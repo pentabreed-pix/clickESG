@@ -10,6 +10,7 @@
 <script>
     document.addEventListener('DOMContentLoaded',function(){
         mainVisual();
+        Tab();
     });
 </script>
 </head>
@@ -17,7 +18,7 @@
 <div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'transparent',})%>
     <!-- main -->
-    <main id="main" class="page main" style="height: 5000px;">
+    <main id="main" class="page main" style="height: 10000px;">
         <div class="page-body">
             <section class="section key-visual">
                 <div class="section-wrap">
@@ -219,7 +220,7 @@
                     <div class="section-head">
                         <h2 class="section-subject">Our References</h2>
                         <p class="section-summary">ClickESG 서비스의 진단 및 컨설팅 건수를 통해 진행 상황을 한눈에 확인할 수 있습니다.</p>
-                        <span class="section-base">(’24년 10월 기준, 누적실적)</span>
+                        <span class="section-base">('24년 10월 기준, 누적실적)</span>
                     </div>
                     <div class="section-body">
                         <ul class="data-list">
@@ -267,10 +268,135 @@
                     </div>
                 </div>
             </section>
+            <section class="section story-04">
+                <div class="section-wrap">
+                    <div class="section-head">
+                        <p class="section-summary">ESG경영 서비스를 구독하고, 함께 지속성장 하고 있는 주요 고객사입니다.</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="tab-display design1">
+                            <div class="swiper tab-wrap">
+                                <ul class="swiper-wrapper tab-list">
+                                    <li id="tab1" class="swiper-slide tab-item"><button class="tab-text">Clients</button></li>
+                                    <li id="tab2" class="swiper-slide tab-item"><button class="tab-text">Partners</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-display design1">
+                            <div class="panel-list">
+                                <div id="tab-panel1" class="panel-item">
+                                    <div class="panel-wrap">
+                                        <div class="sub-section">
+                                            <div class="rolling-display rolling-01">
+                                                <ul class="rolling-list">
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-emart.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-shinsegae.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-pulmuone.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-11.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-ap-systems.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-cj-cheiljedang.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-gst.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-gs-retail.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-ibk-bank.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-kb-bank.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-kb-autosys.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-picglobal.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-inc.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-broadband.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-gas.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-networks.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-nexilis.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-resonac.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-rentalcars.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-boiscience.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-specialty.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-siltron.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-innovation.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-skcnc.png" alt=""></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="sub-section">
+                                            <div class="rolling-display rolling-02">
+                                                <ul class="rolling-list">
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-emart.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-shinsegae.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-pulmuone.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-11.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-ap-systems.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-cj-cheiljedang.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-gst.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-gs-retail.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-ibk-bank.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-kb-bank.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-kb-autosys.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-picglobal.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-inc.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-broadband.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-gas.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-networks.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-nexilis.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-resonac.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-rentalcars.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-boiscience.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-specialty.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-siltron.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-innovation.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-skcnc.png" alt=""></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="sub-section">
+                                            <div class="rolling-display rolling-03">
+                                                <ul class="rolling-list">
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-emart.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-shinsegae.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-pulmuone.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-11.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-ap-systems.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-cj-cheiljedang.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-gst.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-gs-retail.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-ibk-bank.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-kb-bank.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-kb-autosys.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-picglobal.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-inc.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-broadband.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-gas.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-networks.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-nexilis.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-resonac.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-rentalcars.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-boiscience.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-specialty.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-siltron.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-sk-innovation.png" alt=""></li>
+                                                    <li class="rolling-item"><img src="../../../assets/images/main/logo/clients/01/partners-skcnc.png" alt=""></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-panel2" class="panel-item">
+                                    <div class="panel-wrap">
+                                        hi
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
      <!-- // main -->
 </div>
+<script>
+
+</script>
 </body>
 </html>
+       
+            
 

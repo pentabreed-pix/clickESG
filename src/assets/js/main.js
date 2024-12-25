@@ -131,5 +131,83 @@ function mainVisual() {
         sliderBg.update();
         sliderTitle.update();
     });
+    
+    // let $roller = $('.rolling-display');
+
+    // if ($roller.length) {
+    //     $roller.addClass('roller1');
+
+    //     let $clone = $roller.clone(true);
+    //     $clone.addClass('roller2');
+    //     $('.sub-section').append($clone);
+
+    //     $('.roller1').css('left', '0px');
+    //     $('.roller2').css('left', $('.rolling-list').width() + 'px');
+
+    //     $roller.addClass('original');
+    //     $clone.addClass('clone');
+
+    // } else {
+    //     console.error('Element with the class "rolling-display" not found.');
+    // }
+
+    rollingEvent_01('.rolling-01');
+    rollingEvent_01('.rolling-03');
+
+    function rollingEvent_01(selector) {        
+        $(selector).each(function() {
+            var $selector = $(this);
+            var $selectorList = $selector.find('.rolling-list');
+            //let $roller = $('.rolling-display');
+            
+            if ($selector.length) {
+                $selector.addClass('roller1');
+        
+                let $clone = $selector.clone(true);
+                $clone.addClass('roller2');
+                $selector.parent('.sub-section').append($clone);
+        
+                $selector.css('left', '0px');
+                $clone.css('left', $selectorList.width() + 'px');
+        
+                $selector.addClass('original');
+                $clone.addClass('clone');
+        
+            } else {
+                console.error('Element with the class "rolling-display" not found.');
+            }
+            
+        });     
+    }
+
+    rollingEvent_02('.rolling-02');
+
+    function rollingEvent_02(selector) {        
+        $(selector).each(function() {
+            var $selector = $(this);
+            var $selectorList = $selector.find('.rolling-list');
+            //let $roller = $('.rolling-display');
+            
+            if ($selector.length) {
+                $selector.addClass('roller1');
+        
+                let $clone = $selector.clone(true);
+                $clone.addClass('roller2');
+                $selector.parent('.sub-section').append($clone);
+        
+                $selector.css('left', '0');
+                $clone.css('left', $selectorList.width() + 'px');
+        
+                $selector.addClass('original');
+                $clone.addClass('clone');
+        
+            } else {
+                console.error('Element with the class "rolling-display" not found.');
+            }
+            
+        });     
+    }
 }
+
+
 
