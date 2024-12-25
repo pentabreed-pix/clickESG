@@ -118,11 +118,11 @@ function mainVisual() {
             disableOnInteraction: false,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".story-02 .swiper-button-next",
+            prevEl: ".story-02 .swiper-button-prev",
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".story-02 .swiper-pagination",
             type: "progressbar",
         },
     });

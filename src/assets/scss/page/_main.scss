@@ -316,6 +316,7 @@
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: center;
+                                        gap: 2.8rem;
                                         padding: 3.2rem 3.2rem 4.8rem 3.2rem;
 
                                         &::before {
@@ -323,23 +324,86 @@
                                             display: block;
                                             width: 16rem;
                                             height: 16rem;
+                                            //background-color: red;
+                                            margin: 0 auto;
                                         }
                                         .swiper-info {
+                                            min-height: 24rem;
+                                            padding: 2.4rem 2.8rem 2.4rem 2.8rem;
+                                            border-radius: 2.4rem;
                                             background-color: #F7F9FC;
-                                        }
-                                        .swiper-body {
-                                            .para {
 
+                                            .swiper-head {
+                                                display: flex;
+                                                flex-direction: column;
+                                                .swiper-subject {
+                                                    @include font(small-1x, bold);
+                                                    color: custom-color(typo, 030);
+                                                }
+                                                .swiper-category {
+                                                    @include font(small-3x, bold);
+                                                    color: custom-color(primary, 080);
+                                                    line-height: 1.2;
+                                                }
+                                                
+                                                & + .swiper-body {
+                                                    margin-top: 2.4rem;
+                                                }                                                
+                                            }
+
+                                            .swiper-body {
+                                                .para {
+                                                    @include font(small-4x, medium);
+                                                    color: custom-color(neutral, 020);
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+
+                                    &.item-01 {
+                                        .swiper-wrap {
+                                            &::before {
+                                                background-image: url("../../assets/images/main/story02-01.svg");
+                                            }
+                                        }
+                                    }
+                                    &.item-02 {
+                                        .swiper-wrap {
+                                            &::before {
+                                                background-image: url("../../assets/images/main/story02-02.svg");
+                                            }
+                                        }
+                                    }
+                                    &.item-03 {
+                                        .swiper-wrap {
+                                            &::before {
+                                                background-image: url("../../assets/images/main/story02-03.svg");
+                                            }
+                                        }
+                                    }
+                                    &.item-04 {
+                                        .swiper-wrap {
+                                            &::before {
+                                                background-image: url("../../assets/images/main/story02-04.svg");
+                                            }
+                                        }
+                                    }
+                                    &.item-05 {
+                                        .swiper-wrap {
+                                            &::before {
+                                                background-image: url("../../assets/images/main/story02-05.svg");
                                             }
                                         }
                                     }
                                 }
                                 margin-bottom: 7rem;
                             }
-                            .swiper-controls {
+                            .swiper-controls2 {
                                 display: flex;
                                 align-items: center;
                                 padding-right: 24rem;
+
                                 .swiper-pagination {
                                     &.swiper-pagination-progressbar {
                                         position: relative;
@@ -367,6 +431,120 @@
                             }
                         }
                     }
+                }
+            }
+
+            &.story-03 {
+                padding: 12rem 6rem;
+                margin: 12rem 0 0 0;
+                background-image: url("../../assets/images/main/story03-bg.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                .section-wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    max-width: 144rem;
+
+                    .section-head {
+                        width: 49.4rem;
+                        .section-subject {
+                            @include font(small-1x, bold);
+                            color: custom-color(typo, 000);
+
+                            & + .section-summary {
+                                margin-top: 2.4rem;
+                            }
+                        }
+                        .section-summary {
+                            @include font(large, bold);
+                            color: custom-color(typo, 000);
+
+                            & + .section-base {
+                                margin-top: 3.4rem;
+                            }
+                        }
+                        .section-base {
+                            display: block;
+                            @include font(small-3x, regular);
+                            color: custom-color(typo, 000);
+                        }
+
+                        & + .section-body {
+                            margin-top: 6.4rem;
+                        }
+                    }
+                    .section-body {
+                        flex-shrink: 0;
+                        width: 82rem;
+                        
+                        .data-list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 2rem;
+                            .data-item {
+                                width: calc(50% - 1rem);
+                                .data-wrap {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    justify-content: flex-end;
+                                    gap: 2.2rem;
+                                    padding: 4rem 3rem;
+                                    background-color: rgba(0, 0, 0, 0.35);
+                                    
+                                    .data-head {
+                                        .data-subject {
+                                            font-size: 2.2rem;
+                                            line-height: 1.6;
+                                            font-weight: 700;
+                                            color:#28D1FF;
+                                        }
+                                    }
+                                    .data-body {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-end;
+                                        gap: 1rem;
+
+                                        .data-info {
+                                            @include font(large-7x, bold);
+                                            line-height: 1.1;
+                                            color: custom-color(typo, 000);
+                                            letter-spacing: -3.2px;
+                                        }
+                                        .data-text {
+                                            @include font(large-1x, semibold);
+                                            line-height: 1.5;
+                                            color: custom-color(typo, 000);
+                                            letter-spacing: -3.2px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.data-list {
+    .data-item {
+        .data-wrap {
+            .data-head {
+                .data-subject {
+
+                }
+            }
+            .data-body {
+                .data-info {
+
+                }
+                .data-text {
+                    
                 }
             }
         }
