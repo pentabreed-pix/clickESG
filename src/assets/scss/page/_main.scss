@@ -446,6 +446,7 @@
                     flex-wrap: wrap;
                     justify-content: space-between;
                     max-width: 144rem;
+                    margin: 0 auto;
 
                     .section-head {
                         width: 49.4rem;
@@ -543,33 +544,71 @@
                         }
                     }
                     .section-body {
-                        .sub-section { 
-                            display: flex; 
-                            overflow: hidden;
-                            gap: 13rem;
-                            & + .sub-section {
-                                margin-top: 6.4rem;
+                        .panel-display {
+                            .panel-list {
+                                .panel-item {
+                                    .panel-wrap {
+                                        .sub-section { 
+                                            display: flex; 
+                                            overflow: hidden;
+                                            //gap: 13rem;
+                
+                                            & + .sub-section {
+                                                margin-top: 6.4rem;
+                                            }
+                
+                                            &:nth-child(even) {
+                                                padding-left: 65px;
+                                            }
+                
+                                            .rolling-display {                                              
+                                                .rolling-list {
+                                                    display: flex;
+                                                    //gap: 13rem;
+                
+                                                    .rolling-item {
+                                                        margin: 0 6.5rem;
+                                                        flex-shrink: 0; 
+                                                        vertical-align: top;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.clients {
+                                        .panel-wrap {
+                                            .sub-section { 
+                                                .rolling-display {
+                                                    &.original {
+                                                        animation: rollingleft1 100s linear infinite;
+                                                    }
+                                                    &.clone {
+                                                        animation: rollingleft2 100s linear infinite;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.partners {
+                                        .panel-wrap {
+                                            .sub-section { 
+                                                .rolling-display {
+                                                    &.original {
+                                                        animation: rollingleft1 30s linear infinite;
+                                                    }
+                                                    &.clone {
+                                                        animation: rollingleft2 30s linear infinite;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
-                        .sub-section .rolling-display {
-                        }
-                        .sub-section .rolling-display .rolling-list { 
-                            display: flex;
-                            gap: 13rem;
-                        }
-                        .sub-section .rolling-display .rolling-list .rolling-item { 
-                            flex-shrink: 0; 
-                            vertical-align: top;
-                        } 
-                        .sub-section:nth-child(2) {
-                            padding-left: 65px;
-                        }
-                        .rolling-display.original {
-                            animation: rollingleft1 70s linear infinite;
-                        }
-                        .rolling-display.clone {
-                            animation: rollingleft2 70s linear infinite;
-                        }
+                        
                         
                         @keyframes rollingleft1 {
                             0% { transform: translateX(0); }
@@ -582,6 +621,93 @@
                             0% { transition: translateX(0); }
                             100% { transform: translateX(-200%); }
                         }
+                    }
+                }
+            }
+            &.story-05 {
+                padding: 12rem 6rem;
+                background-color: #F1F4F9;
+
+                .section-wrap {
+                    max-width: 144rem;
+                    margin: 0 auto;
+
+                    .section-head {
+                        .section-subject {
+                            @include font(small-1x, bold);
+                            color: #87B4D9;
+
+                            & + .section-summary {
+                                margin-top: 2.4rem;
+                            }
+                        }
+
+                        .section-summary {
+                            @include font(large, bold);
+                            color: custom-color(typo, 030);
+                        }
+
+                        & + .section-body {
+                            margin-top: 6.4rem;
+                        }
+                    }
+                    .section-body {
+                        .data-list {
+                            display: flex;
+                            gap: 6.4rem;
+                            max-width: 125rem;
+                            margin: 0 auto;
+
+                            .data-item {
+
+                                .data-wrap {                                    
+                                    .data-info {
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 37.4rem;
+                                        height: 37.4rem;
+                                        padding: 2.6rem 2.4rem;
+                                        border-radius: 3.2rem;
+                                        background-color: custom-color(neutral, 000);
+                                        .data-year {
+                                            display: inline-block;
+                                            margin-left: auto;
+                                            padding: 0.9rem 1.8rem;
+                                            @include font(small-5x, bold);
+                                            color: custom-color(typo, 090);
+                                            border: 0.1rem solid #CBCBCB;
+                                            border-radius: 4rem;
+                                        }
+                                        .data-figure {   
+                                            position: relative;                                         
+                                            img {
+                                                display: inline-block;
+                                                vertical-align: top;
+                                                margin: 0 auto;
+                                            }
+                                        }
+
+                                        & + .data-head {
+                                            margin-top: 2.4rem;
+                                        }
+                                    }
+                                    .data-head {
+                                        .data-subject {
+                                            @include font(small-1x, bold);
+                                            color: custom-color(typo, 100);
+
+                                            & + .data-base {
+                                                margin-top: 1.2rem;
+                                            }
+                                        }
+                                        .data-base {
+                                            @include font(small-3x, regular);
+                                            color: custom-color(typo, 100);
+                                        }
+                                    }
+                                }
+                            }
+                        }                        
                     }
                 }
             }

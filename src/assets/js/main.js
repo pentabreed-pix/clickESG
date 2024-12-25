@@ -151,10 +151,13 @@ function mainVisual() {
     //     console.error('Element with the class "rolling-display" not found.');
     // }
 
-    rollingEvent_01('.rolling-01');
-    rollingEvent_01('.rolling-03');
+    rollingEvent('.rolling-01');
+    rollingEvent('.rolling-02');
+    rollingEvent('.rolling-03');
+    rollingEvent('.rolling-04');
+    rollingEvent('.rolling-05');
 
-    function rollingEvent_01(selector) {        
+    function rollingEvent(selector) {        
         $(selector).each(function() {
             var $selector = $(this);
             var $selectorList = $selector.find('.rolling-list');
@@ -168,34 +171,6 @@ function mainVisual() {
                 $selector.parent('.sub-section').append($clone);
         
                 $selector.css('left', '0px');
-                $clone.css('left', $selectorList.width() + 'px');
-        
-                $selector.addClass('original');
-                $clone.addClass('clone');
-        
-            } else {
-                console.error('Element with the class "rolling-display" not found.');
-            }
-            
-        });     
-    }
-
-    rollingEvent_02('.rolling-02');
-
-    function rollingEvent_02(selector) {        
-        $(selector).each(function() {
-            var $selector = $(this);
-            var $selectorList = $selector.find('.rolling-list');
-            //let $roller = $('.rolling-display');
-            
-            if ($selector.length) {
-                $selector.addClass('roller1');
-        
-                let $clone = $selector.clone(true);
-                $clone.addClass('roller2');
-                $selector.parent('.sub-section').append($clone);
-        
-                $selector.css('left', '0');
                 $clone.css('left', $selectorList.width() + 'px');
         
                 $selector.addClass('original');
