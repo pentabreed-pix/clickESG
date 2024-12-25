@@ -659,33 +659,53 @@
                             margin: 0 auto;
 
                             .data-item {
+                                position: relative;
+                                display: block;
+                                width: calc(100% / 3 - 42px);
 
                                 .data-wrap {                                    
                                     .data-info {
-                                        display: flex;
-                                        flex-direction: column;
-                                        width: 37.4rem;
-                                        height: 37.4rem;
-                                        padding: 2.6rem 2.4rem;
+                                        position: relative;
+                                        width: 100%;
+                                        height: 0;
+                                        padding-bottom: 100%;
                                         border-radius: 3.2rem;
                                         background-color: custom-color(neutral, 000);
-                                        .data-year {
-                                            display: inline-block;
-                                            margin-left: auto;
-                                            padding: 0.9rem 1.8rem;
-                                            @include font(small-5x, bold);
-                                            color: custom-color(typo, 090);
-                                            border: 0.1rem solid #CBCBCB;
-                                            border-radius: 4rem;
-                                        }
-                                        .data-figure {   
-                                            position: relative;                                         
-                                            img {
+
+                                        .data-info-wrap {                                            
+                                            display: flex;
+                                            flex-direction: column;
+                                            padding: 2.4rem 2.8rem;
+
+                                            .data-year {
                                                 display: inline-block;
-                                                vertical-align: top;
-                                                margin: 0 auto;
+                                                margin-left: auto;
+                                                padding: 0.9rem 1.8rem;
+                                                @include font(small-5x, bold);
+                                                color: custom-color(typo, 090);
+                                                border: 0.1rem solid #CBCBCB;
+                                                border-radius: 4rem;
                                             }
-                                        }
+                                            .data-figure {   
+                                                position: relative;
+                                                display: flex;
+                                                justify-content: center;
+                                                height: 0;
+                                                margin: 0 auto;                                                
+                                                transition: all .5s ease-out;
+                                                                                         
+                                                img {
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-50%,-50%);
+                                                    display: block;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                }
+                                            }
+                                        }                                        
 
                                         & + .data-head {
                                             margin-top: 2.4rem;
@@ -693,6 +713,7 @@
                                     }
                                     .data-head {
                                         .data-subject {
+                                            display: block;
                                             @include font(small-1x, bold);
                                             color: custom-color(typo, 100);
 
@@ -701,8 +722,64 @@
                                             }
                                         }
                                         .data-base {
+                                            display: block;
                                             @include font(small-3x, regular);
                                             color: custom-color(typo, 100);
+                                        }
+                                    }
+                                }
+                                &.data-2024 {
+                                    .data-wrap {                                        
+                                        .data-info {
+                                            .data-info-wrap {
+                                                .data-figure {
+                                                    margin-top: 13.20754%;                                                
+                                                    width: 100%;   
+                                                    padding-bottom: 52.38095%;  
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.data-2023 {
+                                    margin-top: 8.8rem;
+                                    .data-wrap {   
+                                        .data-info {
+                                            .data-info-wrap {
+                                                .data-figure {                                                
+                                                    margin-top: 11.006289%; 
+                                                    width: 64.4654088%;
+                                                    padding-bottom: 65.0943396%; 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.data-2022 {
+                                    .data-wrap {   
+                                        .data-info {
+                                            .data-info-wrap {
+                                                .data-figure {
+                                                    margin-top: 20.125786%; 
+                                                    width: 72.3270440%;
+                                                    padding-bottom: 50.628930%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    .data-wrap {   
+                                        .data-info {
+                                            .data-info-wrap {
+                                                .data-figure {
+                                                    
+                                                    transform: scale(1.1);
+                                                    img {
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
