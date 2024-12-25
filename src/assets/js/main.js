@@ -131,25 +131,6 @@ function mainVisual() {
         sliderBg.update();
         sliderTitle.update();
     });
-    
-    // let $roller = $('.rolling-display');
-
-    // if ($roller.length) {
-    //     $roller.addClass('roller1');
-
-    //     let $clone = $roller.clone(true);
-    //     $clone.addClass('roller2');
-    //     $('.sub-section').append($clone);
-
-    //     $('.roller1').css('left', '0px');
-    //     $('.roller2').css('left', $('.rolling-list').width() + 'px');
-
-    //     $roller.addClass('original');
-    //     $clone.addClass('clone');
-
-    // } else {
-    //     console.error('Element with the class "rolling-display" not found.');
-    // }
 
     rollingEvent('.rolling-01');
     rollingEvent('.rolling-02');
@@ -182,6 +163,15 @@ function mainVisual() {
             
         });     
     }
+
+    var newSlider = new Swiper(".story-06 .swiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".story-06 .swiper-button-next",
+            prevEl: ".story-06 .swiper-button-prev",
+        },
+    });
 }
 
 
