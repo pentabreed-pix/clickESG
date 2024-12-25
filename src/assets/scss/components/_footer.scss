@@ -39,17 +39,19 @@
                 }
 
                 .navi-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.2rem;
+                    margin-top: 2.8rem;
+
                     .navi-item {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 2.2rem;
-                        margin-top: 2.8rem;
                         font-size: 1.5rem;
                         font-weight: 400;
                         color: custom-color(secondary, 060);
                     }
 
                 }
+                
                 .link {
                     position: relative;
 
@@ -72,7 +74,7 @@
 
     .footer-aside {
         background-color: custom-color(primary, 060);
-        
+
         .footer-aside-inner {
             max-width: 1440px;
             margin: 0 auto;
