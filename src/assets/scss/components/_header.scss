@@ -275,19 +275,21 @@
                 }
             }
 
-            .menu {
-                position: relative;
-                &::after {
-                    content: "";
-                    display: inline-block;
-                    position: absolute;
-                    top: 50%;
-                    right: 1.8rem;
-                    width: 2rem;
-                    height: 1.6rem;
-                    background: icon('menu', custom-color(secondary, 060)) no-repeat center;
-                    background-size: 2rem;
-                    transform: translateY(-50%);
+            @include mobile {
+                .menu {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        top: 50%;
+                        right: 1.8rem;
+                        width: 2rem;
+                        height: 1.6rem;
+                        background: icon('menu', custom-color(secondary, 060)) no-repeat center;
+                        background-size: 2rem;
+                        transform: translateY(-50%);
+                    }
                 }
             }
         }

@@ -4,15 +4,15 @@
 @use '../components/icons' as *;
 
 #footer {
-    width: 100%;
-    background-color: custom-color(primary, 080);
+    background-color: custom-color(primary, 050);
     
     .footer-inner {
         position: relative;
-        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
         display: flex;
         gap: 22.3rem;
-        padding: 5.6rem 24rem 8rem;
+        padding: 5.6rem 0 8rem;
 
         .footer-head {
             .footer-subject {
@@ -27,50 +27,42 @@
         }
 
         .footer-body{
-            .section {
-                .section-wrap {
-                    .section-body {
-                        .section-content {
-                            .section-list {
-                                display: flex;
-                                gap: 7.2rem;
+            display: flex;
+            gap: 7.2rem;
 
-                                .section-item {
-                                    width: 20rem;
+            .navi-list {
+                width: 20rem;
 
-                                    .section-title {
-                                        @include font(small-2x, bold);
-                                        color: custom-color(secondary, 060);
-                                    }
+                .navi-title {
+                    @include font(small-2x, bold);
+                    color: custom-color(secondary, 060);
+                }
 
-                                    .section-detail {
-                                        display: flex;
-                                        flex-direction: column;
-                                        gap: 2.2rem;
-                                        margin-top: 2.8rem;
-                                        font-size: 1.5rem;
-                                        font-weight: 400;
-                                        color: custom-color(secondary, 060);
-                                    }
+                .navi-wrap {
+                    .navi-item {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2.2rem;
+                        margin-top: 2.8rem;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        color: custom-color(secondary, 060);
+                    }
 
-                                    .link {
-                                        position: relative;
+                }
+                .link {
+                    position: relative;
 
-                                        &::after {
-                                            content: '';
-                                            position: absolute;
-                                            top: 50%;
-                                            right: -2.4rem;
-                                            width: 1.6rem;
-                                            height: 1.6rem;
-                                            background: icon('link', custom-color(secondary, 060)) no-repeat center;
-                                            transform: translateY(-50%);
-                                            opacity: 0.5;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: -2.4rem;
+                        width: 1.6rem;
+                        height: 1.6rem;
+                        background: icon('link', custom-color(secondary, 060)) no-repeat center;
+                        transform: translateY(-50%);
+                        opacity: 0.5;
                     }
                 }
             }
@@ -79,43 +71,47 @@
 
 
     .footer-aside {
-        width: 100%;
-        padding: 3rem 24rem;
-        background-color: custom-color(primary, 070);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .copyright {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: custom-color(secondary, 060);
-            opacity: 0.6;
-        }
-
-        .info-area {
+        background-color: custom-color(primary, 060);
+        
+        .footer-aside-inner {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 3rem 0;
             display: flex;
-            gap: 4.1rem;
-            
-            .info-area-link {
-                position: relative;
+            justify-content: space-between;
+            align-items: center;
+    
+            .copyright {
                 font-size: 1.3rem;
                 font-weight: 500;
-                color: custom-color(secondary, 060); 
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    right: -2rem;
-                    transform: translateY(-50%);
-                    width: 0.1rem;
-                    height: 0.7rem;
-                    background-color: custom-color(neutral, 060);
-                }
-
-                &:last-child::before {
-                    display: none;
+                color: custom-color(secondary, 060);
+                opacity: 0.6;
+            }
+    
+            .info-area {
+                display: flex;
+                gap: 4.1rem;
+                
+                .info-area-link {
+                    position: relative;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    color: custom-color(secondary, 060); 
+    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: -2rem;
+                        transform: translateY(-50%);
+                        width: 0.1rem;
+                        height: 0.7rem;
+                        background-color: custom-color(neutral, 080);
+                    }
+    
+                    &:last-child::before {
+                        display: none;
+                    }
                 }
             }
         }
