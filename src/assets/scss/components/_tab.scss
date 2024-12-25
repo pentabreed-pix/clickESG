@@ -1,0 +1,114 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+
+.tab-display {
+    &.design1 {
+        display: flex;
+        justify-content: center;
+
+        .tab-wrap {            
+            padding: 0.8rem;
+            border-radius: 5.6rem;
+            background: #095EEF;
+
+            .tab-list {
+                gap: 0.4rem;
+
+                .tab-item  {
+                    width: auto !important;
+                    .tab-text {
+                        text-transform: uppercase;
+                        padding: 0.6rem 2rem;
+                        @include font(small-2x, bold);
+                        border-radius: 5.6rem;
+                        color: rgba(255, 255, 255, 0.60);
+                        transition: all .2s ease-out;
+                    }
+
+                    &.active {
+                        .tab-text {                            
+                            color: #07398F;
+                            background-color: custom-color(typo, 000);
+                        }
+                    }
+                }
+            }
+        }
+
+        & + .panel-display {
+            &.design1 {
+                margin-top: 12rem;
+            }
+        }
+    }
+}
+.panel-display {
+    &.design1 {
+        .panel-list {
+            .panel-item {
+                &.hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+// .panel-display.design1 .panel-list .panel-item.hidden {
+//     display: none;
+// }
+/*
+.tab-display.design1 .tab-wrap .tab-list {
+    align-items: flex-end;
+}
+.tab-display.design1 .tab-wrap .tab-item {
+    max-width: 60rem;
+    flex-shrink: 1;
+}
+.tab-display.design1 .tab-wrap .tab-item .tab-text {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    transition: color 0.3s ease;
+}
+.tab-display.design1 .tab-wrap .tab-item .tab-text::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    content: "";
+    background-color: rgb(228, 228, 231);
+    transition: 0.3s ease;
+}
+.tab-display.design1 .tab-wrap .tab-item.active .tab-text::after {
+    height: 0.3rem;
+    background-color: rgb(0, 0, 0);
+}
+.tab-display.design1 .tab-wrap.full .tab-item {
+    width: 100%;
+    flex-shrink: 1;
+}
+
+
+
+@media (max-width: 1023px) {
+    .tab-display.design1 {
+        position: relative;
+    }
+    .tab-display.design1 .tab-list .tab-item {
+        width: auto;
+        max-width: unset;
+        flex-shrink: 0;
+    }
+    .tab-display.design1::after {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0.1rem;
+        content: "";
+        background-color: rgb(228, 228, 231);
+    }
+}
+.tab-display.case1 .tab-wrap .tab-item .tab-text {
+    padding: 2rem 1rem;
+}*/
