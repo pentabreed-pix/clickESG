@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'service',
+	pageJavascript: ''
+}) %>
+<script src="./../../assets/js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        mainVisual();
+        Tab();
+    });
+</script>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <%-include('../_templates/_header.ejs', {type: 'white',})%>
+    <!-- main -->
+    <div class="solution solution-intro">
+        <div class="main-inner">
+            <div class="local design1">
+                <div class="local-head design1">
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'SOLUTION',
+                        depth2: 'SOLUTION 소개',
+                        depth3: null,
+                        casetype: 'case2'
+                    }) %>
+                    <div class="local-subject">
+                        <h2 class="local-name">
+                            ESG 영역별 전문화된<br>종합 IT 플랫폼 ClickESG 
+                        </h2>
+                        <p class="local-summary">기업의 ESG 핵심경영 활동을 지원하기 위해 기업 환경과 요구사항에 맞춘 최적화된 IT솔루션을 제공합니다.</p>
+                    </div>
+                    <div class="local-figure">
+                        <img src="../../assets/images/solution/bg-local-head-solution.jpg" alt="" class="bg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section design1 case1 type1 bg-color">
+                <div class="section-wrap">
+                    <div class="section-body">
+                        <img src="../../assets/images/solution/solution-diagram-01.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section design1 case1 type1">
+                <div class="section-wrap">
+                    <div class="section-body">
+                       <div class="data-display solutions">
+                            <div class="data-list">
+                                <div class="data-item">
+                                    <div class="data-head">
+                                        <p class="data-subject">솔루션 구독</p>
+                                        <p class="data-summary">ESG 솔루션의 빠른 서비스 개시와 합리적인 비용를 원하는 기업 고객을 위해 구독형 ESG 솔루션 서비스를 제공합니다.
+                                            기업이 제공 받은 서비스 범위, 사용기간, 지원 수준에 따라 다양한 형태의 Pricing이 산정됩니다. </p>
+                                    </div>
+                                    <div class="data-body">
+                                        <div class="data-figure">
+                                            <img src="../../assets/images/solution/solution-subs.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-head">
+                                        <p class="data-subject">솔루션 구축</p>
+                                        <p class="data-summary">기업 고유의 업무 프로세스와 자체 시스템과 연계를 통한 기업 환경에 최적화된 구축을 원하는 경우 적합한 모델입니다. 기업의 요구사항, 보안환경 및 IT 표준환경에 맞추어 독립 솔루션으로 구현합니다. </p>
+                                    </div>
+                                    <div class="data-body">
+                                        <div class="data-figure">
+                                            <img src="../../assets/images/solution/solution-build.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section design1 case1 type1">
+                <div class="section-wrap">
+                    <div class="section-head">
+                        <h4 class="section-name">솔루션 특징</h4>
+                    </div>
+                    <div class="section-body bg-gray">
+                        <div class="data-display">
+                            <div class="data-list">
+                                <div class="data-item">
+                                    <div class="data-body">
+                                        <div class="bullet-display design1 case1 type2">
+                                            <ul class="data-list">
+                                                <li class="data-item">최신 IT 기술과 아키텍처 적용</li>
+                                                <li class="data-item">Cloud 및 On-premise 구축 가능</li>
+                                                <li class="data-item">최고 등급의 보안 서비스 적용</li>
+                                                <li class="data-item">시스템 설정을 통한 사용 환경 구성
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-body">
+                                        <div class="bullet-display design1 case1 type2">
+                                            <ul class="data-list">
+                                                <li class="data-item">다양한 산업군과 다수 사업 수행을 통한 검증</li>
+                                                <li class="data-item">국내외 다수 Award 수상</li>
+                                                <li class="data-item">AWS Qualified Software 인증 </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+     <!-- // main -->
+     <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
+       
+            
+

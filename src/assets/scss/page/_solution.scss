@@ -1,0 +1,62 @@
+
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+
+#wrap {
+    .solution{
+
+        .section{
+            //bg
+            &.bg-color{
+                position: relative;
+                padding: 10rem 0 8.9rem;
+    
+                &::after{
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 100vw;
+                    height: 100%;
+                    content: '';
+                    background: custom-color(etc, 060);
+                    transform: translateX(-50%);
+                    z-index: -1;
+                    
+                }
+
+                .section-body {
+                    text-align: center;
+                }
+            }
+            
+    
+    
+            + .section {
+                margin-top: 12rem;
+            }
+            ~ .section{
+                margin-bottom: 18rem;
+            }
+
+            .section-body {
+                &.bg-gray {
+                    padding: 6.6rem 8rem;
+                    border-radius: 1.6rem;
+                    background: custom-color(etc, 060);
+
+                    >.data-display {
+                        >.data-list {
+                            display: flex;
+                            gap: 7rem;
+                            .data-item {
+                                width: 47rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
