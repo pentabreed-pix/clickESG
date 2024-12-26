@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'main',
+	pageJavascript: ''
+}) %>
+<script src="./../../assets/js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        mainVisual();
+        Tab();
+    });
+</script>
+</head>
+<body>
+<div id="wrap" class="wrap">
+    <%-include('../_templates/_header.ejs', {type: 'white',})%>
+    <!-- main -->
+    <div id="main" class="service service-intro">
+        <div class="main-inner">
+            <div class="local design1">
+                <div class="local-head design1">
+                    <div class="local-info">
+                        <ul class="data-list breadcrumb design1 case2">
+                            <li class="data-item">
+                                <span class="item-text">Home</span>
+                            </li>
+                            <li class="data-item">
+                                <span class="item-text">Service</span>
+                            </li>
+                            <li class="data-item">
+                                <span class="item-text">Service 소개</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- // main -->
+     <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
+       
+            
+
