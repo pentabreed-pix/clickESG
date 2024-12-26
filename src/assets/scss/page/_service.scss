@@ -1,0 +1,29 @@
+#wrap {
+    .service {
+        &:not(.overview) {
+            .local-figure {
+                max-width: 100%;
+               img {
+                    width: 100%;
+               }
+            }
+        }
+        .section {
+            margin-top: 12rem;
+            &.service-intro {
+                .section-wrap {
+                    margin: 0 auto;
+
+                }
+            }
+
+            ~ .section {
+                margin-bottom: 18rem;
+            }
+
+        }
+    }
+    // &:has(.main.business:not(.overview)) {
+    //     overflow: unset;
+    // }
+}

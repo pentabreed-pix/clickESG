@@ -14,7 +14,6 @@
 	.local {
 		&.design1 {
 			margin: 0 auto;
-			max-width: 144rem;
 			padding: 10.4rem 0 0 0;
 
 			.local-body {
@@ -28,41 +27,53 @@
 			}
 		}
 
-		&.design2 {
-			width: 100%;
+		// &.design2 {
+		// 	width: 100%;
 
-			.local-body {
-				.content-body {
-					padding-bottom: 0;
-				}
-			}
-		}
+		// 	.local-body {
+		// 		.content-body {
+		// 			padding-bottom: 0;
+		// 		}
+		// 	}
+		// }
 
-		&.design3 {
-			margin: 0 auto;
-			max-width: 144rem;
-				.local-body {
-					.content-body {
-						padding-top: 23.2rem;
-						padding-bottom: 16rem;
+		// &.design3 {
+		// 	margin: 0 auto;
+		// 	max-width: 144rem;
+		// 		.local-body {
+		// 			.content-body {
+		// 				padding-top: 23.2rem;
+		// 				padding-bottom: 16rem;
 
-						@include mobile {
-							padding: 13.8rem 1.6rem 8rem;
-						}
-					}
-				}
-		}
+		// 				@include mobile {
+		// 					padding: 13.8rem 1.6rem 8rem;
+		// 				}
+		// 			}
+		// 		}
+		// }
 	}
 
 	.local-head {
 		&.design1 {
 			.local-subject {
 				.local-name {
-					@include font(large-12x, bold);
-					line-height: 120%;
-					text-align: left;
+					@include font(large-4x, bold);
+					line-height: 160%;
+					text-align: center;
+					margin-top: 6.4rem
+
+				}
+				.local-summary {
+					@include font(small-1x, regular);
+					line-height: 160%;
+					text-align: center;
+					margin-top: 4rem;
 				}
 			}
+			.local-figure {
+				margin-top: 8rem
+			}
+
 			@include mobile {
 				.local-subject {
 					.local-name {
@@ -462,7 +473,10 @@
 	.section {
 
 		// normal
-		&.design1 {}
+		&.design1 {
+			max-width: 144rem;
+			margin: 0 auto;
+		}
 
 		// section-head와 section-body가 flex 되는 경우
 		&.design2 {
@@ -533,7 +547,7 @@
 				.section-wrap {
 					.section-head {
 						+.section-body {
-							margin-top: 4rem;
+							margin-top: 3.2rem;
 
 							@include mobile {
 								margin-top: 2.4rem;
@@ -1201,6 +1215,8 @@
 		}
 	}
 
+
+
 	// breadcrumb
 	.local-info {
 		margin: 0 auto;
@@ -1211,8 +1227,8 @@
 
 				&.design1 {
 					&.case1 {
-						padding-top: 17.2rem;
-						justify-content: center;
+						padding-top: 4rem;
+						justify-content: left;
 
 						@include mobile {
 							padding-top: 8.2rem;
@@ -1258,8 +1274,9 @@
 						flex-shrink: 0;
 
 						.item-text {
-							@include font(small-5x, medium);
 							position: relative;
+							@include font(small-5x, bold);
+							color: custom-color(neutral, 010);
 						}
 
 						+.data-item {
@@ -1267,22 +1284,45 @@
 
 							.item-text {
 								&::before {
-									position: absolute;
-									top: 0.1rem;
-									left: -2.3rem;
-									width: 1.6rem;
-									height: 1.6rem;
-									content: '';
-									background-image: icon('arrow-right', custom-color(neutral, 010));
-									background-size: 0.7rem 1rem;
-									background-repeat: no-repeat;
-									background-position: center center;
+                                    content: "";
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: -2rem;
+                                    width: 0.4rem;
+                                    height: 0.7rem;
+                                    background: icon('arrow-right', custom-color(neutral, 010)) no-repeat center;
+                                    background-size: 100%;
+                                    transform: translateY(-50%);
+								}
+							}
+
+							~ .data-item {
+								.item-text {
+									color: custom-color(neutral, 090);
 								}
 							}
 						}
 
 						&:last-child {
 							flex-shrink: unset;
+						}
+
+						&:first-child {
+							position: relative;
+
+							&::before {
+								content: "";
+								display: inline-block;
+								position: absolute;
+								top: 50%;
+								left: -1.4rem;
+								width: 1.4rem;
+								height: 1.3rem;
+								background: icon('home', custom-color(neutral, 010)) no-repeat center;
+								background-size: 100%;
+								transform: translateY(-50%);
+							}
 						}
 
 						@include mobile {

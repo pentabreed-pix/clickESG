@@ -1,0 +1,125 @@
+
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+
+.data-display {
+    
+    &.design1 {
+        .data-list {
+            display: flex;
+            flex-direction: column;
+            .data-item {
+                display: flex;
+                align-items: center;
+                .data-head {
+                    border-top: 1px solid  custom-color(primary, 090);
+                    border-bottom: 1px solid rgba(203, 203, 203, 0.50);
+
+                   + .data-body {
+                        border-top: 1px solid rgba(203, 203, 203, 0.50);
+                        border-right: 1px solid rgba(203, 203, 203, 0.50);
+                    }
+                }
+
+                &:last-child {
+                    .data-head {
+                        border-bottom: 1px solid rgba(203, 203, 203, 0.50);
+    
+                       + .data-body {
+                            border-bottom: 1px solid rgba(203, 203, 203, 0.50);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.case1 {
+        .data-item {
+            .data-head {
+                width: 32rem;
+                padding: 4.4rem 0;
+                text-align: center;
+                background: custom-color(primary, 090);
+
+                + .data-body {
+                    padding: 3.2rem 4.8rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.type1 {
+        .data-item {
+            .data-head {
+                font-size: 1.7rem;
+                font-weight: 700;
+                line-height: 160%;
+                color: custom-color(secondary, 060);
+                
+                + .data-body {
+                    @include font(small-4x, regular);
+                    line-height: 160%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/* bullet list */
+.bullet-display {
+    &.design1 {
+        &.case1 {
+            >.data-list {
+                >.data-item {
+                    display: flex;
+                    padding-left: 0.9rem;
+
+                    @include mobile {
+                        padding-left: 0.8rem;
+                    }
+
+                    &::before {
+                        content: '•';
+                        margin-right: 0.9rem;
+
+                        @include mobile {
+                            margin-right: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.type1 {
+            >.data-list {
+                >.data-item {
+                    font-size: 1.9rem;
+                    font-weight: 400;
+                    color: custom-color(neutral, 040);
+                    //@include font(small-4x, medium);
+
+                    @include mobile {
+                        @include font(small-5x, medium);
+                    }
+
+                    &::before {
+                        @include font(small-5x, medium);
+                        color: custom-color(neutral, 040);
+
+                        @include mobile {
+                            @include font(small-6x, medium);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
