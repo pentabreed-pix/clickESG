@@ -146,28 +146,28 @@
 	}
 
 	// table info
-    .t-info {
-		&.type1 {
-			color: custom-color(neutral, 050);
-			font-weight: 600;
-			font-size: 3.2rem;
-		}
-		&.type2 {
-			color: custom-color(neutral, 050);
-			font-weight: 600;
-			font-size: 1.3rem;
-		}
-		+ table {
-			margin-top: 2rem;
-		}
-    }
+    // .t-info {
+	// 	&.type1 {
+	// 		color: custom-color(neutral, 050);
+	// 		font-weight: 600;
+	// 		font-size: 3.2rem;
+	// 	}
+	// 	&.type2 {
+	// 		color: custom-color(neutral, 050);
+	// 		font-weight: 600;
+	// 		font-size: 1.3rem;
+	// 	}
+	// 	+ table {
+	// 		margin-top: 2rem;
+	// 	}
+    // }
 
 	// 코멘트 text
-	+ .comment {
-		margin-top: 1.6rem;
-		@include mobile {
-			margin-top: 1.2rem;
-		}
+	// + .comment {
+	// 	margin-top: 1.6rem;
+	// 	@include mobile {
+	// 		margin-top: 1.2rem;
+	// 	}
 		
-	}
+	// }
 }

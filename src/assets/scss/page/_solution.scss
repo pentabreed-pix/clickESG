@@ -5,7 +5,7 @@
 
 
 #wrap {
-    .solution{
+    .solution-intro{
 
         .section{
             //bg
@@ -30,17 +30,9 @@
                     text-align: center;
                 }
             }
-            
-    
-    
-            + .section {
-                margin-top: 12rem;
-            }
-            ~ .section{
-                margin-bottom: 18rem;
-            }
 
             .section-body {
+                text-align: center;
                 &.bg-gray {
                     padding: 6.6rem 8rem;
                     border-radius: 1.6rem;
@@ -54,6 +46,17 @@
                                 width: 47rem;
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        &.solution-esg {
+            .local-head {
+                .local-figure {
+                    img {
+                        width: 100%;
+                        border-radius: 2.5rem;
                     }
                 }
             }

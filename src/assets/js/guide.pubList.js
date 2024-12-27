@@ -66,7 +66,7 @@ function pubListUp() {
           id_ko: "",
           menu: "ESG Assessment",
           root_ko: "../../page/solution/SOLUTION.01.00.html",
-          status_ko: "",
+          status_ko: "진행",
           worker_ko: "",
           history: "",
         },
