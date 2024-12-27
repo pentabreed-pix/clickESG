@@ -6,6 +6,8 @@
     .main {
         padding: 0;
         .section {
+            opacity: 0;
+            transition: all .5s ease-out;
             &.key-visual {
                 .section-wrap {
                     .section-head {
@@ -345,10 +347,10 @@
                                                     color: custom-color(primary, 080);
                                                     line-height: 1.2;
                                                 }
-                                                
+
                                                 & + .swiper-body {
                                                     margin-top: 2.4rem;
-                                                }                                                
+                                                }
                                             }
 
                                             .swiper-body {
@@ -358,7 +360,7 @@
                                                 }
                                             }
                                         }
-                                        
+
                                     }
 
                                     &.item-01 {
@@ -479,7 +481,7 @@
                     .section-body {
                         flex-shrink: 0;
                         width: 82rem;
-                        
+
                         .data-list {
                             display: flex;
                             flex-wrap: wrap;
@@ -494,7 +496,7 @@
                                     gap: 2.2rem;
                                     padding: 4rem 3rem;
                                     background-color: rgba(0, 0, 0, 0.35);
-                                    
+
                                     .data-head {
                                         .data-subject {
                                             font-size: 2.2rem;
@@ -548,27 +550,27 @@
                             .panel-list {
                                 .panel-item {
                                     .panel-wrap {
-                                        .sub-section { 
-                                            display: flex; 
+                                        .sub-section {
+                                            display: flex;
                                             overflow: hidden;
                                             //gap: 13rem;
-                
+
                                             & + .sub-section {
                                                 margin-top: 6.4rem;
                                             }
-                
+
                                             &:nth-child(even) {
                                                 padding-left: 65px;
                                             }
-                
-                                            .rolling-display {                                              
+
+                                            .rolling-display {
                                                 .rolling-list {
                                                     display: flex;
                                                     //gap: 13rem;
-                
+
                                                     .rolling-item {
                                                         margin: 0 6.5rem;
-                                                        flex-shrink: 0; 
+                                                        flex-shrink: 0;
                                                         vertical-align: top;
                                                     }
                                                 }
@@ -578,7 +580,7 @@
 
                                     &.clients {
                                         .panel-wrap {
-                                            .sub-section { 
+                                            .sub-section {
                                                 .rolling-display {
                                                     &.original {
                                                         animation: rollingleft1 100s linear infinite;
@@ -593,7 +595,7 @@
 
                                     &.partners {
                                         .panel-wrap {
-                                            .sub-section { 
+                                            .sub-section {
                                                 .rolling-display {
                                                     &.original {
                                                         animation: rollingleft1 30s linear infinite;
@@ -608,15 +610,15 @@
                                 }
                             }
                         }
-                        
-                        
+
+
                         @keyframes rollingleft1 {
                             0% { transform: translateX(0); }
                             50% { transform: translateX(-100%); }
                             50.01% { transform: translateX(100%); }
                             100% { transform: translateX(0); }
                         }
-                        
+
                         @keyframes rollingleft2 {
                             0% { transition: translateX(0); }
                             100% { transform: translateX(-200%); }
@@ -663,7 +665,7 @@
                                 display: block;
                                 width: calc(100% / 3 - 42px);
 
-                                .data-wrap {                                    
+                                .data-wrap {
                                     .data-info {
                                         position: relative;
                                         width: 100%;
@@ -672,7 +674,7 @@
                                         border-radius: 3.2rem;
                                         background-color: custom-color(neutral, 000);
 
-                                        .data-info-wrap {                                            
+                                        .data-info-wrap {
                                             display: flex;
                                             flex-direction: column;
                                             padding: 2.4rem 2.8rem;
@@ -686,14 +688,14 @@
                                                 border: 0.1rem solid #CBCBCB;
                                                 border-radius: 4rem;
                                             }
-                                            .data-figure {   
+                                            .data-figure {
                                                 position: relative;
                                                 display: flex;
                                                 justify-content: center;
                                                 height: 0;
-                                                margin: 0 auto;                                                
+                                                margin: 0 auto;
                                                 transition: all .5s ease-out;
-                                                                                         
+
                                                 img {
                                                     position: absolute;
                                                     top: 50%;
@@ -705,7 +707,7 @@
                                                     object-fit: cover;
                                                 }
                                             }
-                                        }                                        
+                                        }
 
                                         & + .data-head {
                                             margin-top: 2.4rem;
@@ -729,13 +731,13 @@
                                     }
                                 }
                                 &.data-2024 {
-                                    .data-wrap {                                        
+                                    .data-wrap {
                                         .data-info {
                                             .data-info-wrap {
                                                 .data-figure {
-                                                    margin-top: 13.20754%;                                                
-                                                    width: 100%;   
-                                                    padding-bottom: 52.38095%;  
+                                                    margin-top: 13.20754%;
+                                                    width: 100%;
+                                                    padding-bottom: 52.38095%;
                                                 }
                                             }
                                         }
@@ -743,24 +745,24 @@
                                 }
                                 &.data-2023 {
                                     margin-top: 8.8rem;
-                                    .data-wrap {   
+                                    .data-wrap {
                                         .data-info {
                                             .data-info-wrap {
-                                                .data-figure {                                                
-                                                    margin-top: 11.006289%; 
+                                                .data-figure {
+                                                    margin-top: 11.006289%;
                                                     width: 64.4654088%;
-                                                    padding-bottom: 65.0943396%; 
+                                                    padding-bottom: 65.0943396%;
                                                 }
                                             }
                                         }
                                     }
                                 }
                                 &.data-2022 {
-                                    .data-wrap {   
+                                    .data-wrap {
                                         .data-info {
                                             .data-info-wrap {
                                                 .data-figure {
-                                                    margin-top: 20.125786%; 
+                                                    margin-top: 20.125786%;
                                                     width: 72.3270440%;
                                                     padding-bottom: 50.628930%;
                                                 }
@@ -770,11 +772,11 @@
                                 }
 
                                 &:hover {
-                                    .data-wrap {   
+                                    .data-wrap {
                                         .data-info {
                                             .data-info-wrap {
                                                 .data-figure {
-                                                    
+
                                                     transform: scale(1.1);
                                                     img {
                                                     }
@@ -784,7 +786,7 @@
                                     }
                                 }
                             }
-                        }                        
+                        }
                     }
                 }
             }
@@ -821,7 +823,7 @@
                                 align-items: center;
                                 justify-content: flex-end;
                                 margin-bottom: 2.4rem;
-                                
+
                                 .swiper-button-prev,
                                 .swiper-button-next {
                                     flex-shrink: 0;
@@ -876,9 +878,13 @@
                                     }
                                 }
                             }
-                        }                   
+                        }
                     }
                 }
+            }
+
+            &.active {
+                opacity: 1;
             }
         }
     }
@@ -897,7 +903,7 @@
 
                 }
                 .data-text {
-                    
+
                 }
             }
         }

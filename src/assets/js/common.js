@@ -5,14 +5,15 @@ frontCommon.Html = (function () {
     instance = {
         reset: function () {
             frontCommonResize();
+            frontCommonScroll();
             header();
 
-            //frontCommonScroll();
             //footer();
             //localAnimations();
             //lenis();
             //business_Interaction();
             //scrollTopBtn();
+            sectionActiveInteraction('.page .section');
         },
     };
     return instance;
@@ -26,13 +27,13 @@ if (instance) {
 
 function frontCommonResize() {
     window.addEventListener("resize", () => {
-
+        sectionActiveInteraction('.page .section');
     });
 }
 
 function frontCommonScroll() {
     window.addEventListener("scroll", () => {
-
+        sectionActiveInteraction('.page .section');
     });
 }
 function lenis() {
@@ -396,6 +397,26 @@ function input() {
                 })
             }
             input.classList.contains("disabled") ? input.querySelector(".input-elem").setAttribute("disabled", "") : ""
+        }
+    });
+}
+
+function sectionActiveInteraction(selector) {
+    $(selector).each(function() {
+        var $selector = $(this);
+        var start = $selector.offset().top - $(window).innerHeight() +300;
+        var end = $selector.offset().top + $selector.innerHeight() +300;
+        var scrollAmt = $(document).scrollTop();
+
+        if (scrollAmt < start) {
+            $selector.removeClass('active');
+        } else if (scrollAmt > end) {
+            $selector.removeClass('active');
+        } else {
+            if( $selector.hasClass('active') === false) {
+                $selector.removeClass('active');
+            }
+            $selector.addClass('active');
         }
     });
 }
