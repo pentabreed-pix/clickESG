@@ -163,7 +163,7 @@
                         flex-direction: column;
                         visibility: visible;
                         transform: translateY(-10px);
-                        //transition: all 0.3s ease-out;
+                        transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1), transform 0.5s cubic-bezier(0.5, 0, 0, 1);
                         opacity: 0;
                         visibility: hidden;
                         z-index: 2;
@@ -194,11 +194,18 @@
                             display: none;
                             opacity: 1;
                             visibility: visible;
+                            transition: none;
                         }
                     }
 
                     &:hover .depth1::after {
                         width: 18rem;
+                    }
+
+                    @include mobile {
+                        &:last-child {
+                            width: 11rem;
+                        }
                     }
                 }
             }

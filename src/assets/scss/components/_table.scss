@@ -1,0 +1,173 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+.t-display {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 144rem;
+	table {
+		width: 100%;
+		table-layout: fixed;
+		border-spacing: 0;
+		border-collapse: collapse;
+		border-right: hidden;
+		border-left: hidden;
+		border-top: hidden;
+        border-bottom: 1px solid rgba(203, 203, 203, 0.50);
+	}
+
+    &.design1 {
+		&.case1 {
+			table {
+				>thead {
+					>tr {
+						>th {
+							padding: 1.8rem;
+							background-color: custom-color(secondary, 100);
+							border-right: 1px solid custom-color(typo, 000);
+							border-left: 1px solid custom-color(neutral, 060);
+							border-top: 1px solid custom-color(neutral, 060);
+                            
+                            &.t-bg {
+                                background: custom-color(secondary, 100);
+                            }
+						}
+					}
+				}
+
+				>tbody {
+					>tr {
+                        >th,
+						>td {
+							padding: 1.5rem 2rem;
+							vertical-align: middle;
+							border-right: 1px solid rgba(203, 203, 203, 0.50);
+
+                            &.t-bg {
+                                background: rgba(133, 133, 133, 0.05);
+                            }
+
+                            &.check {
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 2.6rem;
+                                    height: 2.6rem;
+                                    background: icon('check', custom-color(secondary, 100)) no-repeat center;
+                                    background-size: 2rem;
+                                    transform: translate(-50%, -50%);
+                                    border-radius: 100%
+                                }
+                            }
+                            &.ex {
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    width: 2.8rem;
+                                    height: 2.8rem;
+                                    background: icon('ex', custom-color(secondary, 040)) no-repeat center;
+                                    background-size: 2rem;
+                                    transform: translate(-50%, -50%);
+                                    border-radius: 100%
+                                }
+                            }
+						}
+					}
+				}
+			}
+		}
+
+		&.type1 {
+			table {
+				>thead {
+					>tr {
+						>th {
+                            @include font(small-4x, bold);
+							color: custom-color(typo, 000);
+							text-align: center;
+						}
+					}
+				}
+
+				>tbody {
+					>tr {
+                        >th,
+						>td {
+							color: custom-color(typo, 010);
+							@include font(small-4x, bold);
+
+						}
+					}
+				}
+			}
+		}
+    }
+
+
+	//align
+	&.align1 {
+		tbody {
+			text-align: left;
+		}
+	}
+	&.align2 {
+		tbody {
+			text-align: right;
+		}
+	}
+	&.align3 {
+		tbody {
+			text-align: center;
+		}
+	}
+
+	th,
+	td {
+		&.align1 {
+			text-align: left;
+		}
+		&.align2 {
+			text-align: right;
+		}
+		&.align3 {
+			text-align: center;
+		}
+	}
+
+	// table info
+    .t-info {
+		&.type1 {
+			color: custom-color(neutral, 050);
+			font-weight: 600;
+			font-size: 3.2rem;
+		}
+		&.type2 {
+			color: custom-color(neutral, 050);
+			font-weight: 600;
+			font-size: 1.3rem;
+		}
+		+ table {
+			margin-top: 2rem;
+		}
+    }
+
+	// 코멘트 text
+	+ .comment {
+		margin-top: 1.6rem;
+		@include mobile {
+			margin-top: 1.2rem;
+		}
+		
+	}
+}
