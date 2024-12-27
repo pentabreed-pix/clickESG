@@ -84,7 +84,7 @@
       border-radius: 50%;
       transition:all .2s ease-out;
 
-      &.color-a {        
+      &.color-a {
         border: 0.1rem solid rgba(255, 255, 255, 0.50);
         &.arrow-left1 {
           &::after {
@@ -95,13 +95,13 @@
           &:focus {
             background-color: custom-color(neutral, 000);
             border: 0.1rem solid rgba(255, 255, 255, 1);
-  
+
             &:after {
               background: icon('arrow-left1', custom-color(neutral, 100)) no-repeat center;
             }
           }
         }
-  
+
         &.arrow-right1 {
           &::after {
             background: icon('arrow-right1', custom-color(neutral, 000)) no-repeat center;
@@ -111,7 +111,7 @@
           &:focus {
             background-color: custom-color(neutral, 000);
             border: 0.1rem solid rgba(255, 255, 255, 1);
-  
+
             &:after {
               background: icon('arrow-right1', custom-color(neutral, 100)) no-repeat center;
             }
@@ -129,13 +129,13 @@
           &:focus {
             background-color: custom-color(neutral, 100);
             border: 0.1rem solid custom-color(neutral, 100);
-  
+
             &:after {
               background: icon('arrow-left1', custom-color(neutral, 000)) no-repeat center;
             }
           }
         }
-  
+
         &.arrow-right1 {
           &::after {
             background: icon('arrow-right1', custom-color(neutral, 100)) no-repeat center;
@@ -145,7 +145,7 @@
           &:focus {
             background-color: custom-color(neutral, 100);
             border: 0.1rem solid custom-color(neutral, 100);
-  
+
             &:after {
               background: icon('arrow-right1', custom-color(neutral, 000)) no-repeat center;
             }

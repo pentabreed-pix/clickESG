@@ -1,12 +1,13 @@
 var frontCommon = frontCommon || {};
 frontCommon.Html = (function () {
-  var instance = null;
-  function init() {
+    var instance = null;
+    function init() {
     instance = {
         reset: function () {
             frontCommonResize();
-            //frontCommonScroll();
             header();
+
+            //frontCommonScroll();
             //footer();
             //localAnimations();
             //lenis();
@@ -15,28 +16,24 @@ frontCommon.Html = (function () {
         },
     };
     return instance;
-  }
-  if (instance) {
+}
+if (instance) {
     return instance;
-  } else {
+} else {
     return init();
-  }
+}
 })();
 
 function frontCommonResize() {
-  window.addEventListener("resize", () => {
-    const _header = document.getElementById("header")
-    const modalShow = document.querySelector(".modal.show");
-    if(modalShow) {
-        _header.classList.add("regular")
-    }
-  });
+    window.addEventListener("resize", () => {
+
+    });
 }
 
 function frontCommonScroll() {
-  window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", () => {
 
-  });
+    });
 }
 function lenis() {
     let lenis = new Lenis()
@@ -212,35 +209,11 @@ function lenis() {
     })
 }
 
-
-
-
-
-
-// function localAnimations() {
-//     $header = $('header');
-//     $breadcrumb = $('.data-list.breadcrumb');
-
-//     $('[data-local-animation="case-1"]').each(function(){
-//         $this = $(this);
-//         $this.addClass('active');
-
-//         // $header.removeClass('light').addClass('transparent');
-//         $breadcrumb.removeClass('case1').addClass('case2');
-//     });
-// }
-
-
-
-// header animation
+// header
 function header() {
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
     const $menu = $('.site-control .menu');
-    
-
-
-    let lastScrollTop = 0;
 
     const isDesktop = () => window.innerWidth >= 1024;
 
@@ -262,8 +235,10 @@ function header() {
         }
     };
 
+    let lastScrollTop = 0;
+
     const handleScroll = () => {
-        const winScrollTop = $(window).scrollTop();
+        let winScrollTop = $(window).scrollTop();
 
         $header.toggleClass('scroll', winScrollTop > 0);
 
@@ -276,10 +251,7 @@ function header() {
         lastScrollTop = winScrollTop;
     };
 
-
-
-
-    // 모바일 toggle
+    // mobile
     const handleMobileMenuToggle = () => {
         $menu.on('click', () => {
             $header.toggleClass('menu-bar');
@@ -292,28 +264,14 @@ function header() {
         $this.toggleClass('open');
     });
 
-
-
     initResponsiveEvents();
+    handleMobileMenuToggle();
 
     window.addEventListener('resize', initResponsiveEvents);
     window.addEventListener('scroll', handleScroll);
-
-    handleMobileMenuToggle();
 }
 
-
-
-
-
-
-
-
-
-
-
 function Tab() {
-
     const tabDisplay = document.querySelectorAll(".tab-display")
     tabDisplay.forEach(tab => {
         const firstTab = tab.querySelector(".tab-item:first-child")
@@ -423,7 +381,6 @@ function Tab() {
 
 function input() {
     const form = document.querySelectorAll(".form")
-
     form.forEach(input => {
         if(input.classList.contains("input") || input.classList.contains("search")) {
             const inputRemove = input.querySelector(".remove")
@@ -442,274 +399,3 @@ function input() {
         }
     });
 }
-
-/* 아코디언 */
-// function Accordion() {
-//     const accordionDisplays = document.querySelectorAll(".accordion-display");
-
-//     accordionDisplays.forEach(function(accordionDisplay) {
-//         const accordionItems = accordionDisplay.querySelectorAll(".accordion-item");
-
-//         accordionItems.forEach(function(accordionItem) {
-//             const button = accordionItem.querySelector(".btn");
-
-//             // title 토글 함수
-//             function toggleAccordion() {
-//                 // this에 title 속성이 있는지 확인
-//                 let currentLabel = this.getAttribute("title");
-
-//                 if (currentLabel) {
-//                     // "열기" 또는 "닫기"라는 텍스트가 포함된 경우 조건에 따라 title 값을 변경
-//                     if (currentLabel.includes("열기")) {
-//                         this.setAttribute("title", currentLabel.replace("열기", "닫기"));
-//                     } else if (currentLabel.includes("닫기")) {
-//                         this.setAttribute("title", currentLabel.replace("닫기", "열기"));
-//                     }
-//                 }
-//             }
-
-//             button.addEventListener("click", toggleAccordion.bind(button));
-
-//             const accordionHeads = accordionItem.querySelectorAll(".accordion-head");
-//             accordionHeads.forEach(accordionHead => {
-//                 accordionHead.addEventListener("click", function() {
-//                     // accordion-item에 active 클래스를 토글
-//                     accordionItem.classList.toggle("active");
-
-//                     // active 상태에 따라 panel 높이 업데이트
-//                     updatePanelHeight();
-//                 });
-//             });
-
-//             // active 클래스 변화 감지 및 panel 높이 업데이트
-//             const observer = new MutationObserver(updatePanelHeight);
-//             observer.observe(accordionItem, { attributes: true, attributeFilter: ['class'] });
-
-//             // panel 높이 업데이트 함수
-//             function updatePanelHeight() {
-//                 const panel = accordionItem.querySelector(".accordion-head + *"); //accordion-body
-//                 panel.style.height = accordionItem.classList.contains("active") ? panel.scrollHeight + "px" : null;
-//             }
-//         });
-//     });
-// }
-
-
-/* Interaction */
-// function localAnimations_Case01() {
-//     $('[data-local-animation="case-1"]').each(function(){
-//         $this = $(this);
-//         $breadcrumb = $this.prev('.local-info').find('.data-list.breadcrumb');
-
-//         setTimeout(function() {
-//             $breadcrumb.addClass('active1');
-//             $this.addClass('active1');
-//         }, 500);
-//     });
-
-//     gsap.utils.toArray('[data-local-animation="case-1"]').forEach((localInfo, index) => {
-//         var header = $(localInfo).closest('.main').prev('header');
-//         var breadcrumb = $(localInfo).closest('.main').find('.local-info .data-list.breadcrumb');
-
-//         gsap.to(localInfo, {
-//             scrollTrigger: {
-//                 //markers: true,
-//                 trigger: localInfo,
-//                 start: '101% bottom',
-//                 end: 'top bottom',
-//                 scrub: 0.001,
-//                 onEnter: function(self) {
-//                     //console.log('들어왔다')
-//                     header.removeClass('light').addClass('transparent');
-//                     breadcrumb.removeClass('dark').addClass('light');
-//                     localInfo.classList.add('active2');
-//                     gsap.to('.local-util', {opacity: 0, duration: 0.2,});
-//                 },
-//                 onEnterBack: function(self) {
-//                     //console.log('돌아왔다')
-//                     gsap.to('.local-util', {opacity: 1, duration: 0.2,});
-//                 },
-//             },
-//         })
-//     });
-
-//     function updatePosition() {
-//         var scrollY = window.scrollY;
-//         if(scrollY > 0 && scrollY < 200) {
-//             gsap.to('.local-util', { y: scrollY, duration: 0,});
-//         }
-//     }
-
-//     updatePosition();
-
-//     document.addEventListener('scroll', updatePosition);
-//     window.addEventListener('resize', updatePosition);
-// }
-
-// function localAnimations_Case02() {
-
-//     let $breadcrumb = $('.data-list.breadcrumb');
-//     let $Figure = $('.local-figure');
-//     let $Subject =  $('.local-subject');
-//     let $SubjectName =  $('.local-subject .local-name');
-//     let $Aside = $('.local-aside');
-//     let $Util =  $('.local-util');
-
-//     gsap.to($SubjectName, {duration: 1, opacity: 1, y: '0%'});
-//     gsap.to($Figure, {duration: 1, delay:0.5, opacity: 1, y: '0%'});
-
-//     gsap.utils.toArray('[data-local-animation="case-2"]').forEach((section, index) => {
-//         gsap.timeline({
-//             scrollTrigger: {
-//                 //markers: true,
-//                 trigger: section,
-//                 start: 'top top',
-//                 end: 'bottom bottom',
-//                 scrub: 0.001,
-//             }
-//         })
-//         .fromTo($breadcrumb , {y:'0vh'}, {y:'40vh', opacity:0,}, 0)
-//         .fromTo($Subject , {y:'0vh'}, {y:'40vh', opacity:0,}, 0)
-//         .fromTo($Figure, {width: () => '90vw', x:'-50%'}, {width: () => '100vw', x:'-50%'}, 0)
-//         .to($Figure, { 'background-color': 'rgba(0, 0, 0, 0.5)'}, 0)
-//         .fromTo($Aside, {y: '-30vh'}, {y: '0%',}, 0)
-//         .fromTo($Aside, {opacity: 0,}, {opacity: 1, delay:0.5}, 0)
-//         .fromTo($Util, {opacity: 1, y: '0'}, {opacity: 0, y: '0%',}, 0)
-//     });
-
-// }
-
-// function footer() {
-//     const familySite = document.querySelector(".family-site");
-//     const btnFamily = familySite.querySelector(".btn-family");
-//     const siteArea = familySite.querySelector(".site-area");
-
-//     btnFamily.addEventListener("click", function() {
-//         familySite.classList.contains("active") ? familySite.classList.remove("active") : familySite.classList.add("active");
-//     })
-// }
-
-// function business_Interaction() {
-//     if(document.querySelector(".main").classList.contains("business")) {
-//         const intro = document.querySelector(".article.intro")
-//         const major = document.querySelector(".article.major")
-//         const hico = document.querySelector(".article.hico")
-//         const history = document.querySelector(".article.history")
-//         const portfolio = document.querySelector(".section.portfolio")
-//         if(intro) {
-//             const io = new IntersectionObserver(entries => {
-//                 entries.forEach(entry => {
-//                     if(entry.intersectionRatio > 0.1) {
-//                         intro.classList.add("active")
-//                     }
-//                 })
-//             }, {
-//                 threshold: [0.1]
-//             })
-//             io.observe(intro.querySelector(".article-body"))
-//         }
-//         if(major) {
-//             const io2 = new IntersectionObserver(entries => {
-//                 entries.forEach(entry => {
-//                     if(entry.intersectionRatio > 0.1) {
-//                         major.classList.add("active")
-//                     }
-//                 });
-//             }, {
-//                 threshold: [0.1]
-//             })
-
-//             io2.observe(major)
-//         }
-//         if(hico) {
-//             const io3 = new IntersectionObserver(entries => {
-//                 entries.forEach(entry => {
-//                     if(entry.intersectionRatio > 0.4) {
-//                         hico.classList.add("active1")
-//                     }
-//                 })
-//             }, {
-//                 threshold: [0.4]
-//             })
-//             io3.observe(hico.querySelector(".article-head"))
-
-//             const io4 = new IntersectionObserver(entries => {
-//                 entries.forEach(entry => {
-//                     if(entry.intersectionRatio > 0.6) {
-//                         hico.classList.add("active2")
-//                     }
-//                 })
-//             }, {
-//                 threshold: [0.6]
-//             })
-//             io4.observe(hico.querySelector(".article-body"))
-//         }
-//         if(history) {
-//             const io5 = new IntersectionObserver(entries => {
-//                 entries.forEach(entry => {
-//                     if(entry.intersectionRatio > 0.2) {
-//                         history.classList.add("active")
-//                     }
-//                 })
-//             }, {
-//                 threshold: [0.2]
-//             })
-//             io5.observe(history)
-//         }
-//         if(portfolio) {
-//             const io6 = new IntersectionObserver(entries => {
-//                 entries.forEach(entry => {
-//                     if(entry.intersectionRatio > 0.2) {
-//                         portfolio.classList.add("active1")
-//                     }
-//                 })
-//             }, {
-//                 threshold: [0.2]
-//             })
-//             io6.observe(portfolio.querySelector(".investment"))
-
-//             const io7 = new IntersectionObserver(entries => {
-//                 entries.forEach(entry => {
-//                     if(entry.isIntersecting) {
-//                         portfolio.classList.add("active2")
-//                     }
-//                 })
-//             }, {
-//                 threshold: [0.01]
-//             })
-//             io7.observe(portfolio.querySelector(".article-body"))
-//         }
-//     }
-// }
-
-// // top scroll button
-// function scrollTopBtn() {
-//     const quickScrollBtnToTop = document.querySelector('.btn-to-top .top-btn');
-//     const topButton = document.querySelector('.btn-to-top');
-
-//     quickScrollBtnToTop.addEventListener('click', function(){
-//         window.scroll({
-//             top: 0,
-//             behavior: 'smooth'
-//         });
-//     })
-
-//     window.addEventListener('scroll', function() {
-//         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//         const pageBodyHeight = parseInt(document.querySelector('#wrap').clientHeight);
-//         const showLine = pageBodyHeight * 0.05;
-//         const contentHeight = document.querySelector('#main').clientHeight;
-//         const hotLine = contentHeight - window.innerHeight;
-
-//         if (scrollTop >= showLine) {
-//             topButton.classList.add('active');
-//         } else {
-//             topButton.classList.remove('active');
-//         }
-//         if (scrollTop >= hotLine) {
-//             topButton.classList.add('fixed');
-//         } else {
-//             topButton.classList.remove('fixed');
-//         }
-//     });
-// }
