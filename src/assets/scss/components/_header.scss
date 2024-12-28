@@ -472,6 +472,14 @@
                         }
                     }
                 }
+
+                .site-control {
+                    .menu {
+                        &::after {
+                            background: icon('close', custom-color(neutral, 090)) no-repeat center;
+                        }
+                    }
+                }
             }
         }
     }
