@@ -261,10 +261,17 @@ function header() {
 
     $('.depth1-item').click(function () {
         var $this = $(this);
-        $this.find('.depth2-wrap').stop().slideToggle();
+        
         $this.toggleClass('open');
+        $this.find('.depth2-wrap').stop().slideToggle();
+    
+        // 추가 사항
+        $('.depth1-item').not($this).removeClass('open').find('.depth2-wrap').stop().slideUp();
     });
+    
 
+
+    
     initResponsiveEvents();
     handleMobileMenuToggle();
 

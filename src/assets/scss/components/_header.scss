@@ -74,8 +74,6 @@
                     @include mobile {
                         width: 100%;
                         &.open {
-                            display: block;
-                            
                             .depth1 {
                                 color: custom-color(primary, 090) !important;
 
@@ -83,6 +81,14 @@
                                     &::after {
                                         background: icon('mines', custom-color(neutral, 090)) no-repeat center;
                                     }
+                                    //&::after {
+                                    //    opacity: 0;
+                                    //    transition: all 0.3s ease-out;
+                                    //    transform: rotate(90deg);
+                                    //}
+                                    //&::before {
+                                    //    display: none;
+                                    //}
                                 }
                                 &::after {
                                     display: none;
@@ -131,6 +137,9 @@
 
                             .open-close {
                                 position: relative;
+                                width: 1.5rem;
+                                height: 1.6rem;
+                                transition: all 0.3s ease-out;
 
                                 &::after {
                                     content: "";
@@ -143,7 +152,31 @@
                                     background: icon('plus', custom-color(neutral, 090)) no-repeat center;
                                     background-size: 100%;
                                     transform: translateY(-50%);
+                                    transition: background-image 0.2s;
                                 }
+                                // &::before,
+                                // &::after {
+                                //     content: '';
+                                //     position: absolute;
+                                //     background-color: #000;
+                                //     transition: all 0.3s ease-out;
+                                // }
+
+                                // &::before {
+                                //     width: 100%;
+                                //     height: 0.2rem;
+                                //     top: 50%;
+                                //     left: 0;
+                                //     transform: translateY(-50%);
+                                // }
+                                  
+                                // &::after {
+                                //     width: 0.2rem;
+                                //     height: 100%;
+                                //     left: 50%;
+                                //     top: 0;
+                                //     transform: translateX(-50%);
+                                // }
                             }
                             &::after {
                                 display: none;
@@ -155,6 +188,7 @@
                     .depth2-wrap {
                         display: none;
                         position: absolute;
+                        top: 1rem;
                         display: flex;
                         flex-direction: column;
                         visibility: visible;
@@ -435,17 +469,6 @@
                                 align-items: center;
                                 justify-content: space-between;
                             }
-                        }
-                    }
-                }
-                
-                .site-control {
-                    .menu {
-                        &::after {
-                            width: 1.8rem;
-                            height: 1.8rem;
-                            background: icon('close', custom-color(neutral, 090)) no-repeat center;
-                            background-size: 100%;
                         }
                     }
                 }
