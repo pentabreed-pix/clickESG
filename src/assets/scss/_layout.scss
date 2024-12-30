@@ -2,6 +2,12 @@
 @use 'components/variables' as *;
 @use 'components/icons' as *;
 
+body {
+	&.menu-open {
+		overflow: hidden;
+	}
+}
+
 #wrap {
 	position: relative;
 	min-height: 100vh;
@@ -18,28 +24,28 @@
 			&.design1 {
 				margin: 0 auto;
 				padding: 10.4rem 0 0 0;
-	
+
 				.local-body {
 					.content-body {
 						padding-bottom: 16rem;
-	
+
 						@include mobile {
 							padding-bottom: 8rem;
 						}
 					}
 				}
 			}
-	
+
 			// &.design2 {
 			// 	width: 100%;
-	
+
 			// 	.local-body {
 			// 		.content-body {
 			// 			padding-bottom: 0;
 			// 		}
 			// 	}
 			// }
-	
+
 			// &.design3 {
 			// 	margin: 0 auto;
 			// 	max-width: 144rem;
@@ -47,7 +53,7 @@
 			// 			.content-body {
 			// 				padding-top: 23.2rem;
 			// 				padding-bottom: 16rem;
-	
+
 			// 				@include mobile {
 			// 					padding: 13.8rem 1.6rem 8rem;
 			// 				}
@@ -55,7 +61,7 @@
 			// 		}
 			// }
 		}
-	
+
 		.local-head {
 			&.design1 {
 				.local-subject {
@@ -64,7 +70,7 @@
 						line-height: 160%;
 						text-align: center;
 						margin-top: 6.4rem
-	
+
 					}
 					.local-summary {
 						@include font(small-1x, regular);
@@ -83,7 +89,7 @@
 						width: 100%;
 					}
 				}
-	
+
 				// @include mobile {
 				// 	.local-subject {
 				// 		.local-name {
@@ -92,10 +98,10 @@
 				// 	}
 				// }
 			}
-	
+
 			&.design2 {
 				position: relative;
-	
+
 				.local-subject {
 					position: absolute;
 					top: 13.2rem;
@@ -123,10 +129,10 @@
 					}
 				}
 			}
-	
+
 			// &.design3 {
 			// 	padding: 3.2rem 1.8rem 12rem;
-	
+
 			// 	.local-subject {
 			// 		.local-name {
 			//             color: custom-color(typo, 020);
@@ -134,10 +140,10 @@
 			// 			@include font(large-3x, extrabold);
 			// 		}
 			// 	}
-	
+
 			// 	@include mobile {
 			// 		padding: 4rem 1.8rem 6.4rem;
-	
+
 			// 		.local-subject {
 			// 			.local-name {
 			// 				@include font(medium, extrabold);
@@ -145,7 +151,7 @@
 			// 		}
 			// 	}
 			// }
-	
+
 			// &.design4 {
 			  // 	display: flex;
 			// 	position: relative;
@@ -159,44 +165,44 @@
 			// 	max-width: 1200px;
 			// 	opacity: 0;
 			// 	transition: opacity 0.5s ease-out;
-	
+
 			// 	@include mobile() {
 			// 		width: 100%;
 			// 		padding: 8.2rem 0 20rem 0;
 			// 		min-height: 60rem;
 			// 		max-width: 100%;
 			// 	}
-	
+
 			// 	.local-info {
 			// 		margin: 0;
-	
+
 			// 		& + .local-subject {
 			// 			margin-top: 10rem;
-	
+
 			// 			@include mobile() {
 			// 				margin-top: 5.5rem;
 			// 			}
 			// 		}
 			// 	}
-	
+
 			// 	.local-subject {
 			// 		display: flex;
 			// 		position: relative;
 			// 		top: 50px;
 			// 		transition: top 0.5s ease-out;
 			// 		align-items: center;
-	
+
 			// 		.local-name {
 			// 			@include font(large-12x, bold);
 			// 			color: custom-color(typo, 020);
 			// 			line-height: 1.2;
 			// 			transition: color 1s ease-out;
-	
+
 			// 			@include mobile() {
 			// 				@include font(large-1x, bold);
 			// 			}
 			// 		}
-	
+
 			// 		&+.local-aside {
 			// 		margin-top: 12rem;
 			// 			@include mobile() {
@@ -204,7 +210,7 @@
 			// 			}
 			// 		}
 			// 	}
-	
+
 			// 	.local-aside {
 			// 		display: flex;
 			// 		position: relative;
@@ -213,40 +219,40 @@
 			// 		justify-content: flex-end;
 			//         align-items: flex-end;
 			// 		transition: top 0.5s ease-out;
-	
+
 			// 		.loca-wrap {
 			// 			width: 506px;
-	
+
 			// 			@include mobile() {
 			// 				width: 100%;
 			// 			}
-	
+
 			// 			.local-title {
 			// 				@include font(medium, bold);
 			// 				color: custom-color(primary, 080);
 			// 				transition: color 1s ease-out;
-	
+
 			// 				@include mobile() {
 			// 					@include font(small-1x, bold);
 			// 				}
-	
+
 			// 				&+.local-summary {
 			// 					margin-top: 16px;
 			// 				}
 			// 			}
-	
+
 			// 			.local-summary {
 			// 				color: custom-color(neutral, 080);
 			// 				transition: color 1s ease-out;
 			// 				@include font(small-3x, bold);
-	
+
 			// 				@include mobile() {
 			// 					@include font(small-4x, bold);
 			// 				}
 			// 			}
 			// 		}
 			// 	}
-	
+
 			// 	.local-figure {
 			// 		position: absolute;
 			// 		bottom: 0;
@@ -258,11 +264,11 @@
 			// 		border-radius: 16px 16px 0 0;
 			// 		z-index: -1;
 			// 		transition: all 0.5s ease-out;
-	
+
 			// 		@include mobile() {
 			// 			border-radius: 8px 8px 0 0;
 			// 		}
-	
+
 			// 		video, img {
 			// 			position: absolute;
 			// 			top: 0;
@@ -272,12 +278,12 @@
 			// 			transform: translateX(-50%);
 			// 			-o-object-fit: cover;
 			// 			object-fit: cover;
-	
+
 			// 			@include mobile() {
 			// 				width: 100vw;
 			// 			}
 			// 		}
-	
+
 			// 		&::after {
 			// 				position: absolute;
 			// 				top: 0;
@@ -289,29 +295,29 @@
 			// 				transition: background-color .3s ease;
 			// 		}
 			// 	}
-	
+
 			// 	.local-util {
 			// 		position: absolute;
 			// 		bottom: 48px;
 			// 		left: 50%;
 			// 		transform: translateX(-50%);
-	
+
 			// 		@include mobile() {
 			// 			bottom: 10rem;
 			// 		}
 			// 	}
-	
+
 			// 	&.active1 {
 			// 		opacity: 1;
-	
+
 			// 		.local-subject {
 			// 			top: 0;
 			// 		}
-	
+
 			// 		.local-aside {
 			// 			top: 0;
 			// 		}
-	
+
 			// 		.local-figure {
 			// 			width: 1200px;
 			// 			height: 200px;
@@ -320,59 +326,59 @@
 			// 			}
 			// 		}
 			// 	}
-	
+
 			// 	&.active2 {
 			// 		.local-subject {
 			// 			.local-name {
 			// 				color: custom-color(system, 070);
 			// 			}
 			// 		}
-	
+
 			// 		.local-aside {
 			// 			.loca-wrap {
 			// 				.local-title {
 			// 					color: custom-color(system, 070);
 			// 				}
-	
+
 			// 				.local-summary {
 			// 					color: custom-color(system, 070);
 			// 				}
 			// 			}
 			// 		}
-	
+
 			// 		.local-figure {
 			// 			width: 100vw;
 			// 			height: 100%;
 			// 			border-radius: 0;
-	
+
 			// 			video, img {
 			// 				width: 100%;
 			// 				height: 100%;
 			// 			}
-	
+
 			// 			&::after {
 			// 				background-color: rgba(0,0,0,0.5);
 			// 			}
 			// 		}
 			// 	}
 			// }
-	
+
 			// &.design5 {
 			// 	position: relative;
 			// 	width: 100%;
 			// 	padding: 14rem 0 0 0;
 			// 	margin: 0 auto;
-	
+
 			// 	@include mobile() {
 			// 		padding: 8.2rem 0 0;
 			// 	}
-	
+
 			// 	.local-info {
 			// 		@include mobile() {
 			// 			margin: 0 !important;
 			// 		}
 			// 	}
-	
+
 			// 	.local-subject {
 			// 		display: flex;
 			// 		position: relative;
@@ -381,25 +387,25 @@
 			// 		text-align: center;
 			// 		align-items: center;
 			// 		justify-content: center;
-	
+
 			// 		@include mobile() {
 			// 			//padding: 16rem 0;
 			// 			height: 50vh;
 			// 		}
-	
+
 			// 		.local-name {
 			// 			position: relative;
 			// 			color: custom-color(typo, 020);
 			// 			transform: translateY(30%);
 			// 			opacity: 0;
 			// 			@include font(large-5x, bold);
-	
+
 			// 			@include mobile() {
 			// 				@include font(medium, bold);
 			// 			}
 			// 		}
 			// 	}
-	
+
 			// 	.local-aside {
 			// 		display: flex;
 			// 		position: absolute;
@@ -409,24 +415,24 @@
 			// 		align-items: center;
 			// 		justify-content: center;
 			// 		z-index: 2;
-	
+
 			// 		.local-wrap {
 			// 			.local-title {
 			// 				color: custom-color(typo, 000);
 			// 				@include font(large-5x, bold);
-	
+
 			// 				@include mobile() {
 			// 					text-align: center;
 			// 					@include font(large-3x, bold);
 			// 				}
-	
+
 			// 				@at-root .en & {
 			// 					text-align: center;
 			// 				}
 			// 			}
 			// 		}
 			// 	}
-	
+
 			// 	.local-figure {
 			// 		position: relative;
 			// 		left: 50%;
@@ -437,7 +443,7 @@
 			// 		z-index: 1;
 			// 		opacity: 0;
 			// 		background-color: rgba(0, 0, 0, 0.0);
-	
+
 			// 		img {
 			// 			position: absolute;
 			// 			top: 0;
@@ -447,9 +453,9 @@
 			// 			transform: translateX(-50%);
 			// 			-o-object-fit: cover;
 			// 			object-fit: cover;
-	
+
 			// 			}
-	
+
 			// 			&::after {
 			// 				position: absolute;
 			// 				top: 0;
@@ -461,21 +467,21 @@
 			// 				transition: background-color .3s ease;
 			// 		}
 			// 	}
-	
+
 			// 	.local-util {
 			// 		position: fixed;
 			// 		top: calc(100vh - 4.8rem - 2.3rem);
 			// 		left: 50%;
 			// 		transform: translateX(-50%);
 			// 		z-index: 2;
-	
+
 			// 		@include mobile() {
 			// 			top: calc(100vh - 10rem - 2.3rem);
 			// 		}
 			// 	}
 			// }
 		}
-	
+
 		// .local-body {
 		// 	.content-head {
 		// 		display: block;
@@ -494,33 +500,33 @@
 		// 		pointer-events: none;
 		// 	}
 		// }
-	
+
 		.section {
-			
-	
+
+
 			// ~ .section {
 			// 	padding-bottom: 18rem;
-	
+
 			// }
-	
+
 			// normal
 			&.design1 {
 				max-width: 144rem;
 				margin: 0 auto;
 				padding-top: 12rem;
 			}
-	
+
 			// section-head와 section-body가 flex 되는 경우
 			&.design2 {
 				.section-wrap {
 					display: flex;
-	
+
 					@include mobile {
 						flex-direction: column;
 					}
 				}
 			}
-	
+
 			// // name과 util이 flex 되는 경우
 			// &.design3 {
 			// 	.section-head {
@@ -532,7 +538,7 @@
 			// 		.section-head {
 			// 			flex-direction: column;
 			// 			align-items: flex-start;
-	
+
 			// 			.section-name {
 			// 				+ .section-util {
 			// 					width: 100%;
@@ -542,7 +548,7 @@
 			// 		}
 			// 	}
 			// }
-	
+
 			// // section-body가 flex 되는 경우
 			// &.design4 {
 			// 	.section-body {
@@ -552,7 +558,7 @@
 			// 		}
 			// 	}
 			// }
-	
+
 			// &.design5 {
 			// 	.section-head {
 			// 		display: flex;
@@ -563,7 +569,7 @@
 			// 		.section-head {
 			// 			flex-direction: column;
 			// 			align-items: flex-start;
-	
+
 			// 			.section-name {
 			// 				+ .section-util {
 			// 					margin-top: 4.8rem;
@@ -572,7 +578,7 @@
 			// 		}
 			// 	}
 			// }
-	
+
 			&[class*=design] {
 				// space
 				&.style1{
@@ -580,7 +586,7 @@
 						.section-head {
 							+.section-body {
 								margin-top: 3.2rem;
-	
+
 								@include mobile {
 									margin-top: 2.4rem;
 								}
@@ -614,7 +620,7 @@
 						}
 					}
 				}
-	
+
 				&.style2 {
 					max-width: 100%;
 					.section-wrap {
@@ -634,7 +640,7 @@
 						}
 					}
 				}
-	
+
 				// &.case3 {
 				// 	.section-wrap {
 				// 		.section-head {
@@ -661,7 +667,7 @@
 				// 		}
 				// 	}
 				// }
-	
+
 				// &.case4 {
 				// 	.section-wrap {
 				// 		.section-head {
@@ -688,7 +694,7 @@
 				// 		}
 				// 	}
 				// }
-	
+
 				// &.case5 {
 				// 	.section-wrap {
 				// 		.section-caption {
@@ -765,7 +771,7 @@
 				// 		}
 				// 	}
 				// }
-	
+
 				// &.case7 {
 				// 	.section-wrap {
 				// 		.section-head {
@@ -798,7 +804,7 @@
 				// 		}
 				// 	}
 				// }
-	
+
 				// &.case8 {
 				// 	.section-wrap {
 				// 		.section-body {
@@ -817,7 +823,7 @@
 				// 		}
 				// 	}
 				// }
-	
+
 				// &.case9 {
 				// 	.section-wrap {
 				// 		.section-head {
@@ -850,13 +856,13 @@
 				// 		}
 				// 	}
 				// }
-	
+
 				// &.style0 {
 				// 	.section-wrap {
 				// 		.section-head {
 				// 			+.section-body {
 				// 				margin-top: 2.4rem;
-	
+
 				// 				@include mobile {
 				// 					margin-top: 1.6rem;
 				// 				}
@@ -872,7 +878,7 @@
 				// 		}
 				// 	}
 				// }
-	
+
 				// font style
 				&.type1 {
 					.section-caption {
@@ -882,56 +888,56 @@
 					.section-name {
 						@include font(medium, bold);
 						color: custom-color(typo, 020);
-	
+
 						@include mobile {
 							@include font(small-1x, bold);
 						}
-	
+
 						+.section-summary {
 							color: custom-color(typo, 010);
 							margin-top: 2.4rem;
 							@include font(small-3x, medium);
-	
+
 							@include mobile {
 								margin-top: 1.6rem;
 								@include font(small-4x, medium);
 							}
 						}
 					}
-	
+
 					.section-body {
 						>.para {
 							color: custom-color(typo, 010);
 							@include font(small-3x, medium);
-	
+
 							@include mobile {
 								@include font(small-4x, medium);
 							}
 						}
 					}
 				}
-	
+
 				&.type2 {
 					.section-name {
 						color: custom-color(typo, 020);
 						@include font(small-1x, bold);
-	
+
 						@include mobile {
 							@include font(small-2x, bold);
 						}
-	
+
 						+.section-summary {
 							color: custom-color(typo, 010);
 							margin-top: 1.6rem;
 							@include font(small-4x, medium);
-	
+
 							@include mobile {
 								margin-top: 1.6rem;
 								@include font(small-5x, medium);
 							}
 						}
 					}
-	
+
 					.section-body {
 						>.para {
 							color: custom-color(typo, 010);
@@ -942,12 +948,12 @@
 						}
 					}
 				}
-	
+
 				&.type3 {
 					.section-name {
 						color: custom-color(typo, 020);
 						@include font(large-3x, bold);
-	
+
 						@include mobile {
 							@include font(medium, bold);
 						}
@@ -955,14 +961,14 @@
 							color: custom-color(typo, 010);
 							margin-top: 2.4rem;
 							@include font(small-3x, medium);
-	
+
 							@include mobile {
 								margin-top: 1.6rem;
 								@include font(small-4x, medium);
 							}
 						}
 					}
-	
+
 					.section-body {
 						>.para {
 							color: custom-color(typo, 020);
@@ -981,13 +987,13 @@
 						}
 					}
 				}
-	
+
 				&.type4 {
 					.section-name {
 						color: #000;
 						@include font(small-4x, bold);
 					}
-	
+
 					.section-body {
 						>.para {
 							color: custom-color(typo, 010);
@@ -998,7 +1004,7 @@
 						}
 					}
 				}
-	
+
 				&.type5 {
 					.section-head {
 						.section-name {
@@ -1026,26 +1032,26 @@
 						}
 					}
 				}
-	
+
 				&.type6 {
 					.section-name {
 						@include font(small-1x, bold);
 						color: custom-color(typo, 020);
-	
+
 						@include mobile {
 							@include font(small-2x, bold);
 						}
-	
+
 						+.section-summary {
 							@include font(small-3x, medium);
 							color: custom-color(typo, 010);
-	
+
 							@include mobile {
 								@include font(small-4x, medium);
 							}
 						}
 					}
-	
+
 					.section-body {
 						>.para {
 							color: custom-color(typo, 010);
@@ -1056,22 +1062,22 @@
 						}
 					}
 				}
-	
+
 				&.type7 {
 					.section-name {
 						@include font(medium, bold);
 						color: custom-color(typo, 020);
-	
+
 						@include mobile {
 							@include font(small-1x, bold);
 						}
 					}
-	
+
 					.section-body {
 						>.para {
 							@include font(small-4x, medium);
 							color: custom-color(typo, 010);
-	
+
 							@include mobile {
 								@include font(small-5x, medium);
 							}
@@ -1082,44 +1088,44 @@
 					.section-name {
 						@include font(medium, bold);
 						color: custom-color(typo, 000);
-	
+
 						@include mobile {
 							@include font(small-1x, bold);
 						}
 					}
-	
+
 					.section-body {
 						>.para {
 							color: custom-color(typo, 000);
 							@include font(small-3x, medium);
-	
+
 							@include mobile {
 								@include font(small-4x, medium);
 							}
 						}
 					}
 				}
-	
+
 				// align
 				&.align1 {
 					.section-head {
 						text-align: left;
 					}
 				}
-	
+
 				&.align2 {
 					.section-caption,
 					.section-head {
 						text-align: right;
 					}
 				}
-	
+
 				&.align3 {
 					.section-head {
 						text-align: center;
 					}
 				}
-	
+
 				&.align4 {
 						.section-caption,
 						.section-head,
@@ -1128,7 +1134,7 @@
 						}
 				}
 			}
-	
+
 			// // 상세페이지 공통
 			// &.detail-layout {
 			// 	.section-wrap {
@@ -1163,7 +1169,7 @@
 			// 			}
 			// 		}
 			// 	}
-	
+
 			// 	@include mobile{
 			// 		.section-wrap{
 			// 			.section-head {
@@ -1202,13 +1208,13 @@
 			// 		}
 			// 	}
 			// }
-	
+
 			// // 별첨 공통
 			// .comment {
 			// 	&.design1 {
 			// 		color: custom-color(typo, 010);
 			// 		@include font(small-5x, medium);
-	
+
 			// 		@include mobile {
 			// 			@include font(small-6x, medium);
 			// 		}
@@ -1216,7 +1222,7 @@
 			// 	&.design2 {
 			// 		color: custom-color(system, 100);
 			// 		@include font(small-2x, bold);
-	
+
 			// 		@include mobile {
 			// 			@include font(small-3x, bold);
 			// 		}
@@ -1224,16 +1230,16 @@
 			// 	&.design3 {
 			// 		color: custom-color(system, 100);
 			// 		@include font(small-3x, bold);
-	
+
 			// 		@include mobile {
 			// 			@include font(small-4x, bold);
 			// 		}
 			// 	}
 			// }
 		}
-	
-	
-	
+
+
+
 		// breadcrumb
 		.local-info {
 			margin: 0 auto;
@@ -1241,33 +1247,33 @@
 			.data-list {
 				&.breadcrumb {
 					display: flex;
-	
+
 					&.design1 {
 						&.style1{
 							padding-top: 4rem;
 							justify-content: left;
-	
+
 							@include mobile {
 								padding-top: 8.2rem;
 							}
 						}
-	
+
 						&.style2 {
 							position: relative;
-	
+
 							@include mobile() {
 								justify-content: center;
 							}
-	
+
 							&.active1 {
 								opacity: 1;
 								transition: opacity 0.2s ease-out;
 							}
 						}
-	
+
 						&.dark {
 							color: custom-color(typo, 005);
-	
+
 							.data-item:last-child {
 								.item-text {
 									color: custom-color(neutral, 090);
@@ -1275,30 +1281,30 @@
 								}
 							}
 						}
-	
+
 						&.light {
 							color: custom-color(system, 070);
-	
+
 							.data-item:last-child {
 								.item-text {
 									font-weight: 700;
 								}
 							}
 						}
-	
+
 						.data-item {
 							position: relative;
 							flex-shrink: 0;
-	
+
 							.item-text {
 								position: relative;
 								@include font(small-5x, bold);
 								color: custom-color(neutral, 010);
 							}
-	
+
 							+.data-item {
 								margin-left: 3.2rem;
-	
+
 								.item-text {
 									&::before {
 										content: "";
@@ -1313,24 +1319,24 @@
 										transform: translateY(-50%);
 									}
 								}
-	
+
 								~ .data-item {
 									.item-text {
 										color: custom-color(neutral, 090);
 									}
 								}
 							}
-	
+
 							&:last-child {
 								flex-shrink: unset;
 							}
-	
+
 							&:first-child {
 								position: relative;
 								font-size: 0;
 								text-indent: -999px;
 								margin-right: 1.6rem;
-	
+
 								&::before {
 									content: "";
 									display: inline-block;
@@ -1344,17 +1350,17 @@
 									transform: translateY(-50%);
 								}
 							}
-	
+
 							@include mobile {
 								@include blind;
-	
+
 								.item-text {
 									@include font(small-6x, medium);
 								}
-	
+
 								+.data-item {
 									margin-left: 2.4rem;
-	
+
 									.item-text {
 										&::before {
 											top: -0.1rem;

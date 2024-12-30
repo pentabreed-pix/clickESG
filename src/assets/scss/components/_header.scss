@@ -486,7 +486,9 @@
 
                 .site-navi {
                     height: 100%;
+                    border-top: 1px solid #d9d9d9;
                     opacity: 1;
+                    overflow: auto;
                     .depth1-list {
                         .depth1-item {
                             .depth1 {

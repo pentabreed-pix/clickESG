@@ -212,6 +212,7 @@ function lenis() {
 
 // header
 function header() {
+    const $body = $('body');
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
     const $menu = $('.site-control .menu');
@@ -232,46 +233,58 @@ function header() {
         if (isDesktop()) {
             addDesktopEvents();
         } else {
+            $header.removeClass('menu-bar');
+            $('.depth1-item').removeClass('open');
+            $('.depth2-wrap').stop().slideUp();
             removeDesktopEvents();
         }
     };
 
     let lastScrollTop = 0;
 
+
     const handleScroll = () => {
-        let winScrollTop = $(window).scrollTop();
+        if($('#header').hasClass('menu-bar')) {
 
-        $header.toggleClass('scroll', winScrollTop > 0);
+            console.log('모바일메뉴 보이는 상태야')
+            return false;
+        }else {
+            console.log('모바일메뉴 안보이는 상태야')
+            let winScrollTop = $(window).scrollTop();
 
-        if (winScrollTop > lastScrollTop) {
-            $header.css('transform', 'translateY(-100px)');
-        } else {
-            $header.css('transform', 'translateY(0)');
+            $header.toggleClass('scroll', winScrollTop > 0);
+
+            if (winScrollTop > lastScrollTop) {
+                $header.css('transform', 'translateY(-100px)');
+            } else {
+                $header.css('transform', 'translateY(0)');
+            }
+            lastScrollTop = winScrollTop;
         }
 
-        lastScrollTop = winScrollTop;
     };
 
     // mobile
     const handleMobileMenuToggle = () => {
         $menu.on('click', () => {
+            $body.toggleClass('menu-open');
             $header.toggleClass('menu-bar');
         });
     };
 
     $('.depth1-item').click(function () {
         var $this = $(this);
-        
+
         $this.toggleClass('open');
         $this.find('.depth2-wrap').stop().slideToggle();
-    
+
         // 추가 사항
         $('.depth1-item').not($this).removeClass('open').find('.depth2-wrap').stop().slideUp();
     });
-    
 
 
-    
+
+
     initResponsiveEvents();
     handleMobileMenuToggle();
 
