@@ -258,7 +258,7 @@ function header() {
         $menu.on('click', () => {
             $header.toggleClass('menu-bar');
         });
-    
+\
         $header.on('mouseleave', () => {
             if (!$header.hasClass('menu-bar')) return;
             $header.removeClass('menu-bar');
@@ -269,9 +269,11 @@ function header() {
         e.stopPropagation();
     
         const $this = $(this);
+\
         $this.toggleClass('open');
         $this.find('.depth2-wrap').stop(true, true).slideToggle();
     
+\
         $('.depth1-item').not($this).removeClass('open')
             .find('.depth2-wrap').stop(true, true).slideUp();
     });
