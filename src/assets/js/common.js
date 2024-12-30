@@ -232,10 +232,12 @@ function header() {
     const initResponsiveEvents = () => {
         if (isDesktop()) {
             addDesktopEvents();
-        } else {
-            $header.removeClass('menu-bar');
             $('.depth1-item').removeClass('open');
             $('.depth2-wrap').stop().slideUp();
+            $body.removeClass('menu-open');
+            $header.removeClass('menu-bar');
+        } else {
+
             removeDesktopEvents();
         }
     };
@@ -266,21 +268,28 @@ function header() {
 
     // mobile
     const handleMobileMenuToggle = () => {
-        $menu.on('click', () => {
-            $body.toggleClass('menu-open');
-            $header.toggleClass('menu-bar');
-        });
+        if (isDesktop()) {
+            return false;
+        } else {
+            $menu.on('click', () => {
+                $body.toggleClass('menu-open');
+                $header.toggleClass('menu-bar');
+            });
+
+            $('.depth1-item').click(function () {
+                var $this = $(this);
+
+                $this.toggleClass('open');
+                $this.find('.depth2-wrap').stop().slideToggle();
+
+                // 추가 사항
+                $('.depth1-item').not($this).removeClass('open').find('.depth2-wrap').stop().slideUp();
+            });
+        }
+
     };
 
-    $('.depth1-item').click(function () {
-        var $this = $(this);
 
-        $this.toggleClass('open');
-        $this.find('.depth2-wrap').stop().slideToggle();
-
-        // 추가 사항
-        $('.depth1-item').not($this).removeClass('open').find('.depth2-wrap').stop().slideUp();
-    });
 
 
 
