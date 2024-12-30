@@ -65,6 +65,12 @@
                     }
                 }
             }
+
+            &:nth-child(even) {
+                .post-wrap {
+                    padding: 4rem 4rem 4rem 8rem
+                }
+            }
         }
     }
 
