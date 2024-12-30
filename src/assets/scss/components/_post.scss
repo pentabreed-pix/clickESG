@@ -10,10 +10,15 @@
             .post-wrap {
                 .post-figure {
                     img {
+                        width: 100%;
                         border-radius: 1.6rem;
                     }
                 }
             }
+        }
+
+        @include mobile {
+            flex-direction: column;
         }
     }
     &.design2 {
@@ -31,6 +36,18 @@
                 .post-figure {
                     img {
                         border-radius: 1.6rem;
+                    }
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+
+            @include mobile {
+                &:nth-child(even) {
+                    .post-wrap {
+                        flex-direction: column-reverse;
                     }
                 }
             }
@@ -64,11 +81,19 @@
                         }
                     }
                 }
+
+                @include mobile {
+                    padding: 4rem;
+                }
             }
 
             &:nth-child(even) {
                 .post-wrap {
-                    padding: 4rem 4rem 4rem 8rem
+                    padding: 4rem 4rem 4rem 8rem;
+
+                    @include mobile {
+                        padding: 4rem;
+                    }
                 }
             }
         }
