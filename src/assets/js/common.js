@@ -215,7 +215,6 @@ function header() {
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
     const $menu = $('.site-control .menu');
-    
 
     const isDesktop = () => window.innerWidth >= 1024;
 
@@ -258,33 +257,23 @@ function header() {
         $menu.on('click', () => {
             $header.toggleClass('menu-bar');
         });
-\
-        $header.on('mouseleave', () => {
-            if (!$header.hasClass('menu-bar')) return;
+    
+        // 애라 잡음
+        $header.on('mouseleave focusout', () => {
             $header.removeClass('menu-bar');
         });
     };
-    
-    $('.depth1-item').click(function (e) {
-        e.stopPropagation();
-    
-        const $this = $(this);
-\
+
+    $('.depth1-item').click(function () {
+        var $this = $(this);
+        
         $this.toggleClass('open');
-        $this.find('.depth2-wrap').stop(true, true).slideToggle();
+        $this.find('.depth2-wrap').stop().slideToggle();
     
-\
-        $('.depth1-item').not($this).removeClass('open')
-            .find('.depth2-wrap').stop(true, true).slideUp();
+        // 추가 사항
+        $('.depth1-item').not($this).removeClass('open').find('.depth2-wrap').stop().slideUp();
     });
-    
-    // 이벤트 충둘 해결
-    $(document).on('click', (e) => {
-        if (!$(e.target).closest('.menu-bar, .depth1-item').length) {
-            $('.depth1-item').removeClass('open').find('.depth2-wrap').slideUp();
-        }
-    });
-    
+
     
     initResponsiveEvents();
     handleMobileMenuToggle();
