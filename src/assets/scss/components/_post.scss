@@ -17,6 +17,10 @@
         }
     }
     &.design2 {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
         .post-item {
             .post-wrap {
                 display: flex;
@@ -51,8 +55,15 @@
     &.case2 {
         .post-item {
             .post-wrap {
-                padding: 4rem 4rem 8rem 4rem;
-                
+                padding: 4rem 8rem 4rem 4rem;
+
+                .post-head {
+                    .post-subject {
+                        + .post-summary {
+                            margin-top: 2.8rem
+                        }
+                    }
+                }
             }
         }
     }
@@ -64,6 +75,26 @@
                     .post-subject {
                         @include font(small-2x, medium);
                         color: custom-color(primary, 040);
+                    }
+                }
+            }
+        }
+    }
+
+    &.type2 {
+        .post-item {
+            .post-wrap {
+                .post-head {
+                    .post-subject {
+                        @include font(small, bold);
+                        color: custom-color(primary, 080);
+                        line-height: 190%;
+                        
+                        + .post-summary {
+                            @include font(small-2x, regular);
+                            color: custom-color(primary, 040);
+                            line-height: 160%;
+                        }
                     }
                 }
             }

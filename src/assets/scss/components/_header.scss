@@ -258,13 +258,15 @@
             padding: 0 1.8rem;
 
             .site-control {
+                display: inline-block;
                 position: absolute;
                 top: 50%;
-                right: 0;
+                right: 1.8rem;
                 transform: translateY(-50%);
 
                 .menu {
                     position: relative;
+                    display: inline-block;
                     width: 2rem;
                     height: 1.6rem;
                     &::after {
@@ -272,7 +274,7 @@
                         display: inline-block;
                         position: absolute;
                         top: 50%;
-                        right: 1.8rem;
+                        right: 0;
                         width: 2rem;
                         height: 1.6rem;
                         background: icon('menu', custom-color(neutral, 090)) no-repeat center;
