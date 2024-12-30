@@ -257,6 +257,11 @@ function header() {
         $menu.on('click', () => {
             $header.toggleClass('menu-bar');
         });
+    
+        // 애라 잡음
+        $header.on('mouseleave focusout', () => {
+            $header.removeClass('menu-bar');
+        });
     };
 
     $('.depth1-item').click(function () {
@@ -268,8 +273,6 @@ function header() {
         // 추가 사항
         $('.depth1-item').not($this).removeClass('open').find('.depth2-wrap').stop().slideUp();
     });
-    
-
 
     
     initResponsiveEvents();
