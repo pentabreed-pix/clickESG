@@ -188,7 +188,6 @@
                     .depth2-wrap {
                         display: none;
                         position: absolute;
-                        top: 1rem;
                         display: flex;
                         flex-direction: column;
                         visibility: visible;
@@ -197,6 +196,10 @@
                         opacity: 0;
                         visibility: hidden;
                         z-index: 2;
+
+                        @include mobile {
+                            top: 1rem;
+                        }
 
                         .depth2-list {
                             display: flex;
