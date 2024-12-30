@@ -272,6 +272,7 @@ function header() {
             return false;
         } else {
             $menu.on('click', () => {
+                //alert('hi')
                 $body.toggleClass('menu-open');
                 $header.toggleClass('menu-bar');
             });
