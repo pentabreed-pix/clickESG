@@ -1,0 +1,72 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+.post-list {
+    &.design1 {
+        display: flex;
+        gap: 2.4rem;
+        .post-item {
+            .post-wrap {
+                .post-figure {
+                    img {
+                        border-radius: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    &.design2 {
+        .post-item {
+            .post-wrap {
+                display: flex;
+                gap: 8rem;
+                align-items: center;
+                background-color: custom-color(etc, 060);
+                border-radius: 1.6rem;
+                .post-figure {
+                    img {
+                        border-radius: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.case1 {
+        .post-item {
+            .post-wrap {
+                .post-head {
+                    .post-subject {
+                       padding: 1.6rem 1.5rem 0;
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                margin-top: 5.6rem;
+            }
+        }
+    }
+    &.case2 {
+        .post-item {
+            .post-wrap {
+                padding: 4rem 4rem 8rem 4rem;
+                
+            }
+        }
+    }
+
+    &.type1 {
+        .post-item {
+            .post-wrap {
+                .post-head {
+                    .post-subject {
+                        @include font(small-2x, medium);
+                        color: custom-color(primary, 040);
+                    }
+                }
+            }
+        }
+    }
+}
