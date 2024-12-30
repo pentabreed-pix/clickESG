@@ -74,7 +74,7 @@ function pubListUp() {
           id_ko: "",
           menu: "SCM Assessment",
           root_ko: "../../page/solution/SOLUTION.02.00.html",
-          status_ko: "",
+          status_ko: "진행",
           worker_ko: "",
           history: "",
         },

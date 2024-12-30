@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'service',
+	pageJavascript: ''
+}) %>
+<script src="./../../assets/js/main.js"></script>
+
+</head>
+<body>
+<div id="wrap" class="page">
+    <%-include('../_templates/_header.ejs', {type: 'white',})%>
+    <!-- main -->
+    <main class="page solution-esg">
+        <div class="main-inner">
+            <div class="local design1">
+                <div class="local-head design2">
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'SOLUTION',
+                        depth2: 'ESG ASSESSMENT',
+                        depth3: null,
+                        casetype: 'case2'
+                    }) %>
+                    <div class="local-subject">
+                        <h2 class="local-name">
+                            Supply Chain ESG Assessment<br>(공급망 ESG 진단 솔루션)
+                        </h2>
+                        <p class="local-summary">공급망 협력사의 ESG 위험을 진단하고 ESG 대응수준을 향상할 수 있도록<br>온라인 중심 진단/평가를 수행하며, 도출된 Risk의 대응 방안을 제공합니다.
+                        </p>
+                    </div>
+                    <div class="local-figure">
+                        <div class="figure-wrapper">
+                            <img src="../../assets/images/solution/bg-local-head-solution-scm.jpg" alt="" class="bg">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="local-body">
+                    <div class="content-body">            
+                        <div class="section design1 case1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <div class="section-name">ESG 공급망 진단에 대한 기업의 요구사항</div>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="post-list design1 case1 type1">
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-scm01.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">합리적이고 신뢰성 있는 평가방법론과 프로세스 지원</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-scm02.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">최신 동향 및 규제 변화에 다른 신속한 대응 요구</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-scm03.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">비교 가능하고 객관적인 ESG 경영관리 수준 파악</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-scm04.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">진단기업에게 예측 가능한 ESG 진단 결과와 근거를 제시</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section design1 case1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <div class="section-name">솔루션 주요 특징 (Key Feature)</div>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="post-list design2 case2 type2">
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/clickscm-01.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">편리하고 직관적인 기능</p>
+                                                    <p class="post-summary">ClickESG SCM Assessment는 진단 지표별로 상세하고 구체적인 기준과 증빙 자료가 정의되어 있어 ESG 전문지식과 인력이 부족한 진단 기업의 부담을 최소화할 수 있습니다. 아울러 진단 상세 온라인 가이드, 전년 데이터 복사 기능 등 사용자 편의 기능을 제공하여 빠르고 정확한 진단 수행이 가능하도록 도와 줍니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-head">
+                                                    <p class="post-subject">공급망 원청기업 관점의 특화 기능</p>
+                                                    <p class="post-summary">원청 기업의 공급망 관리 전략과 필요에 따라 특화 평가모델이 요구되는 경우에도 플랫폼 설정 기능과 산업군 및 지표 선택 기능을 통하여 손쉽게 평가모델을 구현하고 진단할 수 있습니다.</p>
+                                                </div>
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/clickscm-02.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/clickscm-03.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">진단 확장성 및 결과 활용</p>
+                                                    <p class="post-summary">다국어 지원이 가능하여 국내 뿐 아니라 해외사업장의 공급망 ESG진단을 지원할 수 있습니다. 진단 결과에 대한 직관적이면서 상세한 분석 내용이 제공되며, 진단 과정에서 수집된 ESG Data도 체계적으로 정리하여 진단기업이 손쉽게 ESG 공시에 활용할 수 있도록 지원합니다.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-head">
+                                                    <p class="post-subject">시뮬레이션 및 프로세스 기능</p>
+                                                    <p class="post-summary">ESG 진단 결과 및 지표의 중요성 및 이행 용이성을 고려한 개선 과제를 자동적으로 제시합니다. 이를 통해 ESG 경영 수준의 개선 효과를 사전에 시뮬레이션할 수 있으며 원청사와 진단 기업의 개선 목표와 여건에 따라 유연하게 적용할 수 있도록 각 이해관계자가 참여하는 온라인 프로세스를 통해 구체적인 개선과제가 결정됩니다.</p>
+                                                </div>
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/clickscm-04.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+     <!-- // main -->
+     <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
+       
+            
+
