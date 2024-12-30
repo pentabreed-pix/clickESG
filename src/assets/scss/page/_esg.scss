@@ -154,7 +154,7 @@
                 }
             }
             .form.radio {
-                &.case1 {
+                &.style1{
                     .radio-item input[type=radio] {
                         margin-right: 0;
                     }
@@ -1292,7 +1292,7 @@
         &.governance-structure {
             .section {
                 &.structure {
-                    .data-display.design1.case2 {
+                    .data-display.design1.style2 {
                         > .data-list {
                             > .data-item {
                                 + .data-item {
@@ -1302,7 +1302,7 @@
                         }
                     }
                     @include mobile {
-                        .data-display.design1.case2 {
+                        .data-display.design1.style2 {
                             > .data-list {
                                 > .data-item {
                                     + .data-item {
@@ -2513,7 +2513,7 @@
             .bg-shadow-layout {
                 border-radius: 1.6rem;
                 box-shadow: 0px 1.33562px 5.34247px rgba(0, 0, 0, 0.1);
-                &.case1 {
+                &.style1{
                     padding: 8rem 6.4rem;
                     @include mobile {
                         padding: 4.8rem 3.2rem;
@@ -2526,7 +2526,7 @@
                         }
                     }
                 }
-                &.case2 {
+                &.style2 {
                     padding: 6.4rem;
                     @include mobile {
                         padding: 3.2rem 2.4rem;

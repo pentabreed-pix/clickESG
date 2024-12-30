@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'service',
+	pageJavascript: ''
+}) %>
+<script src="./../../assets/js/main.js"></script>
+
+</head>
+<body>
+<div id="wrap" class="page">
+    <%-include('../_templates/_header.ejs', {type: 'white',})%>
+    <!-- main -->
+    <main class="page solution-cdp">
+        <div class="main-inner">
+            <div class="local design1">
+                <div class="local-head design2">
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'SOLUTION',
+                        depth2: 'CDP Assistance',
+                        depth3: null,
+                        casetype: 'style2'
+                    }) %>
+                    <div class="local-subject">
+                        <h2 class="local-name">
+                            CDP AI Assistant <br>(Carbon Disclosure Project AI 지원 솔루션)
+                        </h2>
+                        <p class="local-summary">신속하고 정확한 CDP 평가 대응을 위하여 공식 Database로 학습된 AI 기능으로 <br>CDP 응답 자문 서비스를 이용해 보세요.                            
+                        </p>
+                    </div>
+                    <div class="local-figure">
+                        <div class="figure-wrapper">
+                            <img src="../../assets/images/solution/bg-local-head-solution-cdp.jpg" alt="" class="bg">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="local-body">
+                    <div class="content-body">            
+                        <div class="section design1 style1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <div class="section-name">CDP 평가 대응시 기업의 애로사항</div>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="post-list design1 style1 type1">
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-cdp01.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">CDP 평가 대응 경험이 부족한 기업은 CDP 문항의 의미를 이해하기 어려움</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-cdp02.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">요구하는 답변을 정확하게 기술하는데 애로사항이 있음
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-cdp03.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">평가 응답에 따른 CDP 평가 결과 예측 가능성이 낮음</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/solution-cdp04.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">동종/유사기업의 Best Practice 응답내용을 참고할 수 있는 Reference가 없음</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section design1 style1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <div class="section-name">솔루션 주요 특징 (Key Feature)</div>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="post-list design2 style2 type2">
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/clickcdp-01.jpg" alt="">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-subject">즉각적인 CDP 평가 결과 예측</p>
+                                                    <p class="post-summary">CDP 문항은 사용자가 주어진 항목에서 응답 내용을 고르는 선택형 응답과 해당 질문에 대해 내용을 기술하는 서술형 응답 유형으로 나누어 집니다. 작성된 문항 응답은 G.AI 기술로 분석되어 사용자에게 즉각적인 예상점수를 제공합니다. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-head">
+                                                    <p class="post-subject">AI 학습 기반 응답 제공</p>
+                                                    <p class="post-summary">ClickESG CDP Assistance는 ①누적 응답기반 ②동종업종 응답 기반 ③작성자 Prompt 기반으로 학습된 G.AI 응답 서술 지원 기능이 구현되어 있어 의미 해석이 어려운 다수의 CDP 문항에도 사용자가 빠르고 정확한 응답이 가능하게 합니다.</p>
+                                                </div>
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/solution/clickcdp-02.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+     <!-- // main -->
+     <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
+       
+            
+

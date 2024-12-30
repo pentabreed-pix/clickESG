@@ -266,9 +266,6 @@
 
                 .menu {
                     position: relative;
-                    display: inline-block;
-                    width: 2rem;
-                    height: 1.6rem;
                     &::after {
                         content: "";
                         display: inline-block;
@@ -322,18 +319,27 @@
             @include mobile {
                 .menu {
                     position: relative;
+                    display: inline-block;
+                    width: 2rem;
+                    height: 1.6rem;
                     &::after {
                         content: "";
                         display: inline-block;
                         position: absolute;
                         top: 50%;
-                        right: 1.8rem;
+                        right: 0;
                         width: 2rem;
                         height: 1.6rem;
                         background: icon('menu', custom-color(secondary, 060)) no-repeat center;
                         background-size: 10%;
                         transform: translateY(-50%);
                     }
+                }
+            }
+
+            .menu {
+                &::after {
+                    background: icon('menu', custom-color(secondary, 060)) no-repeat center;
                 }
             }
         }
@@ -368,11 +374,11 @@
                         }
                     }
                 }
-            }
 
-            .menu {
-                &::after {
-                    background: icon('menu', custom-color(neutral, 090)) no-repeat center;
+                .menu {
+                    &::after {
+                        background: icon('menu', custom-color(neutral, 090)) no-repeat center;
+                    }
                 }
             }
         }
@@ -413,11 +419,11 @@
                 }
             }
 
-            // .menu {
-            //     &::after {
-            //         background: icon('menu', custom-color(neutral, 090)) no-repeat center;
-            //     }
-            // }
+            .menu {
+                &::after {
+                    background: icon('menu', custom-color(neutral, 090)) no-repeat center;
+                }
+            }
         }
     }
 

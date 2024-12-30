@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'service',
+	pageJavascript: ''
+}) %>
+<script src="./../../assets/js/main.js"></script>
+
+</head>
+<body>
+<div id="wrap" class="page">
+    <%-include('../_templates/_header.ejs', {type: 'white',})%>
+    <!-- main -->
+    <main class="page solution-cdp">
+        <div class="main-inner">
+            <div class="local design1">
+                <div class="local-head design2">
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'SOLUTION',
+                        depth2: 'Net-Zero',
+                        depth3: null,
+                        casetype: 'style2'
+                    }) %>
+                    <div class="local-subject">
+                        <h2 class="local-name">
+                            Net-Zero Management<br>(온실가스 관리 솔루션)
+                        </h2>
+                        <p class="local-summary">End-to-end carbon management platform<br>
+                            고객의 지속가능한 미래를 위해 필요한 모든 기능이 갖춰져 있습니다
+                        </p>
+                    </div>
+                    <div class="local-figure">
+                        <div class="figure-wrapper">
+                            <img src="../../assets/images/solution/bg-local-head-solution-net.jpg" alt="" class="bg">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="local-body">
+                    <div class="content-body">            
+                        <div class="section design1 style2 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">PRODUCT</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="data-display">
+                                        <div class="data-list">
+                                            <div class="data-item">
+                                                <div class="data-body">
+                                                    <div class="bullet-display design1 style1 type1">
+                                                        <ul class="data-list">
+                                                            <li class="data-item">ClickESG Net-Zero 플랫폼은 사용이 간편하면서도 강력한 탄소관리 솔루션을 제공합니다.</li>
+                                                            <li class="data-item">다수의 고객이 어려워하는 탄소중립 목표를 손쉽게 달성할 수 있도록 지원하며, 효율적인 배출량 산정과 분석도구를 통해 지속 가능한 미래로 나아가는 길을 함께합니다. </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-util">
+                                    <div class="util-info">복잡한 탄소 관리를 쉽게, 진단부터 기후공시 대응까지,<br>
+                                        ClickESG Net Zero는 고객의 지속가능한 성장을 지원합니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+     <!-- // main -->
+     <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
+       
+            
+

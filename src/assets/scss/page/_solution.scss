@@ -51,13 +51,37 @@
             }
         }
 
-        &.solution-esg {
-            .local-head {
-                .local-figure {
-                    img {
-                        width: 100%;
-                        border-radius: 2.5rem;
-                    }
+    }
+    .solution-esg {
+        .local-head {
+            .local-figure {
+                img {
+                    width: 100%;
+                    border-radius: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .solution-cdp {
+        .section {
+            .section-util {
+                width: 100vw;
+                height: 32rem;
+                margin-left: -6rem;
+                margin-right: -6rem;
+                margin-top: 6.4rem;
+                background: url('../../assets/images/solution/net-zero-bg.jpg') no-repeat center;
+                background-size: cover;
+
+                .util-info {
+                    max-width: 144rem;
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    @include font(small, medium);
+                    color: custom-color(secondary, 060)
                 }
             }
         }

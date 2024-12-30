@@ -402,7 +402,7 @@
                                 background: transparent;
                             }
                         }
-                        &.chart-display.case1 {
+                        &.chart-display.style1{
                             margin-top: -2.2rem !important;
                             @include mobile {
                                 margin-top: 2.4rem !important;
@@ -669,7 +669,7 @@
                     }
                 }
 
-                & ~ .section.design1.case1 {
+                & ~ .section.design1.style1{
                     margin-top: 16rem;
                     .section-wrap{
                         flex-direction: column;
@@ -679,13 +679,13 @@
                     }
                 }
 
-                &.design1.case1 {
-                    + .section.design1.case2 {
+                &.design1.style1{
+                    + .section.design1.style2 {
                         margin-top: 8rem;
                     }
                 }
     
-                &.design1.case2 {
+                &.design1.style2 {
                     .board-list.design21 {
                         .board-item {
                             > .data-display {
@@ -705,7 +705,7 @@
                             }
                         }
                     }
-                    + .section.design1.case2 {
+                    + .section.design1.style2 {
                         margin-top: 6.4rem;
                     }
                 }
@@ -744,18 +744,18 @@
                             }
                         }
                     }
-                    & ~ .section.design1.case1 {
+                    & ~ .section.design1.style1{
                         margin-top: 8rem;
                     }
     
-                    &.design1.case1 {
-                        + .section.design1.case2 {
+                    &.design1.style1{
+                        + .section.design1.style2 {
                             margin-top: 4.8rem;
                         }
                     }
         
-                    &.design1.case2 {
-                        + .section.design1.case2 {
+                    &.design1.style2 {
+                        + .section.design1.style2 {
                             margin-top: 3.2rem;
                         }
                     }

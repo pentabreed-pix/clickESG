@@ -35,7 +35,7 @@
         }
     }
 
-    &.case1 {
+    &.style1{
         .data-item {
             .data-head {
                 width: 32rem;
@@ -104,7 +104,7 @@
 /* bullet list */
 .bullet-display {
     &.design1 {
-        &.case1 {
+        &.style1{
             >.data-list {
                 >.data-item {
                     display: flex;
