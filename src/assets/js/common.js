@@ -215,38 +215,90 @@ function header() {
     const $body = $('body');
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
-    const $menu = $('.site-control .menu');
-
+    const $depth1Item = $('.depth1-list .depth1-item');
+    const $depth1Link = $('.depth1-list .depth1-item .depth1');
+    const $pageControl = $('.page-control .goto-page-navi');
+    
     const isDesktop = () => window.innerWidth >= 1024;
 
     const addDesktopEvents = () => {
-        $depth1List.on('mouseenter focusin', () => $header.addClass('active'));
-        $header.on('mouseleave focusout', () => $header.removeClass('active'));
+        let timerIdFocus = '';
+
+        $depth1List.on('mouseenter focusin', function() {
+            $header.addClass('pc-menu-open');
+            clearTimeout(timerIdFocus);
+        });
+
+        $header.on('mouseleave focusout', function() {
+            timerIdFocus = setTimeout(function() {
+                $header.removeClass('pc-menu-open');
+            }, 200);
+        });
     };
 
     const removeDesktopEvents = () => {
         $depth1List.off('mouseenter focusin');
         $header.off('mouseleave focusout');
+        $header.removeClass('pc-menu-open');
     };
 
-    const initResponsiveEvents = () => {
+    const removeMobileEvents = () => {
+        $body.removeClass('mo-menu-open');
+        $header.removeClass('mo-menu-open');
+
+        $('.depth1-item').removeClass('open');
+        $('.depth2-wrap').css({'height': 0 +'px'});
+    };    
+
+    const initHeaderPcEvent = () => {
         if (isDesktop()) {
             addDesktopEvents();
-            $('.depth1-item').removeClass('open');
-            $('.depth2-wrap').stop().slideUp();
-            $body.removeClass('menu-open');
-            $header.removeClass('menu-bar');
+            removeMobileEvents();
         } else {
-
             removeDesktopEvents();
         }
     };
 
+    $pageControl.on('click', () => {
+        if (isDesktop()) {
+            return false;
+        } else {
+            if($header.hasClass('mo-menu-open')){
+                $body.removeClass('mo-menu-open');
+                $header.removeClass('mo-menu-open');
+            }else{
+                $body.addClass('mo-menu-open');
+                $header.addClass('mo-menu-open');
+            }
+        }        
+    });
+
+    $depth1Link.click(function () {
+        var $this = $(this);
+        var $this2depthH = $this.next('.depth2-wrap').find('.depth2-list').innerHeight();
+
+        if (isDesktop()) {
+            return false;
+        } else {
+            if( $this.closest('.depth1-item').hasClass('open')){
+                console.log('이게뭐냐1')
+                $this.closest('.depth1-item').removeClass('open');
+                $this.next('.depth2-wrap').css({'height': 0 +'px'})
+                
+            }else{
+                console.log('이게뭐냐2')
+                $('.depth1-item').removeClass('open');
+                $('.depth2-wrap').css({'height': 0 +'px'});
+                $this.closest('.depth1-item').addClass('open');
+                $this.next('.depth2-wrap').css({'height': $this2depthH +'px'})
+            }
+        }
+    });
+
     let lastScrollTop = 0;
 
-
     const handleScroll = () => {
-        if($('#header').hasClass('menu-bar')) {
+        if($('#header').hasClass('mo-menu-open')) {
 
             console.log('모바일메뉴 보이는 상태야')
             return false;
@@ -266,39 +318,9 @@ function header() {
 
     };
 
-    // mobile
-    const handleMobileMenuToggle = () => {
-        if (isDesktop()) {
-            return false;
-        } else {
-            $menu.on('click', () => {
-                //alert('hi')
-                $body.toggleClass('menu-open');
-                $header.toggleClass('menu-bar');
-            });
+    initHeaderPcEvent();
 
-            $('.depth1-item').click(function () {
-                var $this = $(this);
-
-                $this.toggleClass('open');
-                $this.find('.depth2-wrap').stop().slideToggle();
-
-                // 추가 사항
-                $('.depth1-item').not($this).removeClass('open').find('.depth2-wrap').stop().slideUp();
-            });
-        }
-
-    };
-
-
-
-
-
-
-    initResponsiveEvents();
-    handleMobileMenuToggle();
-
-    window.addEventListener('resize', initResponsiveEvents);
+    window.addEventListener('resize', initHeaderPcEvent);
     window.addEventListener('scroll', handleScroll);
 }
 
