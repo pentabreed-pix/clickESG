@@ -6,11 +6,11 @@ frontCommon.Html = (function () {
         reset: function () {
             frontCommonResize();
             frontCommonScroll();
+            lenis();
             header();
 
             //footer();
             //localAnimations();
-            //lenis();
             //business_Interaction();
             //scrollTopBtn();
             sectionActiveInteraction('.page .section');
@@ -25,6 +25,8 @@ if (instance) {
 }
 })();
 
+let lenisBody, lenisNav;
+
 function frontCommonResize() {
     window.addEventListener("resize", () => {
         sectionActiveInteraction('.page .section');
@@ -36,178 +38,32 @@ function frontCommonScroll() {
         sectionActiveInteraction('.page .section');
     });
 }
+
 function lenis() {
-    let lenis = new Lenis()
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-    const _header = document.getElementById("header")
-    const siteNavi = _header.querySelector(".site-navi")
-    const menuHeader = _header.querySelector(".btn.menu-header")
-    const modalData = document.querySelectorAll('[data-bs-toggle="modal"]')
-    const modal = document.querySelectorAll(".modal");
+    const $body = $('body');
+    const $siteNavi = $('.site-navi');
 
-
-    window.addEventListener("scroll", () => {
-        if(lenis.direction == -1) {
-            _header.classList.add("up-color")
-            _header.classList.remove("regular")
-            _header.classList.remove("regular-focus")
-            siteNavi.classList.remove("close")
-            if(lenis.animatedScroll < 5) {
-                _header.classList.remove("up-color")
-            }
-        } else {
-            siteNavi.classList.add("close")
-            const focusedElement = document.activeElement
-            if(focusedElement.closest(".depth1-item") || _header.classList.contains("hover")) {
-                _header.classList.add("regular-focus")
-                _header.classList.remove("regular")
-                if(lenis.animatedScroll < 5) {
-                    _header.classList.remove("regular-focus")
-                }
-            } else {
-                if(!_header.classList.contains("open")) {
-                    _header.classList.add("regular")
-                    _header.classList.remove("regular-focus")
-                    if(lenis.animatedScroll < 5) {
-                        _header.classList.remove("up-color")
-                        _header.classList.remove("regular")
-                    }
-                }
-            }
-        }
-    })
-
-    if(lenis.animatedScroll < window.innerHeight) {
-        _header.classList.remove("regular")
-        _header.classList.remove("regular-focus")
-    } else {
-        _header.classList.add("regular")
-    }
-
-    // Mo 헤더 메뉴 클릭시 lenis stop
-    menuHeader.addEventListener("click", function() {
-        const wrap = document.getElementById("wrap")
-        if(_header.classList.contains("open")) {
-            lenis = new Lenis()
-        } else {
-            wrap.removeAttribute("style")
-            lenis.destroy();
-        }
-    })
-    window.addEventListener("resize", () => {
-        const _width = window.innerWidth
-        if(_width >= 1024) {
-            if(modal) {
-                modal.forEach(modal => {
-                    if(modal.classList.contains("show")) {
-                        return;
-                    } else {
-                        lenis = new Lenis()
-                    }
-                });
-            }
-        } else {
-            // lenis.destroy();
-        }
-    })
-
-
-    // 팝업창 lenis 스크롤 destroy
-    if(modalData) {
-        modalData.forEach(modalData => {
-            modalData.addEventListener("click", function() {
-                _header.style.top = "-7.2rem"
-                modal.forEach(modal => {
-                    if(modal.classList.contains("show")) {
-                        lenis.destroy();
-                    }
-                });
-            });
+    if ($body.length) {
+        lenisBody = new Lenis({
+            wrapper: $body[0],
+            content: $body.find('#wrap')[0]
         });
     }
 
-    modal.forEach(modal => {
-        if(modal) {
-            const close = modal.querySelector(".modal-close")
-            close.addEventListener("click", function() {
-                lenis = new Lenis()
-                _header.removeAttribute("style")
-            })
-        }
-    });
-
-    const main = document.getElementById("main")
-    if(main.classList.contains("sk-main")) {
-        const media = document.querySelector(".section.media")
-        let press = media.querySelector(".press-media")
-        const sns = media.querySelector(".sns-media")
-        if(media && sns) {
-            gsap.to(press, {
-                scrollTrigger: {
-                    trigger: sns,
-                    start: "top bottom",
-                    end: "top bottom",
-
-                    onEnter: function() {
-                        const _width = window.innerWidth
-                        if(_width >= 1024) {
-                            press.style.top = window.innerHeight - press.offsetHeight + "px"
-                        }
-                    },
-
-                    onLeave: function() {
-                        const _width = window.innerWidth
-                        if(_width >= 1024) {
-                            lenis.stop();
-                            media.classList.add("active2")
-                            press = media.querySelector(".press-media")
-
-                            sns.style.marginTop = -press.offsetHeight + "px"
-
-                            setTimeout(() => {
-                                lenis.start();
-                            }, 1000);
-                        }
-                    },
-                    onEnterBack: function() {
-                        const _width = window.innerWidth
-                        if(_width >= 1024) {
-                            lenis.stop();
-                            media.classList.remove("active2")
-                            sns.style.marginTop = "0"
-                            press.style.top = window.innerHeight - press.offsetHeight + "px"
-                            setTimeout(() => {
-                                lenis.start();
-                            }, 1000);
-                        }
-                    }
-
-                }
-            })
-        }
+    if ($siteNavi.length) {
+        lenisNav = new Lenis({
+            wrapper: $siteNavi[0],
+            content: $siteNavi.find('.depth1-list')[0],
+            duration: 2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+        });
     }
 
-    document.addEventListener("keydown", (e) => {
-        if(e.key === 'Tab') {
-            setTimeout(() => {
-                const media = document.querySelector(".sk-main .section.media")
-                const focusedElement = document.activeElement
-                if(media) {
-                    let press = media.querySelector(".press-media")
-                    if(focusedElement.closest(".press-media")) {
-                        window.scrollTo(0, media.offsetTop + press.style.getPropertyValue(top))
-                    }
-                    if(focusedElement.classList.contains("newest-link") && !e.shiftKey) {
-                        window.scrollTo(0, press.offsetTop - press.offsetHeight + 300)
-                    }
-                }
-            }, 0);
-        }
-    })
+    function raf(time) {
+        (lenisBody && lenisBody.raf(time)) || (lenisNav && lenisNav.raf(time));
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
 }
 
 // header
@@ -218,26 +74,31 @@ function header() {
     const $depth1Item = $('.depth1-list .depth1-item');
     const $depth1Link = $('.depth1-list .depth1-item .depth1');
     const $pageControl = $('.page-control .goto-page-navi');
-    
+    const $firstDepth1Item = $('.depth1-list .depth1-item').first();
+    const $firstDepth1 = $firstDepth1Item.find('.depth1').first();
+
     const isDesktop = () => window.innerWidth >= 1024;
 
     const addDesktopEvents = () => {
         let timerIdFocus = '';
 
-        $depth1List.on('mouseenter focusin', function() {
+        $depth1Item.on('mouseenter focusin', function() {
             $header.addClass('pc-menu-open');
             clearTimeout(timerIdFocus);
+            $depth1Item.removeClass('on');
+            $(this).addClass('on');
         });
 
         $header.on('mouseleave focusout', function() {
             timerIdFocus = setTimeout(function() {
                 $header.removeClass('pc-menu-open');
+                $depth1Item.removeClass('on');
             }, 200);
         });
     };
 
     const removeDesktopEvents = () => {
-        $depth1List.off('mouseenter focusin');
+        $depth1Item.off('mouseenter focusin');
         $header.off('mouseleave focusout');
         $header.removeClass('pc-menu-open');
     };
@@ -248,12 +109,13 @@ function header() {
 
         $('.depth1-item').removeClass('open');
         $('.depth2-wrap').css({'height': 0 +'px'});
-    };    
+    };
 
     const initHeaderPcEvent = () => {
         if (isDesktop()) {
             addDesktopEvents();
             removeMobileEvents();
+            lenisBody.start();
         } else {
             removeDesktopEvents();
         }
@@ -264,13 +126,28 @@ function header() {
             return false;
         } else {
             if($header.hasClass('mo-menu-open')){
-                $body.removeClass('mo-menu-open');
                 $header.removeClass('mo-menu-open');
+                setTimeout(() => {
+                    $body.removeClass('mo-menu-open');
+                }, 200);
+                lenisBody.start();
             }else{
                 $body.addClass('mo-menu-open');
                 $header.addClass('mo-menu-open');
+                lenisBody.stop();
+
+                $(document).on('keydown', function(e) {
+                    if (e.key === 'Tab') {
+                        setTimeout(() => {
+                            if ($firstDepth1.length) {
+                                $firstDepth1.focus();
+                                $(document).off('keydown');
+                            }
+                        }, 10);
+                    }
+                });
             }
-        }        
+        }
     });
 
     $depth1Link.click(function () {
@@ -281,12 +158,10 @@ function header() {
             return false;
         } else {
             if( $this.closest('.depth1-item').hasClass('open')){
-                console.log('이게뭐냐1')
                 $this.closest('.depth1-item').removeClass('open');
                 $this.next('.depth2-wrap').css({'height': 0 +'px'})
-                
+
             }else{
-                console.log('이게뭐냐2')
                 $('.depth1-item').removeClass('open');
                 $('.depth2-wrap').css({'height': 0 +'px'});
                 $this.closest('.depth1-item').addClass('open');
@@ -299,11 +174,8 @@ function header() {
 
     const handleScroll = () => {
         if($('#header').hasClass('mo-menu-open')) {
-
-            console.log('모바일메뉴 보이는 상태야')
             return false;
         }else {
-            console.log('모바일메뉴 안보이는 상태야')
             let winScrollTop = $(window).scrollTop();
 
             $header.toggleClass('scroll', winScrollTop > 0);
@@ -315,7 +187,6 @@ function header() {
             }
             lastScrollTop = winScrollTop;
         }
-
     };
 
     initHeaderPcEvent();
