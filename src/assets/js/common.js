@@ -8,12 +8,12 @@ frontCommon.Html = (function () {
             frontCommonScroll();
             lenis();
             header();
+            activeAnimationType1();
 
             //footer();
             //localAnimations();
             //business_Interaction();
             //scrollTopBtn();
-            sectionActiveInteraction('.page .section');
         },
     };
     return instance;
@@ -29,16 +29,15 @@ let lenisBody, lenisNav;
 
 function frontCommonResize() {
     window.addEventListener("resize", () => {
-        sectionActiveInteraction('.page .section');
     });
 }
 
 function frontCommonScroll() {
     window.addEventListener("scroll", () => {
-        sectionActiveInteraction('.page .section');
     });
 }
 
+// lenis
 function lenis() {
     const $body = $('body');
     const $siteNavi = $('.site-navi');
@@ -65,7 +64,6 @@ function lenis() {
     }
     requestAnimationFrame(raf);
 }
-
 // header
 function header() {
     const $body = $('body');
@@ -194,7 +192,7 @@ function header() {
     window.addEventListener('resize', initHeaderPcEvent);
     window.addEventListener('scroll', handleScroll);
 }
-
+// tab
 function Tab() {
     const tabDisplay = document.querySelectorAll(".tab-display")
     tabDisplay.forEach(tab => {
@@ -302,7 +300,7 @@ function Tab() {
         freeMode: true,
     });
 }
-
+// input
 function input() {
     const form = document.querySelectorAll(".form")
     form.forEach(input => {
@@ -323,23 +321,25 @@ function input() {
         }
     });
 }
+// input
+function activeAnimationType1() {
+    gsap.utils
+    .toArray('[active-animation="type-1"]')
+    .forEach((section, index) => {
+        gsap.to(section, {
+            scrollTrigger: {
+                //markers: true,
+                trigger: section,
+                start: "top 98%",
+                end: "top bottom",
 
-function sectionActiveInteraction(selector) {
-    $(selector).each(function() {
-        var $selector = $(this);
-        var start = $selector.offset().top - $(window).innerHeight() +300;
-        var end = $selector.offset().top + $selector.innerHeight() +300;
-        var scrollAmt = $(document).scrollTop();
-
-        if (scrollAmt < start) {
-            $selector.removeClass('active');
-        } else if (scrollAmt > end) {
-            $selector.removeClass('active');
-        } else {
-            if( $selector.hasClass('active') === false) {
-                $selector.removeClass('active');
-            }
-            $selector.addClass('active');
-        }
+                onEnter: function (self) {
+                    section.classList.add("active-animation-01");
+                },
+                onLeaveBack: function (self) {
+                    section.classList.remove("active-animation-01");
+                },
+            },
+        });
     });
 }

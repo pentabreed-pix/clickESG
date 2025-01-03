@@ -10,7 +10,6 @@
 <script>
     document.addEventListener('DOMContentLoaded',function(){
         mainVisual();
-        Tab();
     });
 </script>
 </head>
@@ -30,10 +29,10 @@
                             <div class="swiper swiper-list bg">
                                 <ul class="swiper-wrapper">
                                     <li class="swiper-slide swiper-item">
-                                        <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-01.mp4"></video>
+                                        <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-02.mp4"></video>
                                     </li>
                                     <li class="swiper-slide swiper-item">
-                                        <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-02.mp4"></video>
+                                        <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-01.mp4"></video>
                                     </li>
                                     <li class="swiper-slide swiper-item">
                                         <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-03.mp4"></video>
@@ -106,7 +105,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section story-01">
+            <section class="section story-01" active-animation="main">
                 <div class="section-wrap">
                     <div class="section-body">
                         <div class="data-list">
@@ -131,7 +130,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section story-02">
+            <section class="section story-02" active-animation="main">
                 <div class="section-wrap">
                     <div class="section-head">
                         <h2 class="section-subject">Solutions</h2>
@@ -215,7 +214,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section story-03">
+            <section class="section story-03" active-animation="main">
                 <div class="section-wrap">
                     <div class="section-head">
                         <h2 class="section-subject">Our References</h2>
@@ -268,7 +267,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section story-04">
+            <section class="section story-04" active-animation="main">
                 <div class="section-wrap">
                     <div class="section-head">
                         <p class="section-summary">ESG경영 서비스를 구독하고, 함께 지속성장 하고 있는 주요 고객사입니다.</p>
@@ -413,7 +412,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section story-05">
+            <section class="section story-05" active-animation="main">
                 <div class="section-wrap">
                     <div class="section-head">
                         <h2 class="section-subject">Our Awards</h2>
@@ -473,7 +472,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section story-06">
+            <section class="section story-06" active-animation="main">
                 <div class="section-wrap">
                     <div class="section-head">
                         <h2 class="section-subject">News & Article</h2>
@@ -572,7 +571,7 @@
         </div>
     </main>
      <!-- // main -->
-     <%-include('../_templates/_footer.ejs')%>
+    <%-include('../_templates/_footer.ejs')%>
 </div>
 </body>
 </html>

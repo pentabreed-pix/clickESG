@@ -6,24 +6,21 @@
     .main {
         padding: 0;
         .section {
-            opacity: 0;
-            transition: all .5s ease-out;
             &.key-visual {
                 .section-wrap {
-                    .section-head {
-
-                    }
                     .section-body {
                         .swiper-display {
                             position: relative;
-
+                            height: 100vh;
                             .swiper-list {
                                 &.bg {
+                                    height: 100%;
                                     .swiper-wrapper {
                                         .swiper-item {
                                             position: relative;
-                                            height: 82rem;
+                                            height: 100%;
                                             overflow: hidden;
+                                            transition: none;
 
                                             .swiper-figure {
                                                 position: absolute;
@@ -167,6 +164,22 @@
                                     }
                                 }
                             }
+
+                            .swiper {
+                                .swiper-wrapper {
+                                    .swiper-slide {
+                                        transition: opacity 0.3s ease-in-out;
+                                    }
+                                    .swiper-slide.swiper-slide-active {
+                                        transition: none !important;
+                                    }
+                                }
+                            }
+
+                            .swiper-container {
+                                backface-visibility: hidden; /* 렌더링 최적화 */
+                                will-change: transform; /* 슬라이드 전환 성능 최적화 */
+                            }
                         }
                     }
                 }
@@ -277,7 +290,6 @@
                     }
                 }
             }
-
             &.story-02 {
                 padding: 0 0 0 6rem;
 
@@ -435,7 +447,6 @@
                     }
                 }
             }
-
             &.story-03 {
                 padding: 12rem 6rem;
                 margin: 12rem 0 0 0;
@@ -881,10 +892,6 @@
                         }
                     }
                 }
-            }
-
-            &.active {
-                opacity: 1;
             }
         }
     }
