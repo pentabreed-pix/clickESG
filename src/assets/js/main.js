@@ -7,11 +7,28 @@ function mainVisual() {
 
     var count = 0;
     var countId = '';
-    var isCounterOn;
+    let isCounterOn = false;
+    let isSyncing = false;
+
+    function syncSlider(source, target) {
+        const sourceIndex = source.realIndex;
+        const targetIndex = target.realIndex;
+
+        if (sourceIndex === 0 && targetIndex === slideData.length - 1) {
+            target.slideNext();
+        } else if (sourceIndex === slideData.length - 1 && targetIndex === 0) {
+            target.slidePrev();
+        } else if (sourceIndex > targetIndex) {
+            target.slideNext();
+        } else if (sourceIndex < targetIndex) {
+            target.slidePrev();
+        }
+    }    
 
     function loadingBar() {
         var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
         var loadingVal = (100 * count ) / 50
+
         $('.count_txt').text(count);
         $('.swiper-pagination-bullet .timer-percent').css({'width': 0 +'%'});
         $('.swiper-pagination-bullet-active .timer-percent').css({'width':loadingVal + '%'});
@@ -23,11 +40,11 @@ function mainVisual() {
         var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
         $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleWidth + 'px'});
 
-        clearTimeout(countId);
-        countId = setInterval(function() {
-            count += 1;
-            if(count === 50){
-                sliderBg.slideNext();
+        clearInterval(countId);
+        countId = setInterval(() => {
+            count++;
+            if (count >= 50) {
+                sliderTitle.slideNext();
                 count = 0;
             }
             loadingBar();
@@ -40,9 +57,15 @@ function mainVisual() {
         isCounterOn = false;
     }
 
+    function setTouchSensitivity(slider, isEnabled) {
+        slider.params.touchRatio = isEnabled ? 1 : 0;
+        slider.update();
+    }
+
     var sliderLink = new Swiper(".swiper.link", {
         loop: true,
         //allowTouchMove: false,
+        //touchRatio: 0,
         effect: 'fade',
     });
 
@@ -59,7 +82,13 @@ function mainVisual() {
         },
         thumbs: {
             swiper: sliderLink
-        },
+        }        
+    });
+
+    var sliderTitle = new Swiper(".swiper.title", {
+        loop: true,
+        speed: 1200,
+        
         on: {
             init: function () {
                 $('.swiper-pagination-bullet').css({'width':'18px'});
@@ -68,70 +97,68 @@ function mainVisual() {
                 }, 100);
             },
             slideChangeTransitionStart: function () {
+                setTouchSensitivity(this, false);
                 count = 0;
                 loadingBar();
+                setTimeout(() => setTouchSensitivity(this, true), 1300);
             }
         }
     });
 
-    var sliderTitle = new Swiper(".swiper.title", {
-        loop: true,
-        speed: 1200,
-    });
-
-    sliderBg.controller.control = sliderTitle;
-    sliderTitle.controller.control = sliderBg;
-
-    var toggleButton = document.getElementById('toggleButton');
-
-    toggleButton.addEventListener('click', function() {
-        if (isCounterOn === true) {
-            stopCounter();
-            toggleButton.textContent = 'Play';
-            toggleButton.classList.remove('play');
-            toggleButton.classList.add('stop');
-
-        } else {
-            startCounter();
-            toggleButton.textContent = 'Stop';
-            toggleButton.classList.add('play');
-            toggleButton.classList.remove('stop');
+    sliderTitle.on('slideChangeTransitionStart', function () {
+        if (!isSyncing) {
+            isSyncing = true;
+            syncSlider(sliderTitle, sliderBg); 
+            isSyncing = false;
         }
+    });    
+    
+    sliderTitle.on('touchEnd', function () {
+        if (!isSyncing) {
+            isSyncing = true;
+            syncSlider(sliderTitle, sliderBg);
+            isSyncing = false;
+            
+        }
+
+        setTimeout(function() {
+            var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
+            $('.swiper-pagination-bullet').css({'width':'18px'});
+            $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleWidth + 'px'});
+        }, 200);        
     });
 
-    $('.swiper.bg .swiper-pagination-bullet').on('click', function() {
+    $('.swiper-controls .swiper-pagination-bullet').on('click', function() {
+        const index = $(this).index();
+        sliderBg.slideToLoop(index, 1200);
+        sliderTitle.slideToLoop(index, 1200);
         count = 0;
-        if (isCounterOn === true) {
-            startCounter();
-        } else {
-            loadingBar();
-        }
+        isCounterOn ? startCounter() : loadingBar();
     });
 
-    var solutionSlider = new Swiper(".story-02 .swiper", {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 32,
-        freeMode: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".story-02 .swiper-button-next",
-            prevEl: ".story-02 .swiper-button-prev",
-        },
-        pagination: {
-            el: ".story-02 .swiper-pagination",
-            type: "progressbar",
-        },
-    });
+    function updateToggleButton(isPlaying) {
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.textContent = isPlaying ? 'Stop' : 'Play';
+        toggleButton.classList.toggle('play', isPlaying);
+        toggleButton.classList.toggle('stop', !isPlaying);
+    }
+
+    const toggleButton = document.getElementById('toggleButton');
+
+    toggleButton.addEventListener('click', function () {
+        isCounterOn ? stopCounter() : startCounter();
+        updateToggleButton(isCounterOn);
+    });    
 
     window.addEventListener('resize', function () {
         sliderBg.update();
         sliderTitle.update();
     });
 
+}
+
+function another(){    
     rollingEvent('.rolling-01');
     rollingEvent('.rolling-02');
     rollingEvent('.rolling-03');
@@ -164,6 +191,25 @@ function mainVisual() {
         });     
     }
 
+    var solutionSlider = new Swiper(".story-02 .swiper", {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 32,
+        freeMode: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".story-02 .swiper-button-next",
+            prevEl: ".story-02 .swiper-button-prev",
+        },
+        pagination: {
+            el: ".story-02 .swiper-pagination",
+            type: "progressbar",
+        },
+    });
+
     var newSlider = new Swiper(".story-06 .swiper", {
         slidesPerView: 4,
         spaceBetween: 30,
@@ -173,6 +219,3 @@ function mainVisual() {
         },
     });
 }
-
-
-

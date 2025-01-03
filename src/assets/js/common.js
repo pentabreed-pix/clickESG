@@ -193,7 +193,7 @@ function header() {
     window.addEventListener('scroll', handleScroll);
 }
 // tab
-function Tab() {
+function tab() {
     const tabDisplay = document.querySelectorAll(".tab-display")
     tabDisplay.forEach(tab => {
         const firstTab = tab.querySelector(".tab-item:first-child")
