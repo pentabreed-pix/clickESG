@@ -109,7 +109,7 @@
                     .data-item {
                         position: absolute;
                         width: 100%;
-                        color: custom-color(typo, 010);
+                        color: custom-color(neutral, 060);
                         transition: all 0.2s linear;
                         z-index: 0;
                         opacity: 0;
@@ -154,7 +154,7 @@
                     .section-subject {
                         .section-sub {
                             display: block;
-                            color: custom-color(typo, 000);
+                            color: custom-color(system, 060);
                             font-weight: 700;
                             font-size: 2.5vw;
                             line-height: 4vw;
@@ -174,7 +174,7 @@
                         }
                         .section-name {
                             display: block;
-                            color: custom-color(typo, 000);
+                            color: custom-color(system, 060);
                             font-weight: 700;
                             font-size: 3.333vw;
                             line-height: 5.333vw;
@@ -616,7 +616,7 @@
                             .post-head {
                                 .post-sub {
                                     @include font(medium, bold);
-                                    color: custom-color(typo, 000);
+                                    color: custom-color(system, 060);
 
                                     @include mobile {
                                         @include font(small-2x, bold);
@@ -632,7 +632,7 @@
                             .post-body {
                                 .para {
                                     @include font(large-3x, bold);
-                                    color: custom-color(typo, 000);
+                                    color: custom-color(system, 060);
                                     @include mobile {
                                         @include font(medium, bold);
                                     }
@@ -711,7 +711,7 @@
                             transition: all .5s ease-out;
                             .data-text {
                                 display: flex;
-                                color: custom-color(typo, 000);
+                                color: custom-color(system, 060);
                                 font-weight: 600;
                                 font-size: 8.333333vw;
                                 align-items: center;
@@ -794,7 +794,7 @@
                     }
                     .section-summary {
                         position: relative;
-                        color: custom-color(typo, 010);
+                        color: custom-color(neutral, 060);
                         transition: all 0.5s ease-out;
 
                         @include font(small-1x, medium);
@@ -862,7 +862,7 @@
                                         .product-body {
                                             .para {
                                                 @include font(small-3x, medium);
-                                                color: custom-color(typo, 010);
+                                                color: custom-color(neutral, 060);
                                                 line-height: 1.8;
 
                                                 @include mobile {
@@ -1063,7 +1063,7 @@
                     }
                     .section-summary {
                         position: relative;
-                        color: custom-color(typo, 010);
+                        color: custom-color(neutral, 060);
                         @include font(small-1x, medium);
 
                         @include mobile {
@@ -1127,7 +1127,7 @@
                                         .product-body {
                                             .para {
                                                 @include font(small-3x, medium);
-                                                color: custom-color(typo, 010);
+                                                color: custom-color(neutral, 060);
                                                 line-height: 1.8;
 
                                                 @include mobile {
@@ -1259,7 +1259,7 @@
                     .section-subject {
                         .section-name {
                             display: block;
-                            color: custom-color(typo, 020);
+                            color: custom-color(system, 050);
                             font-weight: 700;
                             font-size: 6.4rem;
                             line-height: 1.2;
@@ -1280,7 +1280,7 @@
                     }
                     .section-summary {
                         @include font(small-1x, medium);
-                        color: custom-color(typo, 010);
+                        color: custom-color(neutral, 060);
 
                         @include mobile {
                             @include font(small-3x, medium);
@@ -1371,7 +1371,7 @@
                                     .data-subject {
                                         .data-name {
                                             display: block;
-                                            color: custom-color(typo, 000);
+                                            color: custom-color(system, 060);
                                             line-height: 1.8;
                                             @include font(small-3x, medium);
 
@@ -1384,7 +1384,7 @@
                                 }
                                 .data-body {
                                     @include font(large-1x, extrabold);
-                                    color: custom-color(typo, 000);
+                                    color: custom-color(system, 060);
                                     line-height: 1.8;
 
                                     @include mobile {
@@ -1394,7 +1394,7 @@
                                 }
                                 .data-base {
                                     display: block;
-                                    color: custom-color(typo, 000);
+                                    color: custom-color(system, 060);
                                     line-height: 1.8;
                                     @include font(small-3x, extrabold);
 
@@ -1463,12 +1463,12 @@
                     .section-subject {
                         .section-name {
                             display: block;
-                            color: custom-color(typo, 000);
+                            color: custom-color(system, 060);
                             @include font(large-5x, bold);
 
                             @include mobile {
                                 @include font(large, bold);
-                                color: custom-color(typo, 020);
+                                color: custom-color(system, 050);
                                 line-height: 1.2;
                             }
                         }
@@ -1496,11 +1496,11 @@
                     }
                     .section-summary {
                         @include font(small-3x, medium);
-                        color: custom-color(typo, 000);
+                        color: custom-color(system, 060);
                         line-height: 1.8;
 
                         @include mobile {
-                            color: custom-color(typo, 010);
+                            color: custom-color(neutral, 060);
                             font-weight: 500;
                             font-size: 1.5rem;
                             line-height: 1.6;
@@ -1612,7 +1612,7 @@
 
                                     .board-subject {
                                         .board-name {
-                                            color: custom-color(typo, 000);
+                                            color: custom-color(system, 060);
                                             font-weight: 700;
                                             font-size: 2.2rem;
 
@@ -1687,7 +1687,7 @@
 
                     .section-summary {
                         @include font(medium, bold);
-                        color: custom-color(typo, 020);
+                        color: custom-color(system, 050);
                         text-align: center;
 
                         @include mobile {
@@ -1775,7 +1775,7 @@
                             // background-size: min(49.17%, 100%);
                             .data-head {
                                 .data-name {
-                                    color: custom-color(typo, 020);
+                                    color: custom-color(system, 050);
                                     @include font(small-2x, bold);
                                     @include mobile {
                                         @include font(small-3x, bold);
@@ -1790,7 +1790,7 @@
                             }
                             .data-body {
                                 .para {
-                                    color: custom-color(typo, 010);
+                                    color: custom-color(neutral, 060);
                                     word-break: keep-all;
                                     @include font(small-3x, medium);
                                     @include mobile {
@@ -1830,7 +1830,7 @@
                                 max-width: 50rem;
                                 .position {
                                     display: inline-block;
-                                    color: custom-color(typo, 005);
+                                    color: custom-color(neutral, 060);
                                     @include font(small-3x, bold);
                                     +.name {
                                         margin-left: 2.4rem;
@@ -1841,7 +1841,7 @@
                                 }
                                 .name {
                                     display: inline-block;
-                                    color: custom-color(typo, 020);
+                                    color: custom-color(system, 050);
                                     @include font(small-1x, bold);
                                     @include mobile {
                                         @include font(small-1x, bold);
@@ -1896,7 +1896,7 @@
                         .section-body {
                             .para,
                             .closing-comment {
-                                color: custom-color(typo, 020);
+                                color: custom-color(system, 050);
                                 @include font(small-2x, bold);
                             }
                             .para {
@@ -1992,7 +1992,7 @@
                                             min-height: 5.6rem;
                                             margin-right: 14.1rem;
                                             .board-subject {
-                                                color: custom-color(typo, 020);
+                                                color: custom-color(system, 050);
                                                 @include font(small-1x, bold)
                                             }
                                             &::after {
@@ -2018,13 +2018,13 @@
                                                     display: flex;
                                                     .info-title {
                                                         display: inline-block;
-                                                        color: custom-color(typo, 020);
+                                                        color: custom-color(system, 050);
                                                         min-width: 8.1rem;
                                                         @include font(small-3x, bold);
                                                     }
                                                     .info-content {
                                                         display: inline-block;
-                                                        color: custom-color(typo, 010);
+                                                        color: custom-color(neutral, 060);
                                                         @include font(small-3x, medium);
                                                     }
                                                     +.info-item {

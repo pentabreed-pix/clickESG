@@ -79,7 +79,7 @@
                 .data-head {
                     .table-title {
                         display: block;
-                        color: custom-color(typo, 020);
+                        color: custom-color(system, 050);
                         @include font(small-3x, bold);
                     }
                 }
@@ -193,7 +193,7 @@
                         min-height: 3.8rem;
                         .sitemap {
                             display: inline-block;
-                            color: custom-color(typo, 010);
+                            color: custom-color(neutral, 060);
                             transition: color .3s ease;
                             @include font(small-2x, bold);
                             @include web {
@@ -208,7 +208,7 @@
                             .sitemap-item-depth2 {
                                 .sitemap-depth2 {
                                     display: inline-block;
-                                    color: custom-color(typo, 005);
+                                    color: custom-color(neutral, 060);
                                     min-height: 2.6rem;
                                     @include font(small-4x, medium);
                                     @include web {

@@ -135,7 +135,7 @@ body {
 
 			// 	.local-subject {
 			// 		.local-name {
-			//             color: custom-color(typo, 020);
+			//             color: custom-color(system, 050);
 			// 			text-align: center;
 			// 			@include font(large-3x, extrabold);
 			// 		}
@@ -194,7 +194,7 @@ body {
 
 			// 		.local-name {
 			// 			@include font(large-12x, bold);
-			// 			color: custom-color(typo, 020);
+			// 			color: custom-color(system, 050);
 			// 			line-height: 1.2;
 			// 			transition: color 1s ease-out;
 
@@ -395,7 +395,7 @@ body {
 
 			// 		.local-name {
 			// 			position: relative;
-			// 			color: custom-color(typo, 020);
+			// 			color: custom-color(system, 050);
 			// 			transform: translateY(30%);
 			// 			opacity: 0;
 			// 			@include font(large-5x, bold);
@@ -418,7 +418,7 @@ body {
 
 			// 		.local-wrap {
 			// 			.local-title {
-			// 				color: custom-color(typo, 000);
+			// 				color: custom-color(system, 060);
 			// 				@include font(large-5x, bold);
 
 			// 				@include mobile() {
@@ -887,14 +887,14 @@ body {
 					}
 					.section-name {
 						@include font(medium, bold);
-						color: custom-color(typo, 020);
+						color: custom-color(system, 050);
 
 						@include mobile {
 							@include font(small-1x, bold);
 						}
 
 						+.section-summary {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							margin-top: 2.4rem;
 							@include font(small-3x, medium);
 
@@ -907,7 +907,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-3x, medium);
 
 							@include mobile {
@@ -919,7 +919,7 @@ body {
 
 				&.type2 {
 					.section-name {
-						color: custom-color(typo, 020);
+						color: custom-color(system, 050);
 						@include font(small-1x, bold);
 
 						@include mobile {
@@ -927,7 +927,7 @@ body {
 						}
 
 						+.section-summary {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							margin-top: 1.6rem;
 							@include font(small-4x, medium);
 
@@ -940,7 +940,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-3x, medium);
 							@include mobile {
 								@include font(small-4x, medium);
@@ -951,14 +951,14 @@ body {
 
 				&.type3 {
 					.section-name {
-						color: custom-color(typo, 020);
+						color: custom-color(system, 050);
 						@include font(large-3x, bold);
 
 						@include mobile {
 							@include font(medium, bold);
 						}
 						+.section-summary {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							margin-top: 2.4rem;
 							@include font(small-3x, medium);
 
@@ -971,7 +971,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(typo, 020);
+							color: custom-color(system, 050);
 							@include font(small-1x, bold);
 							@include mobile {
 								@include font(small-2x, bold)
@@ -979,7 +979,7 @@ body {
 						}
 						.note {
 							display: inline-block;
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-3x, medium);
 							@include mobile {
 								@include font(small-4x, medium);
@@ -996,7 +996,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-4x, medium);
 							@include mobile {
 									@include font(small-5x, medium);
@@ -1008,14 +1008,14 @@ body {
 				&.type5 {
 					.section-head {
 						.section-name {
-							color: custom-color(typo, 020);
+							color: custom-color(system, 050);
 							@include font(large-3x, bold);
 							@include mobile {
 								@include font(medium, bold);
 							}
 						}
 						.section-summary {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-2x, bold);
 							@include mobile {
 								@include font(small-3x, bold);
@@ -1024,7 +1024,7 @@ body {
 					}
 					.section-body {
 						>.para {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-3x, medium);
 							@include mobile {
 								@include font(small-4x, medium);
@@ -1036,7 +1036,7 @@ body {
 				&.type6 {
 					.section-name {
 						@include font(small-1x, bold);
-						color: custom-color(typo, 020);
+						color: custom-color(system, 050);
 
 						@include mobile {
 							@include font(small-2x, bold);
@@ -1044,7 +1044,7 @@ body {
 
 						+.section-summary {
 							@include font(small-3x, medium);
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 
 							@include mobile {
 								@include font(small-4x, medium);
@@ -1054,7 +1054,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-3x, medium);
 							@include mobile {
 								@include font(small-4x, medium);
@@ -1066,7 +1066,7 @@ body {
 				&.type7 {
 					.section-name {
 						@include font(medium, bold);
-						color: custom-color(typo, 020);
+						color: custom-color(system, 050);
 
 						@include mobile {
 							@include font(small-1x, bold);
@@ -1076,7 +1076,7 @@ body {
 					.section-body {
 						>.para {
 							@include font(small-4x, medium);
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 
 							@include mobile {
 								@include font(small-5x, medium);
@@ -1087,7 +1087,7 @@ body {
 				&.type8 {
 					.section-name {
 						@include font(medium, bold);
-						color: custom-color(typo, 000);
+						color: custom-color(system, 060);
 
 						@include mobile {
 							@include font(small-1x, bold);
@@ -1096,7 +1096,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(typo, 000);
+							color: custom-color(system, 060);
 							@include font(small-3x, medium);
 
 							@include mobile {
@@ -1212,7 +1212,7 @@ body {
 			// // 별첨 공통
 			// .comment {
 			// 	&.design1 {
-			// 		color: custom-color(typo, 010);
+			// 		color: custom-color(neutral, 060);
 			// 		@include font(small-5x, medium);
 
 			// 		@include mobile {
@@ -1272,7 +1272,7 @@ body {
 						}
 
 						&.dark {
-							color: custom-color(typo, 005);
+							color: custom-color(neutral, 060);
 
 							.data-item:last-child {
 								.item-text {
@@ -1299,7 +1299,7 @@ body {
 							.item-text {
 								position: relative;
 								@include font(small-5x, bold);
-								color: custom-color(neutral, 010);
+								color: custom-color(neutral, 090);
 							}
 
 							+.data-item {
@@ -1314,7 +1314,7 @@ body {
 										left: -2rem;
 										width: 0.4rem;
 										height: 0.7rem;
-										background: icon('arrow-right', custom-color(neutral, 010)) no-repeat center;
+										background: icon('arrow-right', custom-color(neutral, 090)) no-repeat center;
 										background-size: 100%;
 										transform: translateY(-50%);
 									}
@@ -1345,7 +1345,7 @@ body {
 									left: 0;
 									width: 1.4rem;
 									height: 1.3rem;
-									background: icon('home', custom-color(neutral, 010)) no-repeat center;
+									background: icon('home', custom-color(neutral, 090)) no-repeat center;
 									background-size: 100%;
 									transform: translateY(-50%);
 								}

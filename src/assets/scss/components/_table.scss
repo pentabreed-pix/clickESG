@@ -25,7 +25,7 @@
 						>th {
 							padding: 1.8rem;
 							background-color: custom-color(secondary, 100);
-							border-right: 1px solid custom-color(typo, 000);
+							border-right: 1px solid custom-color(system, 060);
 							border-left: 1px solid custom-color(neutral, 060);
 							border-top: 1px solid custom-color(neutral, 060);
                             
@@ -94,7 +94,7 @@
 					>tr {
 						>th {
                             @include font(small-4x, bold);
-							color: custom-color(typo, 000);
+							color: custom-color(system, 060);
 							text-align: center;
 						}
 					}
@@ -104,7 +104,7 @@
 					>tr {
                         >th,
 						>td {
-							color: custom-color(typo, 010);
+							color: custom-color(neutral, 060);
 							@include font(small-4x, bold);
 
 						}

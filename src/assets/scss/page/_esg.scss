@@ -1960,7 +1960,7 @@
                                     }
                                     .section-body {
                                         .board-name {
-                                            color: custom-color(typo, 020);
+                                            color: custom-color(system, 050);
                                             @include web {
                                                 margin-bottom: 2.4rem;
                                                 @include font(small-1x, bold);
@@ -2551,12 +2551,12 @@
                         .section-subject {
                             .section-name {
                                 @include font(large-6x, bold);
-                                color: custom-color(typo, 020);
+                                color: custom-color(system, 050);
                                 line-height: 1.4;
 
                                 @include mobile{
                                     @include font(large-1x, bold);
-                                    color: custom-color(typo, 020);
+                                    color: custom-color(system, 050);
                                     line-height: 1.2;
                                 }
                             }
@@ -2629,7 +2629,7 @@
                                             .post-subject {
                                                 .post-name {
                                                     @include font(small-1x, bold);
-                                                    color: custom-color(typo, 020);
+                                                    color: custom-color(system, 050);
 
                                                     @include mobile{
                                                         @include font(small-2x, bold);
@@ -2645,7 +2645,7 @@
                                             }
                                             .post-summary {
                                                 @include font(small-3x, medium);
-                                                color: custom-color(typo, 010);
+                                                color: custom-color(neutral, 060);
 
                                                 @include mobile{
                                                     @include font(small-4x, medium);
@@ -2874,7 +2874,7 @@
                         .section-subject {
                             .section-name {
                                 @include font(medium, bold);
-                                color: custom-color(typo, 020);
+                                color: custom-color(system, 050);
 
                                 @include mobile {
                                     @include font(small-1x, bold);
@@ -2890,7 +2890,7 @@
                             }
                             .section-summary {
                                 @include font(small-3x, medium);
-                                color: custom-color(typo, 010);
+                                color: custom-color(neutral, 060);
 
                                 @include mobile {
                                     @include font(small-4x, medium);
@@ -2960,7 +2960,7 @@
                                         .post-subject {
                                             .post-name {
                                                 @include font(small-1x, bold);
-                                                color: custom-color(typo, 000);
+                                                color: custom-color(system, 060);
 
                                                 @include mobile {
                                                     @include font(small-2x, bold);
@@ -2978,7 +2978,7 @@
                                     .post-body {
                                         .para {
                                             @include font(small-4x, regular);
-                                            color: custom-color(typo, 000);
+                                            color: custom-color(system, 060);
 
                                             @include mobile {
                                                 @include font(small-5x, regular);
@@ -3049,7 +3049,7 @@
                         .section-subject {
                             .section-name {
                                 @include font(medium, bold);
-                                color: custom-color(typo, 020);
+                                color: custom-color(system, 050);
 
                                 @include mobile {
                                     @include font(small-1x, bold);
@@ -3065,7 +3065,7 @@
                             }
                             .section-summary {
                                 @include font(small-3x, medium);
-                                color: custom-color(typo, 010);
+                                color: custom-color(neutral, 060);
 
                                 @include mobile {
                                     @include font(small-4x, medium);
@@ -3126,7 +3126,7 @@
                                         .data-subject {
                                             .data-name {
                                                 @include font(small-2x, bold);
-                                                color: custom-color(typo, 020);
+                                                color: custom-color(system, 050);
 
                                                 @include mobile {
                                                     @include font(small-3x, bold);
@@ -3144,7 +3144,7 @@
                                     .data-body {
                                         .para {
                                             @include font(small-4x, medium);
-                                            color: custom-color(typo, 010);
+                                            color: custom-color(neutral, 060);
 
                                             @include mobile {
                                                 @include font(small-5x, bold);
@@ -3171,7 +3171,7 @@
                         .section-subject {
                             .section-name {
                                 @include font(medium, bold);
-                                color: custom-color(typo, 020);
+                                color: custom-color(system, 050);
 
                                 @include mobile {
                                     @include font(small-1x, bold);
@@ -3187,7 +3187,7 @@
                             }
                             .section-summary {
                                 @include font(small-3x, medium);
-                                color: custom-color(typo, 010);
+                                color: custom-color(neutral, 060);
 
                                 @include mobile {
                                     @include font(small-4x, medium);
@@ -3272,7 +3272,7 @@
                                         .post-subject {
                                             .post-name {
                                                 @include font(small-2x, bold);
-                                                color: custom-color(typo, 020);
+                                                color: custom-color(system, 050);
 
                                                 @include mobile {
                                                     @include font(small-3x, bold);
@@ -3285,7 +3285,7 @@
                                     }
                                     .post-date {
                                         padding: 0 1.6rem;
-                                        color: custom-color(typo, 005);
+                                        color: custom-color(neutral, 060);
                                         @include font(small-3x, medium);
 
                                         @include mobile {
@@ -3309,7 +3309,7 @@
                                         }
                                         .para {
                                             @include font(small-4x, medium);
-                                            color: custom-color(typo, 010);
+                                            color: custom-color(neutral, 060);
 
                                             @include mobile {
                                                 @include font(small-5x, medium);

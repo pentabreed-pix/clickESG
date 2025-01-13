@@ -24,16 +24,16 @@
 
       &.color-a {
         border: 0.1rem solid custom-color(neutral, 100);
-        color: custom-color(typo, 100);
+        color: custom-color(system, 080);
         &:hover,
         &:focus {
           background-color: custom-color(neutral, 100);
-          color: custom-color(typo, 000);
+          color: custom-color(system, 060);
         }
       }
       &.color-b {
-        border: 0.1rem solid custom-color(neutral, 000);
-        color: custom-color(typo, 000);
+        border: 0.1rem solid custom-color(system, 060);
+        color: custom-color(system, 060);
         &:hover,
         &:focus {
           border: 0.1rem solid rgba(255, 255, 255, 0.0);
@@ -65,14 +65,14 @@
 
       &.play {
         &::after {
-          background: icon('play', custom-color(neutral, 000)) no-repeat center;
+          background: icon('play', custom-color(system, 060)) no-repeat center;
           background-size: 1.2rem;
         }
       }
 
       &.stop {
         &::after {
-          background: icon('stop', custom-color(neutral, 000)) no-repeat center;
+          background: icon('stop', custom-color(system, 060)) no-repeat center;
           background-size: 1.6rem;
         }
       }
@@ -88,12 +88,12 @@
         border: 0.1rem solid rgba(255, 255, 255, 0.50);
         &.arrow-left1 {
           &::after {
-            background: icon('arrow-left1', custom-color(neutral, 000)) no-repeat center;
+            background: icon('arrow-left1', custom-color(system, 060)) no-repeat center;
             background-size: 2.2rem;
           }
           &:hover,
           &:focus {
-            background-color: custom-color(neutral, 000);
+            background-color: custom-color(system, 060);
             border: 0.1rem solid rgba(255, 255, 255, 1);
 
             &:after {
@@ -104,12 +104,12 @@
 
         &.arrow-right1 {
           &::after {
-            background: icon('arrow-right1', custom-color(neutral, 000)) no-repeat center;
+            background: icon('arrow-right1', custom-color(system, 060)) no-repeat center;
             background-size: 2.2rem;
           }
           &:hover,
           &:focus {
-            background-color: custom-color(neutral, 000);
+            background-color: custom-color(system, 060);
             border: 0.1rem solid rgba(255, 255, 255, 1);
 
             &:after {
@@ -119,7 +119,7 @@
         }
       }
       &.color-b {
-        border: 0.1rem solid custom-color(neutral, 005);
+        border: 0.1rem solid custom-color(neutral, 100);
         &.arrow-left1 {
           &::after {
             background: icon('arrow-left1', custom-color(neutral, 100)) no-repeat center;
@@ -131,7 +131,7 @@
             border: 0.1rem solid custom-color(neutral, 100);
 
             &:after {
-              background: icon('arrow-left1', custom-color(neutral, 000)) no-repeat center;
+              background: icon('arrow-left1', custom-color(system, 060)) no-repeat center;
             }
           }
         }
@@ -147,7 +147,7 @@
             border: 0.1rem solid custom-color(neutral, 100);
 
             &:after {
-              background: icon('arrow-right1', custom-color(neutral, 000)) no-repeat center;
+              background: icon('arrow-right1', custom-color(system, 060)) no-repeat center;
             }
           }
         }

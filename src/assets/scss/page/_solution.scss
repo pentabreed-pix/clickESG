@@ -6,7 +6,6 @@
 
 #wrap {
     .solution-intro{
-
         .section{
             //bg
             &.esg-operation{
@@ -20,7 +19,7 @@
                     width: 100vw;
                     height: 100%;
                     content: '';
-                    background: custom-color(etc, 060);
+                    background: custom-color(etc, 070);
                     transform: translateX(-50%);
                     z-index: -1;
                     
@@ -36,7 +35,7 @@
                 &.bg-gray {
                     padding: 6.6rem 8rem;
                     border-radius: 1.6rem;
-                    background: custom-color(etc, 060);
+                    background: custom-color(etc, 070);
 
                     >.data-display {
                         >.data-list {
@@ -82,6 +81,70 @@
                     align-items: center;
                     @include font(small, medium);
                     color: custom-color(secondary, 060)
+                }
+            }
+
+            &.process {
+                position: relative;
+                padding-bottom: 12rem;
+                &::after{
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 100vw;
+                    height: 100%;
+                    content: '';
+                    background: custom-color(etc, 070);
+                    transform: translateX(-50%);
+                    z-index: -1;
+                }
+
+                .post-list {
+                    display: flex;
+                    gap: 0.8rem;
+                    width: 144rem;
+                    margin-top: 6.4rem;
+                    .post-item {
+                       
+                        .post-wrap {
+                            position: relative;
+                            display: inline-block;
+                            overflow: hidden;
+
+                            .post-head {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                padding: 4rem 5rem;
+                            }
+
+                            .post-figure {
+                                width: auto;
+                                width: 10.2rem;
+                                height: 53rem;
+                                border-radius: 1rem;
+                                background: custom-color(system, 080);
+                                img {
+                                    opacity: 0;
+                                    width: 100%;
+                                    border-radius: 1rem;
+                                }
+                            }
+                        }
+
+                        &.active {
+                           
+                            .post-figure {
+                                width: 89rem;
+                                img {
+                                    opacity: 1;
+                                    height: 53rem;
+                                    width: 100%;
+                                    transition: all 0.5s ease-out;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

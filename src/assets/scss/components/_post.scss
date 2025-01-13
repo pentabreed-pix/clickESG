@@ -30,7 +30,7 @@
                 display: flex;
                 gap: 8rem;
                 align-items: center;
-                background-color: custom-color(etc, 060);
+                background-color: custom-color(etc, 070);
                 border-radius: 1.6rem;
                 .post-figure {
                     img {
@@ -104,7 +104,7 @@
                 .post-head {
                     .post-subject {
                         @include font(small-2x, medium);
-                        color: custom-color(primary, 040);
+                        color: custom-color(system, 080);
                     }
                 }
             }
@@ -122,7 +122,7 @@
                         
                         + .post-summary {
                             @include font(small-2x, regular);
-                            color: custom-color(primary, 040);
+                            color: custom-color(system, 080);
                             line-height: 160%;
                         }
                     }

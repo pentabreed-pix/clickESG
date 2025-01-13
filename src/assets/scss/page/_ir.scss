@@ -439,14 +439,14 @@
                                     gap: 2.4rem;
                                     .title{
                                         @include font(small-5x, bold);
-                                        color: custom-color(typo, 020);
+                                        color: custom-color(system, 050);
                                         +.data {
                                             padding-top: 0.8rem;
                                         }
                                     }
                                     .data{
                                         @include font(small-3x, bold);
-                                        color: custom-color(typo, 010);
+                                        color: custom-color(neutral, 060);
                                     }
                                     &:last-child{
                                         border-right: none;

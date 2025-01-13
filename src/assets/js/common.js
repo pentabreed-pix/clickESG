@@ -192,6 +192,7 @@ function header() {
     window.addEventListener('resize', initHeaderPcEvent);
     window.addEventListener('scroll', handleScroll);
 }
+
 // tab
 function tab() {
     const tabDisplay = document.querySelectorAll(".tab-display")
@@ -343,3 +344,12 @@ function activeAnimationType1() {
         });
     });
 }
+
+// process
+$(document).ready(() => {
+    $('.post-item').first().addClass('active');
+
+    $('.post-item').on('click', function () {
+        $(this).addClass('active').siblings('.post-item').removeClass('active');
+    });
+});
