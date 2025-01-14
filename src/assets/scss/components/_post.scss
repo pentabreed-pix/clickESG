@@ -9,9 +9,15 @@
         .post-item {
             .post-wrap {
                 .post-figure {
+                    width: 34.2rem;
+                    height: 32rem;
+                    border-radius: 1.6rem;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     img {
-                        border-radius: 1.6rem;
-                    }
+                        width: 100%;
+                    }  
                 }
             }
         }
@@ -33,8 +39,13 @@
                 background-color: custom-color(etc, 070);
                 border-radius: 1.6rem;
                 .post-figure {
+                    width: 54.8rem;
+                    height: 33rem;
+                    border-radius: 1.6rem;
+                    overflow: hidden;
+                    flex-shrink: 0;
                     img {
-                        border-radius: 1.6rem;
+                        width: 100%;
                     }
                 }
 
@@ -129,5 +140,220 @@
                 }
             }
         }
+    }
+
+    &.process {
+        position: relative;
+        width: 144rem; 
+        overflow: hidden; 
+        display: flex;
+        justify-content: space-between; 
+
+        .post-item {
+            flex: 0 0 auto; 
+            width: 10.2rem; 
+            height: 53rem;
+            border-radius: 1rem;
+            background: custom-color(secondary, 030);
+            transition: all 0.5s ease-out;
+    
+            .post-wrap {
+                position: relative;
+                overflow: hidden;
+                height: 100%;
+
+                .post-info {
+                    position: relative;
+                    padding: 4rem 3.7rem;
+                    color: custom-color(system, 060);
+                    width: 100%;
+                    z-index: 2;
+
+                    .post-head {
+                        .post-name {
+                            position: relative;
+                            @include font(small-3x, bold);
+                            em {
+                                display: block;
+                                transform: rotate(90deg);
+                                transform-origin: left;
+                                width: max-content;
+                                margin-left: 1.2rem;
+                                margin-top: 1rem;
+    
+                                &::after {
+                                    content: '';
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: -1.5rem;
+                                    width: 0.1rem;
+                                    height: 1.2rem;
+                                    background: custom-color(system, 060);
+                                    transform: translateY(-50%);
+                                } 
+                            }
+                            + .post-subject {
+                                display: none
+                            }
+                            
+                        }
+                        + .post-body {
+                            display: none;
+                        }
+                    }
+                }
+    
+                .post-figure {
+                    img {
+                        width: 0;
+                        border-radius: 1rem;
+                        height: 53rem;
+                        transition: opacity 0.5s ease-out;
+                    }
+                }
+            }
+    
+            &.active {
+                width: 89rem;
+                .post-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+                    .post-head {
+                        .post-name {
+                            position: relative;
+                            @include font(small-2x, bold);
+                            em {
+                                position: relative;
+                                top: 0;
+                                left: 0;
+                                margin-left: 2.7rem;
+                                margin-top: 0;
+                                transform: rotate(0);
+                                display: inline-block;
+    
+                                &::after {
+                                    content: '';
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: -1.5rem;
+                                    width: 0.1rem;
+                                    height: 1.2rem;
+                                    background: custom-color(system, 060);
+                                    transform: translateY(-50%);
+                                } 
+                            }
+                            + .post-subject {
+                                @include font(small-4x, medium);
+                                color: custom-color(neutral, 100);
+                                margin-top: 0.8rem;
+                                display: block;
+                            }
+                            
+                        }
+                        + .post-body {
+                            display: block;
+                            .post-summary {
+                                @include font(small-3x, medium);
+                                width: 66rem;
+                            }
+                        }
+                    }
+                }
+                .post-figure {
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: fill;
+                    width: 89rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &.feature {
+       .post-item {
+            .post-wrap {
+                display: flex;
+                justify-content: center;
+                gap: 2.4rem;
+                width: 100%;
+                .post-info {
+                    border-radius: 1rem;
+                    border: 0.1rem solid rgba(203, 203, 203, 0.50);
+                    padding: 2rem;
+                    cursor: pointer;
+                    width: 71rem;
+                    //height: 7.2rem;
+                    .post-head {
+                        position: relative;
+
+                        .post-name {
+                            padding-left: 3rem;
+                            @include font(small-2x, bold);
+                            color: custom-color(neutral, 080);
+
+                            &.icon {
+                                position: relative;
+                            
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    width: 2.2rem;
+                                    height: 2.1rem;
+                                    background: icon('network', custom-color(system, 070)) no-repeat center;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            background-image: icon('mines', custom-color(system, 080));
+                            background-repeat: no-repeat;
+                            background-size: 1.5rem;
+                            background-position: center;
+                            transition: all .2s ease-out;
+                            transform: translateY(-50%);
+                        }
+
+                        + .post-body {
+                            .bullet-display {
+                                margin-top: 2.4rem;
+                            }
+                        }
+                    }
+                }
+
+                .post-figure {
+                    border-radius: 1.6rem;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            + .post-item {
+                margin-top: 0.8rem;
+            }
+       } 
     }
 }

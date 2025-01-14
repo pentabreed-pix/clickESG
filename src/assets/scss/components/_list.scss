@@ -56,7 +56,7 @@
                 font-size: 1.7rem;
                 font-weight: 700;
                 line-height: 160%;
-                color: custom-color(secondary, 060);
+                color: custom-color(system, 060);
                 
                 + .data-body {
                     @include font(small-4x, regular);
@@ -76,13 +76,13 @@
                         @include font(large, bold);
                         font-weight: 700;
                         line-height: 160%;
-                        color: custom-color(neutral, 090);
+                        color: custom-color(system, 080);
 
                         + .data-summary {
                             font-size: 1.9rem;
                             font-weight: 400;
                             line-height: 180%;
-                            color: custom-color(neutral, 100);
+                            color: custom-color(system, 080);
                             margin-top: 3.2rem;
                         }
                     }
@@ -113,6 +113,26 @@
                     @include mobile {
                         padding-left: 0.8rem;
                     }
+
+                    &::before {
+                        content: '•';
+                        margin-right: 0.9rem;
+
+                        @include mobile {
+                            margin-right: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        &.style2 {
+            >.data-list {
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                >.data-item {
+                    display: flex;
+                    padding-left: 0.9rem;
 
                     &::before {
                         content: '•';
@@ -158,12 +178,29 @@
                     //@include font(small-4x, medium);
 
                     &::before {
-                        @include font(small-5x, medium);
+                        @include font(small-6x, medium);
                         color: custom-color(primary, 060);
 
                         @include mobile {
                             @include font(small-6x, medium);
                         }
+                    }
+                }
+            }
+        }
+
+        &.type3 {
+            >.data-list {
+                >.data-item {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: custom-color(primary, 060);
+                    line-height: 220%;
+                    color: custom-color(neutral, 080);
+
+                    &::before {
+                        @include font(small-6x, medium);
+                        color: custom-color(primary, 060);
                     }
                 }
             }

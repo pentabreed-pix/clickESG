@@ -109,11 +109,11 @@ body {
 
 					.local-name {
 						@include font(large-1x, bold);
-						color: custom-color(secondary, 060);
+						color: custom-color(system, 060);
 
 						+ .local-summary {
 							@include font(small-3x, medium);
-							color: custom-color(secondary, 060);
+							color: custom-color(system, 060);
 							margin-top: 4.8rem;
 						}
 					}
@@ -1322,7 +1322,7 @@ body {
 
 								~ .data-item {
 									.item-text {
-										color: custom-color(neutral, 090);
+										color: custom-color(neutral, 080);
 									}
 								}
 							}

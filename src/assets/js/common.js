@@ -350,6 +350,8 @@ $(document).ready(() => {
     $('.post-item').first().addClass('active');
 
     $('.post-item').on('click', function () {
-        $(this).addClass('active').siblings('.post-item').removeClass('active');
+        const $this = $(this);
+        $this.siblings('.post-item').removeClass('active');
+        $this.addClass('active');
     });
 });

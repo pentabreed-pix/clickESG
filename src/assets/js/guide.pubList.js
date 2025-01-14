@@ -82,7 +82,7 @@ function pubListUp() {
           id_ko: "",
           menu: "Net-Zero",
           root_ko: "../../page/solution/SOLUTION.03.00.html",
-          status_ko: "",
+          status_ko: "진행",
           worker_ko: "",
           history: "",
         },

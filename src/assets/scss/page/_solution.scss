@@ -62,8 +62,73 @@
         }
     }
 
-    .solution-cdp {
+    .solution-netzero {
         .section {
+            .section-body {
+                .post-list {
+                    margin-top: 8rem;
+                    &.feature {
+                        position: relative;
+                        
+                        .post-item {
+                            .post-wrap {
+                                display: flex;
+                                align-items: flex-start;
+                                justify-content: space-between;
+                                gap: 2.4rem;
+                                width: 132.2rem;
+                                margin: 0 auto;
+                                .post-info {
+                                    .post-body {
+                                        height: 0; 
+                                        opacity: 0; 
+                                        overflow: hidden; 
+                                        transition: height 0.3s ease-out, opacity 0.3s ease-out; 
+                                    }
+                                }
+                                .post-figure {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 6rem;
+                                    width: 58.8rem;
+                                    opacity: 0;
+                                    border-radius: 1.6rem;
+                                    overflow: hidden;
+                                    transition: opacity 0.3s ease-out; 
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            &.active {
+                                .post-wrap {
+                                    .post-info {
+                                        background: custom-color(etc, 100);
+                                        .post-head {
+                                            .post-name {
+                                                color: custom-color(primary, 080);
+                                                &::after {
+                                                    background: icon('network', custom-color(primary, 080)) no-repeat center;
+                                                }
+                                            }
+                                            &::after {
+                                                background-image: icon('plus', custom-color(system, 080));
+                                            }
+                                        }
+                                        .post-body {
+                                            height: auto; /* 실제 콘텐츠 크기에 맞게 설정 */
+                                            opacity: 1; /* 투명도를 활성화 */
+                                        }
+                                    }
+                                    .post-figure {
+                                       opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             .section-util {
                 width: 100vw;
                 height: 32rem;
@@ -80,71 +145,7 @@
                     display: flex;
                     align-items: center;
                     @include font(small, medium);
-                    color: custom-color(secondary, 060)
-                }
-            }
-
-            &.process {
-                position: relative;
-                padding-bottom: 12rem;
-                &::after{
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    width: 100vw;
-                    height: 100%;
-                    content: '';
-                    background: custom-color(etc, 070);
-                    transform: translateX(-50%);
-                    z-index: -1;
-                }
-
-                .post-list {
-                    display: flex;
-                    gap: 0.8rem;
-                    width: 144rem;
-                    margin-top: 6.4rem;
-                    .post-item {
-                       
-                        .post-wrap {
-                            position: relative;
-                            display: inline-block;
-                            overflow: hidden;
-
-                            .post-head {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                padding: 4rem 5rem;
-                            }
-
-                            .post-figure {
-                                width: auto;
-                                width: 10.2rem;
-                                height: 53rem;
-                                border-radius: 1rem;
-                                background: custom-color(system, 080);
-                                img {
-                                    opacity: 0;
-                                    width: 100%;
-                                    border-radius: 1rem;
-                                }
-                            }
-                        }
-
-                        &.active {
-                           
-                            .post-figure {
-                                width: 89rem;
-                                img {
-                                    opacity: 1;
-                                    height: 53rem;
-                                    width: 100%;
-                                    transition: all 0.5s ease-out;
-                                }
-                            }
-                        }
-                    }
+                    color: custom-color(system, 060)
                 }
             }
         }
