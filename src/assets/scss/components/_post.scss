@@ -301,10 +301,10 @@
                             padding-left: 3rem;
                             @include font(small-2x, bold);
                             color: custom-color(neutral, 080);
-
-                            &.icon {
+                        
+                            &.network, &.clock, &.device, &.certi {
                                 position: relative;
-                            
+                        
                                 &::after {
                                     content: '';
                                     position: absolute;
@@ -312,11 +312,28 @@
                                     left: 0;
                                     width: 2.2rem;
                                     height: 2.1rem;
-                                    background: icon('network', custom-color(system, 070)) no-repeat center;
+                                    background: no-repeat center;
                                     transform: translateY(-50%);
                                 }
                             }
+                        
+                            &.network::after {
+                                background-image: icon('network', custom-color(system, 070));
+                            }
+                        
+                            &.clock::after {
+                                background-image: icon('clock', custom-color(system, 070));
+                            }
+                        
+                            &.device::after {
+                                background-image: icon('device', custom-color(system, 070));
+                            }
+                        
+                            &.certi::after {
+                                background-image: icon('certi', custom-color(system, 070));
+                            }
                         }
+                        
 
                         &::after {
                             content: "";

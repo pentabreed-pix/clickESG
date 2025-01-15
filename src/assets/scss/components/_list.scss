@@ -1,6 +1,7 @@
 
 @use '../components/mixin' as *;
 @use '../components/variables' as *;
+@use '../components/icons' as *;
 
 .data-display {
     
@@ -132,14 +133,27 @@
                 gap: 0.6rem;
                 >.data-item {
                     display: flex;
-                    padding-left: 0.9rem;
+                    padding-left: 1.8rem;
+                    position: relative;
 
                     &::before {
-                        content: '•';
-                        margin-right: 0.9rem;
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        width: 1.2rem;
+                        height: 0.9rem;
+                        background: icon('bullet-check', custom-color(primary, 100)) no-repeat center;
+                        transform: translateY(-50%);
+
 
                         @include mobile {
                             margin-right: 0.8rem;
+                        }
+                    }
+                    &.arrow {
+                        &::before {
+                            display: none;
                         }
                     }
                 }
@@ -201,6 +215,9 @@
                     &::before {
                         @include font(small-6x, medium);
                         color: custom-color(primary, 060);
+                    }
+                    &.arrow {
+                        color: custom-color(primary, 080);
                     }
                 }
             }

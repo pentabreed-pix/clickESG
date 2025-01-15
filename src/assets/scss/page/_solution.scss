@@ -69,6 +69,7 @@
                     margin-top: 8rem;
                     &.feature {
                         position: relative;
+                        height: 50.9rem;
                         
                         .post-item {
                             .post-wrap {
@@ -106,18 +107,49 @@
                                         background: custom-color(etc, 100);
                                         .post-head {
                                             .post-name {
+                                                padding-left: 3rem;
+                                                @include font(small-2x, bold);
                                                 color: custom-color(primary, 080);
-                                                &::after {
-                                                    background: icon('network', custom-color(primary, 080)) no-repeat center;
+                                            
+                                                &.network, &.clock, &.device, &.certi {
+                                                    position: relative;
+                                            
+                                                    &::after {
+                                                        content: '';
+                                                        position: absolute;
+                                                        top: 50%;
+                                                        left: 0;
+                                                        width: 2.2rem;
+                                                        height: 2.1rem;
+                                                        background: no-repeat center;
+                                                        transform: translateY(-50%);
+                                                    }
+                                                }
+                                            
+                                                &.network::after {
+                                                    background-image: icon('network', custom-color(primary, 080));
+                                                }
+                                            
+                                                &.clock::after {
+                                                    background-image: icon('clock', custom-color(primary, 080));
+                                                }
+                                            
+                                                &.device::after {
+                                                    background-image: icon('device', custom-color(primary, 080));
+                                                }
+                                            
+                                                &.certi::after {
+                                                    background-image: icon('certi', custom-color(primary, 080));
                                                 }
                                             }
+                                            
                                             &::after {
                                                 background-image: icon('plus', custom-color(system, 080));
                                             }
                                         }
                                         .post-body {
-                                            height: auto; /* 실제 콘텐츠 크기에 맞게 설정 */
-                                            opacity: 1; /* 투명도를 활성화 */
+                                            height: auto; 
+                                            opacity: 1; 
                                         }
                                     }
                                     .post-figure {
@@ -146,6 +178,24 @@
                     align-items: center;
                     @include font(small, medium);
                     color: custom-color(system, 060)
+                }
+            }
+
+            &.process-bg {
+                position: relative;
+                padding-bottom: 10rem;
+                
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    bottom: 0;
+                    left: calc(50% - 50vw);
+                    width: 100vw;
+                    height: calc(100% + 2.2rem);
+                    background: custom-color(etc, 070);
                 }
             }
         }
