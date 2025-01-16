@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>SK Networks</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+
+    <script src="./../../assets/js/jquery.js"></script>
+    <script src="./../../assets/js/gsap.min.js"></script>
+    <script src="./../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="./../../assets/js/swiper-bundle.min.js"></script>
+    <!-- <script src="./../../assets/js/bootstrap.bundle.min.js"></script> -->
+    <script src="./../../assets/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="./../../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mainVisual();
+            Tab();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <header id="header" class="white">
+            <div class="header-inner">
+                <h1 class="site-logo">
+                    <a href="#" class="site-name">
+                        <span class="blind">ClickESG 로고</span>
+                    </a>
+                </h1>
+                <div class="site-navi" id="naviMenu">
+                    <ul class="depth1-list">
+                        <li class="depth1-item">
+                            <a href="javascript:void(0);" class="depth1">SERVICE</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Service 소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG 진단 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG 공급망 진단 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Net-Zero 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG Data Hub 구축 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">CDP 대응 자문 컨설팅</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0);" class="depth1">SOLUTION</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Solution 소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG Assessment</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">SCM Assessment</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Net-Zero</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Data Hub</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">CDP Assistance</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0);" class="depth1">ABOUT US</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ClickESG 소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Partnership</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Reference</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">News & Article</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item link">
+                            <a href="javascript:void(0);" class="depth1">PLATFORM</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-control">
+                    <button type="button" class="btn goto-page-navi">전체메뉴</button>
+                </div>
+            </div>
+        </header>
+        <!-- main -->
+        <div id="main" class="service service-intro">
+            <div class="main-inner">
+                <div class="local module-a">
+                    <div class="local-head module-a">
+                        <div class="local-info">
+                            <ul class="data-list breadcrumb module-a style-b">
+                                <li class="data-item">
+                                    <span class="item-text"></span>
+                                </li>
+                                <li class="data-item">
+                                    <span class="item-text">SERVICE</span>
+                                </li>
+                                <li class="data-item">
+                                    <span class="item-text">SERVICE 소개</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="local-subject">
+                            <h2 class="local-name">
+                                기업 ESG 경영 수준 향상을 위한<br>ESG 진단 및 구축 컨설팅 서비스
+                            </h2>
+                            <p class="local-summary">최신 ESG 규제 요건과 기업 환경에 최적화된 ESG 컨설팅 서비스를 고객의 Needs 에 맞추어 다양한 형태로 제공합니다.</p>
+                        </div>
+                        <div class="local-figure">
+                            <img src="../../assets/images/service/bg-local-head-service.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section module-a style-a type-a">
+                    <div class="section-wrap">
+                        <div class="section-head">
+                            <div class="section-subject">
+                                <h4 class="section-name">ESG 서비스의 특장점</h4>
+                            </div>
+                        </div>
+                        <div class="section-body">
+                            <div class="data-display">
+                                <div class="data-list">
+                                    <div class="data-item">
+                                        <div class="data-body">
+                                            <div class="bullet-display module-a style-a type-a">
+                                                <ul class="data-list">
+                                                    <li class="data-item">Global 표준 방법론을 기반으로 개발된 고유 ESG 방법론 보유 (다수 기업과 기관의 ESG 표준평가 방법론으로 채택)</li>
+                                                    <li class="data-item">과학적 데이터 분석 및 Peer 그룹 데이터 비교를 통한 체계적이고 객관적인 진단 수행</li>
+                                                    <li class="data-item">ESG 경영 수준 개선을 위한 기업 중심의 컨설팅 서비스 제공</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // main -->
+        <!-- page-foot -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <a href="#" class="footer-subject"><span class="footer-name blind">ClickESG</span></a>
+                </div>
+                <div class="footer-body">
+                    <div class="navi-list">
+                        <h2 class="navi-title">SERVICE</h2>
+                        <ul class="navi-wrap">
+                            <li class="navi-item">
+                                <a href="#">Service 소개</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG 진단 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG 공급망 진단 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Net-Zero 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG Data Hub 구축 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">CDP 대응 자문 컨설팅</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navi-list">
+                        <h2 class="navi-title">SOLUTION</h2>
+                        <ul class="navi-wrap">
+                            <li class="navi-item">
+                                <a href="#">Solution 소개</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG Assessment</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">SCM Assessment</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Net-Zero</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Data Hub</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">CDP Assistance</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navi-list">
+                        <h2 class="navi-title">ABOUT US</h2>
+                        <ul class="navi-wrap">
+                            <li class="navi-item">
+                                <a href="#">ClickESG 소개</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Partnership</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">SCM Assessment</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Reference</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">News & Article</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">News & AContact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navi-list">
+                        <h2 class="navi-title">
+                            <a href="#" class="link">PLATFORM</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-aside">
+                <div class="footer-aside-inner">
+                    <p class="copyright">COPYRIGHTS 2024 SK Inc. ALL RIGHTS RESERVED.</p>
+                    <ul class="info-area">
+                        <li class="info-area-link">
+                            <a href="">이용약관</a>
+                        </li>
+                        <li class="info-area-link">
+                            <a href="">개인정보 처리방침</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

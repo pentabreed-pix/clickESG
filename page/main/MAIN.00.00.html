@@ -26,11 +26,110 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="./../../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mainVisual();
+            tab();
+            another();
+            activeAnimationMain();
+        });
+    </script>
 </head>
 
 <body>
-    <!-- Modal -->
     <div id="wrap" class="wrap">
+        <header id="header" class="transparent">
+            <div class="header-inner">
+                <h1 class="site-logo">
+                    <a href="#" class="site-name">
+                        <span class="blind">ClickESG 로고</span>
+                    </a>
+                </h1>
+                <div class="site-navi" id="naviMenu">
+                    <ul class="depth1-list">
+                        <li class="depth1-item">
+                            <a href="javascript:void(0);" class="depth1">SERVICE</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Service 소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG 진단 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG 공급망 진단 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Net-Zero 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG Data Hub 구축 컨설팅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">CDP 대응 자문 컨설팅</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0);" class="depth1">SOLUTION</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Solution 소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ESG Assessment</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">SCM Assessment</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Net-Zero</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Data Hub</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">CDP Assistance</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0);" class="depth1">ABOUT US</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">ClickESG 소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Partnership</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Reference</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">News & Article</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="#" target="_self" class="depth2">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item link">
+                            <a href="javascript:void(0);" class="depth1">PLATFORM</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-control">
+                    <button type="button" class="btn goto-page-navi">전체메뉴</button>
+                </div>
+            </div>
+        </header>
         <!-- main -->
         <main id="main" class="page main">
             <div class="page-body">
@@ -109,11 +208,10 @@
                                         </ul>
                                     </div>
                                     <div class="swiper-controls">
-
                                         <p class="count_txt"></p>
                                         <div class="swiper-pagination"></div>
                                         <div class="controls">
-                                            <button id="toggleButton">Stop</button>
+                                            <button id="toggleButton" class="btn icon style-a play">Stop</button>
                                         </div>
                                     </div>
                                 </div>
@@ -121,148 +219,566 @@
                         </div>
                     </div>
                 </section>
+                <section class="section story-01" active-animation="main">
+                    <div class="section-wrap">
+                        <div class="section-body">
+                            <ul class="data-list">
+                                <li class="data-item item-01">
+                                    <div class="data-head">
+                                        <h2 class="data-subject">Our Services</h2>
+                                        <p class="data-summary">ClickESG는 Global 표준 기술력을 보유하고,<br> ESG 전문성을 가진 기업중심의<br> 컨설팅 서비스를 제공합니다.</p>
+                                    </div>
+                                </li>
+                                <li class="data-item item-02">
+                                    <p class="para">기업 대출을 심사를 위한<br> ESG 수준 진단</p>
+                                </li>
+                                <li class="data-item item-03">
+                                    <p class="para">이중 중대성 평가를 위한<br> ESG 수준 파악</p>
+                                </li>
+                                <li class="data-item item-04">
+                                    <p class="para">Net Zero 달성을 위한<br> 탄소 배출량 세부 관리</p>
+                                </li>
+                                <li class="data-item item-05">
+                                    <p class="para">지속가능성보고서 작성을 위한<br> 세부 지표 관리 및 실적 관리</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="section story-02" active-animation="main">
+                    <div class="section-wrap">
+                        <div class="section-head">
+                            <h2 class="section-subject">Solutions</h2>
+                            <p class="section-summary">맞춤형 ESG 솔루션을 통해 고객의 니즈에 최적화된 서비스를 제공하며, 다양한 언어 팩을 지원해<br> 해외 사업장의 공급망 ESG 진단을 도울 수 있습니다.</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="swiper swiper-list">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide swiper-item item-01">
+                                        <a href="#" class="swiper-wrap">
+                                            <div class="swiper-info">
+                                                <div class="swiper-head">
+                                                    <em class="swiper-subject">ESG Assessment</em>
+                                                    <span class="swiper-category">(ESG 경영 진단)</span>
+                                                </div>
+                                                <div class="swiper-body">
+                                                    <p class="para">ESG 경영관리의 시작, 글로벌 기관 기준과 국내 법제도 및 가이드라인 에 맞춘 기업의 ESG 경영 수준을 진단하고 개선 방향을 수립해 보세요.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide swiper-item item-02">
+                                        <a href="#" class="swiper-wrap">
+                                            <div class="swiper-info">
+                                                <div class="swiper-head">
+                                                    <em class="swiper-subject">SCM Assessment</em>
+                                                    <span class="swiper-category">(ESG 공급망 진단 솔루션)</span>
+                                                </div>
+                                                <div class="swiper-body">
+                                                    <p class="para">공급망 협력사의 ESG 위험을 진단하고 ESG 대응수준을 향상할 수 있도록 온라인 중심 진단/평가를 수행하며, 도출된 Risk의 대응 방안을 제공합니다.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide swiper-item item-03">
+                                        <a href="#" class="swiper-wrap">
+                                            <div class="swiper-info">
+                                                <div class="swiper-head">
+                                                    <em class="swiper-subject">ESG Data Hub</em>
+                                                    <span class="swiper-category">(ESG Data Hub 솔루션)</span>
+                                                </div>
+                                                <div class="swiper-body">
+                                                    <p class="para">ESG 경영에 필수적인 ESG Data 및 성과를 도와드립니다. 관리지표/목표/실적이 일관성을 가지고 효과적으로 관리하여 귀사의 ESG 수준을 한 단계 업그레이드해 드립니다.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide swiper-item item-04">
+                                        <a href="#" class="swiper-wrap">
+                                            <div class="swiper-info">
+                                                <div class="swiper-head">
+                                                    <em class="swiper-subject">Net-Zero</em>
+                                                    <span class="swiper-category">(Net-Zero 솔루션)</span>
+                                                </div>
+                                                <div class="swiper-body">
+                                                    <p class="para">디지털 기반의 온실가스 관리 솔루션으로 탄소 발자국을 녹색으로 바꾸세요. 귀사의 배출량을 효율적으로 측정, 보고, 검증 지원하여 지속 가능한 미래를 함께 만들어갑니다.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide swiper-item item-05">
+                                        <a href="#" class="swiper-wrap">
+                                            <div class="swiper-info">
+                                                <div class="swiper-head">
+                                                    <em class="swiper-subject">CDP Assistance</em>
+                                                    <span class="swiper-category">(CDP 평가 지원 솔루션)</span>
+                                                </div>
+                                                <div class="swiper-body">
+                                                    <p class="para">신속하고 정확한 CDP 평가 대응을 위하여 공식 Database로 학습된 AI 기능으로 CDP 응답 자문 서비스를 이용해 보세요.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-controls2">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-prev btn icon style-b color-a arrow-left1"></div>
+                                    <div class="swiper-button-next btn icon style-b color-a arrow-right1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section story-03" active-animation="main">
+                    <div class="section-wrap">
+                        <div class="section-head">
+                            <h2 class="section-subject">Our References</h2>
+                            <p class="section-summary">ClickESG 서비스의 진단 및 컨설팅 건수를 통해 진행 상황을 한눈에 확인할 수 있습니다.</p>
+                            <span class="section-base">('24년 10월 기준, 누적실적)</span>
+                        </div>
+                        <div class="section-body">
+                            <ul class="data-list">
+                                <li class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="data-subject">진단 건수</em>
+                                        </div>
+                                        <div class="data-body">
+                                            <p class="data-info">5786</p><span class="data-text">건</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="data-subject">컨설팅 건수</em>
+                                        </div>
+                                        <div class="data-body">
+                                            <p class="data-info">673</p><span class="data-text">건</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="data-subject">진단 원청사</em>
+                                        </div>
+                                        <div class="data-body">
+                                            <p class="data-info">57</p><span class="data-text">개사</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="data-subject">진단 산업군</em>
+                                        </div>
+                                        <div class="data-body">
+                                            <p class="data-info">97</p><span class="data-text">개</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="section story-04" active-animation="main">
+                    <div class="section-wrap">
+                        <div class="section-head">
+                            <p class="section-summary">ESG경영 서비스를 구독하고, 함께 지속성장 하고 있는 주요 고객사입니다.</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="tab-display module-a">
+                                <div class="swiper tab-wrap">
+                                    <ul class="swiper-wrapper tab-list">
+                                        <li id="tab1" class="swiper-slide tab-item"><button class="tab-text">Clients</button></li>
+                                        <li id="tab2" class="swiper-slide tab-item"><button class="tab-text">Partners</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-display module-a">
+                                <div class="panel-list">
+                                    <div id="tab-panel1" class="panel-item clients">
+                                        <div class="panel-wrap">
+                                            <div class="sub-section">
+                                                <div class="rolling-display rolling-01">
+                                                    <ul class="rolling-list">
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-emart.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-shinsegae.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-pulmuone.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-11.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-ap-systems.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-cj-cheiljedang.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-gst.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-gs-retail.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-ibk-bank.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-kb-bank.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-kb-autosys.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-picglobal.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-inc.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-broadband.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-gas.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-networks.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-nexilis.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-resonac.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-rentalcars.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-boiscience.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-specialty.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-siltron.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-sk-innovation.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/01/partners-skcnc.png" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="sub-section">
+                                                <div class="rolling-display rolling-02">
+                                                    <ul class="rolling-list">
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-sk-chemicals.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-sk-telecom.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-sk-trichem.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-sk-pucore.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-k2.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-gwangju-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-kkpc.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-dine.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-daejeon-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-korea-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-dhf.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-lotte-mart.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-lotte-ds.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-lotte-food.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-lotte-chemical.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-medias.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-binggrae.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-sacheon-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-seoul-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-shinsegae.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-advantest.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/02/partners-anseong-cci.png" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="sub-section">
+                                                <div class="rolling-display rolling-03">
+                                                    <ul class="rolling-list">
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-yoosung-bni.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-justem.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-bgf-retail.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-goryeo-savings-bank.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-dongaotsuka.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-samyang-foods.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-ottogi.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-woojin-inc.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-asflow.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-koreaseven.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-hyundai-ds.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-chungnam-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-chilgok-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-coupang.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-hana-bank.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-korloy.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-korea-computer.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-happynare.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-sk-hns.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/clients/03/partners-hwasung-cci.png" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="tab-panel2" class="panel-item partners">
+                                        <div class="panel-wrap">
+                                            <div class="sub-section">
+                                                <div class="rolling-display rolling-04">
+                                                    <ul class="rolling-list">
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/01/partners-esg-partners.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/01/partners-kpmg.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/01/partners-nice-dnb.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/01/partners-nice-evalinfo.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/01/partners-yoonnyang.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/01/partners-bridging-group.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/01/partners-eco-nine.png" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="sub-section">
+                                                <div class="rolling-display rolling-05">
+                                                    <ul class="rolling-list">
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/02/partners-ecredible.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/02/partners-korea-esg-credits.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/02/partners-kmr.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/02/partners-infinity.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/02/partners-fomek.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/02/partners-korea-cci.png" alt=""></li>
+                                                        <li class="rolling-item"><img src="../../assets/images/main/logo/partners/02/partners-esg-ri.png" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section story-05" active-animation="main">
+                    <div class="section-wrap">
+                        <div class="section-head">
+                            <h2 class="section-subject">Our Awards</h2>
+                            <p class="section-summary">수상 실적이 증명하는 ESG 전문성,<br> 지속가능한 미래를 혁신적으로 선도합니다.</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="data-list">
+                                <a href="#" class="data-item data-2024">
+                                    <div class="data-wrap">
+                                        <div class="data-info">
+                                            <div class="data-info-wrap">
+                                                <span class="data-year">2024</span>
+                                                <div class="data-figure">
+                                                    <img src="../../assets/images/main/story05-2024.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data-head">
+                                            <em class="data-subject">Digital Innovation Awards 2024</em>
+                                            <span class="data-base">전자신문사장표창</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="data-item data-2023">
+                                    <div class="data-wrap">
+                                        <div class="data-info">
+                                            <div class="data-info-wrap">
+                                                <span class="data-year">2023</span>
+                                                <div class="data-figure">
+                                                    <img src="../../assets/images/main/story05-2023.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data-head">
+                                            <em class="data-subject">ASOCIO ICT Awards</em>
+                                            <span class="data-base">ESG부문 Tech Award</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="data-item data-2022">
+                                    <div class="data-wrap">
+                                        <div class="data-info">
+                                            <div class="data-info-wrap">
+                                                <span class="data-year">2022</span>
+                                                <div class="data-figure">
+                                                    <img src="../../assets/images/main/story05-2022.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data-head">
+                                            <em class="data-subject">ICT KOREA AWARD 2022</em>
+                                            <span class="data-base">웹사이트 품질 통합 부문 Gold Prize 수상</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section story-06" active-animation="main">
+                    <div class="section-wrap">
+                        <div class="section-head">
+                            <h2 class="section-subject">News & Article</h2>
+                            <p class="section-summary">ESG 생태계를 분석해 주요 기관을 선별하고,<br> 관련 주요 소식을 전달합니다.</p>
+                        </div>
+                        <div class="section-body">
+                            <div class="swiper swiper-list">
+                                <div class="swiper-controls3">
+                                    <div class="swiper-button-prev btn icon style-b color-b arrow-left1"></div>
+                                    <div class="swiper-button-next btn icon style-b color-b arrow-right1"></div>
+                                </div>
+                                <ul class="swiper-wrapper">
+                                    <a href="#" class="swiper-slide swiper-item">
+                                        <div class="swiper-wrap">
+                                            <div class="swiper-figure">
+                                                <img src="../../assets/images/main/story06-01.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-info">
+                                                <em class="swiper-category">정부/규제기관</em>
+                                                <div class="swiper-body">
+                                                    <p class="para">초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시 초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="swiper-slide swiper-item">
+                                        <div class="swiper-wrap">
+                                            <div class="swiper-figure">
+                                                <img src="../../assets/images/main/story06-02.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-info">
+                                                <em class="swiper-category">정부/규제기관</em>
+                                                <div class="swiper-body">
+                                                    <p class="para">초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시 초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="swiper-slide swiper-item">
+                                        <div class="swiper-wrap">
+                                            <div class="swiper-figure">
+                                                <img src="../../assets/images/main/story06-03.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-info">
+                                                <em class="swiper-category">정부/규제기관</em>
+                                                <div class="swiper-body">
+                                                    <p class="para">초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시 초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="swiper-slide swiper-item">
+                                        <div class="swiper-wrap">
+                                            <div class="swiper-figure">
+                                                <img src="../../assets/images/main/story06-04.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-info">
+                                                <em class="swiper-category">정부/규제기관</em>
+                                                <div class="swiper-body">
+                                                    <p class="para">초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시 초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="swiper-slide swiper-item">
+                                        <div class="swiper-wrap">
+                                            <div class="swiper-figure">
+                                                <img src="../../assets/images/main/story06-01.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-info">
+                                                <em class="swiper-category">정부/규제기관</em>
+                                                <div class="swiper-body">
+                                                    <p class="para">초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시 초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="swiper-slide swiper-item">
+                                        <div class="swiper-wrap">
+                                            <div class="swiper-figure">
+                                                <img src="../../assets/images/main/story06-02.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-info">
+                                                <em class="swiper-category">정부/규제기관</em>
+                                                <div class="swiper-body">
+                                                    <p class="para">초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시 초당파 국회 ESG 포럼 발족…10대 ESG정책과제 제시</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
         <!-- // main -->
+        <!-- page-foot -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <a href="#" class="footer-subject"><span class="footer-name blind">ClickESG</span></a>
+                </div>
+                <div class="footer-body">
+                    <div class="navi-list">
+                        <h2 class="navi-title">SERVICE</h2>
+                        <ul class="navi-wrap">
+                            <li class="navi-item">
+                                <a href="#">Service 소개</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG 진단 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG 공급망 진단 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Net-Zero 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG Data Hub 구축 컨설팅</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">CDP 대응 자문 컨설팅</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navi-list">
+                        <h2 class="navi-title">SOLUTION</h2>
+                        <ul class="navi-wrap">
+                            <li class="navi-item">
+                                <a href="#">Solution 소개</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">ESG Assessment</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">SCM Assessment</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Net-Zero</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Data Hub</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">CDP Assistance</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navi-list">
+                        <h2 class="navi-title">ABOUT US</h2>
+                        <ul class="navi-wrap">
+                            <li class="navi-item">
+                                <a href="#">ClickESG 소개</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Partnership</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">SCM Assessment</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">Reference</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">News & Article</a>
+                            </li>
+                            <li class="navi-item">
+                                <a href="#">News & AContact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navi-list">
+                        <h2 class="navi-title">
+                            <a href="#" class="link">PLATFORM</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-aside">
+                <div class="footer-aside-inner">
+                    <p class="copyright">COPYRIGHTS 2024 SK Inc. ALL RIGHTS RESERVED.</p>
+                    <ul class="info-area">
+                        <li class="info-area-link">
+                            <a href="">이용약관</a>
+                        </li>
+                        <li class="info-area-link">
+                            <a href="">개인정보 처리방침</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- //page-foot -->
     </div>
-    <script>
-        var slideData = [{
-                name: 'ClickESG Service'
-            },
-            {
-                name: 'ClickESG Solutions'
-            },
-            {
-                name: 'About ClickESG'
-            }
-        ];
-
-        var sliderLink = new Swiper(".link", {
-            loop: true,
-            allowTouchMove: false,
-            // autoplay: {
-            //     delay: 5000,
-            // },
-            effect: 'fade',
-        });
-
-        var count = 0;
-        var countId = '';
-        var isCounterOn = status;
-
-
-        function loading_bar() {
-            $('.count_txt').text(count);
-            var loading_val = (100 * count) / 50
-            $('.swiper-pagination-bullet .timer-percent').css({
-                'width': 0 + '%'
-            });
-            $('.swiper-pagination-bullet-active .timer-percent').css({
-                'width': loading_val + '%'
-            });
-            var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-            $('.swiper-pagination-bullet').css({
-                'width': '18px'
-            });
-            $('.swiper-pagination-bullet-active').css({
-                'width': activeBulletTitleW + 'px'
-            });
-        }
-
-        function startCounter() {
-
-            var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-            $('.swiper-pagination-bullet-active').css({
-                'width': activeBulletTitleW + 'px'
-            });
-
-            clearTimeout(countId);
-            countId = setInterval(function() {
-                count += 1;
-                if (count === 50) {
-                    slider.slideNext();
-                    count = 0;
-                }
-                loading_bar();
-            }, 100);
-            isCounterOn = true;
-        }
-
-        function stopCounter() {
-            clearTimeout(countId);
-            isCounterOn = false;
-        }
-
-        var slider = new Swiper(".bg", {
-            slidesPerView: 1,
-            loop: true,
-            // autoplay: {
-            //     delay: 5000,
-            // },
-            speed: 1200,
-            pagination: {
-                el: ".swiper-controls .swiper-pagination",
-                clickable: true,
-                renderBullet: function(index, className) {
-                    return '<div class="' + className + '"><span class="timer-title">' + 0 + (index + 1) + ' ' + slideData[index].name + '</span>' + '<span class="timer-bar"><span class="timer-percent"></span></span></div>';
-                },
-            },
-            thumbs: {
-                swiper: sliderLink
-            },
-            on: {
-                init: function() {
-                    $('.swiper-pagination-bullet').css({
-                        'width': '18px'
-                    });
-                    setTimeout(function() {
-                        startCounter();
-                    }, 100);
-
-                },
-                slideChangeTransitionStart: function() {
-                    count = 0;
-                    loading_bar();
-
-
-                }
-            }
-        });
-
-        var sliderTitle = new Swiper(".title", {
-            loop: true,
-            speed: 1200,
-        });
-
-        slider.controller.control = sliderTitle;
-        sliderTitle.controller.control = slider;
-
-        var toggleButton = document.getElementById('toggleButton');
-        toggleButton.addEventListener('click', function() {
-            if (isCounterOn === true) {
-                stopCounter();
-                toggleButton.textContent = 'Play';
-            } else {
-                startCounter();
-                toggleButton.textContent = 'Stop';
-            }
-        });
-
-        $('.swiper-pagination-bullet').on('click', function() {
-            count = 0;
-            if (isCounterOn === true) {
-                startCounter();
-            } else {
-                loading_bar();
-            }
-
-        });
-
-        window.addEventListener('resize', function() {
-            slider.update();
-            sliderTitle.update();
-        });
-    </script>
 </body>
 
 </html>
