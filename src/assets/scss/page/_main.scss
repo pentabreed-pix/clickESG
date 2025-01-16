@@ -552,7 +552,7 @@
                     .section-head {
                         .section-summary {
                             @include font(medium, bold);
-                            color: custom-color(neutral, 090)
+                            color: custom-color(neutral, 090);
                             text-align: center;
                         }
                     }
