@@ -8,7 +8,7 @@ frontCommon.Html = (function () {
             frontCommonScroll();
             lenis();
             header();
-            activeAnimationType1();
+            activeAnimationtype-a();
 
             //footer();
             //localAnimations();
@@ -323,7 +323,7 @@ function input() {
     });
 }
 // input
-function activeAnimationType1() {
+function activeAnimationtype-a() {
     gsap.utils
     .toArray('[active-animation="type-1"]')
     .forEach((section, index) => {

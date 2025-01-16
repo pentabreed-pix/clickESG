@@ -2,7 +2,7 @@
 @use '../components/variables' as *;
 
 .tab-display {
-    &.design1 {
+    &.module-a {
         display: flex;
         justify-content: center;
 
@@ -36,13 +36,13 @@
         }
 
         & + .panel-display {
-            &.design1 {
+            &.module-a {
                 margin-top: 12rem;
             }
         }
     }
     
-    &.design2 {
+    &.module-b {
         display: flex;
         justify-content: center;
         .tab-wrap {
@@ -66,13 +66,29 @@
                             border-bottom: 0.3rem solid custom-color(primary, 090);
                         }
                     }
+
+                    + .tab-item {
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: -4rem;
+                            width: 0.1rem;
+                            height: 1.6rem;
+                            background-color: #d9d9d9;
+                            transform: translateY(-50%);
+                        } 
+                    }
                 }
             }
         }
     }
 }
 .panel-display {
-    &.design1 {
+    &.module-a {
         .panel-list {
             .panel-item {
                 &.hidden {
@@ -82,24 +98,24 @@
         }
     }
 }
-// .panel-display.design1 .panel-list .panel-item.hidden {
+// .panel-display.module-a .panel-list .panel-item.hidden {
 //     display: none;
 // }
 /*
-.tab-display.design1 .tab-wrap .tab-list {
+.tab-display.module-a .tab-wrap .tab-list {
     align-items: flex-end;
 }
-.tab-display.design1 .tab-wrap .tab-item {
+.tab-display.module-a .tab-wrap .tab-item {
     max-width: 60rem;
     flex-shrink: 1;
 }
-.tab-display.design1 .tab-wrap .tab-item .tab-text {
+.tab-display.module-a .tab-wrap .tab-item .tab-text {
     display: inline-block;
     position: relative;
     width: 100%;
     transition: color 0.3s ease;
 }
-.tab-display.design1 .tab-wrap .tab-item .tab-text::after {
+.tab-display.module-a .tab-wrap .tab-item .tab-text::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -109,11 +125,11 @@
     background-color: rgb(228, 228, 231);
     transition: 0.3s ease;
 }
-.tab-display.design1 .tab-wrap .tab-item.active .tab-text::after {
+.tab-display.module-a .tab-wrap .tab-item.active .tab-text::after {
     height: 0.3rem;
     background-color: rgb(0, 0, 0);
 }
-.tab-display.design1 .tab-wrap.full .tab-item {
+.tab-display.module-a .tab-wrap.full .tab-item {
     width: 100%;
     flex-shrink: 1;
 }
@@ -121,15 +137,15 @@
 
 
 @media (max-width: 1023px) {
-    .tab-display.design1 {
+    .tab-display.module-a {
         position: relative;
     }
-    .tab-display.design1 .tab-list .tab-item {
+    .tab-display.module-a .tab-list .tab-item {
         width: auto;
         max-width: unset;
         flex-shrink: 0;
     }
-    .tab-display.design1::after {
+    .tab-display.module-a::after {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -138,6 +154,6 @@
         background-color: rgb(228, 228, 231);
     }
 }
-.tab-display.style1.tab-wrap .tab-item .tab-text {
+.tab-display.style-a.tab-wrap .tab-item .tab-text {
     padding: 2rem 1rem;
 }*/

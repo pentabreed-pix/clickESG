@@ -5,7 +5,7 @@
 
 .data-display {
     
-    &.design1 {
+    &.module-a {
         .data-list {
             display: flex;
             flex-direction: column;
@@ -36,7 +36,7 @@
         }
     }
 
-    &.style1{
+    &.style-a{
         .data-item {
             .data-head {
                 width: 32rem;
@@ -51,7 +51,7 @@
         }
     }
 
-    &.type1 {
+    &.type-a {
         .data-item {
             .data-head {
                 font-size: 1.7rem;
@@ -104,8 +104,8 @@
 
 /* bullet list */
 .bullet-display {
-    &.design1 {
-        &.style1{
+    &.module-a {
+        &.style-a{
             >.data-list {
                 >.data-item {
                     display: flex;
@@ -126,7 +126,7 @@
                 }
             }
         }
-        &.style2 {
+        &.style-b {
             >.data-list {
                 display: flex;
                 flex-direction: column;
@@ -160,7 +160,7 @@
             }
         }
 
-        &.type1 {
+        &.type-a {
             >.data-list {
                 >.data-item {
                     font-size: 1.9rem;
@@ -182,7 +182,7 @@
             }
         }
 
-        &.type2 {
+        &.type-b {
             >.data-list {
                 >.data-item {
                     font-size: 1.9rem;
@@ -203,7 +203,7 @@
             }
         }
 
-        &.type3 {
+        &.type-c {
             >.data-list {
                 >.data-item {
                     font-size: 1.5rem;

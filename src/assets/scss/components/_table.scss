@@ -17,8 +17,8 @@
         border-bottom: 1px solid rgba(203, 203, 203, 0.50);
 	}
 
-    &.design1 {
-		&.style1{
+    &.module-a {
+		&.style-a{
 			table {
 				>thead {
 					>tr {
@@ -88,7 +88,7 @@
 			}
 		}
 
-		&.type1 {
+		&.type-a {
 			table {
 				>thead {
 					>tr {
@@ -147,12 +147,12 @@
 
 	// table info
     // .t-info {
-	// 	&.type1 {
+	// 	&.type-a {
 	// 		color: custom-color(neutral, 050);
 	// 		font-weight: 600;
 	// 		font-size: 3.2rem;
 	// 	}
-	// 	&.type2 {
+	// 	&.type-b {
 	// 		color: custom-color(neutral, 050);
 	// 		font-weight: 600;
 	// 		font-size: 1.3rem;

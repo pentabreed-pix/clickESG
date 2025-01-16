@@ -21,7 +21,7 @@ body {
 		}
 
 		.local {
-			&.design1 {
+			&.module-a {
 				margin: 0 auto;
 				padding: 10.4rem 0 0 0;
 
@@ -36,7 +36,7 @@ body {
 				}
 			}
 
-			// &.design2 {
+			// &.module-b {
 			// 	width: 100%;
 
 			// 	.local-body {
@@ -46,7 +46,7 @@ body {
 			// 	}
 			// }
 
-			// &.design3 {
+			// &.module-c {
 			// 	margin: 0 auto;
 			// 	max-width: 144rem;
 			// 		.local-body {
@@ -63,7 +63,7 @@ body {
 		}
 
 		.local-head {
-			&.design1 {
+			&.module-a {
 				.local-subject {
 					.local-name {
 						@include font(large-4x, bold);
@@ -99,7 +99,7 @@ body {
 				// }
 			}
 
-			&.design2 {
+			&.module-b {
 				position: relative;
 
 				.local-wrap{
@@ -140,7 +140,7 @@ body {
 				}
 			}
 
-			// &.design3 {
+			// &.module-c {
 			// 	padding: 3.2rem 1.8rem 12rem;
 
 			// 	.local-subject {
@@ -162,7 +162,7 @@ body {
 			// 	}
 			// }
 
-			// &.design4 {
+			// &.module-d {
 			  // 	display: flex;
 			// 	position: relative;
 			// 	width: 100%;
@@ -373,7 +373,7 @@ body {
 			// 	}
 			// }
 
-			// &.design5 {
+			// &.module-e {
 			// 	position: relative;
 			// 	width: 100%;
 			// 	padding: 14rem 0 0 0;
@@ -520,14 +520,14 @@ body {
 			// }
 
 			// normal
-			&.design1 {
+			&.module-a {
 				max-width: 144rem;
 				margin: 0 auto;
 				padding-top: 12rem;
 			}
 
 			// section-head와 section-body가 flex 되는 경우
-			&.design2 {
+			&.module-b {
 				.section-wrap {
 					display: flex;
 
@@ -538,7 +538,7 @@ body {
 			}
 
 			// // name과 util이 flex 되는 경우
-			// &.design3 {
+			// &.module-c {
 			// 	.section-head {
 			// 		display: flex;
 			// 		align-items: center;
@@ -560,7 +560,7 @@ body {
 			// }
 
 			// // section-body가 flex 되는 경우
-			// &.design4 {
+			// &.module-d {
 			// 	.section-body {
 			// 		display: flex;
 			// 		@include mobile {
@@ -569,7 +569,7 @@ body {
 			// 	}
 			// }
 
-			// &.design5 {
+			// &.module-e {
 			// 	.section-head {
 			// 		display: flex;
 			// 		align-items: center;
@@ -589,9 +589,9 @@ body {
 			// 	}
 			// }
 
-			&[class*=design] {
+			&[class*=module] {
 				// space
-				&.style1{
+				&.style-a{
 					.section-wrap {
 						.section-head {
 							+.section-body {
@@ -631,7 +631,7 @@ body {
 					}
 				}
 
-				&.style2 {
+				&.style-b {
 					max-width: 100%;
 					.section-wrap {
 						.section-head {
@@ -890,7 +890,7 @@ body {
 				// }
 
 				// font style
-				&.type1 {
+				&.type-a {
 					.section-caption {
 						color: custom-color(primary, 080);
 						@include font(small-5x, medium);
@@ -927,7 +927,7 @@ body {
 					}
 				}
 
-				&.type2 {
+				&.type-b {
 					.section-name {
 						color: #15151A;
 						@include font(small-1x, bold);
@@ -959,7 +959,7 @@ body {
 					}
 				}
 
-				&.type3 {
+				&.type-c {
 					.section-name {
 						color: #15151A;
 						@include font(large-3x, bold);
@@ -998,7 +998,7 @@ body {
 					}
 				}
 
-				&.type4 {
+				&.type-d {
 					.section-name {
 						color: #000;
 						@include font(small-4x, bold);
@@ -1015,7 +1015,7 @@ body {
 					}
 				}
 
-				&.type5 {
+				&.type-e {
 					.section-head {
 						.section-name {
 							color: #15151A;
@@ -1043,7 +1043,7 @@ body {
 					}
 				}
 
-				&.type6 {
+				&.type-f {
 					.section-name {
 						@include font(small-1x, bold);
 						color: #15151A;
@@ -1073,7 +1073,7 @@ body {
 					}
 				}
 
-				&.type7 {
+				&.type-g {
 					.section-name {
 						@include font(medium, bold);
 						color: #15151A;
@@ -1094,7 +1094,7 @@ body {
 						}
 					}
 				}
-				&.type8 {
+				&.type-h {
 					.section-name {
 						@include font(medium, bold);
 						color: custom-color(neutral, 000);
@@ -1221,7 +1221,7 @@ body {
 
 			// // 별첨 공통
 			// .comment {
-			// 	&.design1 {
+			// 	&.module-a {
 			// 		color: custom-color(neutral, 060);
 			// 		@include font(small-5x, medium);
 
@@ -1229,7 +1229,7 @@ body {
 			// 			@include font(small-6x, medium);
 			// 		}
 			// 	}
-			// 	&.design2 {
+			// 	&.module-b {
 			// 		color: custom-color(system, 100);
 			// 		@include font(small-2x, bold);
 
@@ -1237,7 +1237,7 @@ body {
 			// 			@include font(small-3x, bold);
 			// 		}
 			// 	}
-			// 	&.design3 {
+			// 	&.module-c {
 			// 		color: custom-color(system, 100);
 			// 		@include font(small-3x, bold);
 
@@ -1258,8 +1258,8 @@ body {
 				&.breadcrumb {
 					display: flex;
 
-					&.design1 {
-						&.style1{
+					&.module-a {
+						&.style-a{
 							padding-top: 4rem;
 							justify-content: left;
 
@@ -1268,7 +1268,7 @@ body {
 							}
 						}
 
-						&.style2 {
+						&.style-b {
 							position: relative;
 
 							@include mobile() {

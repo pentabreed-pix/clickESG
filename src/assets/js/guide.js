@@ -151,7 +151,7 @@ function input() {
 }
 
 function select() {
-    const selects = document.querySelectorAll(".form.select.design1")
+    const selects = document.querySelectorAll(".form.select.module-a")
   
     for(const select of selects) {
         if(select) {
