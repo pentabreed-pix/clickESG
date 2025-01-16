@@ -55,7 +55,7 @@
                                                 .swiper-head {
                                                     .swiper-subject {
                                                         @include font(large-5x, bold);
-                                                        color: custom-color(system, 060);
+                                                        color: custom-color(neutral, 000);
                                                     }
                                                     & + .swiper-body {
                                                         margin-top: 4rem;
@@ -64,7 +64,7 @@
                                                 .swiper-body {
                                                     .para {
                                                         @include font(small-2x, bold);
-                                                        color: custom-color(system, 060);
+                                                        color: custom-color(neutral, 000);
                                                     }
                                                 }
                                             }
@@ -100,7 +100,7 @@
                                         bottom: 0;
                                         display: block;
                                         @include font(small-2x, bold);
-                                        color: custom-color(system, 060);
+                                        color: custom-color(neutral, 000);
                                         display: none;
                                     }
                                     .swiper-pagination {
@@ -148,7 +148,7 @@
 
                                             &.swiper-pagination-bullet-active {
                                                 .timer-title {
-                                                    color: custom-color(system, 060);
+                                                    color: custom-color(neutral, 000);
                                                 }
                                                 .timer-bar {
                                                     .timer-percent {
@@ -214,7 +214,7 @@
                                         }
                                         .data-summary {
                                             @include font(large, bold);
-                                            color: custom-color(system, 070);
+                                            color: custom-color(neutral, 090)
                                         }
                                     }
                                 }
@@ -231,7 +231,7 @@
 
                                     .para {
                                         @include font(small-1x, bold);
-                                        color: custom-color(system, 060);
+                                        color: custom-color(neutral, 000);
                                     }
 
                                     &::before {
@@ -301,7 +301,7 @@
                     .section-head {
                         .section-subject {
                             @include font(small-1x, bold);
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
 
                             & + .section-summary {
                                 margin-top: 2.4rem;
@@ -309,7 +309,7 @@
                         }
                         .section-summary {
                             @include font(large, bold);
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
                         }
 
                         & + .section-body {
@@ -352,7 +352,7 @@
                                                 flex-direction: column;
                                                 .swiper-subject {
                                                     @include font(small-1x, bold);
-                                                    color: custom-color(system, 070);
+                                                    color: custom-color(neutral, 090)
                                                 }
                                                 .swiper-category {
                                                     @include font(small-3x, bold);
@@ -465,7 +465,7 @@
                         width: 49.4rem;
                         .section-subject {
                             @include font(small-1x, bold);
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
 
                             & + .section-summary {
                                 margin-top: 2.4rem;
@@ -473,7 +473,7 @@
                         }
                         .section-summary {
                             @include font(large, bold);
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
 
                             & + .section-base {
                                 margin-top: 3.4rem;
@@ -482,7 +482,7 @@
                         .section-base {
                             display: block;
                             @include font(small-3x, regular);
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
                         }
 
                         & + .section-body {
@@ -525,13 +525,13 @@
                                         .data-info {
                                             @include font(large-7x, bold);
                                             line-height: 1.1;
-                                            color: custom-color(system, 060);
+                                            color: custom-color(neutral, 000);
                                             letter-spacing: -3.2px;
                                         }
                                         .data-text {
                                             @include font(large-1x, semibold);
                                             line-height: 1.5;
-                                            color: custom-color(system, 060);
+                                            color: custom-color(neutral, 000);
                                             letter-spacing: -3.2px;
                                         }
                                     }
@@ -552,7 +552,7 @@
                     .section-head {
                         .section-summary {
                             @include font(medium, bold);
-                            color: custom-color(system, 070);
+                            color: custom-color(neutral, 090)
                             text-align: center;
                         }
                     }
@@ -657,7 +657,7 @@
 
                         .section-summary {
                             @include font(large, bold);
-                            color: custom-color(system, 070);
+                            color: custom-color(neutral, 090)
                         }
 
                         & + .section-body {
@@ -683,7 +683,7 @@
                                         height: 0;
                                         padding-bottom: 100%;
                                         border-radius: 3.2rem;
-                                        background-color: custom-color(system, 060);
+                                        background-color: custom-color(neutral, 000);
 
                                         .data-info-wrap {
                                             display: flex;
@@ -695,7 +695,7 @@
                                                 margin-left: auto;
                                                 padding: 0.9rem 1.8rem;
                                                 @include font(small-5x, bold);
-                                                color: custom-color(system, 070);
+                                                color: custom-color(neutral, 090);
                                                 border: 0.1rem solid #CBCBCB;
                                                 border-radius: 4rem;
                                             }
@@ -728,7 +728,7 @@
                                         .data-subject {
                                             display: block;
                                             @include font(small-1x, bold);
-                                            color: custom-color(system, 080);
+                                            color: custom-color(neutral, 100);
 
                                             & + .data-base {
                                                 margin-top: 1.2rem;
@@ -737,7 +737,7 @@
                                         .data-base {
                                             display: block;
                                             @include font(small-3x, regular);
-                                            color: custom-color(system, 080);
+                                            color: custom-color(neutral, 100)
                                         }
                                     }
                                 }
@@ -820,7 +820,7 @@
 
                         .section-summary {
                             @include font(large, bold);
-                            color: custom-color(system, 070);
+                            color: custom-color(neutral, 090)
                         }
 
                         & + .section-body {
@@ -882,7 +882,7 @@
                                                     -webkit-line-clamp: 2;
                                                     -webkit-box-orient: vertical;
                                                     @include font(small-2x, bold);
-                                                    color: custom-color(system, 070);
+                                                    color: custom-color(neutral, 090)
                                                 }
                                             }
                                         }

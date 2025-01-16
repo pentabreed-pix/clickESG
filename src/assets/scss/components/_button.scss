@@ -20,20 +20,22 @@
       padding: 1.4rem 4.7rem;
       @include font(small-4x, bold);
       border-radius: 3rem;
-      transition: all .2s ease-out;
+      //transition: all 10s ease-out;
 
       &.color-a {
         border: 0.1rem solid custom-color(neutral, 100);
         color: custom-color(system, 080);
+
         &:hover,
         &:focus {
+          border: 0.1rem solid custom-color(neutral, 100);
           background-color: custom-color(neutral, 100);
           color: custom-color(system, 060);
         }
       }
       &.color-b {
-        border: 0.1rem solid custom-color(system, 060);
-        color: custom-color(system, 060);
+        border: 0.1rem solid custom-color(neutral, 000);
+        color: custom-color(system, 000);
         &:hover,
         &:focus {
           border: 0.1rem solid rgba(255, 255, 255, 0.0);
