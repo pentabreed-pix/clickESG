@@ -199,6 +199,10 @@
 
                             .data-item {
                                 height: 22.08333vw;
+                                opacity: 0;
+                                transform: translateY(10rem);
+                                transition: .5s ease-out;
+
                                 &.item-01 {
                                     grid-area: 1 / 1 / 2 / 3;
                                     padding: 55px 0 0 184px;
@@ -289,6 +293,32 @@
                         }
                     }
                 }
+
+                &.active-animation-main {
+                    .section-wrap {
+                        .section-body {
+                            .data-list {
+                                .data-item {
+                                    opacity: 1;
+                                    transform: translateY(0);
+
+                                    &.item-02 {
+                                        transition-delay: 0.2s;
+                                    }
+                                    &.item-03 {
+                                        transition-delay: 0.3s;
+                                    }
+                                    &.item-04 {
+                                        transition-delay: 0.4s;
+                                    }
+                                    &.item-05 {
+                                        transition-delay: 0.5s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             &.story-02 {
                 padding: 0 0 0 6rem;
@@ -318,6 +348,10 @@
                     }
                     .section-body {
                         .swiper-list {
+                            opacity: 0;
+                            transform: translateY(15rem);
+                            transition: all .5s ease-out;
+
                             .swiper-wrapper {
                                 .swiper-item {
                                     background-color: white;
@@ -340,8 +374,10 @@
                                             height: 16rem;
                                             //background-color: red;
                                             margin: 0 auto;
+                                            transition: all .5s ease-out;
                                         }
                                         .swiper-info {
+                                            position: relative;
                                             min-height: 24rem;
                                             padding: 2.4rem 2.8rem 2.4rem 2.8rem;
                                             border-radius: 2.4rem;
@@ -370,6 +406,25 @@
                                                     @include font(small-4x, medium);
                                                     color: custom-color(neutral, 080);
                                                 }
+                                            }
+
+                                            &::after {
+                                                content: '';
+                                                position: absolute;
+                                                right: 1.6rem;
+                                                bottom: -1.6rem;
+                                                display: block;
+                                                width: 3.2rem;
+                                                height: 3.2rem;
+                                                border-radius: 0.8rem;
+                                                background: custom-color(secondary, 090) icon('arrow-right1', custom-color(neutral, 000)) no-repeat center center / 1.6rem;
+                                            }
+                                        }
+
+                                        &:hover,
+                                        &:focus {
+                                            &::before {
+                                                transform: scale(1.1);
                                             }
                                         }
 
@@ -446,6 +501,18 @@
                         }
                     }
                 }
+
+                &.active-animation-main {
+                    .section-wrap {
+                        .section-body {
+                            .swiper-list {
+                                opacity: 1;
+                                transform: translateY(0);
+                                transition-delay: 0.2s;
+                            }
+                        }
+                    }
+                }
             }
             &.story-03 {
                 padding: 12rem 6rem;
@@ -498,6 +565,7 @@
                             flex-wrap: wrap;
                             gap: 2rem;
                             .data-item {
+                                position: relative;
                                 width: calc(50% - 1rem);
                                 .data-wrap {
                                     display: flex;
@@ -527,6 +595,7 @@
                                             line-height: 1.1;
                                             color: custom-color(neutral, 000);
                                             letter-spacing: -3.2px;
+                                            font-family: initial;
                                         }
                                         .data-text {
                                             @include font(large-1x, semibold);
@@ -675,6 +744,9 @@
                                 position: relative;
                                 display: block;
                                 width: calc(100% / 3 - 42px);
+                                opacity: 0;
+                                transform: translateY(15rem);
+                                transition: all .5s ease-out;
 
                                 .data-wrap {
                                     .data-info {
@@ -800,6 +872,34 @@
                         }
                     }
                 }
+
+                &.active-animation-main {
+                    .section-wrap {
+                        .section-body {
+                            .data-list {
+                                display: flex;
+                                gap: 6.4rem;
+                                max-width: 125rem;
+                                margin: 0 auto;
+
+                                .data-item {
+                                    opacity: 1;
+                                    transform: translateY(0);
+
+                                    &.data-2024 {
+                                        transition-delay: 0.2s;
+                                    }
+                                    &.data-2023 {
+                                        transition-delay: 0.4s;
+                                    }
+                                    &.data-2022 {
+                                        transition-delay: 0.6s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             &.story-06 {
                 padding: 12rem 6rem 18rem 6rem;
@@ -848,14 +948,26 @@
                             }
                             .swiper-wrapper {
                                 .swiper-item {
+                                    width: 34.4rem !important;
                                     .swiper-wrap {
                                         .swiper-figure {
+                                            position: relative;
                                             border-radius: 2.4rem;
                                             overflow: hidden;
+                                            width: 100%;
+                                            height: 18.9rem;
 
                                             img {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%,-50%);
+                                                width: 100%;
+                                                height: 100%;
                                                 max-width: 100%;
+                                                object-fit: cover;
                                                 vertical-align: top;
+                                                transition: .5s ease-out;
                                             }
 
                                             & + .swiper-info {
@@ -886,31 +998,20 @@
                                                 }
                                             }
                                         }
+
+                                        &:hover,
+                                        &:focus {
+                                            .swiper-figure {
+                                                img {
+                                                    transform: translate(-50%,-50%) scale(1.1);
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-}
-
-.data-list {
-    .data-item {
-        .data-wrap {
-            .data-head {
-                .data-subject {
-
-                }
-            }
-            .data-body {
-                .data-info {
-
-                }
-                .data-text {
-
                 }
             }
         }

@@ -323,7 +323,7 @@ function input() {
     });
 }
 // input
-function activeAnimationtype-a() {
+function activeAnimationType_1() {
     gsap.utils
     .toArray('[active-animation="type-1"]')
     .forEach((section, index) => {

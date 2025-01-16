@@ -23,7 +23,7 @@ function mainVisual() {
         } else if (sourceIndex < targetIndex) {
             target.slidePrev();
         }
-    }    
+    }
 
     function loadingBar() {
         var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
@@ -82,13 +82,13 @@ function mainVisual() {
         },
         thumbs: {
             swiper: sliderLink
-        }        
+        }
     });
 
     var sliderTitle = new Swiper(".swiper.title", {
         loop: true,
         speed: 1200,
-        
+
         on: {
             init: function () {
                 $('.swiper-pagination-bullet').css({'width':'18px'});
@@ -108,24 +108,24 @@ function mainVisual() {
     sliderTitle.on('slideChangeTransitionStart', function () {
         if (!isSyncing) {
             isSyncing = true;
-            syncSlider(sliderTitle, sliderBg); 
+            syncSlider(sliderTitle, sliderBg);
             isSyncing = false;
         }
-    });    
-    
+    });
+
     sliderTitle.on('touchEnd', function () {
         if (!isSyncing) {
             isSyncing = true;
             syncSlider(sliderTitle, sliderBg);
             isSyncing = false;
-            
+
         }
 
         setTimeout(function() {
             var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
             $('.swiper-pagination-bullet').css({'width':'18px'});
             $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleWidth + 'px'});
-        }, 200);        
+        }, 200);
     });
 
     $('.swiper-controls .swiper-pagination-bullet').on('click', function() {
@@ -149,7 +149,7 @@ function mainVisual() {
     toggleButton.addEventListener('click', function () {
         isCounterOn ? stopCounter() : startCounter();
         updateToggleButton(isCounterOn);
-    });    
+    });
 
     window.addEventListener('resize', function () {
         sliderBg.update();
@@ -158,37 +158,37 @@ function mainVisual() {
 
 }
 
-function another(){    
+function another(){
     rollingEvent('.rolling-01');
     rollingEvent('.rolling-02');
     rollingEvent('.rolling-03');
     rollingEvent('.rolling-04');
     rollingEvent('.rolling-05');
 
-    function rollingEvent(selector) {        
+    function rollingEvent(selector) {
         $(selector).each(function() {
             var $selector = $(this);
             var $selectorList = $selector.find('.rolling-list');
             //let $roller = $('.rolling-display');
-            
+
             if ($selector.length) {
                 $selector.addClass('roller1');
-        
+
                 let $clone = $selector.clone(true);
                 $clone.addClass('roller2');
                 $selector.parent('.sub-section').append($clone);
-        
+
                 $selector.css('left', '0px');
                 $clone.css('left', $selectorList.width() + 'px');
-        
+
                 $selector.addClass('original');
                 $clone.addClass('clone');
-        
+
             } else {
                 console.error('Element with the class "rolling-display" not found.');
             }
-            
-        });     
+
+        });
     }
 
     var solutionSlider = new Swiper(".story-02 .swiper", {
@@ -200,6 +200,7 @@ function another(){
             delay: 2500,
             disableOnInteraction: false,
         },
+        speed: 600,
         navigation: {
             nextEl: ".story-02 .swiper-button-next",
             prevEl: ".story-02 .swiper-button-prev",
@@ -212,10 +213,59 @@ function another(){
 
     var newSlider = new Swiper(".story-06 .swiper", {
         slidesPerView: 4,
-        spaceBetween: 30,
+        spaceBetween: 21,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        speed: 600,
         navigation: {
             nextEl: ".story-06 .swiper-button-next",
             prevEl: ".story-06 .swiper-button-prev",
         },
     });
+}
+
+function activeAnimationMain() {
+    function commaSeparateNumber(val) {
+        return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    gsap.utils
+        .toArray('[active-animation="main"]')
+        .forEach((section) => {
+            gsap.to(section, {
+                scrollTrigger: {
+                    //markers: true,
+                    trigger: section,
+                    start: "20% 98%",
+                    end: "top bottom",
+
+                    onEnter: () => {
+                        section.classList.add("active-animation-main");
+
+                        if (section.classList.contains('story-03')) {
+                            document.querySelectorAll('.story-03 .data-info').forEach((el) => {
+                                const targetValue = parseInt(el.textContent.replace(/,/g, ''), 10);
+                                let counter = { value: 0 };
+
+                                gsap.to(counter, {
+                                    value: targetValue,
+                                    duration: 3,
+                                    ease: "swing",
+                                    onUpdate: () => {
+                                        el.textContent = commaSeparateNumber(Math.ceil(counter.value));
+                                    },
+                                });
+                            });
+                        }
+                    },
+
+                    onLeaveBack: () => {
+                        section.classList.remove("active-animation-main");
+                    },
+                },
+            });
+        });
 }
