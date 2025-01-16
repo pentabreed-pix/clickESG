@@ -24,7 +24,7 @@ function pubListUp() {
         id_ko: "",
         menu: "ESG 진단 컨설팅",
         root_ko: "../../page/service/SERVICE.01.00.html",
-        status_ko: "",
+        status_ko: "진행",
         worker_ko: "",
         history: "",
       },

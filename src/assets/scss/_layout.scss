@@ -102,29 +102,39 @@ body {
 			&.design2 {
 				position: relative;
 
-				.local-subject {
-					position: absolute;
-					top: 13.2rem;
-					left: 10rem;
-
-					.local-name {
-						@include font(large-1x, bold);
-						color: custom-color(system, 060);
-
-						+ .local-summary {
-							@include font(small-3x, medium);
+				.local-wrap{
+					position: relative;
+    				margin-top: 1.6rem;
+					height: 40rem;
+					.local-subject {
+						display: flex;
+						flex-direction: column;
+						padding: 10rem 18rem 7.4rem;
+						justify-content: space-between;
+						height: 100%;
+	
+						.local-name {
+							@include font(large-1x, bold);
 							color: custom-color(system, 060);
-							margin-top: 4.8rem;
+	
+							+ .local-summary {
+								@include font(small-3x, medium);
+								color: custom-color(system, 060);
+								// margin-top: 4.8rem;
+							}
 						}
 					}
-				}
-
-				.local-figure {
-					margin-top: 1.6rem;
-					.figure-wrapper {
-						img {
-							width: 100%;
-							border-radius: 2.5rem;
+	
+					.local-figure {
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: -1;
+						.figure-wrapper {
+							img {
+								width: 100%;
+								border-radius: 2.5rem;
+							}
 						}
 					}
 				}

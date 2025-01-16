@@ -4,7 +4,7 @@
 @use '../components/icons' as *;
 
 #footer {
-    background-color: custom-color(primary, 070);
+    background-color: #0A1C3F;
     
     .footer-inner {
         position: relative;
@@ -73,7 +73,7 @@
 
 
     .footer-aside {
-        background-color: custom-color(primary, 060);
+        background-color:#0A1833;
 
         .footer-aside-inner {
             max-width: 144rem;

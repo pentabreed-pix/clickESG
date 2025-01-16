@@ -41,6 +41,35 @@
             }
         }
     }
+    
+    &.design2 {
+        display: flex;
+        justify-content: center;
+        .tab-wrap {
+
+
+            .tab-list {
+                gap: 8rem;
+
+                .tab-item  {
+                    width: auto !important;
+                    .tab-text {
+                        padding: 0.6rem 0;
+                        @include font(small-2x, medium);
+                        color: custom-color(system, 080);
+                        transition: all .2s ease-out;
+                    }
+
+                    &.active {
+                        .tab-text {                            
+                            font-weight: 700;
+                            border-bottom: 0.3rem solid custom-color(primary, 090);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 .panel-display {
     &.design1 {

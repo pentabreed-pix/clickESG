@@ -4,21 +4,18 @@
 @use '../components/icons' as *;
 
 #wrap {
-    .service {
-        &:not(.overview) {
-            .local-figure {
-                max-width: 100%;
-               img {
-                    width: 100%;
-               }
-            }
-
-            .section {
-                margin-top: 12rem;
+    .esg-consulting {
+        .panel-display {
+            margin-top: 10rem;
+            .panel-list {
+                .panel-item {
+                    .panel-wrap {
+                        .section {
+                            
+                        }
+                    }
+                }
             }
         }
     }
-    // &:has(.main.business:not(.overview)) {
-    //     overflow: unset;
-    // }
 }

@@ -165,14 +165,14 @@
                 >.data-item {
                     font-size: 1.9rem;
                     font-weight: 400;
-                    color: custom-color(primary, 060);
+                    color:#0A1833;
                     line-height: 180%;
                     //@include font(small-4x, medium);
 
 
                     &::before {
                         @include font(small-5x, medium);
-                        color: custom-color(primary, 060);
+                        color:#0A1833;
 
                         @include mobile {
                             @include font(small-6x, medium);
@@ -187,13 +187,13 @@
                 >.data-item {
                     font-size: 1.9rem;
                     font-weight: 400;
-                    color: custom-color(primary, 060);
+                    color:#0A1833;
                     line-height: 220%;
                     //@include font(small-4x, medium);
 
                     &::before {
                         @include font(small-6x, medium);
-                        color: custom-color(primary, 060);
+                        color:#0A1833;
 
                         @include mobile {
                             @include font(small-6x, medium);
@@ -208,13 +208,13 @@
                 >.data-item {
                     font-size: 1.5rem;
                     font-weight: 600;
-                    color: custom-color(primary, 060);
+                    color:#0A1833;
                     line-height: 220%;
                     color: custom-color(neutral, 080);
 
                     &::before {
                         @include font(small-6x, medium);
-                        color: custom-color(primary, 060);
+                        color:#0A1833;
                     }
                     &.arrow {
                         color: custom-color(primary, 080);

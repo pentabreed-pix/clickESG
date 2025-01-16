@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'service',
+	pageJavascript: ''
+}) %>
+<script src="./../../assets/js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        tab();
+    });
+</script>
+</head>
+<body>
+<div id="wrap" class="page">
+    <%-include('../_templates/_header.ejs', {type: 'white',})%>
+    <!-- main -->
+    <main class="page esg-consulting">
+        <div class="main-inner">
+            <div class="local design1">
+                <div class="local-head design2">
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'SERVICE',
+                        depth2: 'ESG 진단 컨설팅',
+                        depth3: null,
+                        casetype: 'style2'
+                    }) %>
+                    <div class="local-wrap">
+                        <div class="local-subject">
+                            <h2 class="local-name">
+                                ESG 진단 컨설팅
+                            </h2>
+                            <p class="local-summary">ESG 경영관리 플랫폼은 지표/분류체계 범용성, 진단 객관성, 사용자 편의성 측면에서 특장점이 있으며, 다양한 사용자의 니즈를 충족시켜 시장성을 확대 시킵니다.
+                            </p>
+                        </div>
+                        <div class="local-figure">
+                            <div class="figure-wrapper">
+                                <img src="../../assets/images/solution/bg-local-head-solution-esg.jpg" alt="" class="bg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="local-body">
+                    <div class="content-body">            
+                        <div class="section design1 style1 type1">
+                            <div class="section-body">
+                                <div class="tab-display design2">
+                                    <div class="swiper tab-wrap">
+                                        <ul class="swiper-wrapper tab-list">
+                                            <li id="tab1" class="swiper-slide tab-item active"><button class="tab-text">지표/분류체계 범용성</button></li>
+                                            <li id="tab2" class="swiper-slide tab-item"><button class="tab-text">진단 객관성</button></li>
+                                            <li id="tab3" class="swiper-slide tab-item"><button class="tab-text">서비스 절차</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-display design1">
+                                    <div class="panel-list">
+                                        <div id="tab-panel1" class="panel-item clients">
+                                            <div class="panel-wrap">
+                                                <div class="section">
+                                                    <div class="section-wrap">
+                                                        <div class="section-head">
+                                                            <div class="section-subject">
+                                                                <h4 class="section-name">지표/분류체계 범용성</h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="section-body">
+                                                            <div class="data-display">
+                                                                <div class="data-list">
+                                                                    <div class="data-item">
+                                                                        <div class="data-body">
+                                                                            <div class="bullet-display design1 style1 type2">
+                                                                                <ul class="data-list">
+                                                                                    <li class="data-item">영향력이 높은 ESG 평가기관의 기준과 지표를 분석 및 조회 할 수 있고, 국내외 대표 산업 분류(MSCI, 통계청, SASB)를 총 망라한 자체 산업분류를 확보하고 있어 지표/분류체계의 범용성을 확보하고 있습니다.<br> 공시기관은 GRI, IBC, WFE, K-ESG, 평가기관은 MSCI, DJSI, KCGS를 참고 하였습니다. 산업 분류는 69개(세부산업 기준으로는 163개)로 나뉘어져 있습니다.</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tab-panel2" class="panel-item partners">
+                                            <div class="panel-wrap">
+2
+                                            </div>
+                                        </div>
+                                        <div id="tab-panel3" class="panel-item partners">
+                                            <div class="panel-wrap">
+3
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+     <!-- // main -->
+     <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
+       
+            
+
