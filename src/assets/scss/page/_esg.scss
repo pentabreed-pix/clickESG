@@ -627,7 +627,7 @@
                                                 margin-bottom: 1.6rem;
                                                 .post-caption{
                                                     @include font(small-3x, bold);
-                                                    color: custom-color(system, 070)
+                                                    color: custom-color(neutral, 090)
                                                 }
                                             }
                                             .post-body{
@@ -977,7 +977,7 @@
                             width: 32.25%;
                             .section-name{
                                 @include font(small-2x, bold);
-                                color: custom-color(system, 070);
+                                color: custom-color(neutral, 090);
                                 margin-bottom: 2.4rem;
                             }
                             @include mobile{
@@ -1898,7 +1898,7 @@
                                     }
                                     .section-head{
                                         .section-name{
-                                            color: custom-color(system, 070) !important;
+                                            color: custom-color(neutral, 090) !important;
                                             text-align: center;
                                         }
                                     }
@@ -1960,7 +1960,7 @@
                                     }
                                     .section-body {
                                         .board-name {
-                                            color: custom-color(system, 050);
+                                            color: #15151A;
                                             @include web {
                                                 margin-bottom: 2.4rem;
                                                 @include font(small-1x, bold);
@@ -2551,12 +2551,12 @@
                         .section-subject {
                             .section-name {
                                 @include font(large-6x, bold);
-                                color: custom-color(system, 050);
+                                color: #15151A;
                                 line-height: 1.4;
 
                                 @include mobile{
                                     @include font(large-1x, bold);
-                                    color: custom-color(system, 050);
+                                    color: #15151A;
                                     line-height: 1.2;
                                 }
                             }
@@ -2629,7 +2629,7 @@
                                             .post-subject {
                                                 .post-name {
                                                     @include font(small-1x, bold);
-                                                    color: custom-color(system, 050);
+                                                    color: #15151A;
 
                                                     @include mobile{
                                                         @include font(small-2x, bold);
@@ -2874,7 +2874,7 @@
                         .section-subject {
                             .section-name {
                                 @include font(medium, bold);
-                                color: custom-color(system, 050);
+                                color: #15151A;
 
                                 @include mobile {
                                     @include font(small-1x, bold);
@@ -2960,7 +2960,7 @@
                                         .post-subject {
                                             .post-name {
                                                 @include font(small-1x, bold);
-                                                color: custom-color(system, 060);
+                                                color: custom-color(neutral, 000);
 
                                                 @include mobile {
                                                     @include font(small-2x, bold);
@@ -2978,7 +2978,7 @@
                                     .post-body {
                                         .para {
                                             @include font(small-4x, regular);
-                                            color: custom-color(system, 060);
+                                            color: custom-color(neutral, 000);
 
                                             @include mobile {
                                                 @include font(small-5x, regular);
@@ -3049,7 +3049,7 @@
                         .section-subject {
                             .section-name {
                                 @include font(medium, bold);
-                                color: custom-color(system, 050);
+                                color: #15151A;
 
                                 @include mobile {
                                     @include font(small-1x, bold);
@@ -3126,7 +3126,7 @@
                                         .data-subject {
                                             .data-name {
                                                 @include font(small-2x, bold);
-                                                color: custom-color(system, 050);
+                                                color: #15151A;
 
                                                 @include mobile {
                                                     @include font(small-3x, bold);
@@ -3171,7 +3171,7 @@
                         .section-subject {
                             .section-name {
                                 @include font(medium, bold);
-                                color: custom-color(system, 050);
+                                color: #15151A;
 
                                 @include mobile {
                                     @include font(small-1x, bold);
@@ -3272,7 +3272,7 @@
                                         .post-subject {
                                             .post-name {
                                                 @include font(small-2x, bold);
-                                                color: custom-color(system, 050);
+                                                color: #15151A;
 
                                                 @include mobile {
                                                     @include font(small-3x, bold);

@@ -28,7 +28,7 @@
                     &.active {
                         .tab-text {                            
                             color: #07398F;
-                            background-color: custom-color(system, 060);
+                            background-color: custom-color(neutral, 000);
                         }
                     }
                 }
@@ -56,7 +56,7 @@
                     .tab-text {
                         padding: 0.6rem 0;
                         @include font(small-2x, medium);
-                        color: custom-color(system, 080);
+                        color: custom-color(neutral,100);
                         transition: all .2s ease-out;
                     }
 

@@ -35,7 +35,7 @@
 
                 .navi-title {
                     @include font(small-2x, bold);
-                    color: custom-color(system, 060);
+                    color: custom-color(neutral, 000);
                 }
 
                 .navi-wrap {
@@ -47,7 +47,7 @@
                     .navi-item {
                         font-size: 1.5rem;
                         font-weight: 400;
-                        color: custom-color(system, 060);
+                        color: custom-color(neutral, 000);
                     }
 
                 }
@@ -62,7 +62,7 @@
                         right: -2.4rem;
                         width: 1.6rem;
                         height: 1.6rem;
-                        background: icon('link', custom-color(system, 060)) no-repeat center;
+                        background: icon('link', custom-color(neutral, 000)) no-repeat center;
                         transform: translateY(-50%);
                         opacity: 0.5;
                     }
@@ -86,7 +86,7 @@
             .copyright {
                 font-size: 1.3rem;
                 font-weight: 500;
-                color: custom-color(system, 060);
+                color: custom-color(neutral, 000);
                 opacity: 0.6;
             }
     
@@ -98,7 +98,7 @@
                     position: relative;
                     font-size: 1.3rem;
                     font-weight: 500;
-                    color: custom-color(system, 060); 
+                    color: custom-color(neutral, 000); 
     
                     &::before {
                         content: '';

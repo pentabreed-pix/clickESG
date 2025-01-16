@@ -115,11 +115,11 @@ body {
 	
 						.local-name {
 							@include font(large-1x, bold);
-							color: custom-color(system, 060);
+							color: custom-color(neutral, 000);
 	
 							+ .local-summary {
 								@include font(small-3x, medium);
-								color: custom-color(system, 060);
+								color: custom-color(neutral, 000);
 								// margin-top: 4.8rem;
 							}
 						}
@@ -145,7 +145,7 @@ body {
 
 			// 	.local-subject {
 			// 		.local-name {
-			//             color: custom-color(system, 050);
+			//             color: #15151A;
 			// 			text-align: center;
 			// 			@include font(large-3x, extrabold);
 			// 		}
@@ -204,7 +204,7 @@ body {
 
 			// 		.local-name {
 			// 			@include font(large-12x, bold);
-			// 			color: custom-color(system, 050);
+			// 			color: #15151A;
 			// 			line-height: 1.2;
 			// 			transition: color 1s ease-out;
 
@@ -340,18 +340,18 @@ body {
 			// 	&.active2 {
 			// 		.local-subject {
 			// 			.local-name {
-			// 				color: custom-color(system, 070);
+			// 				color: custom-color(neutral, 090);
 			// 			}
 			// 		}
 
 			// 		.local-aside {
 			// 			.loca-wrap {
 			// 				.local-title {
-			// 					color: custom-color(system, 070);
+			// 					color: custom-color(neutral, 090);
 			// 				}
 
 			// 				.local-summary {
-			// 					color: custom-color(system, 070);
+			// 					color: custom-color(neutral, 090);
 			// 				}
 			// 			}
 			// 		}
@@ -405,7 +405,7 @@ body {
 
 			// 		.local-name {
 			// 			position: relative;
-			// 			color: custom-color(system, 050);
+			// 			color: #15151A;
 			// 			transform: translateY(30%);
 			// 			opacity: 0;
 			// 			@include font(large-5x, bold);
@@ -428,7 +428,7 @@ body {
 
 			// 		.local-wrap {
 			// 			.local-title {
-			// 				color: custom-color(system, 060);
+			// 				color: custom-color(neutral, 000);
 			// 				@include font(large-5x, bold);
 
 			// 				@include mobile() {
@@ -897,7 +897,7 @@ body {
 					}
 					.section-name {
 						@include font(medium, bold);
-						color: custom-color(system, 050);
+						color: #15151A;
 
 						@include mobile {
 							@include font(small-1x, bold);
@@ -929,7 +929,7 @@ body {
 
 				&.type2 {
 					.section-name {
-						color: custom-color(system, 050);
+						color: #15151A;
 						@include font(small-1x, bold);
 
 						@include mobile {
@@ -961,7 +961,7 @@ body {
 
 				&.type3 {
 					.section-name {
-						color: custom-color(system, 050);
+						color: #15151A;
 						@include font(large-3x, bold);
 
 						@include mobile {
@@ -981,7 +981,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(system, 050);
+							color: #15151A;
 							@include font(small-1x, bold);
 							@include mobile {
 								@include font(small-2x, bold)
@@ -1018,7 +1018,7 @@ body {
 				&.type5 {
 					.section-head {
 						.section-name {
-							color: custom-color(system, 050);
+							color: #15151A;
 							@include font(large-3x, bold);
 							@include mobile {
 								@include font(medium, bold);
@@ -1046,7 +1046,7 @@ body {
 				&.type6 {
 					.section-name {
 						@include font(small-1x, bold);
-						color: custom-color(system, 050);
+						color: #15151A;
 
 						@include mobile {
 							@include font(small-2x, bold);
@@ -1076,7 +1076,7 @@ body {
 				&.type7 {
 					.section-name {
 						@include font(medium, bold);
-						color: custom-color(system, 050);
+						color: #15151A;
 
 						@include mobile {
 							@include font(small-1x, bold);
@@ -1097,7 +1097,7 @@ body {
 				&.type8 {
 					.section-name {
 						@include font(medium, bold);
-						color: custom-color(system, 060);
+						color: custom-color(neutral, 000);
 
 						@include mobile {
 							@include font(small-1x, bold);
@@ -1106,7 +1106,7 @@ body {
 
 					.section-body {
 						>.para {
-							color: custom-color(system, 060);
+							color: custom-color(neutral, 000);
 							@include font(small-3x, medium);
 
 							@include mobile {
@@ -1293,7 +1293,7 @@ body {
 						}
 
 						&.light {
-							color: custom-color(system, 070);
+							color: custom-color(neutral, 090);
 
 							.data-item:last-child {
 								.item-text {

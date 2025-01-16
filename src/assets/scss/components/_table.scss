@@ -24,8 +24,8 @@
 					>tr {
 						>th {
 							padding: 1.8rem;
-							background-color: custom-color(secondary, 100);
-							border-right: 1px solid custom-color(system, 060);
+							background-color: #2A78C7;
+							border-right: 1px solid custom-color(neutral, 000);
 							border-left: 1px solid custom-color(neutral, 060);
 							border-top: 1px solid custom-color(neutral, 060);
                             
@@ -59,7 +59,7 @@
                                     left: 50%;
                                     width: 2.6rem;
                                     height: 2.6rem;
-                                    background: icon('check', custom-color(secondary, 100)) no-repeat center;
+                                    background: icon('check', #2A78C7) no-repeat center;
                                     background-size: 2rem;
                                     transform: translate(-50%, -50%);
                                     border-radius: 100%
@@ -76,7 +76,7 @@
                                     left: 50%;
                                     width: 2.8rem;
                                     height: 2.8rem;
-                                    background: icon('ex', custom-color(secondary, 040)) no-repeat center;
+                                    background: icon('ex', #AFACAD) no-repeat center;
                                     background-size: 2rem;
                                     transform: translate(-50%, -50%);
                                     border-radius: 100%
@@ -94,7 +94,7 @@
 					>tr {
 						>th {
                             @include font(small-4x, bold);
-							color: custom-color(system, 060);
+							color: custom-color(neutral, 000);
 							text-align: center;
 						}
 					}

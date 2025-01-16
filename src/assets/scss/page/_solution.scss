@@ -144,7 +144,7 @@
                                             }
                                             
                                             &::after {
-                                                background-image: icon('plus', custom-color(system, 080));
+                                                background-image: icon('plus', custom-color(neutral, 000));
                                             }
                                         }
                                         .post-body {
@@ -177,7 +177,7 @@
                     display: flex;
                     align-items: center;
                     @include font(small, medium);
-                    color: custom-color(system, 060)
+                    color: custom-color(neutral, 000)
                 }
             }
 

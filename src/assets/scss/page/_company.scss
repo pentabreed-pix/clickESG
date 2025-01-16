@@ -154,7 +154,7 @@
                     .section-subject {
                         .section-sub {
                             display: block;
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
                             font-weight: 700;
                             font-size: 2.5vw;
                             line-height: 4vw;
@@ -174,7 +174,7 @@
                         }
                         .section-name {
                             display: block;
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
                             font-weight: 700;
                             font-size: 3.333vw;
                             line-height: 5.333vw;
@@ -616,7 +616,7 @@
                             .post-head {
                                 .post-sub {
                                     @include font(medium, bold);
-                                    color: custom-color(system, 060);
+                                    color: custom-color(neutral, 000);
 
                                     @include mobile {
                                         @include font(small-2x, bold);
@@ -632,7 +632,7 @@
                             .post-body {
                                 .para {
                                     @include font(large-3x, bold);
-                                    color: custom-color(system, 060);
+                                    color: custom-color(neutral, 000);
                                     @include mobile {
                                         @include font(medium, bold);
                                     }
@@ -711,7 +711,7 @@
                             transition: all .5s ease-out;
                             .data-text {
                                 display: flex;
-                                color: custom-color(system, 060);
+                                color: custom-color(neutral, 000);
                                 font-weight: 600;
                                 font-size: 8.333333vw;
                                 align-items: center;
@@ -1259,7 +1259,7 @@
                     .section-subject {
                         .section-name {
                             display: block;
-                            color: custom-color(system, 050);
+                            color: #15151A;
                             font-weight: 700;
                             font-size: 6.4rem;
                             line-height: 1.2;
@@ -1371,7 +1371,7 @@
                                     .data-subject {
                                         .data-name {
                                             display: block;
-                                            color: custom-color(system, 060);
+                                            color: custom-color(neutral, 000);
                                             line-height: 1.8;
                                             @include font(small-3x, medium);
 
@@ -1384,7 +1384,7 @@
                                 }
                                 .data-body {
                                     @include font(large-1x, extrabold);
-                                    color: custom-color(system, 060);
+                                    color: custom-color(neutral, 000);
                                     line-height: 1.8;
 
                                     @include mobile {
@@ -1394,7 +1394,7 @@
                                 }
                                 .data-base {
                                     display: block;
-                                    color: custom-color(system, 060);
+                                    color: custom-color(neutral, 000);
                                     line-height: 1.8;
                                     @include font(small-3x, extrabold);
 
@@ -1463,12 +1463,12 @@
                     .section-subject {
                         .section-name {
                             display: block;
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
                             @include font(large-5x, bold);
 
                             @include mobile {
                                 @include font(large, bold);
-                                color: custom-color(system, 050);
+                                color: #15151A;
                                 line-height: 1.2;
                             }
                         }
@@ -1489,14 +1489,14 @@
                             }
 
                             // .btn  {
-                            //     color: custom-color(system, 070);
+                            //     color: custom-color(neutral, 090);
                             //     border-color: rgb(228, 228, 231);
                             // }
                         }
                     }
                     .section-summary {
                         @include font(small-3x, medium);
-                        color: custom-color(system, 060);
+                        color: custom-color(neutral, 000);
                         line-height: 1.8;
 
                         @include mobile {
@@ -1612,7 +1612,7 @@
 
                                     .board-subject {
                                         .board-name {
-                                            color: custom-color(system, 060);
+                                            color: custom-color(neutral, 000);
                                             font-weight: 700;
                                             font-size: 2.2rem;
 
@@ -1687,7 +1687,7 @@
 
                     .section-summary {
                         @include font(medium, bold);
-                        color: custom-color(system, 050);
+                        color: #15151A;
                         text-align: center;
 
                         @include mobile {
@@ -1775,7 +1775,7 @@
                             // background-size: min(49.17%, 100%);
                             .data-head {
                                 .data-name {
-                                    color: custom-color(system, 050);
+                                    color: #15151A;
                                     @include font(small-2x, bold);
                                     @include mobile {
                                         @include font(small-3x, bold);
@@ -1841,7 +1841,7 @@
                                 }
                                 .name {
                                     display: inline-block;
-                                    color: custom-color(system, 050);
+                                    color: #15151A;
                                     @include font(small-1x, bold);
                                     @include mobile {
                                         @include font(small-1x, bold);
@@ -1896,7 +1896,7 @@
                         .section-body {
                             .para,
                             .closing-comment {
-                                color: custom-color(system, 050);
+                                color: #15151A;
                                 @include font(small-2x, bold);
                             }
                             .para {
@@ -1979,7 +1979,7 @@
                                 width: 100%;
                                 flex: 1;
                                 .board-list {
-                                    background-color: custom-color(system, 070);
+                                    background-color: custom-color(neutral, 090);
                                     .board-item {
                                         position: relative;
                                         padding: 4rem;
@@ -1992,7 +1992,7 @@
                                             min-height: 5.6rem;
                                             margin-right: 14.1rem;
                                             .board-subject {
-                                                color: custom-color(system, 050);
+                                                color: #15151A;
                                                 @include font(small-1x, bold)
                                             }
                                             &::after {
@@ -2018,7 +2018,7 @@
                                                     display: flex;
                                                     .info-title {
                                                         display: inline-block;
-                                                        color: custom-color(system, 050);
+                                                        color: #15151A;
                                                         min-width: 8.1rem;
                                                         @include font(small-3x, bold);
                                                     }

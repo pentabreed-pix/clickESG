@@ -32,7 +32,7 @@
             left: 0;
             width: 100%;
             height: 0;
-            background-color: custom-color(system, 060);
+            background-color: custom-color(neutral, 000);
             box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease-out;
             opacity: 0;
@@ -212,7 +212,7 @@
                                     display: block;
                                     width: 2.4rem;
                                     height: 2.4rem;
-                                    background-image: icon('plus', custom-color(system, 080));
+                                    background-image: icon('plus', custom-color(neutral, 000));
                                     background-repeat: no-repeat;
                                     background-size: 1.5rem;
                                     background-position: center;
@@ -223,7 +223,7 @@
                                 .depth1 {
                                     color: custom-color(primary, 090);
                                     &::after {
-                                        background-image: icon('mines', custom-color(system, 080));
+                                        background-image: icon('mines', custom-color(neutral, 000));
                                         background-size: 1.6rem;
                                     }
                                 }
@@ -285,10 +285,10 @@
                 .depth1-list {
                    .depth1-item {
                         .depth1 {
-                            color: custom-color(system, 060);
+                            color: custom-color(neutral, 000);
 
                             @include mobile {
-                                color: custom-color(system, 080);
+                                color: custom-color(neutral,100);
                             }
 
                         }
@@ -296,7 +296,7 @@
                         &.link {
                             .depth1 {
                                 &::after {
-                                    background: icon('link', custom-color(system, 060)) no-repeat center;
+                                    background: icon('link', custom-color(neutral, 000)) no-repeat center;
                                     opacity: 1;
 
                                     @include mobile {
@@ -313,7 +313,7 @@
             .page-control {
                 .goto-page-navi {
                     &::after {
-                        background: icon('menu', custom-color(system, 060)) no-repeat center;
+                        background: icon('menu', custom-color(neutral, 000)) no-repeat center;
                     }
                 }
             }
@@ -323,7 +323,7 @@
     // color : white
     &.white,
     &.scroll {
-        background-color: custom-color(system, 060);
+        background-color: custom-color(neutral, 000);
         box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.04);
 
         .header-inner {
@@ -354,7 +354,7 @@
             .page-control {
                 .goto-page-navi {
                     &::after {
-                        background: icon('menu', custom-color(system, 070)) no-repeat center;
+                        background: icon('menu', custom-color(neutral, 090)) no-repeat center;
                     }
                 }
             }
@@ -383,7 +383,7 @@
 
                     .depth1-item {
                         .depth1 {
-                            color: custom-color(system, 080);
+                            color: custom-color(neutral,100);
                         }
                         .depth2-wrap {
                             visibility: visible;
@@ -407,7 +407,7 @@
     &.mo-menu-open {
         @include mobile {
             height: 100vh;
-            background-color: custom-color(system, 060);
+            background-color: custom-color(neutral, 000);
 
             .header-inner {
                 .site-logo {
@@ -424,7 +424,7 @@
                 .page-control {
                     .goto-page-navi {
                         &::after {
-                            background: icon('close', custom-color(system, 080)) no-repeat center / 1.8rem;
+                            background: icon('close', custom-color(neutral, 000)) no-repeat center / 1.8rem;
                         }
                     }
                 }

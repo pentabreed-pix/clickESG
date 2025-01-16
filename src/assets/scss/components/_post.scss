@@ -115,7 +115,7 @@
                 .post-head {
                     .post-subject {
                         @include font(small-2x, medium);
-                        color: custom-color(system, 080);
+                        color: custom-color(neutral,100);
                     }
                 }
             }
@@ -133,7 +133,7 @@
                         
                         + .post-summary {
                             @include font(small-2x, regular);
-                            color: custom-color(system, 080);
+                            color: custom-color(neutral,100);
                             line-height: 160%;
                         }
                     }
@@ -154,7 +154,7 @@
             width: 10.2rem; 
             height: 53rem;
             border-radius: 1rem;
-            background: custom-color(secondary, 030);
+            background: custom-color(secondary, 060);
             transition: all 0.5s ease-out;
     
             .post-wrap {
@@ -165,7 +165,7 @@
                 .post-info {
                     position: relative;
                     padding: 4rem 3.7rem;
-                    color: custom-color(system, 060);
+                    color: custom-color(neutral, 000);
                     width: 100%;
                     z-index: 2;
 
@@ -189,7 +189,7 @@
                                     left: -1.5rem;
                                     width: 0.1rem;
                                     height: 1.2rem;
-                                    background: custom-color(system, 060);
+                                    background: custom-color(neutral, 000);
                                     transform: translateY(-50%);
                                 } 
                             }
@@ -242,7 +242,7 @@
                                     left: -1.5rem;
                                     width: 0.1rem;
                                     height: 1.2rem;
-                                    background: custom-color(system, 060);
+                                    background: custom-color(neutral, 000);
                                     transform: translateY(-50%);
                                 } 
                             }
@@ -318,19 +318,19 @@
                             }
                         
                             &.network::after {
-                                background-image: icon('network', custom-color(system, 070));
+                                background-image: icon('network', custom-color(neutral, 090));
                             }
                         
                             &.clock::after {
-                                background-image: icon('clock', custom-color(system, 070));
+                                background-image: icon('clock', custom-color(neutral, 090));
                             }
                         
                             &.device::after {
-                                background-image: icon('device', custom-color(system, 070));
+                                background-image: icon('device', custom-color(neutral, 090));
                             }
                         
                             &.certi::after {
-                                background-image: icon('certi', custom-color(system, 070));
+                                background-image: icon('certi', custom-color(neutral, 090));
                             }
                         }
                         
@@ -343,7 +343,7 @@
                             right: 0;
                             width: 2.4rem;
                             height: 2.4rem;
-                            background-image: icon('mines', custom-color(system, 080));
+                            background-image: icon('mines', custom-color(neutral, 000));
                             background-repeat: no-repeat;
                             background-size: 1.5rem;
                             background-position: center;
