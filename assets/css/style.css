@@ -3985,7 +3985,7 @@ body.mo-menu-open {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 102%;
   height: 102%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -4352,10 +4352,9 @@ body.mo-menu-open {
 #wrap .main .section.story-02 .section-wrap .section-body .swiper-list .swiper-controls2 .swiper-button-next {
   margin-left: 0.8rem;
 }
-#wrap .main .section.story-02.active-animation-main .section-wrap .section-body .swiper-list {
+#wrap .main .section.story-02 .section-wrap .section-body .swiper-list.active-animation-main {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.2s;
 }
 #wrap .main .section.story-03 {
   padding: 12rem 6rem;
