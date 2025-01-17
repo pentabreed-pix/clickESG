@@ -9,6 +9,7 @@ frontCommon.Html = (function () {
             lenis();
             header();
             activeAnimationType_1();
+            accordion();
 
             //footer();
             //localAnimations();
@@ -345,8 +346,8 @@ function activeAnimationType_1() {
     });
 }
 
-// process
-$(document).ready(() => {
+// process&feature function
+function accordion() {
     $('.post-item').first().addClass('active');
 
     $('.post-item').on('click', function () {
@@ -354,4 +355,4 @@ $(document).ready(() => {
         $this.siblings('.post-item').removeClass('active');
         $this.addClass('active');
     });
-});
+}

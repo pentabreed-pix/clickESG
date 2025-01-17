@@ -4,6 +4,13 @@
 <%-include('../_templates/_guide.head.ejs', {
 	pageJavascript: ''
 }) %>
+<!-- <script src="/src/assets/js/common.js"></script> -->
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        accordion();
+    });
+</script>
+
 </head>
 <body>
 <div id="wrap">
@@ -123,39 +130,124 @@
 						<!--  PR 뉴스룸 : 보도자료 -->
 						<div class="subsection line">
 							<div class="subsection-info">
-								<div class="post-list module-b style-a type-a">
-									<a href="#" class="post-item">
+								<div class="post-list process">
+									<div class="post-item active">
 										<div class="post-wrap">
-											<div class="post-figure">
-												<img src="../../assets/images/ir/thumb-01.jpg" alt="ir뉴스 썸네일 이미지">
-											</div>
-											<div class="post-inform">
+											<div class="post-info">
 												<div class="post-head">
-													<p class="post-caption">SK네트웍스</p>
-													<p class="post-name">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
-													<p class="post-summary">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제
+													<p class="post-name">M1 <em>배출원 설정</em>
+													</p>
+													<p class="post-name">Measure : 온실가스 인벤토리 구축</p>
+												</div>
+												<div class="post-body">
+													<p class="post-summary">
+														정확한 관리를 위해 사업장 별 산정, 법인 통합 View를 제공하며 표준 코드 기반하에 배출원을 설정합니다.
 													</p>
 												</div>
-												<p class="post-date" title="등록일">2024.03.19</p>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/process-01.jpg" alt="">
 											</div>
 										</div>
-									</a>
-									<a href="#" class="post-item">
+									</div>
+									<div class="post-item">
 										<div class="post-wrap">
-											<div class="post-figure">
-												<img src="../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
-											</div>
-											<div class="post-inform">
+											<div class="post-info">
 												<div class="post-head">
-													<p class="post-caption">SK네트웍스</p>
-													<p class="post-name">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
-													<p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+													<p class="post-name">M2 <em>배출활동자료 수집</em>
+													</p>
+													<p class="post-name">Measure : 온실가스 인벤토리 구축</p>
+												</div>
+												<div class="post-body">
+													<p class="post-summary">
+														사용량 & 비용 기반 등 모든 관리 방식에 대응합니다.<br>전력, 유가 API 자동화를 통해 편리하게 관리하세요.
 													</p>
 												</div>
-												<p class="post-date" title="등록일">2024.03.19</p>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/process-02.jpg" alt="">
 											</div>
 										</div>
-									</a>
+									</div>
+									<div class="post-item">
+										<div class="post-wrap">
+											<div class="post-info">
+												<div class="post-head">
+													<p class="post-name">M3 <em>배출량 산정</em>
+													</p>
+													<p class="post-name">Measure : 온실가스 인벤토리 구축</p>
+												</div>
+												<div class="post-body">
+													<p class="post-summary">
+														GHG 프로토콜에 따라 신뢰할 수 있는 방법론과 최신 배출계수 DB를 제공합니다.<br>
+														기업 전반에 걸친 Scope 1&2 부터 Scope 3까지 모든 배출량 관리하세요.
+													</p>
+												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/process-03.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="post-item">
+										<div class="post-wrap">
+											<div class="post-info">
+												<div class="post-head">
+													<p class="post-name">R1 <em>감축목표 수립</em>
+													</p>
+													<p class="post-name">Report : 보고</p>
+												</div>
+												<div class="post-body">
+													<p class="post-summary">
+														측정이 완료 되었다면 넷제로 여정을 위한 목표를 설정하세요.<br>
+														SBTi (과학기반) 방법론과 경영 환경에 맞춰 자체 목표 시나리오 관리를 통해, 유연하게 목표를<br> 수립하고 성과를 추적할 수 있습니다
+													</p>
+												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/process-04.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="post-item">
+										<div class="post-wrap">
+											<div class="post-info">
+												<div class="post-head">
+													<p class="post-name">R2 <em>분석 및 리포팅</em>
+													</p>
+													<p class="post-name">Report : 보고</p>
+												</div>
+												<div class="post-body">
+													<p class="post-summary">
+														이해관계자별 상이한 정보 공개 요청을 일일이 파악할 필요가 없습니다.<br>
+														ClickESG Net-Zero를 통해 한번에 대응하세요. 원청사를 위한 제품단위 온실가스 할당부터<br> 다양한 보고서 및 Fact Sheet 를 제공합니다.
+													</p>
+												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/process-05.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="post-item">
+										<div class="post-wrap">
+											<div class="post-info">
+												<div class="post-head">
+													<p class="post-name">V1 <em>검증</em>
+													</p>
+													<p class="post-name">Verification : 검증</p>
+												</div>
+												<div class="post-body">
+													<p class="post-summary">
+														측정된 배출량 검∙인증을 위한 정형화된 보고서 및 분석 Data를 제공합니다.<br>공시 및 외부 이해관계자 대응이 용이해지는 ClickESG와 함께하세요.
+													</p>
+												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/process-06.jpg" alt="">
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -163,56 +255,79 @@
 						<!--  ESG : 지역사회 및 SE 생태계 지원 -->
 						<div class="subsection line">
 							<div class="subsection-info">
-								<div class="post-list module-f style-a type-a">
-									<div class="post-item">
+								<div class="post-list feature">
+									<div class="post-item active">
 										<div class="post-wrap">
-											<div class="post-inform">
-												<p class="para">SK네트웍스는 구성원의 업무 전문성을 사회에 환원하고, 사회적기업과 소셜벤처의 성장을 지원하고자 2022년부터 구성원의 자원을 받아 Target형 프로보노와 Sopt성 프로보노를 운영하고 있습니다. Target형 프로보노는 SK네트웍스(자회사 포함)의 Business Model과 연관성 있는 사회적 기업/소셜벤처를 선정하여 약 1년 동안 지속적으로 종합적 자문활동을 진행하는 프로그램입니다.</p>
-												<p class="para">
-												2022년 Target형 프로보노는 SK네트웍스의 사업군 중 ‘Mobility, 깨끗한 공기, 자원순환‘ 관련 사회문제를 해결하고자 하는 3개 사회적기업/소셜벤처를 대상으로 자문을 진행하였습니다. Spot성 프로보노는 자문 Needs가 있는 사회적 기업과 관련 역량을 보유한 구성원을 매칭하여 Needs 발생 시 자문을 진행하고 있으며, 자문 분야는 경영기획, 마케팅, 법률, 재무/회계, 사업기획, 통번역, R&D, 사용성테스트 등 입니다.
-												</p>
-											</div>
-											<div class="post-body">
-												<div class="post-figure">
-													<img src="../../assets/images/sustainability/zoom.jpg" alt="">
-												</div>
-												<p class="comment module-a">2023년 SK네트웍스 프로보노 발대식</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="subsection line">
-							<div class="subsection-info">
-								<div class="post-list module-g style-a type-a">
-									<div class="post-item">
-										<div class="post-wrap">
-											<div class="post-figure">
-												<img src="../../assets/images/sustainability/car.jpg" alt="" style="max-width: 31.4rem;">
-											</div>
-											<div class="post-inform">
+											<div class="post-info">
 												<div class="post-head">
-													<p class="post-name">모빌리티뱅크</p>
+													<p class="post-name network">Scope 1,2,3 배출량 측정</p>
 												</div>
 												<div class="post-body">
-													<p class="para">2018년 도입된 모빌리티 뱅크는 사회적 기업 등 모빌리티 지원이 필요한 대상에게 렌트 차량을 제공하고, 수혜 기업은 차량 이용을 통해 ‘사회적 가치’를 창출하여 렌털료를 대신 지불하는 비즈니스-SV연계형 모델입니다. SK네트웍스는 SK렌터카와 함께 모빌리티 뱅크를 운영하며 사회적 기업 운영 환경 개선을 위해 노력하고 있습니다. 일자리 창출, 취약계층 사회서비스 제공 등 모빌리티 뱅크로 창출되는 사회적 가치 성과는 매 년 측정을 통해 관리되고 있습니다. SK네트웍스와 SK렌터카는 동 프로그램을 질적/양적으로 지속 개선해 나갈 계획입니다. 특히, 벤처 기업 후원 및 재난 지역 무상 공급 프로그램을 통해 지원 범위를 기존의 취약 계층에서 지역 사회로 확장하는 것을 목표하고 있습니다.</p>
+													<div class="bullet-list module-a style-b type-c">
+														<div class="bullet-item">사용자 편의를 고려한 UX 기획으로 반복적인 온실가스 배출량 산정 Workload 최소화</div>
+														<div class="bullet-item">전기고지서, 유류단가 등 API 연동으로 매월 관리 시간 단축</div>
+														<div class="bullet-item">기업 내부관리에 익숙한 엑셀 양식 제공</div>
+													</div>
 												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/feature-01.jpg" alt="">
 											</div>
 										</div>
 									</div>
 									<div class="post-item">
 										<div class="post-wrap">
-											<div class="post-figure">
-												<img src="../../assets/images/sustainability/prize.jpg" alt="" style="max-width: 27.9rem;">
-											</div>
-											<div class="post-inform">
+											<div class="post-info">
 												<div class="post-head">
-													<p class="post-name">워커힐 그린 갤러리</p>
+													<p class="post-name clock">온실가스 관리 수고 절감</p>
 												</div>
 												<div class="post-body">
-													<p class="para">워커힐 호텔앤리조트는 ESG 경영의 일환으로 ‘워커힐 라이브러리’ 공간을 활용해 ‘그린 갤러리’를 운영하고 있습니다. 2021년 신설된 그린 갤러리에서는 친환경 활동 및 사회 문제 해결에 동참하는 사회적 기업의 제품을 소개하고, 방문 고객 누구나 ‘온라인 스토어 QR코드‘를 통해 즐겁게 상생에 동참할 수 있는 기회를 제공하고 있습니다. 나아가 참여 기업이 제품을 취약 계층에게 기부할 수 있도록 함으로써 기업의 경제적 성장과 사회적 가치 창출이 연계된 선순환 모델 구현을 추구하고 있습니다.</p>
+													<div class="bullet-list module-a style-b type-c">
+														<div class="bullet-item">사용자 편의를 고려한 UX 기획으로 반복적인 온실가스 배출량 산정 Workload 최소화</div>
+														<div class="bullet-item">전기고지서, 유류단가 등 API 연동으로 매월 관리 시간 단축</div>
+														<div class="bullet-item">기업 내부관리에 익숙한 엑셀 양식 제공</div>
+													</div>
 												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/feature-02.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="post-item">
+										<div class="post-wrap">
+											<div class="post-info">
+												<div class="post-head">
+													<p class="post-name device">이해관계자의 정보 요구 증가에 적시 대응</p>
+												</div>
+												<div class="post-body">
+													<div class="bullet-list module-a style-b type-c">
+														<div class="bullet-item">EU (CBAM 제도)및 미국(CAA 법안)등 탄소무역장벽 대응을 위해 원청사의 배출량 공개 요구에 대응 필요 </div>
+														<div class="bullet-item arrow">→ 중소기업을 위한 제품단위 온실가스 배출량 산정 기능</div>
+														<div class="bullet-item">ESG 공시 대응, CDP, TCFD, ISSB 등 다양한 기후공시 요청에 대응가능한 자체 보고서 및 Fact Sheet 출력</div>
+													</div>
+												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/feature-03.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="post-item">
+										<div class="post-wrap">
+											<div class="post-info">
+												<div class="post-head">
+													<p class="post-name certi">인증 및 제3자 검증까지 지원</p>
+												</div>
+												<div class="post-body">
+													<div class="bullet-list module-a style-b type-c">
+														<div class="bullet-item">검증 기관이 요청하는 증빙에 대한 별도 보고서 제공</div>
+														<div class="bullet-item">시나리오 기반 목표 수립부터 성과의 다각적 분석을 통해 대외 대응 역량 내재화</div>
+													</div>
+												</div>
+											</div>
+											<div class="post-figure">
+												<img src="../../assets/images/solution/net-zero/feature-04.jpg" alt="">
 											</div>
 										</div>
 									</div>
@@ -222,64 +337,7 @@
 					</div>
 				</div>
 				<!-- //section -->
-				<!-- section -->
-				<div class="section post-guide">
-					<div class="section-head">
-						<h4 class="section-subject"><span class="section-name">pagination</span></h4>
-					</div>
-					<div class="section-body">
-						<div class="subsection">
-							<div class="subsection-head">HTML structure</div>
-							<div class="subsection-info">
-									<!-- highlight-js -->
-									<pre class="highlight-js"><code class="html">&lt;div class=&quot;pagination module-a style&quot;&gt;
-&#x9;&lt;span class=&quot;page-util&quot;&gt;
-&#x9;&#x9;&lt;span class=&quot;util-item&quot;&gt;
-&#x9;&#x9;&#x9;&lt;a class=&quot;btn prev disabled&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;btn-text&quot;&gt;&#xC774;&#xC804;&lt;/span&gt;&lt;/a&gt;
-&#x9;&#x9;&lt;/span&gt;
-&#x9;&lt;/span&gt;
-&#x9;&lt;span class=&quot;page-list&quot;&gt;
-&#x9;&#x9;&lt;a class=&quot;page-item&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;
-&#x9;&#x9;&lt;a class=&quot;page-item&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;
-&#x9;&#x9;&lt;a class=&quot;page-item&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;
-&#x9;&#x9;&lt;a class=&quot;page-item&quot; href=&quot;#&quot;&gt;4&lt;/a&gt;
-&#x9;&#x9;&lt;a class=&quot;page-item&quot; href=&quot;#&quot;&gt;5&lt;/a&gt;
-&#x9;&lt;/span&gt;
-&#x9;&lt;span class=&quot;page-util&quot;&gt;
-&#x9;&#x9;&lt;span class=&quot;util-item&quot;&gt;
-&#x9;&#x9;&#x9;&lt;a class=&quot;btn next&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;btn-text&quot;&gt;&#xB2E4;&#xC74C;&lt;/span&gt;&lt;/a&gt;
-&#x9;&#x9;&lt;/span&gt;
-&#x9;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-<!-- //highlight-js -->
-							</div>
-						</div>
-						<div class="subsection">
-							<div class="subsection-body">
-								<div class="pagination module-a style">
-									<span class="page-util">
-										<span class="util-item disabled">
-											<a class="btn icon style-aarrow-left2-bg" href="#"><span class="btn-text blind">이전</span></a>
-										</span>
-									</span>
-									<span class="page-list">
-										<a class="page-item current" href="#">1</a>
-										<a class="page-item" href="#">2</a>
-										<a class="page-item" href="#">3</a>
-										<a class="page-item" href="#">4</a>
-										<a class="page-item" href="#">5</a>
-									</span>
-									<span class="page-util">
-										<span class="util-item">
-											<a class="btn icon style-aarrow-right2-bg" href="#"><span class="btn-text blind">다음</span></a>
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- //section -->
+
 			</div>
 			<!-- //local-body -->
 		</div>

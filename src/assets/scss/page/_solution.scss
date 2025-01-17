@@ -162,22 +162,31 @@
                 }
             }
             .section-util {
-                width: 100vw;
-                height: 32rem;
-                margin-left: -6rem;
-                margin-right: -6rem;
-                margin-top: 6.4rem;
-                background: url('../../assets/images/solution/net-zero-bg.jpg') no-repeat center;
-                background-size: cover;
-
-                .para {
-                    max-width: 144rem;
-                    height: 100%;
-                    margin: 0 auto;
-                    display: flex;
-                    align-items: center;
-                    @include font(small, medium);
-                    color: custom-color(neutral, 000)
+                .banner-list {
+                    .banner-item {
+                        .banner-wrap {
+                            width: 100vw;
+                            height: 32rem;
+                            margin-left: -6rem;
+                            margin-right: -6rem;
+                            margin-top: 6.4rem;
+                            background: url('../../assets/images/solution/net-zero-bg.jpg') no-repeat center;
+                            background-size: cover;
+            
+                            .banner-body {
+                                height: 100%;
+                                .para {
+                                    max-width: 144rem;
+                                    height: 100%;
+                                    margin: 0 auto;
+                                    display: flex;
+                                    align-items: center;
+                                    @include font(small, medium);
+                                    color: custom-color(neutral, 000);
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -196,6 +205,14 @@
                     width: 100vw;
                     height: calc(100% + 2.2rem);
                     background: custom-color(etc, 070);
+                }
+            }
+
+            &.big-image {
+                .section-wrap {
+                    .section-figure {
+                        margin-left: -6rem;
+                    }
                 }
             }
         }
