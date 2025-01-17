@@ -5,8 +5,8 @@ frontCommon.Html = (function () {
     instance = {
         reset: function () {
             frontCommonResize();
-            lenis();
             frontCommonScroll();
+            lenis();
             header();
             activeAnimationType_1();
             accordion();
@@ -348,15 +348,11 @@ function activeAnimationType_1() {
 
 // process&feature function
 function accordion() {
-    const postItems = document.querySelectorAll('.post-item');
-    if (postItems.length > 0) {
-        postItems[0].classList.add('active');
-    }
+    $('.post-item').first().addClass('active');
 
-    postItems.forEach(postItem => {
-        postItem.addEventListener('click', function () {
-            postItems.forEach(item => item.classList.remove('active'));
-            this.classList.add('active');
-        });
+    $('.post-item').on('click', function () {
+        const $this = $(this);
+        $this.siblings('.post-item').removeClass('active');
+        $this.addClass('active');
     });
 }
