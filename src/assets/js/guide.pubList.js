@@ -99,7 +99,7 @@ function pubListUp() {
           menu: "CDP Assistance",
           root_ko: "../../page/solution/SOLUTION.05.00.html",
           status_ko: "진행중",
-          worker_ko: "강선율",
+          worker_ko: "강선율", 
           history: "",
         },
     ],
