@@ -922,6 +922,7 @@
   border-radius: 1rem;
   background: rgb(4, 37, 95);
   transition: all 0.5s ease-out;
+  overflow: hidden;
 }
 .post-list.process .post-item .post-wrap {
   position: relative;
@@ -966,27 +967,34 @@
 .post-list.process .post-item .post-wrap .post-info .post-head + .post-body {
   display: none;
 }
+.post-list.process .post-item .post-wrap .post-figure {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 89rem;
+  height: 100%;
+}
 .post-list.process .post-item .post-wrap .post-figure img {
-  width: 0;
-  border-radius: 1rem;
-  height: 53rem;
-  transition: opacity 0.5s ease-out;
+  opacity: 0;
+  transition: all 0.5s ease-out;
 }
 .post-list.process .post-item.active {
   width: 89rem;
+  background-color: none;
 }
-.post-list.process .post-item.active .post-info {
+.post-list.process .post-item.active .post-wrap .post-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-.post-list.process .post-item.active .post-info .post-head .post-name {
+.post-list.process .post-item.active .post-wrap .post-info .post-head .post-name {
   position: relative;
   font-weight: 700;
   font-size: 2rem;
 }
-.post-list.process .post-item.active .post-info .post-head .post-name em {
+.post-list.process .post-item.active .post-wrap .post-info .post-head .post-name em {
   position: relative;
   top: 0;
   left: 0;
@@ -995,7 +1003,7 @@
   transform: rotate(0);
   display: inline-block;
 }
-.post-list.process .post-item.active .post-info .post-head .post-name em::after {
+.post-list.process .post-item.active .post-wrap .post-info .post-head .post-name em::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -1006,34 +1014,23 @@
   background: rgb(255, 255, 255);
   transform: translateY(-50%);
 }
-.post-list.process .post-item.active .post-info .post-head .post-name + .post-name {
+.post-list.process .post-item.active .post-wrap .post-info .post-head .post-name + .post-name {
   font-weight: 500;
   font-size: 1.6rem;
   color: rgb(203, 203, 203);
   margin-top: 0.8rem;
   display: block;
 }
-.post-list.process .post-item.active .post-info .post-head + .post-body {
+.post-list.process .post-item.active .post-wrap .post-info .post-head + .post-body {
   display: block;
 }
-.post-list.process .post-item.active .post-info .post-head + .post-body .post-summary {
+.post-list.process .post-item.active .post-wrap .post-info .post-head + .post-body .post-summary {
   font-weight: 500;
   font-size: 1.8rem;
   width: 66rem;
 }
-.post-list.process .post-item.active .post-figure {
-  border-radius: 1rem;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -o-object-fit: fill;
-     object-fit: fill;
-  width: 89rem;
-}
-.post-list.process .post-item.active .post-figure img {
-  width: 100%;
+.post-list.process .post-item.active .post-wrap .post-figure img {
+  opacity: 1;
 }
 .post-list.feature .post-item .post-wrap {
   display: flex;
@@ -4547,7 +4544,6 @@ body.mo-menu-open {
   line-height: 1.1;
   color: rgb(255, 255, 255);
   letter-spacing: -3.2px;
-  font-family: initial;
 }
 #wrap .main .section.story-03 .section-wrap .section-body .data-list .data-item .data-wrap .data-body .data-text {
   font-weight: 600;
@@ -4975,7 +4971,7 @@ body.mo-menu-open {
   margin-left: -6rem;
   margin-right: -6rem;
   margin-top: 6.4rem;
-  background: url("../../assets/images/solution/net-zero-bg.jpg") no-repeat center;
+  background: url("../../assets/images/solution/net-zero/net-zero-bg.jpg") no-repeat center;
   background-size: cover;
 }
 #wrap .solution-netzero .section .section-util .banner-list .banner-item .banner-wrap .banner-body {
