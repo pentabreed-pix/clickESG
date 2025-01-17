@@ -157,8 +157,7 @@ function mainVisual() {
     });
 
 }
-
-function another(){
+function mainInteraction(){
     rollingEvent('.rolling-01');
     rollingEvent('.rolling-02');
     rollingEvent('.rolling-03');
@@ -191,26 +190,6 @@ function another(){
         });
     }
 
-    var solutionSlider = new Swiper(".story-02 .swiper", {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 32,
-        freeMode: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        speed: 600,
-        navigation: {
-            nextEl: ".story-02 .swiper-button-next",
-            prevEl: ".story-02 .swiper-button-prev",
-        },
-        pagination: {
-            el: ".story-02 .swiper-pagination",
-            type: "progressbar",
-        },
-    });
-
     var newSlider = new Swiper(".story-06 .swiper", {
         slidesPerView: 4,
         spaceBetween: 21,
@@ -225,47 +204,70 @@ function another(){
             prevEl: ".story-06 .swiper-button-prev",
         },
     });
-}
 
-function activeAnimationMain() {
     function commaSeparateNumber(val) {
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
+    var solutionSlider = new Swiper(".story-02 .swiper", {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 32,
+        freeMode: true,
+        autoplay: false,
+        speed: 600,
+        navigation: {
+            nextEl: ".story-02 .swiper-button-next",
+            prevEl: ".story-02 .swiper-button-prev",
+        },
+        pagination: {
+            el: ".story-02 .swiper-pagination",
+            type: "progressbar",
+        },
+    });
+
     gsap.utils
-        .toArray('[active-animation="main"]')
-        .forEach((section) => {
-            gsap.to(section, {
-                scrollTrigger: {
-                    //markers: true,
-                    trigger: section,
-                    start: "20% 98%",
-                    end: "top bottom",
+    .toArray('[active-animation="main"]')
+    .forEach((section) => {
+        gsap.to(section, {
+            scrollTrigger: {
+                //markers: true,
+                trigger: section,
+                start: "20% 98%",
+                end: "top bottom",
 
-                    onEnter: () => {
-                        section.classList.add("active-animation-main");
+                onEnter: () => {
+                    section.classList.add("active-animation-main");
 
-                        if (section.classList.contains('story-03')) {
-                            document.querySelectorAll('.story-03 .data-info').forEach((el) => {
-                                const targetValue = parseInt(el.textContent.replace(/,/g, ''), 10);
-                                let counter = { value: 0 };
+                    if (section.classList.contains('swiper-list')) {
+                        solutionSlider.autoplay.start();
+                    }
 
-                                gsap.to(counter, {
-                                    value: targetValue,
-                                    duration: 3,
-                                    ease: "swing",
-                                    onUpdate: () => {
-                                        el.textContent = commaSeparateNumber(Math.ceil(counter.value));
-                                    },
-                                });
+                    if (section.classList.contains('story-03')) {
+                        document.querySelectorAll('.story-03 .data-info').forEach((el) => {
+                            const targetValue = parseInt(el.textContent.replace(/,/g, ''), 10);
+                            let counter = { value: 0 };
+
+                            gsap.to(counter, {
+                                value: targetValue,
+                                duration: 3,
+                                ease: "swing",
+                                onUpdate: () => {
+                                    el.textContent = commaSeparateNumber(Math.ceil(counter.value));
+                                },
                             });
-                        }
-                    },
-
-                    onLeaveBack: () => {
-                        section.classList.remove("active-animation-main");
-                    },
+                        });
+                    }
                 },
-            });
+
+                onLeaveBack: () => {
+                    section.classList.remove("active-animation-main");
+
+                    if (section.classList.contains('swiper-list')) {
+                        solutionSlider.autoplay.stop();
+                    }
+                },
+            },
         });
+    });
 }
