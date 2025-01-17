@@ -6,7 +6,7 @@ function pubListUp() {
         id_ko: "",
         menu: "MAIN",
         root_ko: "../../page/main/MAIN.00.00.html",
-        status_ko: "완료",
+        status_ko: "진행",
         worker_ko: "주은소",
         history: "",
       },
@@ -17,7 +17,7 @@ function pubListUp() {
         menu: "Service 소개",
         root_ko: "../../page/service/SERVICE.00.00.html",
         status_ko: "진행",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },
       {
@@ -59,7 +59,7 @@ function pubListUp() {
           menu: "Solution 소개",
           root_ko: "../../page/solution/SOLUTION.00.00.html",
           status_ko: "진행",
-          worker_ko: "",
+          worker_ko: "강선율",
           history: "",
         },
         {
@@ -67,7 +67,7 @@ function pubListUp() {
           menu: "ESG Assessment",
           root_ko: "../../page/solution/SOLUTION.01.00.html",
           status_ko: "진행",
-          worker_ko: "",
+          worker_ko: "강선율",
           history: "",
         },
         {
@@ -75,7 +75,7 @@ function pubListUp() {
           menu: "SCM Assessment",
           root_ko: "../../page/solution/SOLUTION.02.00.html",
           status_ko: "진행",
-          worker_ko: "",
+          worker_ko: "강선율",
           history: "",
         },
         {
@@ -83,7 +83,7 @@ function pubListUp() {
           menu: "Net-Zero",
           root_ko: "../../page/solution/SOLUTION.03.00.html",
           status_ko: "진행",
-          worker_ko: "",
+          worker_ko: "강선율",
           history: "",
         },
         {
@@ -91,7 +91,7 @@ function pubListUp() {
           menu: "Data Hub",
           root_ko: "../../page/solution/SOLUTION.04.00.html",
           status_ko: "진행",
-          worker_ko: "",
+          worker_ko: "강선율",
           history: "",
         },
         {
@@ -99,7 +99,7 @@ function pubListUp() {
           menu: "CDP Assistance",
           root_ko: "../../page/solution/SOLUTION.05.00.html",
           status_ko: "진행",
-          worker_ko: "",
+          worker_ko: "강선율",
           history: "",
         },
     ],
