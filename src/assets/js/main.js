@@ -250,7 +250,7 @@ function mainInteraction(){
 
                             gsap.to(counter, {
                                 value: targetValue,
-                                duration: 3,
+                                duration: 2,
                                 ease: "swing",
                                 onUpdate: () => {
                                     el.textContent = commaSeparateNumber(Math.ceil(counter.value));
