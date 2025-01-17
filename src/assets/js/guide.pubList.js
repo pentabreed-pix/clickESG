@@ -145,6 +145,16 @@ function pubListUp() {
         history: "",
       },
     ],
+    Utility: [
+      {
+        id_ko: "",
+        menu: "Utility",
+        root_ko: "../../page/utility/personal-info.html",
+        status_ko: "",
+        worker_ko: "",
+        history: "",
+      },
+    ],
   };
 
   document.addEventListener("DOMContentLoaded", function () {
