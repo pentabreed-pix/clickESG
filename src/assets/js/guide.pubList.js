@@ -149,7 +149,7 @@ function pubListUp() {
       {
         id_ko: "",
         menu: "Utility",
-        root_ko: "../../page/utility/personal-info.html",
+        root_ko: "../../page/utility/PERSONALINFO.00.00.html",
         status_ko: "",
         worker_ko: "",
         history: "",
