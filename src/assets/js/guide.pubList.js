@@ -27,7 +27,7 @@ function pubListUp() {
         status_ko: "",
         worker_ko: "",
         history: "",
-      },
+      },                   
       {
         id_ko: "",
         menu: "ESG 공급망 진단 컨설팅",
@@ -140,24 +140,6 @@ function pubListUp() {
         id_ko: "",
         menu: "Contact Us",
         root_ko: "../../page/aboutus/ABOUTUS.04.00.html",
-        status_ko: "",
-        worker_ko: "",
-        history: "",
-      },
-    ],
-    ERROR: [
-      {
-        id_ko: "",
-        menu: "404",
-        root_ko: "../../page/error/ERROR.404.html",
-        status_ko: "",
-        worker_ko: "",
-        history: "",
-      },
-      {
-        id_ko: "",
-        menu: "500",
-        root_ko: "../../page/error/ERROR.500.html",
         status_ko: "",
         worker_ko: "",
         history: "",
