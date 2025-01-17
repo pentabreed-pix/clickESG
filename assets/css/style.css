@@ -3229,7 +3229,7 @@ sub {
 #guide-list .page-body .local-body .section.font-guide .subsection .subsection-body .table td {
   text-align: center;
 }
-#guide-list .page-body .local-body .section.font-guide .subsection .subsection-body .table td:first-child {
+#guide-list .page-body .local-body .section.font-guide .subsection .subsection-body .table td:nth-child(1), #guide-list .page-body .local-body .section.font-guide .subsection .subsection-body .table td:nth-child(2) {
   text-align: left;
   padding-left: 1rem;
 }
@@ -3272,6 +3272,9 @@ sub {
 }
 #guide-list .page-body .local-body .section.font-guide .subsection .subsection-body .font-info.light .text {
   font-weight: 300;
+}
+#guide-list .page-body .local-body .section.font-guide .subsection .subsection-body .font-info.regular .text {
+  font-weight: 400;
 }
 #guide-list .page-body .local-body .section.font-guide .subsection .subsection-body .font-info.medium .text {
   font-weight: 500;
@@ -4966,7 +4969,7 @@ body.mo-menu-open {
 #wrap .solution-netzero .section .section-body .post-list.feature .post-item.active .post-wrap .post-figure {
   opacity: 1;
 }
-#wrap .solution-netzero .section .section-util {
+#wrap .solution-netzero .section .section-util .banner-list .banner-item .banner-wrap {
   width: 100vw;
   height: 32rem;
   margin-left: -6rem;
@@ -4975,7 +4978,10 @@ body.mo-menu-open {
   background: url("../../assets/images/solution/net-zero-bg.jpg") no-repeat center;
   background-size: cover;
 }
-#wrap .solution-netzero .section .section-util .para {
+#wrap .solution-netzero .section .section-util .banner-list .banner-item .banner-wrap .banner-body {
+  height: 100%;
+}
+#wrap .solution-netzero .section .section-util .banner-list .banner-item .banner-wrap .banner-body .para {
   max-width: 144rem;
   height: 100%;
   margin: 0 auto;
@@ -5000,6 +5006,9 @@ body.mo-menu-open {
   width: 100vw;
   height: calc(100% + 2.2rem);
   background: rgb(249, 249, 249);
+}
+#wrap .solution-netzero .section.big-image .section-wrap .section-figure {
+  margin-left: -6rem;
 }
 
 /**
