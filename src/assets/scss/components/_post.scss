@@ -330,12 +330,16 @@
         }
     }
     &.feature {
+        position: relative;
+        height: 50.9rem;
        .post-item {
             .post-wrap {
                 display: flex;
-                justify-content: center;
-                gap: 2.4rem;
-                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+                width: 132.2rem;
+                margin: 0 auto;
+
                 .post-info {
                     border-radius: 1rem;
                     border: 0.1rem solid rgba(203, 203, 203, 0.50);
@@ -405,12 +409,24 @@
                                 margin-top: 2.4rem;
                             }
                         }
+                        + .post-body {
+                            height: 0; 
+                            opacity: 0; 
+                            overflow: hidden; 
+                            transition: height 0.3s ease-out, opacity 0.3s ease-out; 
+                        }
                     }
                 }
 
                 .post-figure {
+                    position: absolute;
+                    top: 0;
+                    right: 6rem;
+                    width: 58.8rem;
+                    opacity: 0;
                     border-radius: 1.6rem;
                     overflow: hidden;
+                    transition: opacity 0.3s ease-out; 
                     img {
                         width: 100%;
                     }
@@ -419,6 +435,63 @@
 
             + .post-item {
                 margin-top: 0.8rem;
+            }
+
+            &.active {
+                .post-wrap {
+                    .post-info {
+                        background: custom-color(etc, 100);
+                        .post-head {
+                            .post-name {
+                                padding-left: 3rem;
+                                @include font(small-2x, bold);
+                                color: custom-color(primary, 080);
+                            
+                                &.network, &.clock, &.device, &.certi {
+                                    position: relative;
+                            
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        width: 2.2rem;
+                                        height: 2.1rem;
+                                        background: no-repeat center;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            
+                                &.network::after {
+                                    background-image: icon('network', custom-color(primary, 080));
+                                }
+                            
+                                &.clock::after {
+                                    background-image: icon('clock', custom-color(primary, 080));
+                                }
+                            
+                                &.device::after {
+                                    background-image: icon('device', custom-color(primary, 080));
+                                }
+                            
+                                &.certi::after {
+                                    background-image: icon('certi', custom-color(primary, 080));
+                                }
+                            }
+                            
+                            &::after {
+                                background-image: icon('plus', custom-color(neutral, 080));
+                            }
+                        }
+                        .post-body {
+                            height: auto; 
+                            opacity: 1; 
+                        }
+                    }
+                    .post-figure {
+                       opacity: 1;
+                    }
+                }
             }
        }
     }
