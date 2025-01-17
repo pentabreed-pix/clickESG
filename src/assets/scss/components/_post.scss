@@ -17,7 +17,7 @@
                     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     img {
                         width: 100%;
-                    }  
+                    }
                 }
             }
         }
@@ -154,7 +154,7 @@
                         @include font(small, bold);
                         color: custom-color(primary, 080);
                         line-height: 190%;
-                        
+
                         + .post-summary {
                             @include font(small-2x, regular);
                             color: custom-color(neutral,100);
@@ -189,19 +189,20 @@
     // solution accordion 있는 페이제에 씀
     &.process {
         position: relative;
-        width: 144rem; 
-        overflow: hidden; 
+        width: 144rem;
+        overflow: hidden;
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
 
         .post-item {
-            flex: 0 0 auto; 
-            width: 10.2rem; 
+            flex: 0 0 auto;
+            width: 10.2rem;
             height: 53rem;
             border-radius: 1rem;
             background: custom-color(secondary, 060);
             transition: all 0.5s ease-out;
-    
+            overflow: hidden;
+
             .post-wrap {
                 position: relative;
                 overflow: hidden;
@@ -225,7 +226,7 @@
                                 width: max-content;
                                 margin-left: 1.2rem;
                                 margin-top: 1rem;
-    
+
                                 &::after {
                                     content: '';
                                     display: inline-block;
@@ -236,91 +237,95 @@
                                     height: 1.2rem;
                                     background: custom-color(neutral, 000);
                                     transform: translateY(-50%);
-                                } 
+                                }
                             }
                             + .post-name {
                                 display: none
                             }
-                            
+
                         }
                         + .post-body {
                             display: none;
                         }
                     }
                 }
-    
+
                 .post-figure {
-                    img {
-                        width: 0;
-                        border-radius: 1rem;
-                        height: 53rem;
-                        transition: opacity 0.5s ease-out;
-                    }
-                }
-            }
-    
-            &.active {
-                width: 89rem;
-                .post-info {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    height: 100%;
-                    .post-head {
-                        .post-name {
-                            position: relative;
-                            @include font(small-2x, bold);
-                            em {
-                                position: relative;
-                                top: 0;
-                                left: 0;
-                                margin-left: 2.7rem;
-                                margin-top: 0;
-                                transform: rotate(0);
-                                display: inline-block;
-    
-                                &::after {
-                                    content: '';
-                                    display: inline-block;
-                                    position: absolute;
-                                    top: 50%;
-                                    left: -1.5rem;
-                                    width: 0.1rem;
-                                    height: 1.2rem;
-                                    background: custom-color(neutral, 000);
-                                    transform: translateY(-50%);
-                                } 
-                            }
-                            + .post-name {
-                                @include font(small-4x, medium);
-                                color: custom-color(neutral, 060);
-                                margin-top: 0.8rem;
-                                display: block;
-                            }
-                            
-                        }
-                        + .post-body {
-                            display: block;
-                            .post-summary {
-                                @include font(small-3x, medium);
-                                width: 66rem;
-                            }
-                        }
-                    }
-                }
-                .post-figure {
-                    border-radius: 1rem;
-                    overflow: hidden;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    object-fit: fill;
                     width: 89rem;
+                    height: 100%;
+
                     img {
-                        width: 100%;
+                        opacity: 0;
+                        transition: all .5s ease-out;
                     }
                 }
+            }
+
+            &.active {
+                width: 89rem;
+                background-color: none;
+
+                .post-wrap {
+                    .post-info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+                        .post-head {
+                            .post-name {
+                                position: relative;
+                                @include font(small-2x, bold);
+                                em {
+                                    position: relative;
+                                    top: 0;
+                                    left: 0;
+                                    margin-left: 2.7rem;
+                                    margin-top: 0;
+                                    transform: rotate(0);
+                                    display: inline-block;
+
+                                    &::after {
+                                        content: '';
+                                        display: inline-block;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: -1.5rem;
+                                        width: 0.1rem;
+                                        height: 1.2rem;
+                                        background: custom-color(neutral, 000);
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                                + .post-name {
+                                    @include font(small-4x, medium);
+                                    color: custom-color(neutral, 060);
+                                    margin-top: 0.8rem;
+                                    display: block;
+                                }
+
+                            }
+                            + .post-body {
+                                display: block;
+                                .post-summary {
+                                    @include font(small-3x, medium);
+                                    width: 66rem;
+                                }
+                            }
+                        }
+                    }
+                    .post-figure {
+                        img {
+                            opacity: 1;
+                        }
+                    }
+
+
+                }
+
             }
         }
     }
@@ -345,10 +350,10 @@
                             padding-left: 3rem;
                             @include font(small-2x, bold);
                             color: custom-color(neutral, 080);
-                        
+
                             &.network, &.clock, &.device, &.certi {
                                 position: relative;
-                        
+
                                 &::after {
                                     content: '';
                                     position: absolute;
@@ -360,24 +365,24 @@
                                     transform: translateY(-50%);
                                 }
                             }
-                        
+
                             &.network::after {
                                 background-image: icon('network', custom-color(neutral, 090));
                             }
-                        
+
                             &.clock::after {
                                 background-image: icon('clock', custom-color(neutral, 090));
                             }
-                        
+
                             &.device::after {
                                 background-image: icon('device', custom-color(neutral, 090));
                             }
-                        
+
                             &.certi::after {
                                 background-image: icon('certi', custom-color(neutral, 090));
                             }
                         }
-                        
+
 
                         &::after {
                             content: "";
@@ -415,6 +420,6 @@
             + .post-item {
                 margin-top: 0.8rem;
             }
-       } 
+       }
     }
 }
