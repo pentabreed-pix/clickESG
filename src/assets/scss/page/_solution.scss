@@ -144,7 +144,7 @@
                                             }
                                             
                                             &::after {
-                                                background-image: icon('plus', custom-color(neutral, 000));
+                                                background-image: icon('plus', custom-color(neutral, 080));
                                             }
                                         }
                                         .post-body {
@@ -170,7 +170,7 @@
                 background: url('../../assets/images/solution/net-zero-bg.jpg') no-repeat center;
                 background-size: cover;
 
-                .util-info {
+                .para {
                     max-width: 144rem;
                     height: 100%;
                     margin: 0 auto;

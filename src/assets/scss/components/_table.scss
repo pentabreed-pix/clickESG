@@ -14,7 +14,7 @@
 		border-right: hidden;
 		border-left: hidden;
 		border-top: hidden;
-        border-bottom: 1px solid rgba(203, 203, 203, 0.50);
+        border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 	}
 
     &.module-a {
@@ -25,9 +25,9 @@
 						>th {
 							padding: 1.8rem;
 							background-color: #2A78C7;
-							border-right: 1px solid custom-color(neutral, 000);
-							border-left: 1px solid custom-color(neutral, 060);
-							border-top: 1px solid custom-color(neutral, 060);
+							border-right: 0.1rem solid custom-color(neutral, 000);
+							border-left: 0.1rem solid custom-color(neutral, 060);
+							border-top: 0.1rem solid custom-color(neutral, 060);
                             
                             &.t-bg {
                                 background: custom-color(secondary, 100);
@@ -42,7 +42,7 @@
 						>td {
 							padding: 1.5rem 2rem;
 							vertical-align: middle;
-							border-right: 1px solid rgba(203, 203, 203, 0.50);
+							border-right: 0.1rem solid rgba(203, 203, 203, 0.50);
 
                             &.t-bg {
                                 background: rgba(133, 133, 133, 0.05);
@@ -107,6 +107,119 @@
 							color: custom-color(neutral, 080);
 							@include font(small-4x, bold);
 
+						}
+					}
+				}
+			}
+		}
+    }
+
+    &.module-b {
+		&.style-b{
+			table {
+				>thead {
+					>tr {
+						>th {
+							padding: 1.6rem;
+							background-color: #2A78C7;
+							border-right: 0.1rem solid custom-color(neutral, 000);
+							border-left: 0.1rem solid custom-color(neutral, 000);
+							border-top: 0.1rem solid custom-color(neutral, 000);
+                            
+						}
+					}
+				}
+
+				>tbody {
+					>tr {
+                        >th,
+						>td {
+							padding: 1.5rem 2rem;
+							vertical-align: middle;
+							border-right: 0.1rem solid custom-color(neutral, 000);
+							border-bottom: 0.1rem solid custom-color(neutral, 000);
+							&.common-index {
+								background: rgba(5, 104, 204, 0.12);
+							}
+							&.special-index {
+								background: rgba(34, 188, 98, 0.15);
+							}
+							&.bottom-gray {
+								border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+							}
+						}
+						&:nth-child(1) {
+							td {
+								&:nth-child(1) {
+									border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+									background: custom-color(etc, 100);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.type-a {
+			table {
+				>thead {
+					>tr {
+						>th {
+                            @include font(small-4x, bold);
+							color: custom-color(neutral, 000);
+							text-align: center;
+						}
+					}
+				}
+
+				>tbody {
+					>tr {
+                        >th,
+						>td {
+							color: custom-color(neutral, 080);
+							@include font(small-4x, bold);
+
+						}
+					}
+				}
+			}
+		}
+
+		&.type-b {
+			table {
+				>thead {
+					>tr {
+						>th {
+                            font-size: 1.5rem;
+							font-weight: 700;
+							line-height: 160%;
+							color: custom-color(neutral, 000);
+							text-align: center;
+						}
+					}
+				}
+
+				>tbody {
+					>tr {
+                        >th,
+						>td {
+							@include font(small-5x, bold);
+							color: custom-color(neutral, 080);
+							&.common-index {
+								@include font(small-5x, bold);
+								color: #0B5AAB;
+							}
+							&.special-index {
+								@include font(small-5x, bold);
+								color: #166844;
+							}
+							&.bottom-gray {
+								font-size: 1.5rem;
+								font-weight: 400;
+								line-height: 160%;
+								color: custom-color(neutral, 080);
+							}
 						}
 					}
 				}
