@@ -63,12 +63,15 @@
             }
         }
     }
+    &.module-c {
+
+    }
 
     &.style-a{
         .post-item {
             .post-wrap {
                 .post-head {
-                    .post-subject {
+                    .post-name {
                        padding: 1.6rem 1.5rem 0;
                     }
                 }
@@ -85,7 +88,7 @@
                 padding: 4rem 8rem 4rem 4rem;
 
                 .post-head {
-                    .post-subject {
+                    .post-name {
                         + .post-summary {
                             margin-top: 2.8rem
                         }
@@ -108,12 +111,34 @@
             }
         }
     }
+    &.style-c {
+        .post-item {
+            .post-wrap {
+                .post-head {
+                    .post-name {
+                        + .post-summary {
+                            margin-top: 2.4rem
+                        }
+                    }
+                    + .post-figure {
+                        margin-top: 4rem;
+                    }
+                    + .post-body {
+                        margin-top: 4rem;
+                    }
+                }
+            }
+            + .post-item {
+                margin-top: 12rem
+            }
+        }
+    }
 
     &.type-a {
         .post-item {
             .post-wrap {
                 .post-head {
-                    .post-subject {
+                    .post-name {
                         @include font(small-2x, medium);
                         color: custom-color(neutral,100);
                     }
@@ -121,12 +146,11 @@
             }
         }
     }
-
     &.type-b {
         .post-item {
             .post-wrap {
                 .post-head {
-                    .post-subject {
+                    .post-name {
                         @include font(small, bold);
                         color: custom-color(primary, 080);
                         line-height: 190%;
@@ -141,7 +165,28 @@
             }
         }
     }
+    &.type-c {
+        .post-item {
+            .post-wrap {
+                .post-head {
+                    .post-name {
+                        @include font(small-1x, bold);
+                        color: custom-color(neutral, 080);
 
+                        + .post-summary {
+                            @include font(small-3x, medium);
+                            color: custom-color(neutral, 080);
+                        }
+                    }
+                    + .post-figure {
+                        margin-top: 4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // solution accordion 있는 페이제에 씀
     &.process {
         position: relative;
         width: 144rem; 
@@ -193,7 +238,7 @@
                                     transform: translateY(-50%);
                                 } 
                             }
-                            + .post-subject {
+                            + .post-name {
                                 display: none
                             }
                             
@@ -246,9 +291,9 @@
                                     transform: translateY(-50%);
                                 } 
                             }
-                            + .post-subject {
+                            + .post-name {
                                 @include font(small-4x, medium);
-                                color: custom-color(neutral, 100);
+                                color: custom-color(neutral, 060);
                                 margin-top: 0.8rem;
                                 display: block;
                             }
@@ -279,7 +324,6 @@
             }
         }
     }
-
     &.feature {
        .post-item {
             .post-wrap {
@@ -343,7 +387,7 @@
                             right: 0;
                             width: 2.4rem;
                             height: 2.4rem;
-                            background-image: icon('mines', custom-color(neutral, 000));
+                            background-image: icon('mines', custom-color(neutral, 080));
                             background-repeat: no-repeat;
                             background-size: 1.5rem;
                             background-position: center;
@@ -352,7 +396,7 @@
                         }
 
                         + .post-body {
-                            .bullet-display {
+                            .bullet-list {
                                 margin-top: 2.4rem;
                             }
                         }

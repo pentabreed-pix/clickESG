@@ -11,7 +11,11 @@
                 .panel-item {
                     .panel-wrap {
                         .section {
-                            
+                            .section-head {
+                                + .section-body {
+                                    margin-top: 6.4rem;
+                                }
+                            }
                         }
                     }
                 }

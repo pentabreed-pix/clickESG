@@ -383,7 +383,7 @@
                                             .post-item{
                                                 .post-head{
                                                     text-align: center;
-                                                    .post-subject{
+                                                    .post-name{
                                                         padding: 4rem 0 6.4rem;
                                                     }
                                                 }
@@ -2626,7 +2626,7 @@
                                                 max-width: 100%;
                                             }
 
-                                            .post-subject {
+                                            .post-name {
                                                 .post-name {
                                                     @include font(small-1x, bold);
                                                     color: #15151A;
@@ -2957,7 +2957,7 @@
                                     flex-direction: column;
 
                                     .post-head {
-                                        .post-subject {
+                                        .post-name {
                                             .post-name {
                                                 @include font(small-1x, bold);
                                                 color: custom-color(neutral, 000);
@@ -3269,7 +3269,7 @@
                                             padding: 0 1.2rem;
                                         }
 
-                                        .post-subject {
+                                        .post-name {
                                             .post-name {
                                                 @include font(small-2x, bold);
                                                 color: #15151A;

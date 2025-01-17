@@ -8,7 +8,7 @@ frontCommon.Html = (function () {
             frontCommonScroll();
             lenis();
             header();
-            activeAnimationtype-a();
+            activeAnimationType_1();
 
             //footer();
             //localAnimations();
