@@ -18,7 +18,6 @@
 
 		@include mobile {
 			min-width: 144rem;
-			overflow-y: auto;
 		}
 	}
 
@@ -297,4 +296,8 @@
 	// 	}
 		
 	// }
+
+	@include mobile {
+		overflow-y: auto;
+	}
 }
