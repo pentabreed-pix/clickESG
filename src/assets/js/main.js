@@ -158,13 +158,13 @@ function mainVisual() {
 
 }
 function mainInteraction(){
-    rollingEvent('.rolling-01');
-    rollingEvent('.rolling-02');
-    rollingEvent('.rolling-03');
-    rollingEvent('.rolling-04');
-    rollingEvent('.rolling-05');
+    rollingEvent01('.rolling-01');
+    rollingEvent02('.rolling-02');
+    rollingEvent01('.rolling-03');
+    rollingEvent01('.rolling-04');
+    rollingEvent02('.rolling-05');
 
-    function rollingEvent(selector) {
+    function rollingEvent01(selector) {
         $(selector).each(function() {
             var $selector = $(this);
             var $selectorList = $selector.find('.rolling-list');
@@ -190,9 +190,33 @@ function mainInteraction(){
         });
     }
 
+    function rollingEvent02(selector) {
+        $(selector).each(function() {
+            var $selector = $(this);
+            var $selectorList = $selector.find('.rolling-list');
+            //let $roller = $('.rolling-display');
+
+            if ($selector.length) {
+                $selector.addClass('roller3');
+
+                let $clone = $selector.clone(true);
+                $clone.addClass('roller4');
+                $selector.parent('.sub-section').append($clone);
+
+                $selector.addClass('original');
+                $clone.addClass('clone');
+
+            } else {
+                console.error('Element with the class "rolling-display" not found.');
+            }
+
+        });
+    }
+
     var newSlider = new Swiper(".story-06 .swiper", {
         slidesPerView: 4,
-        spaceBetween: 21,
+        spaceBetween: 20,
+        slidesPerGroup: 4,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,

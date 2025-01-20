@@ -212,7 +212,7 @@
                                     .data-head {
                                         .data-subject {
                                             @include font(small-1x, bold);
-                                            color: custom-color(primary, 090);
+                                            color: custom-color(secondary, 040);
 
                                             & + .data-summary {
                                                 margin-top: 2.4rem;
@@ -331,6 +331,7 @@
                     background: linear-gradient(180deg, rgba(0, 190, 242, 0.00) 0%, rgba(95, 188, 255, 0.40) 47.56%), #005EBC;
 
                     .section-head {
+                        max-width: 83rem;
                         .section-subject {
                             @include font(small-1x, bold);
                             color: custom-color(neutral, 000);
@@ -526,7 +527,7 @@
                     .section-head {
                         width: 49.4rem;
                         .section-subject {
-                            @include font(small-1x, bold);
+                            @include font(small-2x, bold);
                             color: custom-color(neutral, 000);
 
                             & + .section-summary {
@@ -547,9 +548,9 @@
                             color: custom-color(neutral, 000);
                         }
 
-                        & + .section-body {
-                            margin-top: 6.4rem;
-                        }
+                        // & + .section-body {
+                        //     margin-top: 6.4rem;
+                        // }
                     }
                     .section-body {
                         flex-shrink: 0;
@@ -562,20 +563,21 @@
                             .data-item {
                                 position: relative;
                                 width: calc(50% - 1rem);
+                                height: 26rem;
                                 .data-wrap {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: flex-start;
                                     justify-content: flex-end;
-                                    gap: 2.2rem;
+                                    height: 100%;
+                                    gap: 1.6rem;
                                     padding: 4rem 3rem;
                                     background-color: rgba(0, 0, 0, 0.35);
+                                    backdrop-filter: blur(4px);
 
                                     .data-head {
                                         .data-subject {
-                                            font-size: 2.2rem;
-                                            line-height: 1.6;
-                                            font-weight: 700;
+                                            @include font(small-2x, bold);
                                             color:#28D1FF;
                                         }
                                     }
@@ -611,11 +613,11 @@
                 .section-wrap {
                     display: flex;
                     flex-direction: column;
-                    gap: 4.8rem;
+                    gap: 4rem;
 
                     .section-head {
                         .section-summary {
-                            @include font(medium, bold);
+                            @include font(large, bold);
                             color: custom-color(neutral, 090);
                             text-align: center;
                         }
@@ -635,7 +637,7 @@
                                             }
 
                                             &:nth-child(even) {
-                                                padding-left: 65px;
+                                                //padding-left: 65px;
                                             }
 
                                             .rolling-display {
@@ -657,11 +659,24 @@
                                         .panel-wrap {
                                             .sub-section {
                                                 .rolling-display {
-                                                    &.original {
-                                                        animation: rollingleft1 100s linear infinite;
+                                                    &.rolling-01,
+                                                    &.rolling-03 {
+                                                        &.original {
+                                                            animation: rollingleft1 250s linear infinite;
+                                                        }
+                                                        &.clone {
+                                                            animation: rollingleft2 250s linear infinite;
+                                                        }
                                                     }
-                                                    &.clone {
-                                                        animation: rollingleft2 100s linear infinite;
+
+                                                    &.rolling-02{
+                                                        position: relative;
+                                                        &.original {
+                                                            animation: rollingright1 300s linear infinite reverse;
+                                                        }
+                                                        &.clone {
+                                                            animation: rollingright2 300s linear infinite reverse;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -672,11 +687,22 @@
                                         .panel-wrap {
                                             .sub-section {
                                                 .rolling-display {
-                                                    &.original {
-                                                        animation: rollingleft1 30s linear infinite;
+                                                    &.rolling-04 {
+                                                        &.original {
+                                                            animation: rollingleft1 100s linear infinite;
+                                                        }
+                                                        &.clone {
+                                                            animation: rollingleft2 100s linear infinite;
+                                                        }
                                                     }
-                                                    &.clone {
-                                                        animation: rollingleft2 30s linear infinite;
+
+                                                    &.rolling-05 {
+                                                        &.original {
+                                                            animation: rollingright1 100s linear infinite reverse;
+                                                        }
+                                                        &.clone {
+                                                            animation: rollingright2 100s linear infinite reverse;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -684,6 +710,19 @@
                                     }
                                 }
                             }
+                        }
+
+                        @keyframes rollingright1 {
+                            0% { transform: translateX(0); }
+                            50% { transform: translateX(-100%); }
+                            50.01% { transform: translateX(100%); }
+                            100% { transform: translateX(0); }
+
+                        }
+
+                        @keyframes rollingright2 {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-200%); }
                         }
 
 
@@ -695,7 +734,7 @@
                         }
 
                         @keyframes rollingleft2 {
-                            0% { transition: translateX(0); }
+                            0% { transform: translateX(0); }
                             100% { transform: translateX(-200%); }
                         }
                     }
@@ -712,7 +751,7 @@
                     .section-head {
                         .section-subject {
                             @include font(small-1x, bold);
-                            color: custom-color(primary, 090);
+                            color: custom-color(secondary, 040);
 
                             & + .section-summary {
                                 margin-top: 2.4rem;
@@ -906,7 +945,7 @@
                     .section-head {
                         .section-subject {
                             @include font(small-1x, bold);
-                            color: custom-color(primary, 090);
+                            color: custom-color(secondary, 040);
 
                             & + .section-summary {
                                 margin-top: 2.4rem;
@@ -943,7 +982,7 @@
                             }
                             .swiper-wrapper {
                                 .swiper-item {
-                                    width: 34.4rem !important;
+                                    width: 34.5rem !important;
                                     .swiper-wrap {
                                         .swiper-figure {
                                             position: relative;
@@ -975,7 +1014,7 @@
                                                 font-size: 1.5rem;
                                                 font-weight: 600;
                                                 line-height: 1.2;
-                                                color: custom-color(primary, 090);
+                                                color: custom-color(secondary, 040);
 
                                                 & + .swiper-body {
                                                     margin-top: 0.8rem;
