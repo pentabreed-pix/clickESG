@@ -68,6 +68,11 @@
     &.solutions {
         display: flex;
         gap: 12.4rem;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
         .data-item {
             .data-head {
                 .data-subject {
@@ -84,9 +89,32 @@
                         margin-top: 3.2rem;
                     }
                 }
+
+                @include mobile {
+                    text-align: left;
+                    .data-subject {
+                        @include font(small-2x, bold);
+                        + .data-summary {
+                            @include font(small-4x, regular);
+                            margin-top: 2rem;
+                        }
+                    }
+                }
             }
             .data-body {
                 margin-top: 6.4rem;
+
+                @include mobile {
+                    margin-top: 4rem;
+                }
+
+                .data-figure {
+                    border-radius: 1.6rem;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -173,6 +201,10 @@
                 @include font(small-3x, regular);
                 color:custom-color(neutral, 100);
                 line-height: 240%;
+
+                @include mobile {
+                    @include font(small-5x, regular);
+                }
 
                 &::before {
                     @include font(small-6x, regular);

@@ -180,6 +180,10 @@
                                 .depth2 {
                                     font-size: 1.6rem;
                                     line-height: 1.9rem;
+                                    &:hover {
+                                        color: custom-color(primary, 090);
+                                        font-weight: 600;
+                                    }
                                 }
                             }
                         }
@@ -212,7 +216,7 @@
                                     display: block;
                                     width: 2.4rem;
                                     height: 2.4rem;
-                                    background-image: icon('plus', custom-color(neutral, 000));
+                                    background-image: icon('plus', custom-color(neutral, 100));
                                     background-repeat: no-repeat;
                                     background-size: 1.5rem;
                                     background-position: center;
@@ -223,7 +227,7 @@
                                 .depth1 {
                                     color: custom-color(primary, 090);
                                     &::after {
-                                        background-image: icon('mines', custom-color(neutral, 000));
+                                        background-image: icon('mines', custom-color(neutral, 100));
                                         background-size: 1.6rem;
                                     }
                                 }
@@ -424,7 +428,7 @@
                 .page-control {
                     .goto-page-navi {
                         &::after {
-                            background: icon('close', custom-color(neutral, 000)) no-repeat center / 1.8rem;
+                            background: icon('close', custom-color(neutral, 100)) no-repeat center / 1.8rem;
                         }
                     }
                 }

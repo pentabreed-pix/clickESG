@@ -64,12 +64,18 @@ body {
 
 		.local-head {
 			&.module-a {
+				position: relative;
 				.local-subject {
 					.local-name {
 						@include font(large-4x, bold);
 						line-height: 160%;
 						text-align: center;
-						margin-top: 6.4rem
+						margin-top: 6.4rem;
+
+						@include mobile {
+							@include font(small-1x, bold);
+							margin-top: 4rem;
+						}
 
 					}
 					.local-summary {
@@ -77,26 +83,37 @@ body {
 						line-height: 160%;
 						text-align: center;
 						margin-top: 4rem;
+
+						@include mobile {
+							@include font(small-5x, regular);
+							margin-top: 2.4rem;
+						}
 					}
 				}
 				.local-figure {
 					margin-top: 8rem;
-					height: 0;
-					padding-bottom: 26.6%;
 					margin-left: -60px;
 					margin-right: -60px;
 					img {
-						width: 100%;
+						// /width: 100%;
+					}
+
+					@include mobile {
+						margin-top: 4rem;
+						position: relative;
+						height: 24rem;
+						img {
+							height: 24rem;
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							transform: translate(-50%, -50%);
+							z-index: -1;
+							background-size: cover;
+						}
 					}
 				}
 
-				// @include mobile {
-				// 	.local-subject {
-				// 		.local-name {
-				// 			@include font(large-1x, bold);
-				// 		}
-				// 	}
-				// }
 			}
 
 			&.module-b {
@@ -849,9 +866,6 @@ body {
 						&.style-b {
 							position: relative;
 
-							@include mobile() {
-								justify-content: center;
-							}
 
 							&.active1 {
 								opacity: 1;
@@ -940,7 +954,6 @@ body {
 							}
 
 							@include mobile {
-								@include blind;
 
 								.item-text {
 									@include font(small-6x, medium);
@@ -951,12 +964,8 @@ body {
 
 									.item-text {
 										&::before {
-											top: -0.1rem;
-											left: -1.9rem;
-											width: 1.6rem;
-											height: 1.6rem;
 											content: '';
-											background-size: 0.6rem 1.1rem;
+											left: -1.5rem;
 										}
 									}
 								}

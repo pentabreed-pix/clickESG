@@ -11,6 +11,16 @@
             &.esg-operation{
                 position: relative;
                 padding: 10rem 0 8.9rem;
+
+                @include mobile {
+                    padding: 6rem 0 7.9rem;
+                    .section-figure {
+                        overflow-y: auto;
+                        img {
+                            width: 91rem;
+                        }
+                    }
+                }
     
                 &::after{
                     position: absolute;
@@ -36,13 +46,24 @@
                     padding: 6.6rem 8rem;
                     border-radius: 1.6rem;
                     background: custom-color(etc, 070);
+                    @include mobile {
+                        padding: 4rem 1.6rem;
+                    }
 
-                    >.data-display {
-                        >.data-list {
-                            display: flex;
-                            gap: 7rem;
-                            .data-item {
-                                width: 47rem;
+                    >.data-list {
+                        .data-item {
+                            .bullet-list {
+                                display: flex;
+                                flex-wrap: wrap;
+                                column-gap: 7rem;
+                                width: 111rem;
+                                .bullet-item {
+                                    width: 47rem;
+                                }
+    
+                                @include mobile {
+                                    flex-direction: column;
+                                }
                             }
                         }
                     }
@@ -51,6 +72,9 @@
 
             + .section {
                 padding-top: 18rem;
+                @include mobile {
+                    padding-top: 12rem;
+                }
             }
         }
     }
