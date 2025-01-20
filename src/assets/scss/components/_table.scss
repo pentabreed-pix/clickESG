@@ -147,13 +147,9 @@
 							&.bottom-gray {
 								border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 							}
-						}
-						&:nth-child(1) {
-							td {
-								&:nth-child(1) {
-									border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
-									background: custom-color(etc, 100);
-								}
+							&.has-bg {
+								border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+								background: custom-color(etc, 100);
 							}
 						}
 					}

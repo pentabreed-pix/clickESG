@@ -48,9 +48,13 @@
                     }
                 }
             }
-        }
 
+            + .section {
+                padding-top: 18rem;
+            }
+        }
     }
+
     .solution-esg {
         .local-head {
             .local-figure {
@@ -60,10 +64,52 @@
                 }
             }
         }
+        .local-body {
+            .section {
+                padding-top: 12rem;
+                + .section {
+                    padding-top: 18rem;
+                }
+            }
+        }
+    }
+
+    .solution-scm {
+        .local-body {
+            .section {
+                padding-top: 12rem;
+                + .section {
+                    padding-top: 18rem;
+                }
+            }
+        }
+    }
+
+    .solution-data {
+        .local-body {
+            .section {
+                padding-top: 12rem;
+                + .section {
+                    padding-top: 18rem;
+                }
+            }
+        }
+    }
+
+    .solution-cdp {
+        .local-body {
+            .section {
+                padding-top: 12rem;
+                + .section {
+                    padding-top: 18rem;
+                }
+            }
+        }
     }
 
     .solution-netzero {
         .section {
+            padding-top: 12rem;
             .section-body {
                 .post-list {
                     margin-top: 8rem;
@@ -73,20 +119,28 @@
                 .banner-list {
                     .banner-item {
                         .banner-wrap {
-                            width: 100vw;
-                            height: 32rem;
-                            margin-left: -6rem;
-                            margin-right: -6rem;
-                            margin-top: 6.4rem;
-                            background: url('../../assets/images/solution/net-zero/net-zero-bg.jpg') no-repeat center;
-                            background-size: cover;
-            
+          
                             .banner-body {
                                 height: 100%;
+                                position: relative;
+                                margin-top: 6rem;
+
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    top: 0;
+                                    left: calc(50% - 50vw);
+                                    width: 100vw;
+                                    height: 32rem;
+                                    background: url('../../assets/images/solution/net-zero/net-zero-bg.jpg') no-repeat center;
+                                    background-size: cover;
+                                    z-index: -1;
+                                }
                                 .para {
                                     max-width: 144rem;
                                     height: 100%;
-                                    margin: 0 auto;
+                                    padding: 11.2rem 0;
                                     display: flex;
                                     align-items: center;
                                     @include font(small, medium);
@@ -100,7 +154,7 @@
 
             &.process-bg {
                 position: relative;
-                padding-bottom: 10rem;
+                padding-bottom: 18rem;
                 
                 &::after {
                     content: "";
@@ -111,7 +165,7 @@
                     bottom: 0;
                     left: calc(50% - 50vw);
                     width: 100vw;
-                    height: calc(100% + 2.2rem);
+                    height: 100%;
                     background: custom-color(etc, 070);
                 }
             }
@@ -119,9 +173,13 @@
             &.big-image {
                 .section-wrap {
                     .section-figure {
-                        margin-left: -6rem;
+                        margin-bottom: 10rem;
                     }
                 }
+            }
+
+            + .section {
+                padding-top: 18rem;
             }
         }
     }

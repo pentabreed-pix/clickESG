@@ -7,14 +7,16 @@
         display: flex;
         gap: 2.4rem;
         .post-item {
+            width: calc(100% / 4 - 1.8rem);
             .post-wrap {
                 .post-figure {
-                    width: 34.2rem;
-                    height: 32rem;
+                    width: 100%;
+                    height: 0;
                     border-radius: 1.6rem;
                     overflow: hidden;
                     flex-shrink: 0;
                     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    padding-bottom: 94%;
                     img {
                         width: 100%;
                     }
@@ -26,43 +28,7 @@
             flex-direction: column;
         }
     }
-    &.module-b {
-        display: flex;
-        flex-direction: column;
-        gap: 4rem;
 
-        .post-item {
-            .post-wrap {
-                display: flex;
-                gap: 8rem;
-                align-items: center;
-                background-color: custom-color(etc, 070);
-                border-radius: 1.6rem;
-                .post-figure {
-                    width: 54.8rem;
-                    height: 33rem;
-                    border-radius: 1.6rem;
-                    overflow: hidden;
-                    flex-shrink: 0;
-                    img {
-                        width: 100%;
-                    }
-                }
-
-                @include mobile {
-                    flex-direction: column;
-                }
-            }
-
-            @include mobile {
-                &:nth-child(even) {
-                    .post-wrap {
-                        flex-direction: column-reverse;
-                    }
-                }
-            }
-        }
-    }
     &.module-c {
 
     }
@@ -82,35 +48,7 @@
             }
         }
     }
-    &.style-b {
-        .post-item {
-            .post-wrap {
-                padding: 4rem 8rem 4rem 4rem;
 
-                .post-head {
-                    .post-name {
-                        + .post-summary {
-                            margin-top: 2.8rem
-                        }
-                    }
-                }
-
-                @include mobile {
-                    padding: 4rem;
-                }
-            }
-
-            &:nth-child(even) {
-                .post-wrap {
-                    padding: 4rem 4rem 4rem 8rem;
-
-                    @include mobile {
-                        padding: 4rem;
-                    }
-                }
-            }
-        }
-    }
     &.style-c {
         .post-item {
             .post-wrap {
@@ -146,25 +84,7 @@
             }
         }
     }
-    &.type-b {
-        .post-item {
-            .post-wrap {
-                .post-head {
-                    .post-name {
-                        @include font(small, bold);
-                        color: custom-color(primary, 080);
-                        line-height: 190%;
 
-                        + .post-summary {
-                            @include font(small-2x, regular);
-                            color: custom-color(neutral,100);
-                            line-height: 160%;
-                        }
-                    }
-                }
-            }
-        }
-    }
     &.type-c {
         .post-item {
             .post-wrap {

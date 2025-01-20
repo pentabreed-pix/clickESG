@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_guide.head.ejs', {
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+<div id="wrap">
+	<div id="guide-list">
+		<%-include('../_templates/_guide.header.ejs') %>
+		<!-- page-body -->
+		<div class="page-body">
+			<!-- local-head -->
+			<div class="local-head">
+				<h2 class="local-subject">
+					<span class="local-name">Board</span>
+				</h2>
+			</div>
+			<!-- //local-head -->
+			<!-- local-body -->
+			<div class="local-body">
+				<!-- section -->
+				<div class="section board-guide">
+					<div class="section-head">
+						<h4 class="section-subject"><span class="section-name">Board system</span></h4>
+					</div>
+					<div class="section-body">
+						<div class="subsection">
+							<div class="subsection-head">HTML structure</div>
+							<div class="subsection-body">
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;div class=&quot;board-list module-a style-a type-a&quot;&gt;
+	&lt;div class=&quot;board-item&quot;&gt;
+		&lt;div class=&quot;board-wrap&quot;&gt;
+			&lt;div class=&quot;board-head&quot;&gt;
+				&lt;span class=&quot;board-subject&quot;&gt;...&lt;/span&gt;
+				&lt;span class=&quot;board-caption&quot;&gt;...&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;board-info&quot;&gt;...&lt;/div&gt;
+			&lt;div class=&quot;board-util&quot;&gt;...&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- //highlight-js -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //section -->
+				<!-- section -->
+                 
+				<div class="section board-guide">
+					<div class="section-head">
+						<h4 class="section-subject"><span class="section-name">Info board</span></h4>
+					</div>
+					<div class="section-body">
+						<div class="subsection">
+							<div class="subsection-info">
+								<div class="board-list module-b style-b type-b">
+									<div class="board-item">
+										<div class="board-wrap">
+											<div class="board-figure">
+												<img src="../../assets/images/solution/esg/clickesg-01.jpg" alt="">
+											</div>
+											<div class="board-head">
+												<p class="board-name">과학적인 ESG 평가방법론과 프로세스</p>
+												<p class="board-summary">ClickESG ESG Assessment 솔루션은 기업 ESG 경영수준을 정확하고 합리적으로 측정할 수 있는 평가지표와 MSCI 기반 산업별 가중치가 적용된 평가방법론과 프로세스를 완벽히 지원합니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>			
+					</div>
+				</div>
+				<!-- //section -->
+			</div>
+			<!-- //local-body -->
+		</div>
+		<!-- //page-body -->
+		<%-include('../_templates/_guide.footer.ejs') %>
+	</div>
+</div>
+</body>
+</html>

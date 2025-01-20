@@ -1,0 +1,92 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+
+.board-list {
+    &.module-b {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        .board-item {
+            .board-wrap {
+                display: flex;
+                gap: 8rem;
+                align-items: center;
+                background-color: custom-color(etc, 070);
+                border-radius: 1.6rem;
+                .board-figure {
+                    width: 54.8rem;
+                    height: 33rem;
+                    border-radius: 1.6rem;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                @include mobile {
+                    flex-direction: column;
+                }
+            }
+
+            @include mobile {
+                &:nth-child(even) {
+                    .board-wrap {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+        }
+    }
+    &.style-b {
+        .board-item {
+            .board-wrap {
+                padding: 4rem 8rem 4rem 4rem;
+
+                .board-info {
+                    .board-head {
+                        + .board-body {
+                            margin-top: 2.8rem
+                        }
+                    }
+                }
+
+                @include mobile {
+                    padding: 4rem;
+                }
+            }
+
+            &:nth-child(even) {
+                .board-wrap {
+                    padding: 4rem 4rem 4rem 8rem;
+
+                    @include mobile {
+                        padding: 4rem;
+                    }
+                }
+            }
+        }
+    }
+    &.type-b {
+        .board-item {
+            .board-wrap {
+                .board-info {
+                    .board-head {
+                        @include font(small, bold);
+                        color: custom-color(primary, 080);
+                        line-height: 190%;
+
+                        + .board-body {
+                            @include font(small-2x, regular);
+                            color: custom-color(neutral,100);
+                            line-height: 160%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

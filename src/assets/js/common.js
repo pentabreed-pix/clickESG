@@ -180,7 +180,7 @@ function header() {
             $header.toggleClass('scroll', winScrollTop > 0);
 
             if (winScrollTop > lastScrollTop) {
-                $header.css('transform', 'translateY(-100px)');
+                $header.css('white', 'translateY(-100px)');
             } else {
                 $header.css('transform', 'translateY(0)');
             }

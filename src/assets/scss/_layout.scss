@@ -85,6 +85,8 @@ body {
 					padding-bottom: 26.6%;
 					margin-left: -60px;
 					margin-right: -60px;
+					border-radius: 4rem;
+					overflow: hidden;
 					img {
 						width: 100%;
 					}
@@ -127,535 +129,105 @@ body {
 	
 					.local-figure {
 						position: absolute;
-						top: 0;
-						left: 0;
+						top: 50%;
+						left: 50%;
 						z-index: -1;
-						.figure-wrapper {
-							img {
-								width: 100%;
-								border-radius: 2.5rem;
-							}
+						width: 100%;
+						overflow: hidden;
+						border-radius: 4rem;
+						transform: translate(-50%, -50%);
+						height: 40rem;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
 						}
 					}
 				}
 			}
-
-			// &.module-c {
-			// 	padding: 3.2rem 1.8rem 12rem;
-
-			// 	.local-subject {
-			// 		.local-name {
-			//             color: #15151A;
-			// 			text-align: center;
-			// 			@include font(large-3x, extrabold);
-			// 		}
-			// 	}
-
-			// 	@include mobile {
-			// 		padding: 4rem 1.8rem 6.4rem;
-
-			// 		.local-subject {
-			// 			.local-name {
-			// 				@include font(medium, extrabold);
-			// 			}
-			// 		}
-			// 	}
-			// }
-
-			// &.module-d {
-			  // 	display: flex;
-			// 	position: relative;
-			// 	width: 100%;
-			// 	height: 100vh;
-			// 	padding: 14rem 0 20rem 0;
-			// 	margin: 0 auto;
-			// 	justify-content: flex-start;
-			// 	flex-direction: column;
-			// 	min-height: 980px;
-			// 	max-width: 1200px;
-			// 	opacity: 0;
-			// 	transition: opacity 0.5s ease-out;
-
-			// 	@include mobile() {
-			// 		width: 100%;
-			// 		padding: 8.2rem 0 20rem 0;
-			// 		min-height: 60rem;
-			// 		max-width: 100%;
-			// 	}
-
-			// 	.local-info {
-			// 		margin: 0;
-
-			// 		& + .local-subject {
-			// 			margin-top: 10rem;
-
-			// 			@include mobile() {
-			// 				margin-top: 5.5rem;
-			// 			}
-			// 		}
-			// 	}
-
-			// 	.local-subject {
-			// 		display: flex;
-			// 		position: relative;
-			// 		top: 50px;
-			// 		transition: top 0.5s ease-out;
-			// 		align-items: center;
-
-			// 		.local-name {
-			// 			@include font(large-12x, bold);
-			// 			color: #15151A;
-			// 			line-height: 1.2;
-			// 			transition: color 1s ease-out;
-
-			// 			@include mobile() {
-			// 				@include font(large-1x, bold);
-			// 			}
-			// 		}
-
-			// 		&+.local-aside {
-			// 		margin-top: 12rem;
-			// 			@include mobile() {
-			// 				margin-top: 48px;
-			// 			}
-			// 		}
-			// 	}
-
-			// 	.local-aside {
-			// 		display: flex;
-			// 		position: relative;
-			// 		top: 50px;
-			// 		height: auto;
-			// 		justify-content: flex-end;
-			//         align-items: flex-end;
-			// 		transition: top 0.5s ease-out;
-
-			// 		.loca-wrap {
-			// 			width: 506px;
-
-			// 			@include mobile() {
-			// 				width: 100%;
-			// 			}
-
-			// 			.local-title {
-			// 				@include font(medium, bold);
-			// 				color: custom-color(primary, 080);
-			// 				transition: color 1s ease-out;
-
-			// 				@include mobile() {
-			// 					@include font(small-1x, bold);
-			// 				}
-
-			// 				&+.local-summary {
-			// 					margin-top: 16px;
-			// 				}
-			// 			}
-
-			// 			.local-summary {
-			// 				color: custom-color(neutral, 080);
-			// 				transition: color 1s ease-out;
-			// 				@include font(small-3x, bold);
-
-			// 				@include mobile() {
-			// 					@include font(small-4x, bold);
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-
-			// 	.local-figure {
-			// 		position: absolute;
-			// 		bottom: 0;
-			// 		left: 50%;
-			// 		width: 0;
-			// 		height: 0;
-			// 		transform: translateX(-50%);
-			// 		overflow: hidden;
-			// 		border-radius: 16px 16px 0 0;
-			// 		z-index: -1;
-			// 		transition: all 0.5s ease-out;
-
-			// 		@include mobile() {
-			// 			border-radius: 8px 8px 0 0;
-			// 		}
-
-			// 		video, img {
-			// 			position: absolute;
-			// 			top: 0;
-			// 			left: 50%;
-			// 			width: 1200px;
-			// 			height: 100%;
-			// 			transform: translateX(-50%);
-			// 			-o-object-fit: cover;
-			// 			object-fit: cover;
-
-			// 			@include mobile() {
-			// 				width: 100vw;
-			// 			}
-			// 		}
-
-			// 		&::after {
-			// 				position: absolute;
-			// 				top: 0;
-			// 				left: 0;
-			// 				width: 100%;
-			// 				height: 100%;
-			// 				content: '';
-			// 				background-color: rgba(0,0,0,0);
-			// 				transition: background-color .3s ease;
-			// 		}
-			// 	}
-
-			// 	.local-util {
-			// 		position: absolute;
-			// 		bottom: 48px;
-			// 		left: 50%;
-			// 		transform: translateX(-50%);
-
-			// 		@include mobile() {
-			// 			bottom: 10rem;
-			// 		}
-			// 	}
-
-			// 	&.active1 {
-			// 		opacity: 1;
-
-			// 		.local-subject {
-			// 			top: 0;
-			// 		}
-
-			// 		.local-aside {
-			// 			top: 0;
-			// 		}
-
-			// 		.local-figure {
-			// 			width: 1200px;
-			// 			height: 200px;
-			// 			@include mobile() {
-			// 				width: 100%;
-			// 			}
-			// 		}
-			// 	}
-
-			// 	&.active2 {
-			// 		.local-subject {
-			// 			.local-name {
-			// 				color: custom-color(neutral, 090);
-			// 			}
-			// 		}
-
-			// 		.local-aside {
-			// 			.loca-wrap {
-			// 				.local-title {
-			// 					color: custom-color(neutral, 090);
-			// 				}
-
-			// 				.local-summary {
-			// 					color: custom-color(neutral, 090);
-			// 				}
-			// 			}
-			// 		}
-
-			// 		.local-figure {
-			// 			width: 100vw;
-			// 			height: 100%;
-			// 			border-radius: 0;
-
-			// 			video, img {
-			// 				width: 100%;
-			// 				height: 100%;
-			// 			}
-
-			// 			&::after {
-			// 				background-color: rgba(0,0,0,0.5);
-			// 			}
-			// 		}
-			// 	}
-			// }
-
-			// &.module-e {
-			// 	position: relative;
-			// 	width: 100%;
-			// 	padding: 14rem 0 0 0;
-			// 	margin: 0 auto;
-
-			// 	@include mobile() {
-			// 		padding: 8.2rem 0 0;
-			// 	}
-
-			// 	.local-info {
-			// 		@include mobile() {
-			// 			margin: 0 !important;
-			// 		}
-			// 	}
-
-			// 	.local-subject {
-			// 		display: flex;
-			// 		position: relative;
-			// 		//padding: 25rem 0;
-			// 		height: 60.573vh;
-			// 		text-align: center;
-			// 		align-items: center;
-			// 		justify-content: center;
-
-			// 		@include mobile() {
-			// 			//padding: 16rem 0;
-			// 			height: 50vh;
-			// 		}
-
-			// 		.local-name {
-			// 			position: relative;
-			// 			color: #15151A;
-			// 			transform: translateY(30%);
-			// 			opacity: 0;
-			// 			@include font(large-5x, bold);
-
-			// 			@include mobile() {
-			// 				@include font(medium, bold);
-			// 			}
-			// 		}
-			// 	}
-
-			// 	.local-aside {
-			// 		display: flex;
-			// 		position: absolute;
-			// 		bottom: 0;
-			// 		width: 100%;
-			// 		height: 100vh;
-			// 		align-items: center;
-			// 		justify-content: center;
-			// 		z-index: 2;
-
-			// 		.local-wrap {
-			// 			.local-title {
-			// 				color: custom-color(neutral, 000);
-			// 				@include font(large-5x, bold);
-
-			// 				@include mobile() {
-			// 					text-align: center;
-			// 					@include font(large-3x, bold);
-			// 				}
-
-			// 				@at-root .en & {
-			// 					text-align: center;
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-
-			// 	.local-figure {
-			// 		position: relative;
-			// 		left: 50%;
-			// 		width: 90vw;
-			// 		height: 100vh;
-			// 		transform:translateY(15%);
-			// 		overflow: hidden;
-			// 		z-index: 1;
-			// 		opacity: 0;
-			// 		background-color: rgba(0, 0, 0, 0.0);
-
-			// 		img {
-			// 			position: absolute;
-			// 			top: 0;
-			// 			left: 50%;
-			// 			width: 100%;
-			// 			height: 100%;
-			// 			transform: translateX(-50%);
-			// 			-o-object-fit: cover;
-			// 			object-fit: cover;
-
-			// 			}
-
-			// 			&::after {
-			// 				position: absolute;
-			// 				top: 0;
-			// 				left: 0;
-			// 				width: 100%;
-			// 				height: 100%;
-			// 				content: '';
-			// 				background-color: inherit;
-			// 				transition: background-color .3s ease;
-			// 		}
-			// 	}
-
-			// 	.local-util {
-			// 		position: fixed;
-			// 		top: calc(100vh - 4.8rem - 2.3rem);
-			// 		left: 50%;
-			// 		transform: translateX(-50%);
-			// 		z-index: 2;
-
-			// 		@include mobile() {
-			// 			top: calc(100vh - 10rem - 2.3rem);
-			// 		}
-			// 	}
-			// }
 		}
 
-		// .local-body {
-		// 	.content-head {
-		// 		display: block;
-		// 		position: absolute;
-		// 		width: 1px;
-		// 		height: 1px;
-		// 		padding: 0;
-		// 		margin: -1px;
-		// 		border: 0;
-		// 		font-size: 1px;
-		// 		line-height: 1px;
-		// 		overflow: hidden;
-		// 		visibility: hidden;
-		// 		clip: rect(0 0 0 0);
-		// 		clip: rect(0, 0, 0, 0);
-		// 		pointer-events: none;
-		// 	}
-		// }
 
 		.section {
-
-
-			// ~ .section {
-			// 	padding-bottom: 18rem;
-
-			// }
-
+			
 			// normal
 			&.module-a {
 				max-width: 144rem;
 				margin: 0 auto;
-				padding-top: 12rem;
+				.section-wrap {
+					.section-head {
+						+.section-body {
+							margin-top: 3.2rem;
+
+							@include mobile {
+								margin-top: 2.4rem;
+							}
+						}
+						.section-summary {
+							margin-top: 2rem;
+						}
+					}
+					.section-body {
+						>.para {
+							+.para {
+								margin-top: 1.6rem;
+							}
+							+.note {
+								display: inline-block;
+								margin-top: 1.6rem;
+							}
+							@include mobile {
+								+.para {
+									margin-top: 1.2rem;
+								}
+								+.note {
+									display: inline-block;
+									margin-top: 1.2rem;
+								}
+							}
+						}
+						+.section-util {
+							margin-top: 4rem;
+							@include mobile {
+								margin-top: 4.8rem;
+							}
+						}
+					}
+				}
 			}
 
 			// section-head와 section-body가 flex 되는 경우
 			&.module-b {
+				max-width: 144rem;
+				margin: 0 auto;
 				.section-wrap {
 					display: flex;
-
-					@include mobile {
-						flex-direction: column;
+					.section-head {
+						max-width: 144rem;
+						margin: 0 auto;
+						// .section-name {
+						// 	+.section-summary {
+						// 		margin-top: 4rem;
+						// 	}
+						// }
+						+.section-body {
+							max-width: 144rem;
+							margin: 0 auto;
+							margin-top: 2.4rem;
+						}
+						.section-summary {
+							margin-top: 2rem;
+						}
 					}
 				}
 			}
 
-			// // name과 util이 flex 되는 경우
-			// &.module-c {
-			// 	.section-head {
-			// 		display: flex;
-			// 		align-items: center;
-			// 		justify-content: space-between;
-			// 	}
-			// 	@include mobile {
-			// 		.section-head {
-			// 			flex-direction: column;
-			// 			align-items: flex-start;
-
-			// 			.section-name {
-			// 				+ .section-util {
-			// 					width: 100%;
-			// 					margin-top: 2.4rem;
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-			// }
-
-			// // section-body가 flex 되는 경우
-			// &.module-d {
-			// 	.section-body {
-			// 		display: flex;
-			// 		@include mobile {
-			// 			flex-direction: column;
-			// 		}
-			// 	}
-			// }
-
-			// &.module-e {
-			// 	.section-head {
-			// 		display: flex;
-			// 		align-items: center;
-			// 		justify-content: space-between;
-			// 	}
-			// 	@include mobile {
-			// 		.section-head {
-			// 			flex-direction: column;
-			// 			align-items: flex-start;
-
-			// 			.section-name {
-			// 				+ .section-util {
-			// 					margin-top: 4.8rem;
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-			// }
+			&.module-c {
+				
+			}
 
 			&[class*=module] {
 				// space
-				&.style-a{
-					.section-wrap {
-						.section-head {
-							+.section-body {
-								margin-top: 3.2rem;
-
-								@include mobile {
-									margin-top: 2.4rem;
-								}
-							}
-							.section-summary {
-								margin-top: 2rem;
-							}
-						}
-						.section-body {
-							>.para {
-								+.para {
-									margin-top: 1.6rem;
-								}
-								+.note {
-									display: inline-block;
-									margin-top: 1.6rem;
-								}
-								@include mobile {
-									+.para {
-										margin-top: 1.2rem;
-									}
-									+.note {
-										display: inline-block;
-										margin-top: 1.2rem;
-									}
-								}
-							}
-							+.section-util {
-								margin-top: 4rem;
-								@include mobile {
-									margin-top: 4.8rem;
-								}
-							}
-						}
-					}
-				}
-
-				&.style-b {
-					max-width: 100%;
-					.section-wrap {
-						.section-head {
-							max-width: 144rem;
-							margin: 0 auto;
-							// .section-name {
-							// 	+.section-summary {
-							// 		margin-top: 4rem;
-							// 	}
-							// }
-							+.section-body {
-								max-width: 144rem;
-								margin: 0 auto;
-								margin-top: 2.4rem;
-							}
-							.section-summary {
-								margin-top: 2rem;
-							}
-						}
-					}
-				}
 
 				// &.case3 {
 				// 	.section-wrap {
