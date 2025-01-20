@@ -8,6 +8,11 @@
         gap: 2.4rem;
         .post-item {
             width: calc(100% / 4 - 1.8rem);
+
+            @include mobile {
+                width: 100%;
+            }
+
             .post-wrap {
                 .post-figure {
                     width: 100%;
