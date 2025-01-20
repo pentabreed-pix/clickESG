@@ -14,7 +14,7 @@
 		border-right: hidden;
 		border-left: hidden;
 		border-top: hidden;
-        border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+		border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 	}
 
     &.module-a {
@@ -125,7 +125,9 @@
 							border-right: 0.1rem solid custom-color(neutral, 000);
 							border-left: 0.1rem solid custom-color(neutral, 000);
 							border-top: 0.1rem solid custom-color(neutral, 000);
-                            
+							position: sticky; // 헤더 고정
+							top: 0;
+							z-index: 1; // 헤더 우선 순위
 						}
 					}
 				}
@@ -144,12 +146,23 @@
 							&.special-index {
 								background: rgba(34, 188, 98, 0.15);
 							}
-							&.bottom-gray {
+							&.bottom-grey {
 								border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 							}
 							&.has-bg {
 								border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 								background: custom-color(etc, 100);
+							}
+						}
+						&:last-child{
+							>td {
+								border-bottom: 0;
+								&.bottom-grey {
+									border-bottom: 0;
+								}
+								&.has-bg:last-child {
+									border-bottom: 0;
+								}
 							}
 						}
 					}
@@ -203,14 +216,14 @@
 							@include font(small-5x, bold);
 							color: custom-color(neutral, 080);
 							&.common-index {
-								@include font(small-5x, bold);
+								@include font(small-5x, medium);
 								color: #0B5AAB;
 							}
 							&.special-index {
-								@include font(small-5x, bold);
+								@include font(small-5x, medium);
 								color: #166844;
 							}
-							&.bottom-gray {
+							&.bottom-grey {
 								font-size: 1.5rem;
 								font-weight: 400;
 								line-height: 160%;

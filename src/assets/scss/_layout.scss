@@ -85,8 +85,6 @@ body {
 					padding-bottom: 26.6%;
 					margin-left: -60px;
 					margin-right: -60px;
-					border-radius: 4rem;
-					overflow: hidden;
 					img {
 						width: 100%;
 					}
@@ -202,6 +200,7 @@ body {
 				margin: 0 auto;
 				.section-wrap {
 					display: flex;
+					justify-content: space-between;
 					.section-head {
 						max-width: 144rem;
 						margin: 0 auto;
@@ -213,7 +212,7 @@ body {
 						+.section-body {
 							max-width: 144rem;
 							margin: 0 auto;
-							margin-top: 2.4rem;
+							// margin-top: 2.4rem;
 						}
 						.section-summary {
 							margin-top: 2rem;
@@ -797,33 +796,33 @@ body {
 			// 	}
 			// }
 
-			// // 별첨 공통
-			// .comment {
-			// 	&.module-a {
-			// 		color: custom-color(neutral, 060);
-			// 		@include font(small-5x, medium);
+			// 별첨 공통
+			.comment {
+				&.module-a {
+					color: custom-color(neutral, 080);
+					@include font(small-4x, medium);
 
-			// 		@include mobile {
-			// 			@include font(small-6x, medium);
-			// 		}
-			// 	}
-			// 	&.module-b {
-			// 		color: custom-color(system, 100);
-			// 		@include font(small-2x, bold);
+					@include mobile {
+						@include font(small-6x, medium);
+					}
+				}
+				&.module-b {
+					color: custom-color(system, 100);
+					@include font(small-2x, bold);
 
-			// 		@include mobile {
-			// 			@include font(small-3x, bold);
-			// 		}
-			// 	}
-			// 	&.module-c {
-			// 		color: custom-color(system, 100);
-			// 		@include font(small-3x, bold);
+					@include mobile {
+						@include font(small-3x, bold);
+					}
+				}
+				&.module-c {
+					color: custom-color(system, 100);
+					@include font(small-3x, bold);
 
-			// 		@include mobile {
-			// 			@include font(small-4x, bold);
-			// 		}
-			// 	}
-			// }
+					@include mobile {
+						@include font(small-4x, bold);
+					}
+				}
+			}
 		}
 
 

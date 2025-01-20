@@ -4,16 +4,43 @@
 @use '../components/icons' as *;
 
 #wrap {
+    .service-intro {
+        .section {
+            padding-top: 12rem;
+            + .section {
+                padding-top: 18rem;
+            }
+            &.module-b {
+                .section-wrap {
+                    gap: 32.2rem;
+                    .section-body {
+                        width: 66.25%;
+                    }
+                }
+            }
+        }
+    }
     .esg-consulting {
-        .panel-display {
-            margin-top: 10rem;
-            .panel-list {
-                .panel-item {
-                    .panel-wrap {
-                        .section {
-                            .section-head {
-                                + .section-body {
-                                    margin-top: 6.4rem;
+        .section {
+            padding-top: 10rem;
+            .section-body {
+                .t-display {
+                    table {
+                        + .comment {
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+            .panel-display {
+                .panel-list {
+                    .panel-item {
+                        .panel-wrap {
+                            .section {
+                                .section-head {
+                                    + .section-body {
+                                        margin-top: 6.4rem;
+                                    }
                                 }
                             }
                         }
