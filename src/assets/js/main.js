@@ -9,6 +9,7 @@ function mainVisual() {
     var countId = '';
     let isCounterOn = false;
     let isSyncing = false;
+    const isDesktop = () => window.innerWidth >= 1024;
 
     function syncSlider(source, target) {
         const sourceIndex = source.realIndex;
@@ -32,7 +33,13 @@ function mainVisual() {
         $('.count_txt').text(count);
         $('.swiper-pagination-bullet .timer-percent').css({'width': 0 +'%'});
         $('.swiper-pagination-bullet-active .timer-percent').css({'width':loadingVal + '%'});
-        $('.swiper-pagination-bullet').css({'width':'18px'});
+
+        if (isDesktop()) {
+            $('.swiper-pagination-bullet').css({'width':'18px'});
+        } else {
+            $('.swiper-pagination-bullet').css({'width':'15px'});
+        }
+
         $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleWidth + 'px'});
     }
 
@@ -85,13 +92,19 @@ function mainVisual() {
         }
     });
 
+
+
     var sliderTitle = new Swiper(".swiper.title", {
         loop: true,
         speed: 1200,
 
         on: {
             init: function () {
-                $('.swiper-pagination-bullet').css({'width':'18px'});
+                if (isDesktop()) {
+                    $('.swiper-pagination-bullet').css({'width':'18px'});
+                } else {
+                    $('.swiper-pagination-bullet').css({'width':'15px'});
+                }
                 setTimeout(function() {
                     startCounter();
                 }, 100);
@@ -123,7 +136,11 @@ function mainVisual() {
 
         setTimeout(function() {
             var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-            $('.swiper-pagination-bullet').css({'width':'18px'});
+            if (isDesktop()) {
+                $('.swiper-pagination-bullet').css({'width':'18px'});
+            } else {
+                $('.swiper-pagination-bullet').css({'width':'15px'});
+            }
             $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleWidth + 'px'});
         }, 200);
     });
@@ -247,6 +264,11 @@ function mainInteraction(){
         pagination: {
             el: ".story-02 .swiper-pagination",
             type: "progressbar",
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 12,
+            },
         },
     });
 

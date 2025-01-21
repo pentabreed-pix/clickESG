@@ -11,7 +11,7 @@
                     .section-body {
                         .swiper-display {
                             position: relative;
-                            height: 100vh;
+                            height: 82rem;
                             .swiper-list {
                                 &.bg {
                                     height: 100%;
@@ -43,8 +43,12 @@
                                 justify-content: center;
                                 width: 100%;
                                 height: 100%;
-                                padding: 0 24rem;
+                                padding: 0 0 0 24rem;
                                 z-index: 1;
+
+                                @include mobile {
+                                    padding: 0 1.8rem;
+                                }
 
                                 .swiper-list {
                                     &.title {
@@ -52,21 +56,37 @@
                                         margin-left: 0;
                                         margin-right: 0;
 
+                                        @include mobile {
+                                            width: 100%;
+                                        }
+
                                         .swiper-wrapper {
                                             .swiper-item {
                                                 .swiper-head {
                                                     .swiper-subject {
                                                         @include font(large-5x, bold);
                                                         color: custom-color(neutral, 000);
+
+                                                        @include mobile {
+                                                            @include font(large-1x , bold);
+                                                        }
                                                     }
                                                     & + .swiper-body {
                                                         margin-top: 4rem;
+
+                                                        @include mobile {
+                                                            margin-top: 2rem;
+                                                        }
                                                     }
                                                 }
                                                 .swiper-body {
                                                     .para {
                                                         @include font(small-2x, bold);
                                                         color: custom-color(neutral, 000);
+
+                                                        @include mobile {
+                                                            @include font(small-4x , bold);
+                                                        }
                                                     }
                                                 }
                                             }
@@ -74,12 +94,20 @@
 
                                         & + .link {
                                             margin-top: 6.4rem;
+
+                                            @include mobile {
+                                                margin-top: 4rem;
+                                            }
                                         }
                                     }
                                     &.link {
                                         width: 60rem;
                                         margin-left: 0;
                                         margin-right: 0;
+
+                                        @include mobile {
+                                            width: 100%;
+                                        }
                                         .swiper-wrapper {
                                             .swiper-item {
                                                 opacity: 0 !important;
@@ -97,6 +125,14 @@
                                     display: flex;
                                     gap: 2rem;
                                     padding: 0 24rem;
+
+                                    @include mobile {
+                                        padding: 0 1.8rem;
+                                        right: 50%;
+                                        transform: translateX(50%);
+                                        gap: 1.4rem;
+                                    }
+
                                     .count_txt {
                                         position: absolute;
                                         bottom: 0;
@@ -110,6 +146,11 @@
                                         justify-content: flex-end;
                                         gap: 0.9rem;
                                         position: unset;
+
+                                        @include mobile {
+                                            gap: 1rem;
+                                        }
+
                                         .swiper-pagination-bullet {
                                             position: relative;
                                             gap: 1rem;
@@ -122,14 +163,26 @@
                                             opacity: 1;
                                             transition: all 0.5s linear;
 
+                                            @include mobile {
+                                                width: 1.6rem;
+                                            }
+
                                             .timer-title {
                                                 display: inline-block;
                                                 @include font(small-5x, bold);
                                                 color: rgba(217, 217, 217, 0.7);
                                                 white-space: nowrap;
 
+                                                @include mobile {
+                                                    @include font(small-6x, bold);
+                                                }
+
                                                 & + .timer-bar {
                                                     margin-top: 1rem;
+
+                                                    @include mobile {
+                                                        margin-top: 0.8rem;
+                                                    }
                                                 }
                                             }
                                             .timer-bar {
@@ -141,7 +194,7 @@
                                                 .timer-percent {
                                                     display: block;
                                                     width: 0;
-                                                    height: 4px;
+                                                    height: 0.2rem;
                                                     background-color: rgba(217, 217, 217, 1);
                                                     transition: all .2s linear;
                                                 }
@@ -189,6 +242,10 @@
             &.story-01 {
                 padding: 12rem 6rem;
 
+                @include mobile {
+                    padding: 8rem 1.8rem;
+                }
+
                 .section-wrap {
                     .section-body {
                         .data-list {
@@ -199,28 +256,61 @@
                             grid-column-gap: 20px;
                             grid-row-gap: 20px;
 
+                            @media (max-width: 1440px) {
+                                display: flex;
+                                flex-wrap: wrap;
+                                column-gap: 2rem;
+                                row-gap: 2rem;
+                            }
+
+                            @include mobile {
+                                column-gap: 1.2rem;
+                                row-gap: 1.2rem;
+                            }
+
                             .data-item {
-                                height: 22.08333vw;
                                 opacity: 0;
                                 transform: translateY(10rem);
                                 transition: .5s ease-out;
 
                                 &.item-01 {
                                     grid-area: 1 / 1 / 2 / 3;
-                                    padding: 55px 0 0 184px;
+                                    padding: 2.86458vw 0 0 9.5833vw;
+
+                                    @media (max-width: 1440px) {
+                                        width: 100%;
+                                        padding: 0;
+                                        margin-bottom: 4rem;
+                                    }
+
+                                    @include mobile {
+                                        margin-bottom: 4.8rem;
+                                    }
 
                                     .data-head {
                                         .data-subject {
                                             @include font(small-1x, bold);
                                             color: custom-color(secondary, 040);
 
+                                            @include mobile {
+                                                @include font(small-3x, bold);
+                                            }
+
                                             & + .data-summary {
                                                 margin-top: 2.4rem;
+
+                                                @include mobile {
+                                                    margin-top: 1.8rem;
+                                                }
                                             }
                                         }
                                         .data-summary {
                                             @include font(large, bold);
-                                            color: custom-color(neutral, 090)
+                                            color: custom-color(neutral, 090);
+
+                                            @include mobile {
+                                                @include font(small-1x, bold);
+                                            }
                                         }
                                     }
                                 }
@@ -231,13 +321,29 @@
                                     flex-direction: column;
                                     justify-content: flex-end;
                                     align-items: flex-start;
+                                    height: 22.08333vw;
                                     padding: 0 4rem 5.2rem 4rem;
                                     border-radius: 3.2rem;
                                     overflow: hidden;
 
+                                    @media (max-width: 1440px) {
+                                        width: calc(50% - 1rem);
+                                        height: 29.44444vw;
+                                    }
+
+                                    @include mobile {
+                                        width: 100%;
+                                        height: 64vw;
+                                        padding: 2.6rem;
+                                    }
+
                                     .para {
                                         @include font(small-1x, bold);
                                         color: custom-color(neutral, 000);
+
+                                        @include mobile {
+                                            @include font(small-3x, bold);
+                                        }
                                     }
 
                                     &::before {
@@ -325,28 +431,52 @@
             &.story-02 {
                 padding: 0 0 0 6rem;
 
+                @include mobile {
+                    padding: 0 0 0 0rem;
+                }
+
                 .section-wrap {
                     padding: 12rem 0 12rem 18rem;
                     border-radius: 40px 0px 0px 40px;
                     background: linear-gradient(180deg, rgba(0, 190, 242, 0.00) 0%, rgba(95, 188, 255, 0.40) 47.56%), #005EBC;
 
+                    @include mobile {
+                        padding: 8rem 0 8rem 1.8rem;
+                        border-radius: 0;
+                    }
                     .section-head {
                         max-width: 83rem;
                         .section-subject {
                             @include font(small-1x, bold);
                             color: custom-color(neutral, 000);
 
+                            @include mobile {
+                                @include font(small-2x, bold);
+                            }
+
                             & + .section-summary {
                                 margin-top: 2.4rem;
+
+                                @include mobile {
+                                    margin-top: 1.8rem;
+                                }
                             }
                         }
                         .section-summary {
                             @include font(large, bold);
                             color: custom-color(neutral, 000);
+
+                            @include mobile {
+                                @include font(small-1x, bold);
+                            }
                         }
 
                         & + .section-body {
                             margin-top: 6.4rem;
+
+                            @include mobile {
+                                margin-top: 6rem;
+                            }
                         }
                     }
                     .section-body {
@@ -363,12 +493,22 @@
                                     border-radius: 3.2rem;
                                     overflow: hidden;
 
+                                    @include mobile {
+                                        width: 268px;
+                                        height: 374px;
+                                    }
+
                                     .swiper-wrap {
                                         display: flex;
                                         flex-direction: column;
                                         justify-content: center;
                                         gap: 2.8rem;
                                         padding: 3.2rem 3.2rem 4.8rem 3.2rem;
+
+                                        @include mobile {
+                                            gap: 2.5rem;
+                                            padding: 2.5rem 1.8rem 3rem 1.8rem;
+                                        }
 
                                         &::before {
                                             content:'';
@@ -378,6 +518,12 @@
                                             //background-color: red;
                                             margin: 0 auto;
                                             transition: all .5s ease-out;
+                                            background-size: 100%;
+
+                                            @include mobile {
+                                                width: 9.6rem;
+                                                height: 9.6rem;
+                                            }
                                         }
                                         .swiper-info {
                                             position: relative;
@@ -386,21 +532,38 @@
                                             border-radius: 2.4rem;
                                             background-color: #F7F9FC;
 
+                                            @include mobile {
+                                                min-height: 19.8rem;
+                                                border-radius: 1.5rem;
+                                            }
+
                                             .swiper-head {
                                                 display: flex;
                                                 flex-direction: column;
                                                 .swiper-subject {
                                                     @include font(small-1x, bold);
-                                                    color: custom-color(neutral, 090)
+                                                    color: custom-color(neutral, 090);
+
+                                                    @include mobile {
+                                                        @include font(small-3x, bold);
+                                                    }
                                                 }
                                                 .swiper-category {
                                                     @include font(small-3x, bold);
                                                     color: custom-color(primary, 080);
                                                     line-height: 1.2;
+
+                                                    @include mobile {
+                                                        @include font(small-5x, bold);
+                                                    }
                                                 }
 
                                                 & + .swiper-body {
                                                     margin-top: 2.4rem;
+
+                                                    @include mobile {
+                                                        margin-top: 1.6rem;
+                                                    }
                                                 }
                                             }
 
@@ -408,6 +571,10 @@
                                                 .para {
                                                     @include font(small-4x, medium);
                                                     color: custom-color(neutral, 080);
+
+                                                    @include mobile {
+                                                        @include font(small-6x, bold);
+                                                    }
                                                 }
                                             }
 
@@ -421,6 +588,12 @@
                                                 height: 3.2rem;
                                                 border-radius: 0.8rem;
                                                 background: custom-color(secondary, 090) icon('arrow-right1', custom-color(neutral, 000)) no-repeat center center / 1.6rem;
+
+                                                @include mobile {
+                                                    width: 2.4rem;
+                                                    height: 2.4rem;
+                                                    background: custom-color(secondary, 090) icon('arrow-right1', custom-color(neutral, 000)) no-repeat center center / 1.4rem;
+                                                }
                                             }
                                         }
 
@@ -469,12 +642,20 @@
                                         }
                                     }
                                 }
-                                margin-bottom: 7rem;
                             }
                             .swiper-controls2 {
                                 display: flex;
                                 align-items: center;
                                 padding-right: 24rem;
+                                margin-top: 4rem;
+
+                                @include mobile {
+                                    padding-right: 1.8rem;
+                                    margin-top: 2.6rem;
+                                    flex-wrap: wrap;
+                                    justify-content: flex-end;
+                                    row-gap: 2.8rem;
+                                }
 
                                 .swiper-pagination {
                                     &.swiper-pagination-progressbar {
@@ -482,6 +663,10 @@
                                         margin-right: 1.8rem;
                                         height: 0.1rem;
                                         background-color: rgba(27, 27, 27, 0.40);
+
+                                        @include mobile {
+                                            margin-right: 0;
+                                        }
 
                                         .swiper-pagination-progressbar-fill {
                                             height: 0.3rem;
