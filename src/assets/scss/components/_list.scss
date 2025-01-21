@@ -75,6 +75,7 @@
 
         .data-item {
             .data-head {
+                text-align: left;
                 .data-subject {
                     @include font(large, bold);
                     font-weight: 700;
@@ -158,14 +159,13 @@
                 position: relative;
 
                 &::before {
-                    content: '';
+                    content: "";
                     position: absolute;
-                    top: 50%;
-                    left: 0;
+                    top: 1.2rem;
+                    left: -0.5rem;
                     width: 1.2rem;
                     height: 0.9rem;
                     background: icon('bullet-check', custom-color(primary, 100)) no-repeat center;
-                    transform: translateY(-50%);
 
 
                     @include mobile {
@@ -222,10 +222,10 @@
                 font-size: 1.5rem;
                 font-weight: 600;
                 color:custom-color(neutral, 100);
-                line-height: 220%;
+                line-height: 180%;
 
                 &.arrow {
-                    color: custom-color(primary, 080);
+                    color: custom-color(primary, 090);
                 }
             }
         }
