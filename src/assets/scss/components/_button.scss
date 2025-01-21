@@ -21,12 +21,8 @@
       padding: 1.4rem 4.7rem;
       @include font(small-4x, bold);
       border-radius: 3.1rem;
-    }
 
-    &.style-b {
-      padding: 1.15rem 2.7rem;
-      @include font(small-5x, bold);
-      border-radius: 3.1rem;
+      
     }
 
     &.color-a {

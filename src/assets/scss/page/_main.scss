@@ -12,6 +12,10 @@
                         .swiper-display {
                             position: relative;
                             height: 82rem;
+
+                            @include mobile {
+                                height: 100vh;
+                            }
                             .swiper-list {
                                 &.bg {
                                     height: 100%;
@@ -111,6 +115,13 @@
                                         .swiper-wrapper {
                                             .swiper-item {
                                                 opacity: 0 !important;
+
+                                                .btn {
+                                                    @include mobile {
+                                                        padding: 1.15rem 2.7rem;
+                                                        @include font(small-5x, bold);
+                                                    }
+                                                }
                                                 &.swiper-slide-active {
                                                     opacity: 1 !important;
                                                 }
@@ -534,6 +545,7 @@
 
                                             @include mobile {
                                                 min-height: 19.8rem;
+                                                padding: 2rem;
                                                 border-radius: 1.5rem;
                                             }
 
@@ -702,6 +714,11 @@
                 background-repeat: no-repeat;
                 background-size: cover;
 
+                @include mobile {
+                    margin: 0;
+                    padding: 8rem 1.8rem;
+                }
+
                 .section-wrap {
                     display: flex;
                     flex-wrap: wrap;
@@ -711,44 +728,85 @@
 
                     .section-head {
                         width: 49.4rem;
+
+                        @media (max-width: 1440px) {
+                            width: 100%;
+                        }
+
                         .section-subject {
                             @include font(small-2x, bold);
                             color: custom-color(neutral, 000);
 
+                            // @include mobile {
+                            //     @include font(small-2x, bold);
+                            // }
+
                             & + .section-summary {
                                 margin-top: 2.4rem;
+
+                                @include mobile {
+                                    margin-top: 1.8rem;
+                                }
                             }
                         }
                         .section-summary {
                             @include font(large, bold);
                             color: custom-color(neutral, 000);
 
+                            @include mobile {
+                                @include font(small-1x, bold);
+                            }
+
                             & + .section-base {
                                 margin-top: 3.4rem;
+
+                                @include mobile {
+                                    margin-top: 1.2rem;
+                                }
                             }
                         }
                         .section-base {
                             display: block;
                             @include font(small-3x, regular);
                             color: custom-color(neutral, 000);
+
+                            @include mobile {
+                                @include font(small-4x, regular);
+                            }
                         }
 
-                        // & + .section-body {
-                        //     margin-top: 6.4rem;
-                        // }
+                        @media (max-width: 1440px) {
+                            & + .section-body {
+                                margin-top: 6.4rem;
+                            }
+                        }
                     }
                     .section-body {
                         flex-shrink: 0;
                         width: 82rem;
 
+                        @media (max-width: 1440px) {
+                            width: 100%;
+                        }
+
                         .data-list {
                             display: flex;
                             flex-wrap: wrap;
                             gap: 2rem;
+
+                            @include mobile {
+                                gap: 0.6rem;
+                            }
                             .data-item {
                                 position: relative;
                                 width: calc(50% - 1rem);
                                 height: 26rem;
+
+                                @include mobile {
+                                    width: 100%;
+                                    height: 17rem;
+                                }
+
                                 .data-wrap {
                                     display: flex;
                                     flex-direction: column;
@@ -760,10 +818,20 @@
                                     background-color: rgba(0, 0, 0, 0.35);
                                     backdrop-filter: blur(4px);
 
+                                    @include mobile {
+                                        gap: 0.2rem;
+                                        padding: 2.8rem;
+                                    }
+
+
                                     .data-head {
                                         .data-subject {
                                             @include font(small-2x, bold);
                                             color:#28D1FF;
+
+                                            @include mobile {
+                                                @include font(small-4x, bold);
+                                            }
                                         }
                                     }
                                     .data-body {
@@ -772,18 +840,32 @@
                                         align-items: flex-end;
                                         gap: 1rem;
 
+                                        @include mobile {
+                                            gap: 0.6rem;
+                                        }
+
                                         .data-info {
                                             @include font(large-7x, bold);
                                             line-height: 1.1;
                                             color: custom-color(neutral, 000);
                                             letter-spacing: -3.2px;
                                             //font-family: initial;
+
+                                            @include mobile {
+                                                letter-spacing: 0;
+                                                @include font(large-3x, bold);
+                                            }
                                         }
                                         .data-text {
                                             @include font(large-1x, semibold);
                                             line-height: 1.5;
                                             color: custom-color(neutral, 000);
                                             letter-spacing: -3.2px;
+
+                                            @include mobile {
+                                                letter-spacing: 0;
+                                                @include font(small, bold);
+                                            }
                                         }
                                     }
                                 }
@@ -795,19 +877,34 @@
             &.story-04 {
                 padding: 16rem 0;
 
+                @include mobile {
+                    padding: 8rem 1.8rem;
+                }
+
                 .section-wrap {
                     display: flex;
                     flex-direction: column;
                     gap: 4rem;
+
+                    @include mobile {
+                        gap: 3.2rem;
+                    }
 
                     .section-head {
                         .section-summary {
                             @include font(large, bold);
                             color: custom-color(neutral, 090);
                             text-align: center;
+
+                            @include mobile {
+                                @include font(small-1x, bold);
+                            }
                         }
                     }
                     .section-body {
+                        @include mobile {
+                            margin: 0 -1.8rem;
+                        }
                         .panel-display {
                             .panel-list {
                                 .panel-item {
@@ -815,25 +912,39 @@
                                         .sub-section {
                                             display: flex;
                                             overflow: hidden;
-                                            //gap: 13rem;
 
                                             & + .sub-section {
                                                 margin-top: 6.4rem;
-                                            }
 
-                                            &:nth-child(even) {
-                                                //padding-left: 65px;
+                                                @include mobile {
+                                                    margin-top: 4rem;
+                                                }
                                             }
 
                                             .rolling-display {
                                                 .rolling-list {
                                                     display: flex;
-                                                    //gap: 13rem;
+                                                    position: relative;
 
                                                     .rolling-item {
                                                         margin: 0 6.5rem;
                                                         flex-shrink: 0;
                                                         vertical-align: top;
+
+                                                        @include mobile {
+                                                            position: relative;
+                                                            margin: 0 0;
+                                                            width: auto;
+                                                            text-align: center;
+                                                        }
+
+                                                        img {
+                                                            @include mobile {
+                                                                display: block;
+                                                                margin: 0 auto;
+                                                                transform: scale(0.7);
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
@@ -848,6 +959,8 @@
                                                     &.rolling-03 {
                                                         &.original {
                                                             animation: rollingleft1 250s linear infinite;
+
+
                                                         }
                                                         &.clone {
                                                             animation: rollingleft2 250s linear infinite;
@@ -857,10 +970,12 @@
                                                     &.rolling-02{
                                                         position: relative;
                                                         &.original {
-                                                            animation: rollingright1 300s linear infinite reverse;
+                                                           animation: rollingright1 300s linear infinite reverse;
+
                                                         }
                                                         &.clone {
                                                             animation: rollingright2 300s linear infinite reverse;
+
                                                         }
                                                     }
                                                 }
@@ -901,15 +1016,13 @@
                             0% { transform: translateX(0); }
                             50% { transform: translateX(-100%); }
                             50.01% { transform: translateX(100%); }
-                            100% { transform: translateX(0); }
-
+                            100% { transform: translateX(0);}
                         }
 
                         @keyframes rollingright2 {
                             0% { transform: translateX(0); }
                             100% { transform: translateX(-200%); }
                         }
-
 
                         @keyframes rollingleft1 {
                             0% { transform: translateX(0); }
@@ -929,6 +1042,10 @@
                 padding: 12rem 6rem;
                 background-color: custom-color(etc, 100);
 
+                @include mobile {
+                    padding: 8rem 1.8rem;
+                }
+
                 .section-wrap {
                     max-width: 144rem;
                     margin: 0 auto;
@@ -938,18 +1055,34 @@
                             @include font(small-1x, bold);
                             color: custom-color(secondary, 040);
 
+                            @include mobile {
+                                @include font(small-2x, bold);
+                            }
+
                             & + .section-summary {
                                 margin-top: 2.4rem;
+
+                                @include mobile {
+                                    margin-top: 1.8rem;
+                                }
                             }
                         }
 
                         .section-summary {
                             @include font(large, bold);
-                            color: custom-color(neutral, 090)
+                            color: custom-color(neutral, 090);
+
+                            @include mobile {
+                                @include font(small-1x, bold);
+                            }
                         }
 
                         & + .section-body {
                             margin-top: 6.4rem;
+
+                            @include mobile {
+                                margin-top: 6rem;
+                            }
                         }
                     }
                     .section-body {
@@ -959,6 +1092,11 @@
                             max-width: 125rem;
                             margin: 0 auto;
 
+                            @include mobile {
+                                gap: 4rem;
+                                flex-wrap: wrap;
+                            }
+
                             .data-item {
                                 position: relative;
                                 display: block;
@@ -966,6 +1104,10 @@
                                 opacity: 0;
                                 transform: translateY(15rem);
                                 transition: all .5s ease-out;
+
+                                @include mobile {
+                                    width: 100%;
+                                }
 
                                 .data-wrap {
                                     .data-info {
@@ -981,6 +1123,10 @@
                                             flex-direction: column;
                                             padding: 2.4rem 2.8rem;
 
+                                            @include mobile {
+                                                padding: 2rem;
+                                            }
+
                                             .data-year {
                                                 display: inline-block;
                                                 margin-left: auto;
@@ -989,6 +1135,11 @@
                                                 color: custom-color(neutral, 090);
                                                 border: 0.1rem solid #CBCBCB;
                                                 border-radius: 4rem;
+
+                                                @include mobile {
+                                                    border-radius: 3.2rem;
+                                                }
+
                                             }
                                             .data-figure {
                                                 position: relative;
@@ -1013,6 +1164,11 @@
 
                                         & + .data-head {
                                             margin-top: 2.4rem;
+
+                                            @include mobile {
+                                                margin-top: 1.4rem;
+                                            }
+
                                         }
                                     }
                                     .data-head {
@@ -1021,14 +1177,26 @@
                                             @include font(small-1x, bold);
                                             color: custom-color(neutral, 100);
 
+                                            @include mobile {
+                                                @include font(small-2x, bold);
+                                            }
+
                                             & + .data-base {
                                                 margin-top: 1.2rem;
+
+                                                @include mobile {
+                                                    margin-top: 0.4rem;
+                                                }
                                             }
                                         }
                                         .data-base {
                                             display: block;
                                             @include font(small-3x, regular);
-                                            color: custom-color(neutral, 100)
+                                            color: custom-color(neutral, 100);
+
+                                            @include mobile {
+                                                @include font(small-4x, regular);
+                                            }
                                         }
                                     }
                                 }
@@ -1040,6 +1208,10 @@
                                                     margin-top: 13.20754%;
                                                     width: 100%;
                                                     padding-bottom: 52.38095%;
+
+                                                    @include mobile {
+                                                        //padding-bottom: 52.38095%;
+                                                    }
                                                 }
                                             }
                                         }
@@ -1047,6 +1219,9 @@
                                 }
                                 &.data-2023 {
                                     margin-top: 8.8rem;
+                                    @include mobile {
+                                        margin-top: 0;
+                                    }
                                     .data-wrap {
                                         .data-info {
                                             .data-info-wrap {
@@ -1096,11 +1271,6 @@
                     .section-wrap {
                         .section-body {
                             .data-list {
-                                display: flex;
-                                gap: 6.4rem;
-                                max-width: 125rem;
-                                margin: 0 auto;
-
                                 .data-item {
                                     opacity: 1;
                                     transform: translateY(0);
@@ -1123,6 +1293,10 @@
             &.story-06 {
                 padding: 12rem 6rem 18rem 6rem;
 
+                @include mobile {
+                    padding: 8rem 1.8rem 8rem 1.8rem;
+                }
+
                 .section-wrap {
                     max-width: 144rem;
                     margin: 0 auto;
@@ -1132,27 +1306,55 @@
                             @include font(small-1x, bold);
                             color: custom-color(secondary, 040);
 
+                            @include mobile {
+                                @include font(small-2x, bold);
+                            }
+
                             & + .section-summary {
                                 margin-top: 2.4rem;
+
+                                @include mobile {
+                                    margin-top: 1.8rem;
+                                }
                             }
                         }
 
                         .section-summary {
                             @include font(large, bold);
-                            color: custom-color(neutral, 090)
+                            color: custom-color(neutral, 090);
+
+                            @include mobile {
+                                @include font(small-1x, bold);
+                            }
                         }
 
                         & + .section-body {
                             margin-top: 6.4rem;
+
+                            @include mobile {
+                                margin-top: 4rem;
+                            }
                         }
                     }
                     .section-body {
+                        // @media (max-width: 1559px) {
+                        //     margin-right: -6rem;
+                        // }
+
+                        @include mobile {
+                            margin-right: -1.8rem;
+                        }
                         .swiper-list {
                             .swiper-controls3 {
                                 display: flex;
                                 align-items: center;
                                 justify-content: flex-end;
                                 margin-bottom: 2.4rem;
+
+                                @include mobile {
+                                    justify-content: flex-start;
+                                    margin-bottom: 2.8rem;
+                                }
 
                                 .swiper-button-prev,
                                 .swiper-button-next {
@@ -1168,6 +1370,15 @@
                             .swiper-wrapper {
                                 .swiper-item {
                                     width: 34.5rem !important;
+
+                                    @media (max-width: 1559px) {
+                                        width: calc(33.3333% - 13.333333px) !important;
+                                    }
+
+                                    @include mobile {
+                                        width: 28.1rem !important;
+                                    }
+
                                     .swiper-wrap {
                                         .swiper-figure {
                                             position: relative;
@@ -1175,6 +1386,10 @@
                                             overflow: hidden;
                                             width: 100%;
                                             height: 18.9rem;
+
+                                            @include mobile {
+                                                height: 15.8rem;
+                                            }
 
                                             img {
                                                 position: absolute;
@@ -1201,6 +1416,10 @@
                                                 line-height: 1.2;
                                                 color: custom-color(secondary, 040);
 
+                                                @include mobile {
+                                                    @include font(small-6x, bold);
+                                                }
+
                                                 & + .swiper-body {
                                                     margin-top: 0.8rem;
                                                 }
@@ -1213,7 +1432,13 @@
                                                     -webkit-line-clamp: 2;
                                                     -webkit-box-orient: vertical;
                                                     @include font(small-2x, bold);
-                                                    color: custom-color(neutral, 090)
+                                                    color: custom-color(neutral, 090);
+
+
+
+                                                    @include mobile {
+                                                        @include font(small-4x, bold);
+                                                    }
                                                 }
                                             }
                                         }

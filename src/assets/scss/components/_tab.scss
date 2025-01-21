@@ -6,13 +6,22 @@
         display: flex;
         justify-content: center;
 
-        .tab-wrap {            
+        .tab-wrap {
             padding: 0.8rem;
             border-radius: 5.6rem;
             background: #095EEF;
 
+            @include mobile {
+                padding: 0.56rem;
+                border-radius: 3.92rem;
+            }
+
             .tab-list {
                 gap: 0.4rem;
+
+                @include mobile {
+                    gap: 0.28rem;
+                }
 
                 .tab-item  {
                     width: auto !important;
@@ -23,10 +32,15 @@
                         border-radius: 5.6rem;
                         color: rgba(255, 255, 255, 0.60);
                         transition: all .2s ease-out;
+
+                        @include mobile {
+                            padding: 0.42rem 1.4rem;
+                            @include font(small-5x, bold);
+                        }
                     }
 
                     &.active {
-                        .tab-text {                            
+                        .tab-text {
                             color: #07398F;
                             background-color: custom-color(neutral, 000);
                         }
@@ -38,10 +52,14 @@
         & + .panel-display {
             &.module-a {
                 margin-top: 12rem;
+
+                @include mobile {
+                    margin-top: 6rem;
+                }
             }
         }
     }
-    
+
     &.module-b {
         display: flex;
         justify-content: center;
@@ -61,7 +79,7 @@
                     }
 
                     &.active {
-                        .tab-text {                            
+                        .tab-text {
                             font-weight: 700;
                             border-bottom: 0.3rem solid custom-color(primary, 090);
                         }
@@ -80,7 +98,7 @@
                             height: 1.6rem;
                             background-color: #d9d9d9;
                             transform: translateY(-50%);
-                        } 
+                        }
                     }
                 }
             }

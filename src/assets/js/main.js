@@ -185,6 +185,9 @@ function mainInteraction(){
         $(selector).each(function() {
             var $selector = $(this);
             var $selectorList = $selector.find('.rolling-list');
+
+            var $selectorItem = $selector.find('.rolling-list .rolling-item');
+            var $selectorItemImg = $selector.find('.rolling-list .rolling-item img');
             //let $roller = $('.rolling-display');
 
             if ($selector.length) {
@@ -195,7 +198,7 @@ function mainInteraction(){
                 $selector.parent('.sub-section').append($clone);
 
                 $selector.css('left', '0px');
-                $clone.css('left', $selectorList.width() + 'px');
+                $clone.css('left', $selectorList.outerWidth() + 'px');
 
                 $selector.addClass('original');
                 $clone.addClass('clone');
@@ -220,6 +223,9 @@ function mainInteraction(){
                 $clone.addClass('roller4');
                 $selector.parent('.sub-section').append($clone);
 
+                // $selector.css('left', '0px');
+                // $clone.css('left', $selectorList.outerWidth() + 'px');
+
                 $selector.addClass('original');
                 $clone.addClass('clone');
 
@@ -231,18 +237,34 @@ function mainInteraction(){
     }
 
     var newSlider = new Swiper(".story-06 .swiper", {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        slidesPerGroup: 4,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
-        },
-        loop: true,
+        }, // autoplay 활성화
+        loop: true, // loop 활성화
         speed: 600,
         navigation: {
             nextEl: ".story-06 .swiper-button-next",
             prevEl: ".story-06 .swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                spaceBetween: 12,
+                slidesPerView: "auto",
+                freeMode: true,
+                slidesPerGroup: 1,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                slidesPerGroup: 3,
+            },
+            1560: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                slidesPerGroup: 4,
+
+            },
         },
     });
 
@@ -266,7 +288,7 @@ function mainInteraction(){
             type: "progressbar",
         },
         breakpoints: {
-            768: {
+            1024: {
                 spaceBetween: 12,
             },
         },
