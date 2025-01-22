@@ -193,6 +193,11 @@
                         @include font(small-6x, regular);
                     }
                 }
+
+                @include mobile {
+                    @include font(small-4x, regular);
+                    word-break: break-all
+                }
             }
         }
 
