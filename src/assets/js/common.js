@@ -196,6 +196,7 @@ function header() {
 
 // tab
 function tab() {
+
     const tabDisplay = document.querySelectorAll(".tab-display")
     tabDisplay.forEach(tab => {
         const firstTab = tab.querySelector(".tab-item:first-child")
@@ -356,3 +357,23 @@ function accordion() {
         $this.addClass('active');
     });
 }
+
+// tab fixed
+$(function () {
+    var tabDisplay = $(".tab-display").offset().top - 64;
+
+    var placeholder = $("<div>").height($(".tab-display").outerHeight()).hide();
+    $(".tab-display").before(placeholder);
+
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+
+        if (tabDisplay <= scrollTop) {
+            $(".tab-display").addClass("fixed");
+            placeholder.show(); 
+        } else {
+            $(".tab-display").removeClass("fixed");
+            placeholder.hide(); 
+        }
+    });
+});
