@@ -196,25 +196,23 @@
 
                     .post-head {
                         .post-name {
-                            position: relative;
+                            position: fixed;
+                            display: flex;
+                            flex-direction: column;
+                            //transition: all 0.1s ease-out;
+
                             @include font(small-3x, bold);
                             em {
-                                // display: block;
-                                // transform: rotate(90deg);
-                                // transform-origin: left;
-                                // width: max-content;
-                                // margin-left: 1.2rem;
                                 display: inline-block;
                                 writing-mode: vertical-rl;
                                 margin-top: 1.2rem;
                                 margin-left: -0.2rem;
-                                text-orientation: mixed;
-
+                                
                                 &::after {
                                     content: '';
                                     display: inline-block;
                                     position: absolute;
-                                    top: 3.25rem;
+                                    top: 3.2rem;
                                     left: 0.5rem;
                                     width: 1.2rem;
                                     height: 0.1rem;
@@ -260,7 +258,14 @@
                         height: 100%;
                         .post-head {
                             .post-name {
-                                position: relative;
+                                // position: relative;
+                                position: absolute;
+                                top: 4rem;
+                                left: 3.7rem;
+                                display: flex;
+                                width: 100%;
+                                flex-direction: unset;
+
                                 @include font(small-2x, bold);
                                 em {
                                     position: relative;
@@ -287,7 +292,7 @@
                                 + .post-name {
                                     @include font(small-4x, medium);
                                     color: custom-color(neutral, 060);
-                                    margin-top: 0.8rem;
+                                    margin-top: 4.8rem;
                                     display: block;
                                 }
 
@@ -335,6 +340,9 @@
                     //height: 7.2rem;
                     .post-head {
                         position: relative;
+                        width: auto;
+                        display: flex;
+
 
                         .post-name {
                             padding-left: 3rem;
