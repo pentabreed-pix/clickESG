@@ -31,6 +31,7 @@
 
         @include mobile {
             flex-direction: column;
+            gap: 4rem;
         }
     }
 
@@ -66,6 +67,10 @@
 
             &:nth-child(even) {
                 margin-top: 5.6rem;
+
+                @include mobile {
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -115,6 +120,10 @@
                     .post-name {
                         @include font(small-2x, medium);
                         color: custom-color(neutral,100);
+
+                        @include mobile {
+                            @include font(small-3x, bold);
+                        }
                     }
                 }
             }
@@ -145,7 +154,7 @@
 
                         + .post-summary {
                             @include font(small-3x, medium);
-                            color: custom-color(neutral, 080);
+                            color: custom-color(neutral, 100);
                         }
                     }
                     + .post-figure {

@@ -88,8 +88,16 @@
         .local-body {
             .section {
                 padding-top: 12rem;
+
+                @include mobile {
+                    padding-top: 8rem;
+                }
                 + .section {
                     padding-top: 18rem;
+
+                    @include mobile {
+                        padding-top: 12rem;
+                    }
                 }
             }
         }
@@ -99,8 +107,18 @@
         .local-body {
             .section {
                 padding-top: 12rem;
+
+                @include mobile {
+                    padding-top: 12rem;
+                }
+
                 + .section {
                     padding-top: 18rem;
+
+                    @include mobile {
+                        padding-top: 12rem;
+                    }
+
                 }
             }
         }
@@ -110,8 +128,14 @@
         .local-body {
             .section {
                 padding-top: 12rem;
+                @include mobile {
+                    padding-top: 8rem;
+                }
                 + .section {
                     padding-top: 18rem;
+                    @include mobile {
+                        padding-top: 12rem;
+                    }
                 }
             }
         }
@@ -121,8 +145,14 @@
         .local-body {
             .section {
                 padding-top: 12rem;
+                @include mobile {
+                    padding-top: 8rem;
+                }
                 + .section {
                     padding-top: 18rem;
+                    @include mobile {
+                        padding-top: 12rem;
+                    }
                 }
             }
         }
@@ -133,7 +163,7 @@
             padding-top: 12rem;
             .section-body {
                 .post-list {
-                    margin-top: 8rem;
+                    margin-top: 6.4rem;
                 }
             }
             .section-util {
