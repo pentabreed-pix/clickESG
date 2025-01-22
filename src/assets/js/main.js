@@ -273,12 +273,14 @@ function mainInteraction(){
     }
 
     var solutionSlider = new Swiper(".story-02 .swiper", {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 32,
-        freeMode: true,
-        autoplay: false,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }, // autoplay 활성화
+        loop: true, // loop 활성화
         speed: 600,
+        slidesPerView: 'auto',
+        freeMode: true,
         navigation: {
             nextEl: ".story-02 .swiper-button-next",
             prevEl: ".story-02 .swiper-button-prev",
@@ -288,8 +290,11 @@ function mainInteraction(){
             type: "progressbar",
         },
         breakpoints: {
-            1024: {
+            0: {
                 spaceBetween: 12,
+            },
+            1024: {
+                spaceBetween: 24,
             },
         },
     });
@@ -305,6 +310,29 @@ function mainInteraction(){
                 end: "top bottom",
 
                 onEnter: () => {
+                    section.classList.add("active-animation-main");
+
+                    if (section.classList.contains('swiper-list')) {
+                        solutionSlider.autoplay.start();
+                    }
+
+                    if (section.classList.contains('story-03')) {
+                        document.querySelectorAll('.story-03 .data-info').forEach((el) => {
+                            const targetValue = parseInt(el.textContent.replace(/,/g, ''), 10);
+                            let counter = { value: 0 };
+
+                            gsap.to(counter, {
+                                value: targetValue,
+                                duration: 2,
+                                ease: "swing",
+                                onUpdate: () => {
+                                    el.textContent = commaSeparateNumber(Math.ceil(counter.value));
+                                },
+                            });
+                        });
+                    }
+                },
+                onEnterBack: () => {
                     section.classList.add("active-animation-main");
 
                     if (section.classList.contains('swiper-list')) {

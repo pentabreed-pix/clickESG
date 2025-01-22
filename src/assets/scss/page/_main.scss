@@ -443,7 +443,7 @@
                 padding: 0 0 0 6rem;
 
                 @include mobile {
-                    padding: 0 0 0 0rem;
+                    padding: 0;
                 }
 
                 .section-wrap {
@@ -455,6 +455,7 @@
                         padding: 8rem 0 8rem 1.8rem;
                         border-radius: 0;
                     }
+
                     .section-head {
                         max-width: 83rem;
                         .section-subject {
@@ -599,12 +600,12 @@
                                                 width: 3.2rem;
                                                 height: 3.2rem;
                                                 border-radius: 0.8rem;
-                                                background: custom-color(secondary, 090) icon('arrow-right1', custom-color(neutral, 000)) no-repeat center center / 1.6rem;
+                                                background: custom-color(secondary, 090) icon('arrow-right2', custom-color(neutral, 000)) no-repeat center center / 1.6rem;
 
                                                 @include mobile {
                                                     width: 2.4rem;
                                                     height: 2.4rem;
-                                                    background: custom-color(secondary, 090) icon('arrow-right1', custom-color(neutral, 000)) no-repeat center center / 1.4rem;
+                                                    background: custom-color(secondary, 090) icon('arrow-right2', custom-color(neutral, 000)) no-repeat center center / 1.4rem;
                                                 }
                                             }
                                         }
