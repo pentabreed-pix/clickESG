@@ -1754,74 +1754,76 @@
   }
 }
 
-.swiper-list.process .swiper-wrapper .swiper-slide {
-  width: 33.9rem !important;
-  height: 35rem;
-  margin-right: 0;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 35rem;
-  padding: 3.4rem 1.8rem;
-  color: rgb(255, 255, 255);
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name {
-  position: relative;
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name em {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin-left: 2.7rem;
-  margin-top: 0;
-  transform: rotate(0);
-  display: inline-block;
-  writing-mode: unset;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name em::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: -1.5rem;
-  width: 0.1rem;
-  height: 1.2rem;
-  background: rgb(255, 255, 255);
-  transform: translateY(-50%);
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name + .swiper-name {
-  font-weight: 500;
-  font-size: 1.2rem;
-  color: rgb(203, 203, 203);
-  margin-top: 0.4rem;
-  display: block;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head + .swiper-body {
-  display: block;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head + .swiper-body .swiper-summary {
-  font-weight: 500;
-  font-size: 1.4rem;
-  width: auto;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-body {
-  display: block;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-figure {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 34.8rem;
-  transform: none;
-  z-index: -1;
-}
-.swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-figure img {
-  border-radius: 1.6rem;
-  opacity: 1;
+@media (max-width: 1023px) {
+  .swiper-list.process .swiper-wrapper .swiper-slide {
+    width: 33.9rem !important;
+    height: 35rem;
+    margin-right: 0;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35rem;
+    padding: 3.4rem 1.8rem;
+    color: rgb(255, 255, 255);
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name {
+    position: relative;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name em {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 2.7rem;
+    margin-top: 0;
+    transform: rotate(0);
+    display: inline-block;
+    writing-mode: unset;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name em::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -1.5rem;
+    width: 0.1rem;
+    height: 1.2rem;
+    background: rgb(255, 255, 255);
+    transform: translateY(-50%);
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head .swiper-name + .swiper-name {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(203, 203, 203);
+    margin-top: 0.4rem;
+    display: block;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head + .swiper-body {
+    display: block;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head + .swiper-body .swiper-summary {
+    font-weight: 500;
+    font-size: 1.4rem;
+    width: auto;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-body {
+    display: block;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34.8rem;
+    transform: none;
+    z-index: -1;
+  }
+  .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-figure img {
+    border-radius: 1.6rem;
+    opacity: 1;
+  }
 }
 
 body .blind {
