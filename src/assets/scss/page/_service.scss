@@ -30,9 +30,10 @@
             // padding-top: 10rem;
             .section-body {
                 .t-display {
-                    table {
-                        + .comment {
-                            margin-top: 2rem;
+                    + .comment {
+                        margin-top: 2rem;
+                        @include mobile {
+                            margin-top: 1.4rem;
                         }
                     }
                 }
@@ -53,9 +54,10 @@
 
                                         .post-list {
                                             .post-figure {
-                                                overflow: auto;
+                                                
                                                 
                                                 @include mobile{
+                                                    overflow: auto;
                                                     @include scroll-y;
                                                     @include scroll-x;
                                                 }
@@ -76,6 +78,11 @@
                                                             left: 0%;
                                                             transform: none;
                                                         }
+                                                    }
+                                                }
+                                                &.height {
+                                                    @include mobile {
+                                                        max-height: 53rem;
                                                     }
                                                 }
 

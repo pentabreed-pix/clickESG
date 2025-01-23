@@ -6,6 +6,13 @@
 	width: 100%;
 	margin: 0 auto;
 	max-width: 144rem;
+	
+	overflow: auto;
+	@include mobile {
+		@include scroll-y;
+		@include scroll-x;
+	}
+	
 	table {
 		width: 100%;
 		table-layout: fixed;
@@ -440,7 +447,9 @@
 		
 	// }
 
+&.height {
 	@include mobile {
-		overflow-y: auto;
+		max-height: 53rem;
 	}
+}
 }
