@@ -307,22 +307,31 @@ function tab() {
     // jQuery Scroll Event
     $(function () {
         var tabDisplayOffset = $(".tab-display.module-b").offset().top - 64;
-
+    
         var placeholder = $("<div>").height($(".tab-display.module-b").outerHeight()).hide();
         $(".tab-display.module-b").before(placeholder);
-
+    
         $(window).scroll(function () {
             var scrollTop = $(this).scrollTop();
-
+    
             if (tabDisplayOffset <= scrollTop) {
                 $(".tab-display.module-b").addClass("fixed");
                 placeholder.show();
+    
+                $("#header").css({
+                    "box-shadow": "none"
+                });
             } else {
                 $(".tab-display.module-b").removeClass("fixed");
                 placeholder.hide();
+
+                $("#header").css({
+                    "box-shadow": "0px 4px 28px 0px rgba(0, 0, 0, 0.04)" 
+                });
             }
         });
     });
+    
 }
 
 // input
