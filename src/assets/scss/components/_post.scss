@@ -196,14 +196,16 @@
 
                     .post-head {
                         .post-name {
-                            position: relative;
+                            position: absolute;
+                            top: 4rem;
+                            left: 3.7rem;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            
+
                             @include font(small-3x, bold);
                             em {
-                                // display: block;
-                                // transform: rotate(90deg);
-                                // transform-origin: left;
-                                // width: max-content;
-                                // margin-left: 1.2rem;
                                 display: inline-block;
                                 writing-mode: vertical-rl;
                                 margin-top: 1.2rem;
@@ -260,8 +262,8 @@
                         height: 100%;
                         .post-head {
                             .post-name {
-                                position: relative;
-                                @include font(small-2x, bold);
+                                flex-direction: unset;
+                                
                                 em {
                                     position: relative;
                                     top: 0;
@@ -287,7 +289,7 @@
                                 + .post-name {
                                     @include font(small-4x, medium);
                                     color: custom-color(neutral, 060);
-                                    margin-top: 0.8rem;
+                                    margin-top: 4.8rem;
                                     display: block;
                                 }
 
@@ -354,6 +356,10 @@
                             @include font(small-2x, bold);
                             color: custom-color(neutral, 080);
 
+                            @include mobile {
+                                @include font(small-4x, bold);
+                            }
+
                             &.network, &.clock, &.device, &.certi {
                                 position: relative;
 
@@ -407,6 +413,10 @@
                             .bullet-list {
                                 margin-top: 2.4rem;
                                 padding-left: 3.2rem;
+
+                                @include mobile {
+                                    margin-top: 1.6rem;
+                                }
                             }
                         }
                         + .post-body {
@@ -463,6 +473,10 @@
                                 padding-left: 3rem;
                                 @include font(small-2x, bold);
                                 color: custom-color(primary, 080);
+
+                                @include mobile {
+                                    @include font(small-4x, bold);
+                                }
 
                                 &.network, &.clock, &.device, &.certi {
                                     position: relative;

@@ -5,6 +5,26 @@
 
 
 #wrap {
+
+    // 공통
+    .local-body {
+        .section {
+            padding-top: 12rem;
+
+            @include mobile {
+                padding-top: 8rem;
+            }
+            + .section {
+                padding-top: 18rem;
+
+                @include mobile {
+                    padding-top: 12rem;
+                }
+            }
+        }
+    }
+
+
     .solution-intro{
         .section{
             //bg
@@ -79,97 +99,13 @@
         }
     }
 
-    .solution-esg {
-        .local-head {
-            .local-figure {
-
-            }
-        }
-        .local-body {
-            .section {
-                padding-top: 12rem;
-
-                @include mobile {
-                    padding-top: 8rem;
-                }
-                + .section {
-                    padding-top: 18rem;
-
-                    @include mobile {
-                        padding-top: 12rem;
-                    }
-                }
-            }
-        }
-    }
-
-    .solution-scm {
-        .local-body {
-            .section {
-                padding-top: 12rem;
-
-                @include mobile {
-                    padding-top: 12rem;
-                }
-
-                + .section {
-                    padding-top: 18rem;
-
-                    @include mobile {
-                        padding-top: 12rem;
-                    }
-
-                }
-            }
-        }
-    }
-
-    .solution-data {
-        .local-body {
-            .section {
-                padding-top: 12rem;
-                @include mobile {
-                    padding-top: 8rem;
-                }
-                + .section {
-                    padding-top: 18rem;
-                    @include mobile {
-                        padding-top: 12rem;
-                    }
-                }
-            }
-        }
-    }
-
-    .solution-cdp {
-        .local-body {
-            .section {
-                padding-top: 12rem;
-                @include mobile {
-                    padding-top: 8rem;
-                }
-                + .section {
-                    padding-top: 18rem;
-                    @include mobile {
-                        padding-top: 12rem;
-                    }
-                }
-            }
-        }
-    }
 
     .solution-netzero {
         .section {
-            //padding-top: 12rem;
-
-            @include mobile {
-                padding-top: 8rem;
-            }
-
             .section-wrap {
                 .section-body {
                     .post-list {
-                       // margin-top: 6.4rem;
+                    //    margin-top: 7.5rem;
                     }
                 }
                 .section-util {
@@ -229,20 +165,16 @@
                     }
                 }
 
-
-                &.big-image {
-                    .section-wrap {
-                        .section-figure {
-                            margin-bottom: 10rem;
-                        }
-                    }
-                }
             }
 
-            + .section {
-                //padding-top: 18rem;
-                @include mobile {
-                    padding-top: 12rem;
+            &.big-image {
+                .section-wrap {
+                    .section-figure {
+                        margin-bottom: 10rem;
+                        @include mobile {
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
 
@@ -267,7 +199,8 @@
 
 
             &.story1 {
-                .section-wrap {
+                
+                 .section-wrap {
                     height: 100vh;
                     display: flex;
                     flex-direction: column;
@@ -285,4 +218,5 @@
             }
         }
     }
+
 }

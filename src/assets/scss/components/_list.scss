@@ -161,7 +161,7 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    top: 1.2rem;
+                    top: 0.9rem;
                     left: -0.5rem;
                     width: 1.2rem;
                     height: 0.9rem;
@@ -228,6 +228,11 @@
                 font-weight: 600;
                 color:custom-color(neutral, 100);
                 line-height: 180%;
+
+                @include mobile {
+                    font-size: 1.3rem;
+                    line-height: 160%;
+                }
 
                 &.arrow {
                     color: custom-color(primary, 090);
