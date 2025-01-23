@@ -40,6 +40,25 @@
                                 .section-head {
                                     + .section-body {
                                         margin-top: 6.4rem;
+
+                                        .post-list {
+                                            .post-figure {
+                                                &.spec {
+                                                    position: relative;
+                                                    height: 0;
+                                                    padding-bottom: 63%;
+                                                    img {
+                                                        position: absolute;
+                                                        top: 0;
+                                                        left: 50%;
+                                                        transform: translateX(-50%);
+                                                        object-fit: cover;
+                                                        height: 100%;
+                                                    }
+                                                }
+
+                                            }
+                                        }
                                     }
                                 }
                             }
