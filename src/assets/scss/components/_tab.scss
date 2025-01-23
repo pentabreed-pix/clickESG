@@ -67,6 +67,10 @@
             .tab-list {
                 gap: 8rem;
 
+                @include mobile {
+                    gap: 2.9rem;
+                }
+
                 .tab-item  {
                     width: auto !important;
                     .tab-text {
@@ -74,6 +78,10 @@
                         @include font(small-2x, medium);
                         color: custom-color(neutral,100);
                         transition: all .2s ease-out;
+
+                        @include mobile {
+                            @include font(small-4x, medium);
+                        }
                     }
 
                     &.active {
@@ -96,6 +104,12 @@
                             height: 1.6rem;
                             background-color: #d9d9d9;
                             transform: translateY(-50%);
+
+                            @include mobile {
+                                top: 45%;
+                                left: -1.5rem;
+                                height: 1.2rem;
+                            }
                         }
                     }
                 }

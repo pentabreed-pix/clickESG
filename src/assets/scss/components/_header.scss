@@ -182,7 +182,6 @@
                                     line-height: 1.9rem;
                                     &:hover {
                                         color: custom-color(primary, 090);
-                                        font-weight: 600;
                                     }
                                 }
                             }
@@ -238,7 +237,7 @@
                     &:hover,
                     &.on {
                         .depth1 {
-                            color: custom-color(primary, 090) !important;
+                            
                             &::before {
                                 width: 100%;
                             }

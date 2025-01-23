@@ -254,18 +254,16 @@ body {
 				.section-wrap {
 					display: flex;
 					justify-content: space-between;
+
+					@include mobile {
+						flex-direction: column;
+					}
+
 					.section-head {
-						max-width: 144rem;
-						margin: 0 auto;
-						// .section-name {
-						// 	+.section-summary {
-						// 		margin-top: 4rem;
-						// 	}
-						// }
 						+.section-body {
 							max-width: 144rem;
 							margin: 0 auto;
-							// margin-top: 2.4rem;
+							
 						}
 						.section-summary {
 							margin-top: 2rem;

@@ -111,15 +111,15 @@ $iframe: 1040px;
     }
 }
 @mixin scroll-y {
-    // width: calc(100% - 1.8rem);
-    // padding-right: 1.8rem;
+    width: calc(100% - 1.8rem);
+    padding-right: 1.8rem;
     overflow-x: hidden;
     overflow-y: auto;
     &::-webkit-scrollbar {
         width: 0.5rem;
     }
     &::-webkit-scrollbar-thumb {
-        // height: calc(100% - 20px);
+        //height: calc(100% - 20px);
         background-color: #D5D4D9;
         border-radius: 5rem;
     }
