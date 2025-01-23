@@ -9,7 +9,7 @@ frontCommon.Html = (function () {
             lenis();
             header();
             activeAnimationType_1();
-            accordion();
+            //accordion();
 
             //footer();
             //localAnimations();
@@ -315,10 +315,10 @@ function tab() {
 
             if (tabDisplayOffset <= scrollTop) {
                 $(".tab-display.module-b").addClass("fixed");
-                placeholder.show(); 
+                placeholder.show();
             } else {
                 $(".tab-display.module-b").removeClass("fixed");
-                placeholder.hide(); 
+                placeholder.hide();
             }
         });
     });
@@ -368,17 +368,30 @@ function activeAnimationType_1() {
     });
 }
 
-// process&feature function
-function accordion() {
-    $('.post-item').first().addClass('active');
+function activeItemOnlyMo(selector) {
+    $(selector).each(function() {
+        const $accordion = $(this);
 
-    $('.post-item').on('click', function () {
-        const $this = $(this);
-        $this.siblings('.post-item').removeClass('active');
-        $this.addClass('active');
+        $accordion.find('[class*="-item"]').on('click', function () {
+            if ($(window).width() < 1024) {
+                const $this = $(this);
+                $accordion.find('[class*="-item"]').removeClass('active');
+                $this.addClass('active');
+            }
+        });
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.swiper-container', { /* 옵션 */ });
-});
+function activeItemOnlyPc(selector) {
+    $(selector).each(function() {
+        const $accordion = $(this);
+
+        $accordion.find('[class*="-item"]').on('click', function () {
+            if ($(window).width() >= 1024) {
+                const $this = $(this);
+                $accordion.find('[class*="-item"]').removeClass('active');
+                $this.addClass('active');
+            }
+        });
+    });
+}

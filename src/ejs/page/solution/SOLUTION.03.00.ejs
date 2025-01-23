@@ -44,7 +44,7 @@
                             </p>
                         </div>
                         <div class="local-figure">
-                            
+
                             <picture>
                                 <source media="(max-width: 1024px)" srcset="../../assets/images/solution/net-zero/bg-local-head-solution-net-mo.jpg">
                                 <img src="../../assets/images/solution/net-zero/bg-local-head-solution-net.jpg" alt="">
@@ -56,7 +56,7 @@
 
                 <div class="local-body">
                     <div class="content-body">
-                        <div class="section module-a type-a" active-animation="type-1">
+                        <div class="section module-a type-a">
                             <div class="section-wrap">
                                 <div class="section-head">
                                     <div class="section-subject">
@@ -92,16 +92,16 @@
                             </div>
                         </div>
 
-                        <div class="section module-a type-a big-image" active-animation="type-1">
+                        <div class="section module-a type-a big-image">
                             <div class="section-wrap">
-                                <div class="section-figure" active-animation="type-1">
+                                <div class="section-figure">
                                     <img src="../../assets/images/solution/net-zero/solution-diagram-02.jpg" alt="" class="pc-only">
                                     <img src="../../assets/images/solution/net-zero/solution-diagram-02-mo.jpg" alt="" class="mo-only">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="section module-a type-a process-bg" active-animation="type-1">
+                        <div class="section module-a type-a process-bg">
                             <div class="section-wrap">
                                 <div class="section-head">
                                     <div class="section-subject">
@@ -366,7 +366,7 @@
                             </div>
                         </div>
 
-                        <div class="section module-a type-a scroll-stop" active-animation="type-1">
+                        <div class="section module-a type-a story1" data-section-animation="case-1">
                             <div class="section-wrap">
                                 <div class="section-head">
                                     <div class="section-subject">
@@ -468,8 +468,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -478,8 +476,93 @@
      <!-- // main -->
      <%-include('../_templates/_footer.ejs')%>
 </div>
+<script>
+
+    //let scrollTriggersInitialized = false;
+
+    $(document).ready(function() {
+        handleScrollTriggers();
+    });
+
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            handleScrollTriggers();
+        }, 500);
+    });
+
+    function handleScrollTriggers() {
+    if ($(window).width() >= 1024 ) {
+        sectionAnimations_Case01('[data-section-animation="case-1"]');
+    } else if ($(window).width() < 1024) {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        activeItemOnlyMo('.feature');
+    }
+}
+    function sectionAnimations_Case01() {
+            let landingSlides = $('.post-list.feature .post-item');
+            let landingSlidesLength = landingSlides.length;
+            let story = $('.story1');
+            let storyInner = $('.story1 .section-wrap');
+            let storyInnerHeight = story.innerHeight();
+
+            function setCurrentSlide(index) {
+                landingSlides.removeClass('active previous next');
+                landingSlides.eq(index).addClass('active');
+                if (index > 0) {
+                    landingSlides.eq(index - 1).addClass('previous');
+                }
+                if (index < landingSlides.length - 1) {
+                    landingSlides.eq(index + 1).addClass('next');
+                }
+            }
+
+            let scrollTimeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: storyInner,
+                    start: 'top top',
+                    end: () => {
+                        if (window.innerWidth >= 1024) {
+                            return '+=' + landingSlidesLength * (storyInnerHeight / 2)
+                        } else {
+                            return '+=' + landingSlidesLength * (storyInnerHeight*2.5)
+                        }
+                    },
+                    pin: storyInner,
+                }
+            });
+
+            landingSlides.each(function(i, landingSlide) {
+                ScrollTrigger.create({
+                    trigger: story,
+                    //markers: true,
+                    start: () => {
+                        if (window.innerWidth >= 1024) {
+                            return (i * (storyInnerHeight / 2)) + 'px top'
+                        } else {
+                            return (i * (storyInnerHeight*2.5)) + 'px top'
+                        }
+                    },
+                    end: () => {
+                        if (window.innerWidth >= 1024) {
+                            return '+=' + (storyInnerHeight / 2)
+                        } else {
+                            return '+=' + storyInnerHeight * 2.5
+                        }
+                    },
+                    onEnter: () => setCurrentSlide(i),
+                    onLeave: () => setCurrentSlide(i),
+                    onEnterBack: () => setCurrentSlide(i),
+                    onLeaveBack: () => setCurrentSlide(i),
+                });
+            });
+
+
+        }
+</script>
 </body>
 </html>
-       
-            
+
+
 

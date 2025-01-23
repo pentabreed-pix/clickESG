@@ -196,23 +196,25 @@
 
                     .post-head {
                         .post-name {
-                            position: fixed;
-                            display: flex;
-                            flex-direction: column;
-                            //transition: all 0.1s ease-out;
-
+                            position: relative;
                             @include font(small-3x, bold);
                             em {
+                                // display: block;
+                                // transform: rotate(90deg);
+                                // transform-origin: left;
+                                // width: max-content;
+                                // margin-left: 1.2rem;
                                 display: inline-block;
                                 writing-mode: vertical-rl;
                                 margin-top: 1.2rem;
                                 margin-left: -0.2rem;
-                                
+                                text-orientation: mixed;
+
                                 &::after {
                                     content: '';
                                     display: inline-block;
                                     position: absolute;
-                                    top: 3.2rem;
+                                    top: 3.25rem;
                                     left: 0.5rem;
                                     width: 1.2rem;
                                     height: 0.1rem;
@@ -258,14 +260,7 @@
                         height: 100%;
                         .post-head {
                             .post-name {
-                                // position: relative;
-                                position: absolute;
-                                top: 4rem;
-                                left: 3.7rem;
-                                display: flex;
-                                width: 100%;
-                                flex-direction: unset;
-
+                                position: relative;
                                 @include font(small-2x, bold);
                                 em {
                                     position: relative;
@@ -292,7 +287,7 @@
                                 + .post-name {
                                     @include font(small-4x, medium);
                                     color: custom-color(neutral, 060);
-                                    margin-top: 4.8rem;
+                                    margin-top: 0.8rem;
                                     display: block;
                                 }
 
@@ -322,27 +317,37 @@
 
     &.feature {
         position: relative;
+        max-width: 133.2rem;
+        margin: 0 auto;
         height: 50.9rem;
+
+        @include mobile {
+            height: auto;
+        }
        .post-item {
+            @include mobile {
+                position: relative;
+            }
             .post-wrap {
+                padding-right: 45.94594%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 132.2rem;
-                margin: 0 auto;
+
+                @include mobile {
+                    flex-direction: column;
+                    padding-right: 0;
+                    gap: 0.8rem;
+                }
 
                 .post-info {
                     border-radius: 1rem;
                     border: 0.1rem solid rgba(203, 203, 203, 0.50);
                     padding: 2rem;
-                    cursor: pointer;
-                    width: 71rem;
-                    //height: 7.2rem;
+                    width: 100%;
+
                     .post-head {
                         position: relative;
-                        width: auto;
-                        display: flex;
-
 
                         .post-name {
                             padding-left: 3rem;
@@ -405,10 +410,10 @@
                             }
                         }
                         + .post-body {
-                            height: 0; 
-                            opacity: 0; 
-                            overflow: hidden; 
-                            transition: height 0.3s ease-out, opacity 0.3s ease-out; 
+                            height: 0;
+                            opacity: 0;
+                            overflow: hidden;
+                            transition: height 0.3s ease-out, opacity 0.3s ease-out;
                         }
                     }
                 }
@@ -416,14 +421,31 @@
                 .post-figure {
                     position: absolute;
                     top: 0;
-                    right: 6rem;
-                    width: 58.8rem;
-                    opacity: 0;
+                    right: 0;
+                    width: 44.14414%;
+                    height: 0;
+                    padding-bottom: 38.21321%;
                     border-radius: 1.6rem;
                     overflow: hidden;
-                    transition: opacity 0.3s ease-out; 
-                    img {
+                    transition: opacity 0.3s ease-out;
+                    opacity: 0;
+
+                    @include mobile {
+                        position: relative;
                         width: 100%;
+                        height: 0;
+                        padding-bottom: 87.4666%;
+                        display: none;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                     }
                 }
             }
@@ -441,10 +463,10 @@
                                 padding-left: 3rem;
                                 @include font(small-2x, bold);
                                 color: custom-color(primary, 080);
-                            
+
                                 &.network, &.clock, &.device, &.certi {
                                     position: relative;
-                            
+
                                     &::after {
                                         content: '';
                                         position: absolute;
@@ -456,48 +478,42 @@
                                         transform: translateY(-50%);
                                     }
                                 }
-                            
+
                                 &.network::after {
                                     background-image: icon('network', custom-color(primary, 080));
                                 }
-                            
+
                                 &.clock::after {
                                     background-image: icon('clock', custom-color(primary, 080));
                                 }
-                            
+
                                 &.device::after {
                                     background-image: icon('device', custom-color(primary, 080));
                                 }
-                            
+
                                 &.certi::after {
                                     background-image: icon('certi', custom-color(primary, 080));
                                 }
                             }
-                            
+
                             &::after {
                                 background-image: icon('mines', custom-color(neutral, 080));
                             }
                         }
                         .post-body {
-                            height: auto; 
-                            opacity: 1; 
+                            height: auto;
+                            opacity: 1;
                         }
                     }
                     .post-figure {
                        opacity: 1;
+
+                       @include mobile {
+                        display: block;
+                       }
                     }
                 }
             }
-       }
-
-       &.scroll-section {
-        flex: 1;
-        overflow-y: auto; /* 이 섹션만 스크롤 가능 */
-        display: none; 
-
-        &.active {
-            display: block;
-        }
        }
     }
 }

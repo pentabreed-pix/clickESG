@@ -21,7 +21,7 @@
                         }
                     }
                 }
-    
+
                 &::after{
                     position: absolute;
                     top: 0;
@@ -32,7 +32,7 @@
                     background: custom-color(etc, 070);
                     transform: translateX(-50%);
                     z-index: -1;
-                    
+
                 }
 
                 .section-body {
@@ -60,7 +60,7 @@
                                 .bullet-item {
                                     width: 47rem;
                                 }
-    
+
                                 @include mobile {
                                     flex-direction: column;
                                 }
@@ -160,7 +160,7 @@
 
     .solution-netzero {
         .section {
-            padding-top: 12rem;
+            //padding-top: 12rem;
 
             @include mobile {
                 padding-top: 8rem;
@@ -169,19 +169,19 @@
             .section-wrap {
                 .section-body {
                     .post-list {
-                        margin-top: 6.4rem;
+                       // margin-top: 6.4rem;
                     }
                 }
                 .section-util {
                     .banner-list {
                         .banner-item {
                             .banner-wrap {
-              
+
                                 .banner-body {
                                     height: 100%;
                                     position: relative;
                                     margin-top: 6rem;
-    
+
                                     &::after {
                                         content: '';
                                         display: block;
@@ -193,7 +193,7 @@
                                         background: url('../../assets/images/solution/net-zero/net-zero-bg.jpg') no-repeat center;
                                         background-size: cover;
                                         z-index: -1;
-    
+
                                         @include mobile {
                                             background: url('../../assets/images/solution/net-zero/net-zero-bg-mo.jpg') no-repeat center;
                                             background-size: cover;
@@ -208,7 +208,7 @@
                                         align-items: center;
                                         @include font(small, medium);
                                         color: custom-color(neutral, 000);
-    
+
                                         @include mobile {
                                             padding: 5rem 0 17.7rem;
                                             @include font(small-3x, medium);
@@ -229,7 +229,7 @@
                     }
                 }
 
-    
+
                 &.big-image {
                     .section-wrap {
                         .section-figure {
@@ -237,10 +237,10 @@
                         }
                     }
                 }
-            } 
+            }
 
             + .section {
-                padding-top: 18rem;
+                //padding-top: 18rem;
                 @include mobile {
                     padding-top: 12rem;
                 }
@@ -249,7 +249,7 @@
             &.process-bg {
                 position: relative;
                 padding-bottom: 18rem;
-                
+
                 &::after {
                     content: "";
                     display: block;
@@ -261,6 +261,26 @@
                     width: 100vw;
                     height: 100%;
                     background: custom-color(etc, 070);
+                }
+            }
+
+
+
+            &.story1 {
+                .section-wrap {
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include mobile {
+                        height: auto;
+                    }
+
+                    .section-body {
+                        width: 100%;
+                    }
                 }
             }
         }
