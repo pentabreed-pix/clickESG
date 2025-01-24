@@ -137,6 +137,7 @@
                                     @include font(small-5x, bold);
                                     color: custom-color(neutral, 080);
                                     background: custom-color(etc, 070);
+                                    line-height: 120%;
 
                                     &::after {
 										content: "";
@@ -174,6 +175,7 @@
                                     left: calc(50% + 39rem);
                                     .title {
                                         bottom: -1.4rem;
+                                        left: 3rem;
                                     }
                                 }
                                 &.four {
@@ -181,6 +183,7 @@
                                     left: calc(50% + 23rem);
                                     .title {
                                         bottom: -1.4rem;
+                                        left: 3.5rem;
                                     }
                                     .icon {
                                         top: 4.5rem;
