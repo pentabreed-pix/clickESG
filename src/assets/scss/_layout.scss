@@ -524,7 +524,7 @@ body {
 						@include font(small-5x, medium);
 					}
 					.section-name {
-						@include font(medium, bold);
+						@include font(large, bold);
 						color: custom-color(neutral, 080);
 
 						@include mobile {
@@ -539,6 +539,10 @@ body {
 							@include mobile {
 								margin-top: 1.6rem;
 								@include font(small-4x, medium);
+							}
+
+							.para {
+								@include font(small-3x, medium);
 							}
 						}
 					}

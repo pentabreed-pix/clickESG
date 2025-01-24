@@ -1,0 +1,136 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+
+.mark {
+    position: relative;
+    .mark-text {
+        white-space: nowrap;
+    }
+
+    &[class*="al-"]::before {
+        content: '';
+        //background-repeat: no-repeat;
+        //background-position: center center;
+        transition: 0.3s ease;
+    }
+    &[class*="ar-"]::after {
+        content: '';
+        //background-repeat: no-repeat;
+        //background-position: center center;
+        transition: 0.3s ease;
+    }
+
+    &.module-a {
+        margin-bottom: 2rem;
+        .mark-text {
+            padding-left: 1.45rem;
+        }
+        
+        &.style-a {
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 1.4rem;
+                height: 1.4rem;
+                position: absolute;
+                top: 50%;
+                left: -0.5rem;
+                transform: translateY(-50%);
+                border-radius: 0.2rem;
+            }
+        }
+        &.style-b {
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 1.4rem;
+                height: 1.4rem;
+                background: rgba(34, 188, 98, 0.40);
+                position: absolute;
+                top: 50%;
+                left: -0.5rem;
+                transform: translateY(-50%);
+                border-radius: 0.2rem;
+            }
+        }
+
+        &.type-a {
+            .mark-text {
+                @include font(small-5x, bold);
+                color: custom-color(neutral, 080);
+                line-height: 120%;
+
+                @include mobile {
+                    @include font(small-6x, bold);
+                    //line-height: 1.9rem;
+                }
+            }
+        }
+
+        &[class*=color1]::before {
+            background: rgba(5, 104, 204, 0.35);
+        }
+        &[class*=color2]::before {
+            //background-//color color(primary, 080);
+        }
+        &[class*=color3]::before {
+            //background-//color color(etc, 090);
+        }
+        &[class*=color4]::before {
+            //background-//color color(etc, 080);
+        }
+        &[class*=color5]::before {
+            //background: linear-gradient(180deg, #9735D0 0%, rgba(151, 53, 208, 0.40) 100%);
+        }
+        &[class*=color6]::before {
+            //background: linear-gradient(180deg, #6D0CA6 0%, rgba(109, 12, 166, 0.40) 100%);
+        }
+        &[class*=color7]::before {
+            //background: linear-gradient(180deg, #E4E4E7 0%, rgba(228, 228, 228, 0.40) 100%);
+        }
+    }
+}
+
+// .mark-text-area {
+//     display: flex;
+//     &.style-a {
+//         flex-direction: column;
+//         @include mobile {
+//             flex-direction: row;
+//             gap: 0.8rem;
+//         }
+//     }
+// }
+
+.mark-display {
+    .mark-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &.style-a {
+        .mark-list {
+            gap: 1.6rem;
+            @include mobile {
+                gap: 0.8rem 1.2rem;
+            }
+        }
+    }
+    &.style-b {
+        .mark-list {
+            flex-direction: column;
+            gap: 0.8rem;
+            @include mobile {
+                flex-direction: row;
+                gap: 0.8rem 2.4rem;
+            }
+        }
+    }
+    &.case3 {
+        .mark-list {
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+    }
+}

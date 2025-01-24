@@ -13,6 +13,13 @@
 		@include scroll-x;
 	}
 	
+	.table-info {
+		display: flex;
+		justify-content: right;
+		gap: 1.2rem;
+	}
+
+
 	table {
 		width: 100%;
 		table-layout: fixed;
@@ -446,10 +453,9 @@
 	// 	}
 		
 	// }
-
-&.height {
-	@include mobile {
+	&.height {
+		@include mobile {
 		max-height: 53rem;
+		}
 	}
-}
 }
