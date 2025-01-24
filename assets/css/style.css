@@ -6361,6 +6361,7 @@ body.mo-menu-open {
   font-size: 1.4rem;
   color: rgb(57, 57, 57);
   background: rgb(249, 249, 249);
+  line-height: 120%;
 }
 #wrap .solution-intro .section .section-body .click-esg-manager .circle .circles .item .title::after {
   content: "";
@@ -6394,6 +6395,7 @@ body.mo-menu-open {
 }
 #wrap .solution-intro .section .section-body .click-esg-manager .circle .circles .item.three .title {
   bottom: -1.4rem;
+  left: 3rem;
 }
 #wrap .solution-intro .section .section-body .click-esg-manager .circle .circles .item.four {
   top: 59rem;
@@ -6401,6 +6403,7 @@ body.mo-menu-open {
 }
 #wrap .solution-intro .section .section-body .click-esg-manager .circle .circles .item.four .title {
   bottom: -1.4rem;
+  left: 3.5rem;
 }
 #wrap .solution-intro .section .section-body .click-esg-manager .circle .circles .item.four .icon {
   top: 4.5rem;
