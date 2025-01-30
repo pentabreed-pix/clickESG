@@ -25,19 +25,9 @@
             }
         }
     }
+
     .esg-consulting {
         .section {
-            // padding-top: 10rem;
-            .section-body {
-                .t-display {
-                    + .comment {
-                        margin-top: 2rem;
-                        @include mobile {
-                            margin-top: 1.4rem;
-                        }
-                    }
-                }
-            }
             .panel-display {
                 .panel-list {
                     .panel-item {
@@ -87,6 +77,45 @@
                                                 }
 
                                             }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .esg-chain {
+        .section {
+            .panel-display {
+                .panel-list {
+                    .panel-item {
+                        .panel-wrap {
+                            .section {
+
+                                @include mobile {
+                                    padding-top: 6.2rem;
+                                }
+
+                                .section-body {
+
+                                    .post-list {
+                                        .post-figure {
+                                            @include mobile{
+                                                overflow: auto;
+                                                @include scroll-y;
+                                                @include scroll-x;
+                                            }
+                                            
+                                            &.height {
+                                                @include mobile {
+                                                    max-height: 53rem;
+                                                }
+                                            }
+
                                         }
                                     }
                                 }

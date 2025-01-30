@@ -293,6 +293,27 @@
 		}
 	}
 
+	&.style-d{
+		table {
+			>thead {
+				>tr {
+					>th {
+						padding: 1.8rem 4rem;
+					}
+				}
+			}
+
+			>tbody {
+				>tr {
+					>th,
+					>td {
+						padding: 2.8rem 4rem;
+					}
+				}
+			}
+		}
+	}
+
 	&.type-a {
 		table {
 			>thead {
