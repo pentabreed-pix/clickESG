@@ -877,6 +877,9 @@ body {
 						@include font(small-4x, bold);
 					}
 				}
+				&.style-a {
+					margin-top: 2rem;
+				}
 			}
 		}
 
