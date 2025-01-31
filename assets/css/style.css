@@ -4523,10 +4523,10 @@ body.mo-menu-open {
   margin-top: 2rem;
 }
 #wrap .page .section.module-a .section-wrap .section-body > .para + .para {
+  margin-top: 1.6rem;
   color: rgb(203, 203, 203);
   font-weight: 500;
   font-size: 1.8rem;
-  margin-top: 1.6rem;
 }
 @media (max-width: 1023px) {
   #wrap .page .section.module-a .section-wrap .section-body > .para + .para {
