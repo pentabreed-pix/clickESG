@@ -224,13 +224,13 @@ body {
 					.section-body {
 						>.para {
 							+.para {
+								margin-top: 1.6rem;
 								color: custom-color(neutral, 060);
 								@include font(small-3x, medium);
 	
 								@include mobile {
 									@include font(small-4x, medium);
 								}
-								margin-top: 1.6rem;
 							}
 							+.note {
 								display: inline-block;
