@@ -198,4 +198,40 @@
             }
         }
     }
+
+    .esg-cdp {
+        .section {
+            .panel-display {
+                .panel-list {
+                    .panel-item {
+                        .panel-wrap {
+                            .section {
+
+                                @include mobile {
+                                    padding-top: 6.2rem;
+                                }
+
+                                .section-body {
+                                    .section-figure {
+                                        @include mobile{
+                                            overflow: auto;
+                                            @include scroll-y;
+                                            @include scroll-x;
+                                        }
+                                        
+                                        &.height {
+                                            @include mobile {
+                                                max-height: 53rem;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

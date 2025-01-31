@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'service',
+	pageJavascript: ''
+}) %>
+<script src="./../../assets/js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        tab();
+    });
+</script>
+</head>
+<body>
+<div id="wrap" class="page">
+    <%-include('../_templates/_header.ejs', {type: 'white',})%>
+    <!-- main -->
+    <main class="page esg-cdp">
+        <div class="main-inner">
+            <div class="local module-a">
+                <div class="local-head module-b">
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'SERVICE',
+                        depth2: 'CDP(Carbon Disclosure Project) 대응자문 컨설팅 서비스',
+                        depth3: null,
+                        casetype: 'style-b'
+                    }) %>
+                    <div class="local-wrap">
+                        <div class="local-subject">
+                            <h2 class="local-name">
+                                CDP(Carbon Disclosure Project) <br class="pc-only">대응자문 컨설팅 서비스
+                            </h2>
+                            <p class="local-summary">투자자와 금융기관의 핵심평가 지표인 CDP 평가를 빠르고 정확하게  대응하기 위해 CDP Best Practice 기반자문 컨설팅을 제공합니다.
+                            </p>
+                        </div>
+                        <div class="local-figure">
+                            <picture>
+                                <source media="(max-width: 1024px)" srcset="../../assets/images/service/cdp/bg-local-head-service-cdp-mo.jpg">
+                                <img src="../../assets/images/service/cdp/bg-local-head-service-cdp.jpg" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="local-body">
+                    <div class="content-body">            
+                        <div class="section module-a type-a">
+                            <div class="section-body">
+                                <div class="tab-display module-b">
+                                    <div class="swiper tab-wrap">
+                                        <ul class="swiper-wrapper tab-list">
+                                            <li id="tab1" class="swiper-slide tab-item active"><button class="tab-text">컨설팅 서비스 범위</button></li>
+                                            <li id="tab2" class="swiper-slide tab-item"><button class="tab-text">컨설팅 서비스 절차</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-display module-a">
+                                    <div class="panel-list">
+                                        <div id="tab-panel1" class="panel-item clients">
+                                            <div class="panel-wrap">
+                                                <div class="section">
+                                                    <div class="section-wrap">
+                                                        <div class="section-head">
+                                                            <div class="section-subject">
+                                                                <h4 class="section-name">최적화된 서비스 범위 및 기간 설정</h4>
+                                                            </div>
+                                                            <div class="section-summary">
+                                                                <div class="bullet-list module-a style-a type-d">
+                                                                    <div class="bullet-item">국내 컨설팅사 최초 CDP의 기후변화 부문 ASP로서 고객사의 역량, 경영환경, 요구사항을 고려하여 최적화된 서비스 범위와 기간으로 컨설팅 서비스를 수행합니다.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="section-body">
+                                                            <div class="section-figure height">
+                                                                <img src="../../assets/images/service/cdp/spectrum.svg" alt="" class="pc-only">
+                                                                        
+                                                                <img src="../../assets/images/service/cdp/spectrum-mo.svg" alt="" class="mo-only" style="min-width: 1080px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="tab-panel2" class="panel-item partners">
+                                            <div class="panel-wrap">
+                                                <div class="section">
+                                                    <div class="section-wrap">
+                                                        <div class="section-head">
+                                                            <div class="section-subject">
+                                                                <h4 class="section-name">전문적인 CDP평가 대응자문 서비스 제공</h4>
+                                                            </div>
+                                                            <div class="section-summary">
+                                                                <div class="bullet-list module-a style-a type-d">
+                                                                    <div class="bullet-item">국내 컨설팅사 최초 CDP의 기후변화 부문 ASP로서 고객사의 역량, 경영환경, 요구사항을 고려하여 최적화된 서비스 범위와 기간으로 컨설팅 서비스를 수행합니다.</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="section-body">
+                                                            <div class="section-figure height">
+                                                                <img src="../../assets/images/service/cdp/cdp-service.svg" alt="" class="pc-only">
+                                                                        
+                                                                <img src="../../assets/images/service/cdp/cdp-service-mo.svg" alt="" class="mo-only" style="min-width: 1080px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+     <!-- // main -->
+     <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+</html>
+       
+            
+
