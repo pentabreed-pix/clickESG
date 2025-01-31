@@ -5,26 +5,6 @@
 
 
 #wrap {
-
-    // 공통
-    .local-body {
-        .section {
-            padding-top: 12rem;
-
-            @include mobile {
-                padding-top: 8rem;
-            }
-            + .section {
-                padding-top: 18rem;
-
-                @include mobile {
-                    padding-top: 12rem;
-                }
-            }
-        }
-    }
-
-
     .solution-intro{
         .section{
             //bg

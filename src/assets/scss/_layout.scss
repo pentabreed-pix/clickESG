@@ -25,45 +25,6 @@ body {
 				margin: 0 auto;
 				padding: 10.4rem 0 0 0;
 
-				.local-body {
-					.content-body {
-						padding-bottom: 16rem;
-
-						@include mobile {
-							padding-bottom: 8rem;
-						}
-					}
-				}
-			}
-
-			// &.module-b {
-			// 	width: 100%;
-
-			// 	.local-body {
-			// 		.content-body {
-			// 			padding-bottom: 0;
-			// 		}
-			// 	}
-			// }
-
-			// &.module-c {
-			// 	margin: 0 auto;
-			// 	max-width: 144rem;
-			// 		.local-body {
-			// 			.content-body {
-			// 				padding-top: 23.2rem;
-			// 				padding-bottom: 16rem;
-
-			// 				@include mobile {
-			// 					padding: 13.8rem 1.6rem 8rem;
-			// 				}
-			// 			}
-			// 		}
-			// }
-		}
-
-		.local-head {
-			&.module-a {
 				position: relative;
 				.local-subject {
 					.local-name {
@@ -113,10 +74,11 @@ body {
 						}
 					}
 				}
-
 			}
-
 			&.module-b {
+				margin: 0 auto;
+				padding: 10.4rem 0 0 0;
+
 				position: relative;
 
 				.local-wrap{
@@ -196,11 +158,20 @@ body {
 					}
 				}
 			}
+
+			.local-body {
+				.content-body {
+					padding-bottom: 20rem;
+
+					@include mobile {
+						padding-bottom: 8rem;
+					}
+				}
+			}
 		}
 
-
 		.section {
-			
+			padding-top: 12rem;
 			// normal
 			&.module-a {
 				max-width: 144rem;
@@ -245,6 +216,12 @@ body {
 						}
 					}
 				}
+
+				+ .section {
+					&.module-a {
+						padding-top: 18rem;
+					}
+				}
 			}
 
 			// section-head와 section-body가 flex 되는 경우
@@ -272,250 +249,8 @@ body {
 				}
 			}
 
-			&.module-c {
-				
-			}
 
 			&[class*=module] {
-				// space
-
-				// &.case3 {
-				// 	.section-wrap {
-				// 		.section-head {
-				// 			+.section-body {
-				// 				margin-top: 6.4rem;
-				// 				@include mobile {
-				// 					margin-top: 3.2rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-body {
-				// 			>.para {
-				// 				+.para {
-				// 					margin-top: 1.6rem;
-				// 				}
-				// 			}
-				// 			@include mobile {
-				// 				>.para {
-				// 					+.para {
-				// 						margin-top: 1.2rem;
-				// 					}
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
-
-				// &.case4 {
-				// 	.section-wrap {
-				// 		.section-head {
-				// 			+.section-body {
-				// 				margin-top: 8rem;
-				// 				@include mobile {
-				// 					margin-top: 4.8rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-body {
-				// 			>.para {
-				// 				+.para {
-				// 					margin-top: 1.6rem;
-				// 				}
-				// 			}
-				// 			@include mobile {
-				// 				>.para {
-				// 					+.para {
-				// 						margin-top: 1.2rem;
-				// 					}
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
-
-				// &.case5 {
-				// 	.section-wrap {
-				// 		.section-caption {
-				// 			~.section-head {
-				// 				margin-top: 4rem;
-				// 				@include mobile {
-				// 					margin-top: 2.4rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-head {
-				// 			.section-name {
-				// 				+.section-summary {
-				// 					margin-top: 1.6rem;
-				// 					@include mobile {
-				// 						margin-top: 1.2rem;
-				// 					}
-				// 				}
-				// 			}
-				// 			+.section-body {
-				// 				margin-top: 4rem;
-				// 				@include mobile {
-				// 					margin-top: 2.4rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-body {
-				// 			>.para {
-				// 				+.para,
-				// 				+.note {
-				// 					margin-top: 1.6rem;
-				// 				}
-				// 			}
-				// 			@include mobile {
-				// 				>.para {
-				// 					+.para,
-				// 					+.note {
-				// 						margin-top: 1.2rem;
-				// 					}
-				// 				}
-				// 			}
-				// 			+.section-util {
-				// 				margin-top: 8rem;
-				// 				@include mobile {
-				// 					margin-top: 4.8rem;
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
-				// &.case6 {
-				// 	.section-wrap {
-				// 		.section-head {
-				// 			+.section-body {
-				// 				margin-top: 3rem;
-				// 				@include mobile {
-				// 					margin-top: 2.7rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-body {
-				// 			>.para {
-				// 				+.para {
-				// 					margin-top: 1.6rem;
-				// 				}
-				// 			}
-				// 			@include mobile {
-				// 				>.para {
-				// 					+.para {
-				// 						margin-top: 1.2rem;
-				// 					}
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
-
-				// &.case7 {
-				// 	.section-wrap {
-				// 		.section-head {
-				// 			~.section-body {
-				// 				margin-top: 1.6rem;
-				// 				@include mobile {
-				// 					margin-top: 1.2rem;
-				// 				}
-				// 			}
-				// 			~.section-util {
-				// 				margin-top: 4rem;
-				// 				@include mobile {
-				// 					margin-top: 2.4rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-body {
-				// 			>.para {
-				// 				+.para {
-				// 					margin-top: 1.6rem;
-				// 				}
-				// 			}
-				// 			@include mobile {
-				// 				>.para {
-				// 					+.para {
-				// 						margin-top: 1.2rem;
-				// 					}
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
-
-				// &.case8 {
-				// 	.section-wrap {
-				// 		.section-body {
-				// 			>.para {
-				// 				+.para {
-				// 					margin-top: 4rem;
-				// 				}
-				// 			}
-				// 			@include mobile {
-				// 				>.para {
-				// 					+.para {
-				// 						margin-top: 2.4rem;
-				// 					}
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
-
-				// &.case9 {
-				// 	.section-wrap {
-				// 		.section-head {
-				// 			.section-name {
-				// 				+.section-summary {
-				// 					margin-top: 2.4rem;
-				// 					@include mobile {
-				// 						margin-top: 1.6rem;
-				// 					}
-				// 				}
-				// 			}
-				// 			+.section-body {
-				// 				margin-top: 6.4rem;
-				// 				@include mobile {
-				// 					margin-top: 4rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-body {
-				// 			>.para {
-				// 				+.para {
-				// 					margin-top: 1.6rem;
-				// 				}
-				// 				@include mobile {
-				// 					+.para {
-				// 						margin-top: 1.2rem;
-				// 					}
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
-
-				// &.style0 {
-				// 	.section-wrap {
-				// 		.section-head {
-				// 			+.section-body {
-				// 				margin-top: 2.4rem;
-
-				// 				@include mobile {
-				// 					margin-top: 1.6rem;
-				// 				}
-				// 			}
-				// 		}
-				// 		.section-body {
-				// 			+.section-util {
-				// 				margin-top: 8rem;
-				// 				@include mobile {
-				// 					margin-top: 4.8rem;
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// }
 
 				// font style
 				&.type-a {
@@ -776,80 +511,6 @@ body {
 						}
 				}
 			}
-
-			// // 상세페이지 공통
-			// &.detail-layout {
-			// 	.section-wrap {
-			// 		.section-head {
-			// 			.section-name {
-			// 				+ .section-summary {
-			// 					margin-top: 3.2rem;
-			// 				}
-			// 			}
-			// 			+ .section-body{
-			// 				margin-top: 6.4rem;
-			// 				img {
-			// 					max-width: 100%;
-			// 				}
-			// 				+ .section-aside {
-			// 					margin-top: 6.4rem;
-			// 					+ .section-util {
-			// 						margin-top: 8rem;
-			// 					}
-			// 				}
-			// 				+ .section-util {
-			// 					margin-top: 8rem;
-			// 				}
-			// 			}
-			// 		}
-			// 		.section-util{
-			// 			.btn-display{
-			// 				justify-content: center;
-			// 				+ .board-dipslay {
-			// 					margin-top: 6.4rem;
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-
-			// 	@include mobile{
-			// 		.section-wrap{
-			// 			.section-head {
-			// 				+ .section-body{
-			// 					margin-top: 3.2rem;
-			// 					+ .section-aside {
-			// 						margin-top: 3.2rem;
-			// 						+ .section-util {
-			// 							margin-top: 4.8rem;
-			// 						}
-			// 					}
-			// 					+ .section-util {
-			// 						margin-top: 4.8rem;
-			// 					}
-			// 				}
-			// 			}
-			// 			.section-util{
-			// 				.btn-display{
-			// 					+ .board-dipslay {
-			// 						margin-top: 3.2rem;
-			// 					}
-			// 				}
-			// 			}
-			// 			.section-body{
-			// 				.data-display{
-			// 					.data-subject{
-			// 						@include font(small-3x, bold);
-			// 					}
-			// 					.data-body{
-			// 						.para{
-			// 							@include font(small-5x, bold);
-			// 						}
-			// 					}
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-			// }
 
 			// 별첨 공통
 			.comment {
