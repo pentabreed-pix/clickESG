@@ -171,12 +171,11 @@ body {
 		}
 
 		.section {
-			max-width: 144rem;
-			margin: 0 auto;
-
-
+				
 			// normal
 			&.module-a {
+				max-width: 144rem;
+				margin: 0 auto;
 				padding-top: 12rem;
 				@include mobile {
 					padding-top: 8rem;
@@ -278,6 +277,33 @@ body {
 					}
 
 					.section-head {
+						.section-caption {
+							color: custom-color(primary, 080);
+							@include font(small-5x, medium);
+						}
+						.section-name {
+							@include font(large, bold);
+							color: custom-color(neutral, 080);
+	
+							@include mobile {
+								@include font(small-2x, bold);
+							}
+	
+							+.section-summary {
+								color: custom-color(neutral, 060);
+								margin-top: 2.4rem;
+								@include font(small-3x, medium);
+	
+								@include mobile {
+									margin-top: 1.6rem;
+									@include font(small-4x, medium);
+								}
+	
+								.para {
+									@include font(small-3x, medium);
+								}
+							}
+						}
 						+.section-body {
 							max-width: 144rem;
 							margin: 0 auto;
