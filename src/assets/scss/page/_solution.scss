@@ -231,6 +231,7 @@
         .local {
             .local-body {
                 .content-body {
+                    padding-bottom: 0;
                     .section {
                         .section-wrap {
                             .section-util {
@@ -342,9 +343,6 @@
                             }
                         }
                     }
-        
-                    // 특별 케이스
-                    padding-bottom: 0;
                 }
             }
         }
