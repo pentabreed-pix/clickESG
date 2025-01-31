@@ -251,6 +251,11 @@ body {
 								margin-top: 4.8rem;
 							}
 						}
+						.section-figure {
+							img {
+								width: 100%;
+							}
+						}
 					}
 				}
 
@@ -268,6 +273,10 @@ body {
 			&.module-b {
 				max-width: 144rem;
 				margin: 0 auto;
+				padding-top: 12rem;
+				@include mobile {
+					padding-top: 8rem;
+				}
 				.section-wrap {
 					display: flex;
 					justify-content: space-between;

@@ -3,68 +3,83 @@
 <head>
 <%-include('../_templates/_head.ejs', {
 	layoutTemplate: 'front',
-	pageStyle: 'main',
+	pageStyle: 'service',
 	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded',function(){
-        mainVisual();
-        Tab();
-    });
-</script>
+
 </head>
 <body>
 <div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <div id="main" class="service service-intro">
-        <div class="main-inner">
+    <main id="page" class="page about-intro">
+        <div class="page-body">
             <div class="local module-a">
                 <div class="local-head">
-                    <div class="local-info">
-                        <ul class="data-list breadcrumb module-a style-b">
-                            <li class="data-item">
-                                <span class="item-text"></span>
-                            </li>
-                            <li class="data-item">
-                                <span class="item-text">SERVICE</span>
-                            </li>
-                            <li class="data-item">
-                                <span class="item-text">SERVICE 소개</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'ABOUT US',
+                        depth2: 'ClickESG 소개',
+                        depth3: null,
+                        casetype: 'style-b'
+                    }) %>
                     <div class="local-subject">
                         <h2 class="local-name">
-                            기업 ESG 경영 수준 향상을 위한<br>ESG 진단 및 구축 컨설팅 서비스
+                            ClickESG 소개
                         </h2>
-                        <p class="local-summary">최신 ESG 규제 요건과 기업 환경에 최적화된 ESG 컨설팅 서비스를 고객의 Needs 에 맞추어 다양한 형태로 제공합니다.</p>
+                        <p class="local-summary">ClickESG 주관사인 SK㈜ C&C는 ESG 전문 기업과 파트너쉽을 바탕으로 국내 주요 기관 및 단체와 공동으로 고객 기업의 지속가능한 경영을 위해<br class="pc-only">ESG 컨설팅, 경영 수준 진단 및 공급망 진단 서비스, ESG 전문 솔루션 공급 사업 등을 추진하고 있습니다.</p>
                     </div>
                     <div class="local-figure">
-                        <img src="../../assets/images/service/bg-local-head-service.jpg" alt="">
+                        <img src="../../assets/images/about/intro/bg-local-head-about.jpg" alt="">
                     </div>
                 </div>
-            </div>
 
-            <div class="section module-a">
-                <div class="section-wrap">
-                    <div class="section-head">
-                        <div class="section-subject">
-                            <h4 class="section-name">ESG 서비스의 특장점</h4>
-                        </div>
-                    </div>
-                    <div class="section-body">
-                        <div class="data-display">
-                            <div class="data-list">
-                                <div class="data-item">
-                                    <div class="data-body">
-                                        <div class="bullet-display module-a style-a type-a">
-                                            <ul class="data-list">
-                                                <li class="data-item">Global 표준 방법론을 기반으로 개발된 고유 ESG 방법론 보유 (다수 기업과 기관의 ESG 표준평가 방법론으로 채택)</li>
-                                                <li class="data-item">과학적 데이터 분석 및 Peer 그룹 데이터 비교를 통한 체계적이고 객관적인 진단 수행</li>
-                                                <li class="data-item">ESG 경영 수준 개선을 위한 기업 중심의 컨설팅 서비스 제공</li>
-                                            </ul>
+                <div class="local-body">
+                    <div class="content-body">
+                        <div class="section module-b">
+                            <div class="section-wrap">
+                                <div class="section-body">
+                                    <div class="post-list module-d style-d type-d">
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-info">
+                                                    <p class="post-number">01</p>
+                                                    <div class="post-head">ESG 선도적 경험 기반<br class="pc-only">
+                                                        차별화된 역량</div>
+                                                    <div class="post-body">산업별 ESG 및 Net-Zero 대응 레퍼런스를 보유하고 있으며 선도적 경험을 기반으로 축적해온 독보적인 기술력을 경험할 수 있습니다. 비즈니스와 기술적 관점에서 분야별 특화된 서비스 기반으로 전략 및 정책 수립, 이니셔티브 대응, 대외 정보공개(지속가능경영보고서, TCFD 등)까지 통합 컨설팅을 제공하며 ESG 성과 관리, 공급망 실사를 위한 시스템/플랫폼 구축을 지원합니다.
+                                                    </div>
+                                                </div>
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/intro/step-01.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-info">
+                                                    <p class="post-number">02</p>
+                                                    <div class="post-head">디지털 ESG 종합 서비스</div>
+                                                    <div class="post-body">ESG 선도적 경험 기반으로 기업 ESG 대응 전략을 제시하고 효과적인 ESG 활동을 추진하도록 돕습니다. 글로벌 ESG 규제 및 공시 대응, 디지털 기반 ESG 관리, 온실가스 배출량 관리 및 인증 등 ESG 전문 영역에 디지털 기술을 접목하여 지속 가능한 ESG 성과 달성을 지원합니다. ESG 디지털 전환을 통해 ESG 경영의 신뢰성을 확보하고 관리 효율성을 극대화하여 지속 가능한 발전을 추구할 수 있습니다.
+                                                    </div>
+                                                </div>
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/intro/step-02.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-info">
+                                                    <p class="post-number">03</p>
+                                                    <div class="post-head">기업 ESG<br class="pc-only">
+                                                        전문 디지털 기술력</div>
+                                                    <div class="post-body">최신 디지털 기술을 기업 ESG 영역에 접목한 최적의 솔루션을 제공합니다. ESG 가속화를 위해 기업에 적용 가능한 디지털 솔루션을 활용하여 전사 ESG 데이터를 관리하고 효율적으로 운영할 수 있는 시스템을 구축할 수 있습니다. 공급망 관리, ESG 공시 대응, 온실가스 배출량 관리 등 실질적인 ESG 영역에 적용한 디지털 ESG 경험과 역량을 토대로 끊임없는 혁신으로 함께 합니다.
+                                                    </div>
+                                                </div>
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/intro/step-03.jpg" alt="">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +89,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
      <!-- // main -->
      <%-include('../_templates/_footer.ejs')%>
 </div>
