@@ -7,6 +7,9 @@
     .service-intro {
         .section {
             padding-top: 10rem;
+            @include mobile {
+                padding-top: 8.4rem;
+            }
             &.module-b {
                 .section-wrap {
                     gap: 32.2rem;
@@ -30,6 +33,9 @@
     .esg-consulting {
         .section {
             padding-top: 10rem;
+            @include mobile {
+                padding-top: 8.4rem;
+            }
             .panel-display {
                 .panel-list {
                     .panel-item {
@@ -93,6 +99,9 @@
     .esg-chain {
         .section {
             padding-top: 10rem;
+            @include mobile {
+                padding-top: 8.4rem;
+            }
             .panel-display {
                 .panel-list {
                     .panel-item {
@@ -133,6 +142,9 @@
     .esg-net {
         .section {
             padding-top: 10rem;
+            @include mobile {
+                padding-top: 8.4rem;
+            }
             .panel-display {
                 .panel-list {
                     .panel-item {
@@ -169,6 +181,9 @@
 
     .esg-data-hub {
         padding-top: 10rem;
+        @include mobile {
+            padding-top: 8.4rem;
+        }
         .section {
             .panel-display {
                 .panel-list {
@@ -207,6 +222,9 @@
     .esg-cdp {
         .section {
             padding-top: 10rem;
+            @include mobile {
+                padding-top: 8.4rem;
+            }
             .panel-display {
                 .panel-list {
                     .panel-item {

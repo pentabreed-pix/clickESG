@@ -171,13 +171,45 @@ body {
 		}
 
 		.section {
-			padding-top: 12rem;
+			max-width: 144rem;
+			margin: 0 auto;
+
+
 			// normal
 			&.module-a {
-				max-width: 144rem;
-				margin: 0 auto;
+				padding-top: 12rem;
+				@include mobile {
+					padding-top: 8rem;
+				}
 				.section-wrap {
 					.section-head {
+						.section-caption {
+							color: custom-color(primary, 080);
+							@include font(small-5x, medium);
+						}
+						.section-name {
+							@include font(large, bold);
+							color: custom-color(neutral, 080);
+	
+							@include mobile {
+								@include font(small-2x, bold);
+							}
+	
+							+.section-summary {
+								color: custom-color(neutral, 060);
+								margin-top: 2.4rem;
+								@include font(small-3x, medium);
+	
+								@include mobile {
+									margin-top: 1.6rem;
+									@include font(small-4x, medium);
+								}
+	
+								.para {
+									@include font(small-3x, medium);
+								}
+							}
+						}
 						+.section-body {
 							margin-top: 6.4rem;
 
@@ -192,6 +224,12 @@ body {
 					.section-body {
 						>.para {
 							+.para {
+								color: custom-color(neutral, 060);
+								@include font(small-3x, medium);
+	
+								@include mobile {
+									@include font(small-4x, medium);
+								}
 								margin-top: 1.6rem;
 							}
 							+.note {
@@ -220,6 +258,9 @@ body {
 				+ .section {
 					&.module-a {
 						padding-top: 18rem;
+						@include mobile {
+							padding-top: 12rem;
+						}
 					}
 				}
 			}
@@ -251,237 +292,6 @@ body {
 
 
 			&[class*=module] {
-
-				// font style
-				&.type-a {
-					.section-caption {
-						color: custom-color(primary, 080);
-						@include font(small-5x, medium);
-					}
-					.section-name {
-						@include font(large, bold);
-						color: custom-color(neutral, 080);
-
-						@include mobile {
-							@include font(small-2x, bold);
-						}
-
-						+.section-summary {
-							color: custom-color(neutral, 060);
-							margin-top: 2.4rem;
-							@include font(small-3x, medium);
-
-							@include mobile {
-								margin-top: 1.6rem;
-								@include font(small-4x, medium);
-							}
-
-							.para {
-								@include font(small-3x, medium);
-							}
-						}
-					}
-
-					.section-body {
-						>.para {
-							color: custom-color(neutral, 060);
-							@include font(small-3x, medium);
-
-							@include mobile {
-								@include font(small-4x, medium);
-							}
-						}
-					}
-				}
-
-				&.type-b {
-					.section-name {
-						color: #15151A;
-						@include font(small-1x, bold);
-
-						@include mobile {
-							@include font(small-2x, bold);
-						}
-
-						+.section-summary {
-							color: custom-color(neutral, 060);
-							margin-top: 1.6rem;
-							@include font(small-4x, medium);
-
-							@include mobile {
-								margin-top: 1.6rem;
-								@include font(small-5x, medium);
-							}
-						}
-					}
-
-					.section-body {
-						>.para {
-							color: custom-color(neutral, 060);
-							@include font(small-3x, medium);
-							@include mobile {
-								@include font(small-4x, medium);
-							}
-						}
-					}
-				}
-
-				&.type-c {
-					.section-name {
-						color: #15151A;
-						@include font(large-3x, bold);
-
-						@include mobile {
-							@include font(medium, bold);
-						}
-						+.section-summary {
-							color: custom-color(neutral, 060);
-							margin-top: 2.4rem;
-							@include font(small-3x, medium);
-
-							@include mobile {
-								margin-top: 1.6rem;
-								@include font(small-4x, medium);
-							}
-						}
-					}
-
-					.section-body {
-						>.para {
-							color: #15151A;
-							@include font(small-1x, bold);
-							@include mobile {
-								@include font(small-2x, bold)
-							}
-						}
-						.note {
-							display: inline-block;
-							color: custom-color(neutral, 060);
-							@include font(small-3x, medium);
-							@include mobile {
-								@include font(small-4x, medium);
-							}
-						}
-					}
-				}
-
-				&.type-d {
-					.section-name {
-						color: #000;
-						@include font(small-4x, bold);
-					}
-
-					.section-body {
-						>.para {
-							color: custom-color(neutral, 060);
-							@include font(small-4x, medium);
-							@include mobile {
-									@include font(small-5x, medium);
-							}
-						}
-					}
-				}
-
-				&.type-e {
-					.section-head {
-						.section-name {
-							color: #15151A;
-							@include font(large-3x, bold);
-							@include mobile {
-								@include font(medium, bold);
-							}
-						}
-						.section-summary {
-							color: custom-color(neutral, 060);
-							@include font(small-2x, bold);
-							@include mobile {
-								@include font(small-3x, bold);
-							}
-						}
-					}
-					.section-body {
-						>.para {
-							color: custom-color(neutral, 060);
-							@include font(small-3x, medium);
-							@include mobile {
-								@include font(small-4x, medium);
-							}
-						}
-					}
-				}
-
-				&.type-f {
-					.section-name {
-						@include font(small-1x, bold);
-						color: #15151A;
-
-						@include mobile {
-							@include font(small-2x, bold);
-						}
-
-						+.section-summary {
-							@include font(small-3x, medium);
-							color: custom-color(neutral, 060);
-
-							@include mobile {
-								@include font(small-4x, medium);
-							}
-						}
-					}
-
-					.section-body {
-						>.para {
-							color: custom-color(neutral, 060);
-							@include font(small-3x, medium);
-							@include mobile {
-								@include font(small-4x, medium);
-							}
-						}
-					}
-				}
-
-				&.type-g {
-					.section-name {
-						@include font(medium, bold);
-						color: #15151A;
-
-						@include mobile {
-							@include font(small-1x, bold);
-						}
-					}
-
-					.section-body {
-						>.para {
-							@include font(small-4x, medium);
-							color: custom-color(neutral, 060);
-
-							@include mobile {
-								@include font(small-5x, medium);
-							}
-						}
-					}
-				}
-				&.type-h {
-					.section-name {
-						@include font(medium, bold);
-						color: custom-color(neutral, 000);
-
-						@include mobile {
-							@include font(small-1x, bold);
-						}
-					}
-
-					.section-body {
-						>.para {
-							color: custom-color(neutral, 000);
-							@include font(small-3x, medium);
-
-							@include mobile {
-								@include font(small-4x, medium);
-							}
-						}
-					}
-				}
 
 				// align
 				&.align1 {

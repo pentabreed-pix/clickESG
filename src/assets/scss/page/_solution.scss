@@ -53,21 +53,17 @@
                         padding: 4rem 1.6rem;
                     }
 
-                    >.data-list {
-                        .data-item {
-                            .bullet-list {
-                                display: flex;
-                                flex-wrap: wrap;
-                                column-gap: 7rem;
-                                width: 111rem;
-                                .bullet-item {
-                                    width: 47rem;
-                                }
+                    .bullet-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        column-gap: 7rem;
+                        width: 111rem;
+                        .bullet-item {
+                            width: 47rem;
+                        }
 
-                                @include mobile {
-                                    flex-direction: column;
-                                }
-                            }
+                        @include mobile {
+                            flex-direction: column;
                         }
                     }
                 }
@@ -210,7 +206,7 @@
                         }
                     }
                     @include mobile {
-                        // @include scroll-x;
+                        @include scroll-x;
                         //overflow-y: auto;
                         padding-left: 3rem;
                         transform: scale(1) !important;
@@ -227,134 +223,130 @@
 
                 }
             }
-
-            + .section {
-                padding-top: 18rem;
-                @include mobile {
-                    padding-top: 12rem;
-                }
-            }
         }
     }
 
 
     .solution-netzero {
-        .section {
-            .section-wrap {
-                .section-body {
-                    .post-list {
-                    //    margin-top: 7.5rem;
-                    }
-                }
-                .section-util {
-                    .banner-list {
-                        .banner-item {
-                            .banner-wrap {
-
-                                .banner-body {
-                                    height: 100%;
-                                    position: relative;
-                                    margin-top: 6rem;
-
-                                    &::after {
-                                        content: '';
-                                        display: block;
-                                        position: absolute;
-                                        top: 0;
-                                        left: calc(50% - 50vw);
-                                        width: 100vw;
-                                        height: 32rem;
-                                        background: url('../../assets/images/solution/net-zero/net-zero-bg.jpg') no-repeat center;
-                                        background-size: cover;
-                                        z-index: -1;
-
-                                        @include mobile {
-                                            background: url('../../assets/images/solution/net-zero/net-zero-bg-mo.jpg') no-repeat center;
-                                            background-size: cover;
-                                            height: 100%;
-                                        }
-                                    }
-                                    .para {
-                                        max-width: 144rem;
-                                        height: 100%;
-                                        padding: 11.2rem 0;
-                                        display: flex;
-                                        align-items: center;
-                                        @include font(small, medium);
-                                        color: custom-color(neutral, 000);
-
-                                        @include mobile {
-                                            padding: 5rem 0 17.7rem;
-                                            @include font(small-3x, medium);
+        .local {
+            .local-body {
+                .content-body {
+                    .section {
+                        .section-wrap {
+                            .section-util {
+                                .banner-list {
+                                    .banner-item {
+                                        .banner-wrap {
+            
+                                            .banner-body {
+                                                height: 100%;
+                                                position: relative;
+                                                margin-top: 6rem;
+            
+                                                &::after {
+                                                    content: '';
+                                                    display: block;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: calc(50% - 50vw);
+                                                    width: 100vw;
+                                                    height: 32rem;
+                                                    background: url('../../assets/images/solution/net-zero/net-zero-bg.jpg') no-repeat center;
+                                                    background-size: cover;
+                                                    z-index: -1;
+            
+                                                    @include mobile {
+                                                        background: url('../../assets/images/solution/net-zero/net-zero-bg-mo.jpg') no-repeat center;
+                                                        background-size: cover;
+                                                        height: 100%;
+                                                    }
+                                                }
+                                                .para {
+                                                    max-width: 144rem;
+                                                    height: 100%;
+                                                    padding: 11.2rem 0;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    @include font(small, medium);
+                                                    color: custom-color(neutral, 000);
+            
+                                                    @include mobile {
+                                                        padding: 5rem 0 17.7rem;
+                                                        @include font(small-3x, medium);
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
                             }
+            
+                            .section-figure {
+                                img {
+                                    @include mobile {
+                                        width: 100%;
+                                        padding-bottom: 6rem;
+                                    }
+                                }
+                            }
+            
+                        }
+            
+                        &.big-image {
+                            .section-wrap {
+                                .section-figure {
+                                    margin-bottom: 10rem;
+                                    @include mobile {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+            
+                        &.process-bg {
+                            position: relative;
+                            padding-bottom: 18rem;
+            
+                            &::after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                z-index: -1;
+                                top: 0;
+                                bottom: 0;
+                                left: calc(50% - 50vw);
+                                width: 100vw;
+                                height: 100%;
+                                background: custom-color(etc, 070);
+                            }
+                        }
+            
+            
+            
+                        &.story1 {
+                            padding-top: 0;
+                             .section-wrap {
+                                height: 100vh;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+            
+                                @include mobile {
+                                    height: auto;
+                                }
+            
+                                .section-body {
+                                    width: 100%;
+                                }
+                            }
                         }
                     }
-                }
-
-                .section-figure {
-                    img {
-                        @include mobile {
-                            width: 100%;
-                            padding-bottom: 6rem;
-                        }
-                    }
-                }
-
-            }
-
-            &.big-image {
-                .section-wrap {
-                    .section-figure {
-                        margin-bottom: 10rem;
-                        @include mobile {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-
-            &.process-bg {
-                position: relative;
-                padding-bottom: 18rem;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    z-index: -1;
-                    top: 0;
-                    bottom: 0;
-                    left: calc(50% - 50vw);
-                    width: 100vw;
-                    height: 100%;
-                    background: custom-color(etc, 070);
-                }
-            }
-
-
-
-            &.story1 {
-                
-                 .section-wrap {
-                    height: 100vh;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-
-                    @include mobile {
-                        height: auto;
-                    }
-
-                    .section-body {
-                        width: 100%;
-                    }
+        
+                    // 특별 케이스
+                    padding-bottom: 0;
                 }
             }
         }
     }
-
 }
