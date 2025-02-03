@@ -33,6 +33,32 @@
             flex-direction: column;
             gap: 4rem;
         }
+
+        &.style-a{
+            .post-item {
+                .post-wrap {
+                    .post-head {
+                        .post-name {
+                           padding: 1.6rem 1.5rem 0;
+                           @include font(small-2x, medium);
+                           color: custom-color(neutral,100);
+   
+                           @include mobile {
+                               @include font(small-3x, bold);
+                           }
+                        }
+                    }
+                }
+    
+                &:nth-child(even) {
+                    margin-top: 5.6rem;
+    
+                    @include mobile {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
     }
 
     &.module-b {
@@ -59,6 +85,95 @@
                     overflow: hidden;
                     img {
                         width: 100%;
+                    }
+                }
+            }
+        }
+        &.style-b {
+            .post-item {
+                .post-wrap {
+                    .post-figure {
+                        + .post-info {
+                            margin-top: 4rem;
+                            color: custom-color(neutral, 080);
+                            .post-head {
+                                @include font(small-1x, bold);
+                                
+                                @include mobile {
+                                    @include font(small-4x, bold);
+                                }
+                                + .post-body {
+                                    @include font(small-3x, regular);
+                                    
+                                    @include mobile {
+                                        @include font(small-5x, regular);
+                                    }
+                                }
+                            }
+                            @include mobile {
+                                margin-top: 2.4rem;
+                            }
+                            .post-body {
+                                margin-top: 2rem;
+    
+                                @include mobile {
+                                    margin-top: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.module-c {
+        &.style-c {
+            .post-item {
+                .post-wrap {
+                    .post-head {
+                        .post-name {
+                            @include font(small-1x, bold);
+                            color: custom-color(neutral, 080);
+    
+                            @include mobile {
+                                @include font(small-4x, bold);
+                            }
+                            + .post-summary {
+                                margin-top: 2.4rem;
+                                @include font(small-3x, medium);
+                                color: custom-color(neutral, 100);
+    
+                                @include mobile {
+                                    @include font(small-5x, medium);
+                                }
+                            }
+                        }
+                        + .post-figure {
+                            margin-top: 4rem;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        + .post-body {
+                            margin-top: 4rem;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .post-figure {
+                        margin-top: 4rem;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                + .post-item {
+                    margin-top: 12rem;
+    
+                    @include mobile {
+                        margin-top: 8rem
                     }
                 }
             }
@@ -106,6 +221,43 @@
                 }
             }
         }
+        &.style-d {
+            .post-item {
+                .post-wrap {
+                    .post-info {
+                        .post-number {
+                            @include font(small-1x, bold);
+                            color: custom-color(primary, 090);
+    
+                            @include mobile {
+                                @include font(small-2x, bold);
+                            }
+                           + .post-head {
+                            margin-top: 0.8rem;
+                            @include font(large, bold);
+                            color: custom-color(neutral, 090);
+
+                            @include mobile {
+                                @include font(small-1x, bold);
+                            }
+                            + .post-body {
+                                margin-top: 3.2rem;
+                                @include font(small-3x, regular);
+                                color: custom-color(neutral, 100);
+                                text-align: justify;
+                                @include mobile {
+                                    margin-top: 2rem;
+                                }
+                                @include mobile {
+                                    @include font(small-5x, regular);
+                                }
+                            }
+                           }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     &.module-e {
@@ -129,13 +281,32 @@
                         padding: 4rem 0;
                     }
                     + .post-info {
-                        //height: 35.6rem;
+                        height: 35.6rem;
                         padding: 6rem 3.2rem;
                         background: custom-color(etc, 070);
                         border: 0.1rem solid custom-color(etc, 070);
                         border-radius: 0 0 1rem 1rem;
+                        .post-head {
+                            @include font(small-1x, bold);
+                            color: custom-color(primary, 080);
+                            @include mobile {
+                                @include font(small-4x, bold);
+                            }
+                            + .post-body {
+                                margin-top: 2.4rem;
+                                @include font(small-3x, regular);
+                                color: custom-color(neutral, 100);
+                                @include mobile {
+                                    @include font(small-5x, regular);
+                                }
+                                @include mobile {
+                                    margin-top: 1.6rem
+                                }
+                            }
+                        }
                         @include mobile {
                             padding: 4rem 2rem;
+                            height: auto;
                         }
                     }
                 }
@@ -146,251 +317,16 @@
             }
         }
     }
-
-    &.style-a{
+    
+    &.module-f {
+        display: flex;
+        gap: 4rem 2rem;
+        flex-wrap: wrap;
         .post-item {
-            .post-wrap {
-                .post-head {
-                    .post-name {
-                       padding: 1.6rem 1.5rem 0;
-                    }
-                }
-            }
-
-            &:nth-child(even) {
-                margin-top: 5.6rem;
-
-                @include mobile {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
-
-    &.style-b {
-        .post-item {
-            .post-wrap {
-                .post-figure {
-                    + .post-info {
-                        margin-top: 4rem;
-                        @include mobile {
-                            margin-top: 2.4rem;
-                        }
-                        .post-body {
-                            margin-top: 2rem;
-
-                            @include mobile {
-                                margin-top: 1.6rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-c {
-        .post-item {
-            .post-wrap {
-                .post-head {
-                    .post-name {
-                        + .post-summary {
-                            margin-top: 2.4rem
-                        }
-                    }
-                    + .post-figure {
-                        margin-top: 4rem;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                    + .post-body {
-                        margin-top: 4rem;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-                .post-figure {
-                    margin-top: 4rem;
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-            + .post-item {
-                margin-top: 12rem;
-
-                @include mobile {
-                    margin-top: 8rem
-                }
-            }
-        }
-    }
-
-    &.style-d {
-        .post-item {
-            .post-wrap {
-                .post-info {
-                    .post-number {
-                       + .post-head {
-                        margin-top: 0.8rem;
-                        + .post-body {
-                            margin-top: 3.2rem;
-                            @include mobile {
-                                margin-top: 2rem;
-                            }
-                        }
-                       }
-                    }
-                }
-            }
-        }
-    }
-
-    &.style-e {
-        .post-item {
-            .post-wrap {
-                .post-figure {
-                    + .post-info {
-                        .post-head {
-                            + .post-body {
-                                margin-top: 2.4rem;
-                                @include mobile {
-                                    margin-top: 1.6rem
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.type-a {
-        .post-item {
-            .post-wrap {
-                .post-head {
-                    .post-name {
-                        @include font(small-2x, medium);
-                        color: custom-color(neutral,100);
-
-                        @include mobile {
-                            @include font(small-3x, bold);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.type-b {
-        .post-item {
-            .post-wrap {
-                .post-info {
-                    color: custom-color(neutral, 080);
-                    .post-head {
-                        @include font(small-1x, bold);
-
-                        @include mobile {
-                            @include font(small-4x, bold);
-                        }
-                        + .post-body {
-                            @include font(small-3x, regular);
-
-                            @include mobile {
-                                @include font(small-5x, regular);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.type-c {
-        .post-item {
-            .post-wrap {
-                .post-head {
-                    .post-name {
-                        @include font(small-1x, bold);
-                        color: custom-color(neutral, 080);
-
-                        @include mobile {
-                            @include font(small-4x, bold);
-                        }
-
-                        + .post-summary {
-                            @include font(small-3x, medium);
-                            color: custom-color(neutral, 100);
-
-                            @include mobile {
-                                @include font(small-5x, medium);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.type-d {
-        .post-item {
-            .post-wrap {
-                .post-info {
-                    .post-number {
-                        @include font(small-1x, bold);
-                        color: custom-color(primary, 090);
-
-                        @include mobile {
-                            @include font(small-2x, bold);
-                        }
-
-                       + .post-head {
-                            @include font(large, bold);
-                            color: custom-color(neutral, 090);
-
-                            @include mobile {
-                                @include font(small-1x, bold);
-                            }
-
-                        + .post-body {
-                            @include font(small-3x, regular);
-                            color: custom-color(neutral, 100);
-                            text-align: justify;
-
-                            @include mobile {
-                                @include font(small-5x, regular);
-                            }
-                        }
-                       }
-                    }
-                }
-            }
-        }
-    }
-    &.type-e {
-        .post-item {
-            .post-wrap {
-                .post-figure {
-                    + .post-info {
-                        .post-head {
-                            @include font(small-1x, bold);
-                            color: custom-color(primary, 080);
-                            @include mobile {
-                                @include font(small-4x, bold);
-                            }
-                            + .post-body {
-                                @include font(small-3x, regular);
-                                color: custom-color(neutral, 100);
-                                @include mobile {
-                                    @include font(small-5x, regular);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            border: 0.1rem solid rgba(203, 203, 203, 0.50);
+            border-radius: 0.8rem;
+            overflow: hidden;
+            width: calc(100%/6 - 2rem);
         }
     }
 

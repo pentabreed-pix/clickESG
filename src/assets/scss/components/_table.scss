@@ -227,6 +227,83 @@
 		}
 	}
 
+	&.module-d{
+		table {
+			border-bottom: 0;
+			>thead {
+				>tr {
+					>th {
+						background-color: #2A78C7;
+						border-right: 0.1rem solid custom-color(neutral, 000);
+						border-left: 0.1rem solid custom-color(neutral, 000);
+						border-top: 0.1rem solid custom-color(neutral, 000);
+
+						&.organization {
+							border-right: 1px solid rgba(203, 203, 203, 0.50);
+							background: custom-color(etc, 100);
+						}
+					}
+				}
+			}
+
+			>tbody {
+				>tr {
+					>th,
+					>td {
+						vertical-align: middle;
+						border-right: 1px solid rgba(203, 203, 203, 0.50);
+						&.has-bg {
+							//border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+							background: custom-color(etc, 100);
+						}
+						&.has-grey {
+							background: rgba(133, 133, 133, 0.05);
+						}
+
+						&.bottom-grey {
+							border-bottom: 1px solid rgba(203, 203, 203, 0.50);
+						}
+
+						&.check {
+							position: relative;
+
+							&::after {
+								content: "";
+								display: inline-block;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								width: 2.6rem;
+								height: 2.6rem;
+								background: icon('check', #2A78C7) no-repeat center;
+								background-size: 2rem;
+								transform: translate(-50%, -50%);
+								border-radius: 100%
+							}
+						}
+						&.ex {
+							position: relative;
+
+							&::after {
+								content: "";
+								display: inline-block;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								width: 2.8rem;
+								height: 2.8rem;
+								background: icon('ex', #AFACAD) no-repeat center;
+								background-size: 2rem;
+								transform: translate(-50%, -50%);
+								border-radius: 100%
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 	&.style-a {
 		table {
 			>thead {

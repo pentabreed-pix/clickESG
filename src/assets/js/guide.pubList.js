@@ -125,15 +125,15 @@ function pubListUp() {
         menu: "Partnership",
         root_ko: "../../page/aboutus/ABOUTUS.01.00.html",
         status_ko: "진행중",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },
       {
         id_ko: "",
         menu: "Reference",
         root_ko: "../../page/aboutus/ABOUTUS.02.00.html",
-        status_ko: "",
-        worker_ko: "",
+        status_ko: "진행중",
+        worker_ko: "강선율",
         history: "",
       },
       {

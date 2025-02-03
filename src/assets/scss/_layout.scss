@@ -159,6 +159,90 @@ body {
 				}
 			}
 
+			&.module-c {
+				margin: 0 auto;
+				padding: 10.4rem 0 0 0;
+
+				position: relative;
+
+				.local-wrap{
+					position: relative;
+    				margin-top: 1.6rem;
+					height: 40rem;
+					
+					@include mobile {
+						position: relative;
+                        margin-top: 1.6rem;
+                        height: 40rem;
+                        width: calc(100% + 3.61rem);
+                        margin-left: -1.81rem;
+					}
+
+					.local-subject {
+						display: flex;
+						flex-direction: column;
+						padding: 0 18rem;
+						justify-content: center;
+						height: 100%;
+
+						@include mobile {
+							padding: 0 1.8rem;
+							position: absolute;
+							left: 0;
+							bottom: 5rem;
+							gap: 2rem;
+							justify-content: flex-end;
+						}
+	
+						.local-name {
+							@include font(large-1x, bold);
+							color: custom-color(neutral, 000);
+	
+							+ .local-summary {
+								@include font(small-3x, medium);
+								color: custom-color(neutral, 000);
+							}
+
+							@include mobile {
+								@include font(small, bold);
+
+								+ .local-summary {
+									@include font(small-5x, medium);
+								}
+							}
+						}
+					}
+	
+					.local-figure {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						z-index: -1;
+						width: 100%;
+						overflow: hidden;
+						border-radius: 4rem;
+						transform: translate(-50%, -50%);
+						height: 40rem;
+
+						@include mobile {
+							border-radius: 0;
+							width: 100%;
+						}
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							
+							@include mobile {
+								border-radius: 0;
+							}
+						}
+
+					}
+				}
+			}
+
 			.local-body {
 				.content-body {
 					padding-bottom: 20rem;

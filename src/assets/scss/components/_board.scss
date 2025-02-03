@@ -4,7 +4,7 @@
 
 
 .board-list {
-    &.module-b {
+    &.module-a {
         display: flex;
         flex-direction: column;
         gap: 4rem;
@@ -62,7 +62,7 @@
             }
         }
     }
-    &.style-b {
+    &.style-a {
         .board-item {
             .board-wrap {
                 padding: 4rem 8rem 4rem 4rem;
@@ -95,7 +95,7 @@
             }
         }
     }
-    &.type-b {
+    &.type-a {
         .board-item {
             .board-wrap {
                 .board-info {
@@ -115,6 +115,98 @@
 
                             @include mobile {
                                 @include font(small-4x, regular);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.module-b {
+        width: 100%;
+        height: 50rem;
+        background: url('../images/about/reference/performance.jpg');
+        background-size: cover;
+        border-radius: 1.6rem;
+        padding: 17rem 16.5rem 3.4rem;
+        display: flex;
+        gap: 12rem;
+        justify-content: space-between;
+        .board-item {
+            .board-wrap {
+                .board-icon {
+                    position: relative;
+                    &.consulting {
+                        content: '';
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 4rem;
+                        height: 4rem;
+                        background-image: icon('note', custom-color(neutral, 000));
+                        background-repeat: no-repeat;
+                    }
+                    &.diagnosis {
+                        content: '';
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 3.8rem;
+                        height: 3.6rem;
+                        background-image: icon('diagnosis', custom-color(neutral, 000));
+                        background-repeat: no-repeat;
+                    }
+                    &.member {
+                        content: '';
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 3.4rem;
+                        height: 3.5rem;
+                        background-image: icon('member', custom-color(neutral, 000));
+                        background-repeat: no-repeat;
+                    }
+                    &.building {
+                        content: '';
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 3.4rem;
+                        height: 3.4rem;
+                        background-image: icon('building', custom-color(neutral, 000));
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    &.style-b {
+        .board-item {
+            .board-wrap {
+                .board-head {
+                   .board-name {
+                    margin-top: 0.6rem
+                   }
+                }
+            }
+        }
+    }
+
+    &.type-b {
+        .board-item {
+            .board-wrap {
+                .board-head {
+                    .board-name {
+                        @include font(small-4x, bold);
+                        color: custom-color(neutral, 000);
+                    }
+                    + .board-body {
+                        .board-info {
+                            @include font(large-7x, bold);
+                            color: custom-color(neutral, 000);
+                            .board-text {
+                                @include font(large-1x, bold);
                             }
                         }
                     }

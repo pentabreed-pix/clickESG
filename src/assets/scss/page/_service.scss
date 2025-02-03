@@ -113,22 +113,39 @@
                                 }
 
                                 .section-body {
-
+                                    position: relative;
                                     .post-list {
-                                        .post-figure {
-                                            @include mobile{
-                                                overflow: auto;
-                                                @include scroll-y;
-                                                @include scroll-x;
-                                            }
-                                            
-                                            &.height {
-                                                @include mobile {
-                                                    max-height: 53rem;
+                                        .post-item {
+                                            .post-wrap {
+                                                .post-figure {
+                                                    //position: relative;
+                                                    @include mobile{
+                                                        overflow: auto;
+                                                        @include scroll-y;
+                                                        @include scroll-x;
+                                                    }
+                                                    
+                                                    &.height {
+                                                        @include mobile {
+                                                            max-height: 53rem;
+                                                        }
+                                                    }
+                                                    
+                                                    &.step-bg {
+                                                        position: relative;
+                                                        left: 50%;
+                                                        transform: translateX(-50%);
+                                                        width: 100vw;
+                                                        img {
+                                                            @include mobile {
+                                                                margin-left: 1.8rem;
+                                                                margin-right: -1.8rem;
+                                                            }
+                                                        }
+                                                    }
                                                 }
                                             }
-
-                                        }
+                                        }                                        
                                     }
                                 }
                             }
@@ -180,11 +197,11 @@
     }
 
     .esg-data-hub {
-        padding-top: 10rem;
-        @include mobile {
-            padding-top: 8.4rem;
-        }
         .section {
+            padding-top: 10rem;
+            @include mobile {
+                padding-top: 8.4rem;
+            }
             .panel-display {
                 .panel-list {
                     .panel-item {
