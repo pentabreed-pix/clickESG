@@ -3,68 +3,236 @@
 <head>
 <%-include('../_templates/_head.ejs', {
 	layoutTemplate: 'front',
-	pageStyle: 'main',
+	pageStyle: 'service',
 	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded',function(){
-        mainVisual();
-        Tab();
+        tab();
     });
 </script>
 </head>
 <body>
-<div id="wrap" class="wrap">
+<div id="wrap" class="page">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <div id="main" class="service service-intro">
+    <main class="page esg-chain">
         <div class="main-inner">
-            <div class="local module-a">
+            <div class="local module-b">
                 <div class="local-head">
-                    <div class="local-info">
-                        <ul class="data-list breadcrumb module-a style-b">
-                            <li class="data-item">
-                                <span class="item-text"></span>
-                            </li>
-                            <li class="data-item">
-                                <span class="item-text">SERVICE</span>
-                            </li>
-                            <li class="data-item">
-                                <span class="item-text">SERVICE 소개</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="local-subject">
-                        <h2 class="local-name">
-                            기업 ESG 경영 수준 향상을 위한<br>ESG 진단 및 구축 컨설팅 서비스
-                        </h2>
-                        <p class="local-summary">최신 ESG 규제 요건과 기업 환경에 최적화된 ESG 컨설팅 서비스를 고객의 Needs 에 맞추어 다양한 형태로 제공합니다.</p>
-                    </div>
-                    <div class="local-figure">
-                        <img src="../../assets/images/service/bg-local-head-service.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="section module-a">
-                <div class="section-wrap">
-                    <div class="section-head">
-                        <div class="section-subject">
-                            <h4 class="section-name">ESG 서비스의 특장점</h4>
+                    <%-include('../_templates/_local-info.ejs', {
+                        depth1: 'ABOUT US',
+                        depth2: 'Partnership',
+                        depth3: null,
+                        casetype: 'style-b'
+                    }) %>
+                    <div class="local-wrap">
+                        <div class="local-subject">
+                            <h2 class="local-name">
+                                Partnership
+                            </h2>
+                        </div>
+                        <div class="local-figure">
+                            <picture>
+                                <source media="(max-width: 1024px)" srcset="../../assets/images/about/partner/bg-local-head-partner-mo.jpg">
+                                <img src="../../assets/images/about/partner/bg-local-head-partner.jpg" alt="">
+                            </picture>
                         </div>
                     </div>
-                    <div class="section-body">
-                        <div class="data-display">
-                            <div class="data-list">
-                                <div class="data-item">
-                                    <div class="data-body">
-                                        <div class="bullet-display module-a style-a type-a">
-                                            <ul class="data-list">
-                                                <li class="data-item">Global 표준 방법론을 기반으로 개발된 고유 ESG 방법론 보유 (다수 기업과 기관의 ESG 표준평가 방법론으로 채택)</li>
-                                                <li class="data-item">과학적 데이터 분석 및 Peer 그룹 데이터 비교를 통한 체계적이고 객관적인 진단 수행</li>
-                                                <li class="data-item">ESG 경영 수준 개선을 위한 기업 중심의 컨설팅 서비스 제공</li>
-                                            </ul>
+                </div>
+
+
+                <div class="local-body">
+                    <div class="content-body">
+                        <div class="section module-a">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">검증/컨설팅 파트너십</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="post-list module-e style-e type-e">
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-01.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">ESG파트너스</div>
+                                                    <div class="post-body">다양한 산업의 고객에게 폭넓고 심층적인 ESG 컨설팅 서비스를 제공하고 있으며, 온실가스 인벤토리 및 LCA 평가, 금융배출량 산정과 인권실사 대응을 위한 인권영향평가, 지속가능보고서 개발을 포함한 ESG 전 영역을 Cover합니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-02.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">KPMG</div>
+                                                    <div class="post-body">삼정KPMG는 국내 회계•컨설팅 Firm 최초로 2008년에 ESG 전담팀을 신설하여 국내 ESG 시장을 개척해 왔습니다.  ESG 벤치마킹부터, ESG 비전 및 경영전략 체계 수립, ESG 신사업/신상품 도출, ESG 성과관리 구축, ESG 인증 서비스(ESG채권 인증, ESG 보고서 인증 등) 등 ESG 경영체계 구축을 위한 One-stop 서비스를 제공합니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-03.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">NICE디앤비 </div>
+                                                    <div class="post-body">㈜NICE디앤비는 신용정보 조회 및 조사에 관한 국내 사업 라이센스를 취득한 국내 최대의 글로벌 기업신용정보 제공기관이며, 기업의 지속가능성을 평가하고 진단하는 맞춤형 ESG진단과 컨설팅 서비스를 제공하고 있습니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-04.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">NICE평가정보</div>
+                                                    <div class="post-body">㈜NICE디앤비는 신용정보 조회 및 조사에 관한 국내 사업 라이센스를 취득한 국내 최대의 글로벌 기업신용정보 제공기관이며, 기업의 지속가능성을 평가하고 진단하는 맞춤형 ESG진단과 컨설팅 서비스를 제공하고 있습니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-05.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">법무법인 화우</div>
+                                                    <div class="post-body">㈜NICE디앤비는 신용정보 조회 및 조사에 관한 국내 사업 라이센스를 취득한 국내 최대의 글로벌 기업신용정보 제공기관이며, 기업의 지속가능성을 평가하고 진단하는 맞춤형 ESG진단과 컨설팅 서비스를 제공하고 있습니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-06.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">브릿징그룹코리아</div>
+                                                    <div class="post-body"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-07.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">에코나인</div>
+                                                    <div class="post-body"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-08.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">이크레더블</div>
+                                                    <div class="post-body">이크레더블은 차별화된 신용인증 역량을 기반으로 기업간 거래 시장에서의 거래 위험을 관리할 수 있는 다양한 상품과 서비스를 제공하여 왔고, 기업의 지속가능성과 경쟁력 평가의 새로운 기준으로 자리잡은 ESG와 기술가치 평가 시장에서도  비재무적 가치 평가 노하우를 활용한 다양한 서비스를 제공하고 있습니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-09.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">한국ESG크레딧</div>
+                                                    <div class="post-body"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-10.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">인피니티컨설팅</div>
+                                                    <div class="post-body">인피니티컨설팅은 국내 메이저 호텔 멤버십 컨설팅사로서 전문성과 노하우를 보유하고 있으며
+                                                        고객사의 비즈니스 효율 및 ESG 경영 수준 향상을 위한 최상의 서비스와 가치를 제공합니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-11.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">한국경영인증원(KMR)</div>
+                                                    <div class="post-body">한국경영인증원은 인증, 평가, 교육을 통해 고객의 성장에 도움이 되는 지식을 서비스하고, ESG 경영, ISO 인증, 제품인증, 온실가스 검증 등 ESG 전 영역의 경영활동의 신뢰를 위한 서비스를 제공합니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-12.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">롯데케미칼</div>
+                                                    <div class="post-body"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section module-a">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">기관/단체 공동사업 파트너십</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="post-list module-e style-e type-e">
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-13.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">한국중견기업연합회</div>
+                                                    <div class="post-body">한국중견기업연합회는 대한민국 중견기업을 대변하는 유일한 법정단체이며, 현장전문성 강화를 통한 중견기업 경영 환경 개선을 추구하고 ESG 경영 확산을 지원하는 역할을 수행합니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-02.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">대한상공회의소</div>
+                                                    <div class="post-body">대한민국의 상공회의소. 법정 경제단체로 정부와 경제계간의 가교 역할을 하는 중추적인 기관으로서 국내 기업의 ESG 경영 발전의 선도적 역할을 맡고 있습니다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/about/partner/partner-logo-03.jpg" alt="">
+                                                </div>
+                                                <div class="post-info">
+                                                    <div class="post-head">유통산업 ESG공동사업 추진위원회</div>
+                                                    <div class="post-body"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +242,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
      <!-- // main -->
      <%-include('../_templates/_footer.ejs')%>
 </div>

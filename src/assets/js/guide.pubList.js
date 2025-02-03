@@ -25,7 +25,7 @@ function pubListUp() {
         menu: "ESG 진단 컨설팅",
         root_ko: "../../page/service/SERVICE.01.00.html",
         status_ko: "진행중",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },                   
       {
@@ -33,7 +33,7 @@ function pubListUp() {
         menu: "ESG 공급망 진단 컨설팅",
         root_ko: "../../page/service/SERVICE.02.00.html",
         status_ko: "진행중",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },
       {
@@ -41,7 +41,7 @@ function pubListUp() {
         menu: "Net-Zero 컨설팅",
         root_ko: "../../page/service/SERVICE.03.00.html",
         status_ko: "진행중",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },
       {
@@ -49,7 +49,7 @@ function pubListUp() {
         menu: "ESG Data Hub 구축 컨설팅",
         root_ko: "../../page/service/SERVICE.04.00.html",
         status_ko: "진행중",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },
       {
@@ -57,7 +57,7 @@ function pubListUp() {
         menu: "CDP 대응자문 컨설팅",
         root_ko: "../../page/service/SERVICE.05.00.html",
         status_ko: "진행중",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },
     ],
@@ -117,7 +117,7 @@ function pubListUp() {
         menu: "ClickESG 소개",
         root_ko: "../../page/aboutus/ABOUTUS.00.00.html",
         status_ko: "진행중",
-        worker_ko: "",
+        worker_ko: "강선율",
         history: "",
       },
       {
