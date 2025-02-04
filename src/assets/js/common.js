@@ -420,7 +420,7 @@ $(function(){
 
     imgModalOpener.on('click', function(e){
         $('body').addClass('sc-disable');
-        imgModalTarget = $(this).next('div').clone(false, false);
+        imgModalTarget = $(this).next('div').clone(true, true);
         imgModalTarget.css({
             'max-height': '100%',
             'overflow' : 'auto',
