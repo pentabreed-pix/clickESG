@@ -140,12 +140,13 @@
                                 @include font(small-4x, bold);
                             }
                             + .post-summary {
-                                margin-top: 2.4rem;
+                                margin-top: 6.4rem;
                                 @include font(small-3x, medium);
                                 color: custom-color(neutral, 100);
     
                                 @include mobile {
                                     @include font(small-5x, medium);
+                                    margin-top: 4rem;
                                 }
                             }
                         }
@@ -244,7 +245,6 @@
                                 margin-top: 3.2rem;
                                 @include font(small-3x, regular);
                                 color: custom-color(neutral, 100);
-                                text-align: justify;
                                 @include mobile {
                                     margin-top: 2rem;
                                 }

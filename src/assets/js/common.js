@@ -10,7 +10,8 @@ frontCommon.Html = (function () {
             header();
             activeAnimationType_1();
             //accordion();
-            activeItemOnlyPc('.process');
+            activeItemOnlyPc('.process, .feature');
+            activeItemOnlyMo('.feature');
 
             //footer();
             //localAnimations();

@@ -76,7 +76,7 @@
         .local {
             .local-body {
                 .content-body {
-                    padding-bottom: 0;
+                    // /padding-bottom: 0;
                     .section {
                         .section-wrap {
                             .section-util {
@@ -169,24 +169,24 @@
             
             
             
-                        &.story1 {
-                            padding-top: 0;
-                             .section-wrap {
-                                height: 100vh;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
+                        // &.story1 {
+                        //     padding-top: 0;
+                        //      .section-wrap {
+                        //         height: 100vh;
+                        //         display: flex;
+                        //         flex-direction: column;
+                        //         align-items: center;
+                        //         justify-content: center;
             
-                                @include mobile {
-                                    height: auto;
-                                }
+                        //         @include mobile {
+                        //             height: auto;
+                        //         }
             
-                                .section-body {
-                                    width: 100%;
-                                }
-                            }
-                        }
+                        //         .section-body {
+                        //             width: 100%;
+                        //         }
+                        //     }
+                        // }
                     }
                 }
             }
