@@ -12,12 +12,6 @@
 		@include scroll-y;
 		@include scroll-x;
 	}
-	
-	.table-info {
-		display: flex;
-		justify-content: right;
-		gap: 1.2rem;
-	}
 
 
 	table {
@@ -174,7 +168,7 @@
 					>th,
 					>td {
 						vertical-align: middle;
-						border-right: 1px solid rgba(203, 203, 203, 0.50);
+						//border-right: 1px solid rgba(203, 203, 203, 0.50);
 						&.has-bg {
 							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 							background: custom-color(etc, 100);
@@ -185,6 +179,10 @@
 
 						&.bottom-grey {
 							border-bottom: 1px solid rgba(203, 203, 203, 0.50);
+						}
+
+						&.right-grey {
+							border-right: 1px solid rgba(203, 203, 203, 0.50);
 						}
 
 						&.check {
