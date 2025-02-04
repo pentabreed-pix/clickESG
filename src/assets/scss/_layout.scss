@@ -243,12 +243,46 @@ body {
 				}
 			}
 
+			&.module-d {
+				max-width: 144rem;
+				margin: 0 auto;
+				padding: 10.4rem 0 0 0;
+
+				position: relative;
+				.local-subject {
+					margin-top: 6.4rem;
+					@include mobile {
+						margin-top: 4rem
+					}
+					.local-name {
+						@include font(large-4x, bold);
+						color: custom-color(neutral, 080);
+
+						@include mobile {
+							@include font(small-2x, bold);
+						}
+
+					}
+					.local-summary {
+						@include font(small-2x, medium);
+						color: custom-color(neutral, 080);
+						margin-top: 4rem;
+						@include mobile {
+							margin-top: 2.4rem;
+							@include font(small-4x, medium);
+						}
+					}
+				}
+			}
+
 			.local-body {
 				.content-body {
+					padding-top: 8rem;
 					padding-bottom: 20rem;
 
 					@include mobile {
 						padding-bottom: 8rem;
+						padding-top: 6rem;
 					}
 				}
 			}
@@ -303,6 +337,7 @@ body {
 						.section-summary {
 							margin-top: 2rem;
 							@include font(small-3x, medium);
+							color: custom-color(neutral, 080);
 							@include mobile {
 								margin-top: 1.6rem;
 								@include font(small-4x, medium);
@@ -388,7 +423,7 @@ body {
 							}
 	
 							+.section-summary {
-								color: custom-color(neutral, 060);
+								color: custom-color(neutral, 080);
 								margin-top: 2.4rem;
 								@include font(small-3x, medium);
 	
@@ -409,10 +444,12 @@ body {
 						}
 						.section-summary {
 							margin-top: 2rem;
+
 						}
 					}
 				}
 			}
+
 
 
 			&[class*=module] {

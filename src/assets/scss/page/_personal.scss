@@ -1,0 +1,35 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+#wrap {
+    .personal {
+        .section {
+            &.module-a {
+                .section-wrap {
+                    .section-head{
+                        + .section-body {
+                            margin-top: 4rem;
+                            @include mobile {
+                                margin-top: 2.4rem;
+                            }
+                            .t-display {
+                                margin: 4rem 0 3.6rem;
+                                @include mobile {
+                                    @include scroll-x;
+                                }
+                            }
+
+                            .para {
+                                @include font(small-2x, regular);
+                                @include mobile {
+                                    @include font(small-4x, regular);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -35,6 +35,10 @@
 						border-right: 0.1rem solid custom-color(neutral, 000);
 						border-left: 0.1rem solid custom-color(neutral, 060);
 						border-top: 0.1rem solid custom-color(neutral, 060);
+						padding: 1.8rem;
+						@include font(small-4x, bold);
+						color: custom-color(neutral, 000);
+						text-align: center;
 					}
 				}
 			}
@@ -44,6 +48,9 @@
 					>th,
 					>td {
 						border-right: 0.1rem solid rgba(203, 203, 203, 0.50);
+						padding: 1.5rem 2rem;
+						color: custom-color(neutral, 080);
+						@include font(small-4x, bold);
 
 						&.t-bg {
 							background: rgba(133, 133, 133, 0.05);
@@ -99,7 +106,13 @@
 						border-left: 0.1rem solid custom-color(neutral, 000);
 						border-top: 0.1rem solid custom-color(neutral, 000);
 						top: 0;
+						padding: 1.6rem;
 						z-index: 1; 
+						font-size: 1.5rem;
+						font-weight: 700;
+						line-height: 160%;
+						color: custom-color(neutral, 000);
+						text-align: center;
 
 						&.organization {
 							border-right: 1px solid rgba(203, 203, 203, 0.50);
@@ -115,14 +128,27 @@
 					>td {
 						border-right: 0.1rem solid custom-color(neutral, 000);
 						border-bottom: 0.1rem solid custom-color(neutral, 000);
+						padding: 1.5rem 2rem;
+						@include font(small-5x, bold);
+						color: custom-color(neutral, 080);
 						&.common-index {
 							background: rgba(5, 104, 204, 0.12);
+							@include font(small-5x, medium);
+							color: #0B5AAB;
+							font-weight: 600;
 						}
 						&.special-index {
 							background: rgba(34, 188, 98, 0.15);
+							@include font(small-5x, medium);
+							color: #166844;
+							font-weight: 600;
 						}
 						&.bottom-grey {
 							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+							font-size: 1.5rem;
+							font-weight: 400;
+							line-height: 160%;
+							color: custom-color(neutral, 080);
 						}
 						&.has-bg {
 							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
@@ -154,8 +180,14 @@
 						border-right: 0.1rem solid custom-color(neutral, 000);
 						border-left: 0.1rem solid custom-color(neutral, 000);
 						border-top: 0.1rem solid custom-color(neutral, 000);
-
+						font-size: 1.5rem;
+						font-weight: 700;
+						line-height: 160%;
+						color: custom-color(neutral, 000);
 						&.organization {
+							@include font(small-5x, bold);
+							color: custom-color(neutral, 080);
+							font-weight: 600;
 							border-right: 1px solid rgba(203, 203, 203, 0.50);
 							background: custom-color(etc, 100);
 						}
@@ -168,8 +200,14 @@
 					>th,
 					>td {
 						vertical-align: middle;
-						//border-right: 1px solid rgba(203, 203, 203, 0.50);
+						@include font(small-5x, medium);
+						color: custom-color(neutral, 080);
+
+						&.bold {
+							font-weight: 700;
+						}
 						&.has-bg {
+							@include font(small-5x, bold);
 							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 							background: custom-color(etc, 100);
 						}
@@ -235,7 +273,7 @@
 						border-right: 0.1rem solid custom-color(neutral, 000);
 						border-left: 0.1rem solid custom-color(neutral, 000);
 						border-top: 0.1rem solid custom-color(neutral, 000);
-
+						padding: 1.6rem;
 						&.organization {
 							border-right: 1px solid rgba(203, 203, 203, 0.50);
 							background: custom-color(etc, 100);
@@ -249,9 +287,8 @@
 					>th,
 					>td {
 						vertical-align: middle;
-						//border-right: 1px solid rgba(203, 203, 203, 0.50);
+						padding: 1.5rem 2rem;
 						&.has-bg {
-							//border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 							background: custom-color(etc, 100);
 						}
 						&.has-grey {
@@ -302,32 +339,17 @@
 		}
 	}
 
-	&.style-a {
+	&.module-e {
+		border-top: 0.1rem solid custom-color(neutral, 100);
 		table {
 			>thead {
 				>tr {
 					>th {
+						background-color: custom-color(etc, 070);
+						border-right: 0.1rem solid rgba(203, 203, 203, 0.50);
+						border-left: 0.1rem solid rgba(203, 203, 203, 0.50);
 						padding: 1.8rem;
-					}
-				}
-			}
-			>tbody {
-				>tr {
-					>th,
-					>td {
-						padding: 1.5rem 2rem;
-					}
-				}
-			}
-		}
-	}
-
-	&.style-b{
-		table {
-			>thead {
-				>tr {
-					>th {
-						padding: 1.6rem;
+						@include font(small-4x, bold)
 					}
 				}
 			}
@@ -336,119 +358,14 @@
 				>tr {
 					>th,
 					>td {
-						padding: 1.5rem 2rem;
-					}
-				}
-			}
-		}
-	}
-
-	&.style-c{
-		table {
-			>thead {
-				>tr {
-					>th {
-						padding: 1.6rem;
-						&.organization {
-							border-right: 1px solid rgba(203, 203, 203, 0.50);
-							background: custom-color(etc, 100);
-						}
-					}
-				}
-			}
-
-			>tbody {
-				>tr {
-					>th,
-					>td {
-						padding: 1.5rem 2rem;
-					}
-				}
-			}
-		}
-	}
-
-	&.style-d{
-		table {
-			>thead {
-				>tr {
-					>th {
-						padding: 1.8rem 4rem;
-					}
-				}
-			}
-
-			>tbody {
-				>tr {
-					>th,
-					>td {
-						padding: 2.8rem 4rem;
-					}
-				}
-			}
-		}
-	}
-
-	&.type-a {
-		table {
-			>thead {
-				>tr {
-					>th {
-						@include font(small-4x, bold);
-						color: custom-color(neutral, 000);
-						text-align: center;
-					}
-				}
-			}
-
-			>tbody {
-				>tr {
-					>th,
-					>td {
+						vertical-align: middle;
+						border-top: 0.1rem solid rgba(203, 203, 203, 0.50);
+						border-right: 0.1rem solid rgba(203, 203, 203, 0.50);
+						padding: 3.9rem;
+						@include font(small-4x, regular);
 						color: custom-color(neutral, 080);
-						@include font(small-4x, bold);
-
-					}
-				}
-			}
-		}
-	}
-
-	&.type-b {
-		table {
-			>thead {
-				>tr {
-					>th {
-						font-size: 1.5rem;
-						font-weight: 700;
-						line-height: 160%;
-						color: custom-color(neutral, 000);
-						text-align: center;
-					}
-				}
-			}
-
-			>tbody {
-				>tr {
-					>th,
-					>td {
-						@include font(small-5x, bold);
-						color: custom-color(neutral, 080);
-						&.common-index {
-							@include font(small-5x, medium);
-							color: #0B5AAB;
-							font-weight: 600;
-						}
-						&.special-index {
-							@include font(small-5x, medium);
-							color: #166844;
-							font-weight: 600;
-						}
-						&.bottom-grey {
-							font-size: 1.5rem;
-							font-weight: 400;
-							line-height: 160%;
-							color: custom-color(neutral, 080);
+						@include mobile {
+							padding: 3rem 1rem;
 						}
 					}
 				}
@@ -456,43 +373,6 @@
 		}
 	}
 	
-	&.type-c {
-		table {
-			>thead {
-				>tr {
-					>th {
-						font-size: 1.5rem;
-						font-weight: 700;
-						line-height: 160%;
-						color: custom-color(neutral, 000);
-
-						&.organization {
-							@include font(small-5x, bold);
-							color: custom-color(neutral, 080);
-							font-weight: 600;
-						}
-					}
-				}
-			}
-
-			>tbody {
-				>tr {
-					>th,
-					>td {
-						@include font(small-5x, medium);
-						color: custom-color(neutral, 080);
-						&.has-bg {
-							@include font(small-5x, bold);
-						}
-						&.bold {
-							font-weight: 700;
-						}
-					}
-				}
-			}
-		}
-	}
-
 
 	//align
 	&.align1 {
@@ -524,31 +404,6 @@
 		}
 	}
 
-	// table info
-    // .t-info {
-	// 	&.type-a {
-	// 		color: custom-color(neutral, 050);
-	// 		font-weight: 600;
-	// 		font-size: 3.2rem;
-	// 	}
-	// 	&.type-b {
-	// 		color: custom-color(neutral, 050);
-	// 		font-weight: 600;
-	// 		font-size: 1.3rem;
-	// 	}
-	// 	+ table {
-	// 		margin-top: 2rem;
-	// 	}
-    // }
-
-	// 코멘트 text
-	// + .comment {
-	// 	margin-top: 1.6rem;
-	// 	@include mobile {
-	// 		margin-top: 1.2rem;
-	// 	}
-		
-	// }
 	&.height {
 		@include mobile {
 		max-height: 53rem;
