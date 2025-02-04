@@ -2223,11 +2223,6 @@
     border-radius: 5rem;
   }
 }
-.t-display .table-info {
-  display: flex;
-  justify-content: right;
-  gap: 1.2rem;
-}
 .t-display table {
   width: 100%;
   table-layout: fixed;
@@ -2344,7 +2339,6 @@
 .t-display.module-c table > tbody > tr > th,
 .t-display.module-c table > tbody > tr > td {
   vertical-align: middle;
-  border-right: 1px solid rgba(203, 203, 203, 0.5);
 }
 .t-display.module-c table > tbody > tr > th.has-bg,
 .t-display.module-c table > tbody > tr > td.has-bg {
@@ -2358,6 +2352,10 @@
 .t-display.module-c table > tbody > tr > th.bottom-grey,
 .t-display.module-c table > tbody > tr > td.bottom-grey {
   border-bottom: 1px solid rgba(203, 203, 203, 0.5);
+}
+.t-display.module-c table > tbody > tr > th.right-grey,
+.t-display.module-c table > tbody > tr > td.right-grey {
+  border-right: 1px solid rgba(203, 203, 203, 0.5);
 }
 .t-display.module-c table > tbody > tr > th.check,
 .t-display.module-c table > tbody > tr > td.check {
@@ -6801,6 +6799,11 @@ body.mo-menu-open {
   #wrap .esg-consulting .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure.height {
     max-height: 53rem;
   }
+}
+#wrap .esg-consulting .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .table-info {
+  display: flex;
+  justify-content: right;
+  gap: 1.2rem;
 }
 #wrap .esg-consulting .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
   margin-top: 6.4rem;
