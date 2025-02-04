@@ -1,0 +1,400 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+/* submit-form */
+.submit-form {
+  &.module-a {
+    .form-list {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+      column-gap: 2rem;
+
+      @include mobile {
+        row-gap: 1.4rem;
+      }
+
+      .form-item {
+        display: flex;
+        align-items: center;
+        width: calc(50% - 1rem);
+        min-height: 7.6rem;
+        background-color: #f3f3f3;
+        padding: 2.4rem 3.2rem;
+        border-radius: 0.8rem;
+
+        @include mobile {
+          width: 100%;
+          padding: 1.8rem 3.2rem;
+        }
+
+        .form-wrap {
+          display: flex;
+          align-items: center;
+          column-gap: 1.6rem;
+          width: 100%;
+
+          .form-head {
+            flex-shrink: 0;
+            width: 10rem;
+
+            @include mobile {
+              width: 6rem;
+            }
+
+            .form-name {
+              @include font(small-4x, semibold);
+              color: custom-color(neutral, 090);
+
+              @include mobile {
+                @include font(small-5x, semibold);
+              }
+            }
+          }
+
+          .form-body {
+            flex: 1 1 100%;
+
+            .form-area {
+              display: flex;
+              align-items: center;
+              column-gap: 1.6rem;
+
+              @include mobile {
+                column-gap: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sign {
+    flex-shrink: 0;
+    &.mail {
+      width: 2.4rem;
+      text-align: center;
+      @include font(small-4x, medium);
+      color: custom-color(neutral, 090);
+    }
+
+    &.bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+
+      @include mobile {
+        width: 1.6rem;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1rem;
+        height: 0.2rem;
+        background: icon('bar', custom-color(neutral, 100)) no-repeat center center;
+      }
+    }
+  }
+}
+
+.form {
+  &.flex {
+    flex: 1 1 100%;
+  }
+
+  &.select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    &.module-a {
+      position: relative;
+      display: inline-flex;
+
+      // .form-elem {
+      //   flex: 1 1 100%;
+      //   border: 0.1rem solid transparent;
+      //   width: 100%;
+      //   //padding: 2.5rem 0;
+      //   @include font(small-4x, medium);
+      //   color: custom-color(neutral, 090);
+      //   background-color: transparent;
+      //   &:focus {
+      //     outline: none;
+      //     border: 0.1rem solid #222;
+      //     border-radius: 0.4rem;
+      //   }
+
+      //   &:invalid  {
+      //     @include font(small-4x, medium);
+      //     color: custom-color(neutral, 070);
+      //   }
+
+      //   option {
+      //     @include font(small-4x, medium);
+      //     color: custom-color(neutral, 090);
+      //   }
+      // }
+      // &.open {
+      //   .form-elem {
+      //   }
+      // }
+    }
+  }
+
+  &.check {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .form-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border: 0.1rem solid custom-color(neutral, 060);
+      border-radius: 50%;
+
+      &::after {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        background-color: custom-color(secondary, 090);
+        display: none;
+      }
+    }
+
+    .form-text {
+      @include font(small-4x, bold);
+      color: custom-color(neutral, 080);
+    }
+
+    // input:checked ~ .form-mark {
+    //   background-color: #2196F3;
+    // }
+
+    input:checked ~ .form-mark:after {
+      display: block;
+    }
+  }
+
+  &.textfield {
+    &.module-a {
+      position: relative;
+      display: inline-flex;
+
+      .form-elem {
+        flex: 1 1 100%;
+        border: 0.1rem solid transparent;
+        width: 100%;
+        @include font(small-4x, medium);
+        color: custom-color(neutral, 090);
+
+        @include mobile {
+          @include font(small-5x, medium);
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder  {
+          @include font(small-4x, medium);
+          color: custom-color(neutral, 070);
+
+          @include mobile {
+            @include font(small-5x, medium);
+          }
+        }
+      }
+    }
+  }
+
+  &.textarea {
+    &.module-a {
+      position: relative;
+      display: inline-flex;
+
+      .form-elem {
+        flex: 1 1 100%;
+        border: 0.1rem solid transparent;
+        width: 100%;
+        @include font(small-4x, medium);
+        color: custom-color(neutral, 090);
+
+        @include mobile {
+          @include font(small-5x, medium);
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder  {
+          @include font(small-4x, medium);
+          color: custom-color(neutral, 070);
+
+          @include mobile {
+            @include font(small-5x, medium);
+          }
+        }
+      }
+    }
+  }
+}
+
+.data-list {
+  &.select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .data-wrap {
+      width: 100%;
+      .data-head {
+        display: flex;
+        align-items: center;
+        column-gap: 1.6rem;
+
+        @include mobile {
+          flex-wrap: wrap;
+          column-gap: 0;
+        }
+
+        .data-title {
+          flex-shrink: 0;
+          width: 10rem;
+          @include font(small-4x, semibold);
+          color: custom-color(neutral, 090);
+
+          @include mobile {
+            width: 8rem;
+            @include font(small-5x, semibold);
+          }
+        }
+
+        .data-name {
+          position: relative;
+          flex: 1 1 100%;
+          padding-right: 2.4rem;
+          @include font(small-4x, medium);
+          color: custom-color(neutral, 070);
+
+          @include mobile {
+            flex: 1 1 calc(100% - 8rem - 1.6rem);
+            @include font(small-5x, medium);
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+            background: icon('arrow-down1', custom-color(neutral, 100)) no-repeat center center;
+          }
+
+          &.active {
+            color: custom-color(neutral, 090);
+          }
+        }
+      }
+      .data-body {
+        .option-list {
+          position: absolute;
+          left: - 3.2rem;
+          width: calc(100% + 6.4rem);
+          padding: 2.5rem 3.2rem;
+          background-color: #f3f3f3;
+          border-radius: 0 0 0.8rem 0.8rem;
+          z-index: 1;
+          display: none;
+
+          .option-item {
+            .option-text {
+              @include font(small-4x, medium);
+              color: custom-color(neutral, 080);
+
+              @include mobile {
+                @include font(small-5x, medium);
+              }
+            }
+
+            &.active,
+            &:hover {
+              .option-text {
+                color: custom-color(secondary, 090);
+              }
+            }
+
+            & + .option-item {
+              margin-top: 1.4rem;
+
+              @include mobile {
+                margin-top: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.show {
+      .data-wrap {
+        .data-head {
+          .data-title {
+            @include font(small-4x, medium);
+            color: custom-color(neutral, 070);
+
+            @include mobile {
+              @include font(small-5x, medium);
+            }
+          }
+          .data-name {
+            color: transparent;
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 2.4rem;
+              height: 2.4rem;
+              background: icon('arrow-up1', custom-color(neutral, 100)) no-repeat center center;
+            }
+          }
+        }
+        .data-body {
+          //padding-top: 2.4rem;
+
+          .option-list {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

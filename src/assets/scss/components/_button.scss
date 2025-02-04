@@ -2,6 +2,14 @@
 @use '../components/variables' as *;
 @use '../components/icons' as *;
 
+
+.button-area {
+  &.module-a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .btn {
   margin: 0;
   padding: 0;
@@ -17,12 +25,18 @@
     text-align: center;
     transition: all 0.2s ease-out;
 
+    .btn-text {
+      display: block;
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+
     &.style-a {
       padding: 1.4rem 4.7rem;
       @include font(small-4x, bold);
+      line-height: 1.2;
       border-radius: 3.1rem;
-
-      
     }
 
     &.color-a {
@@ -46,6 +60,12 @@
         border: 0.1rem solid transparent;
         background-color: rgba(255, 255, 255, 0.50);
       }
+    }
+
+    &.color-c {
+      border: 0.1rem solid custom-color(neutral, 100);
+      background-color: custom-color(neutral, 100);
+      color: custom-color(neutral, 000);
     }
   }
 
