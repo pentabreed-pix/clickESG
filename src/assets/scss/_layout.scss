@@ -279,9 +279,9 @@ body {
 							}
 	
 							+.section-summary {
+								@include font(small-3x, medium);
 								color: custom-color(neutral, 060);
 								margin-top: 2.4rem;
-								@include font(small-3x, medium);
 	
 								@include mobile {
 									margin-top: 1.6rem;
@@ -302,6 +302,11 @@ body {
 						}
 						.section-summary {
 							margin-top: 2rem;
+							@include font(small-3x, medium);
+							@include mobile {
+								margin-top: 1.6rem;
+								@include font(small-4x, medium);
+							}
 						}
 					}
 					.section-body {
@@ -504,26 +509,6 @@ body {
 							}
 						}
 
-						&.dark {
-							color: custom-color(neutral, 060);
-
-							.data-item:last-child {
-								.item-text {
-									color: custom-color(neutral, 090);
-									font-weight: 700;
-								}
-							}
-						}
-
-						&.light {
-							color: custom-color(neutral, 090);
-
-							.data-item:last-child {
-								.item-text {
-									font-weight: 700;
-								}
-							}
-						}
 
 						.data-item {
 							position: relative;
@@ -531,12 +516,13 @@ body {
 
 							.item-text {
 								position: relative;
-								@include font(small-5x, bold);
+								@include font(small-6x);
+								font-weight: 600;
 								color: custom-color(neutral, 070);
 							}
 
 							+.data-item {
-								margin-left: 3.2rem;
+								margin-left: 2.8rem;
 
 								.item-text {
 									&::before {
@@ -544,7 +530,7 @@ body {
 										display: inline-block;
 										position: absolute;
 										top: 50%;
-										left: -2rem;
+										left: -1.8rem;
 										width: 0.4rem;
 										height: 0.7rem;
 										background: icon('arrow-right', custom-color(neutral, 070)) no-repeat center;

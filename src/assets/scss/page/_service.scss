@@ -41,14 +41,17 @@
                     .panel-item {
                         .panel-wrap {
                             .section {
-
+                                //margin-top: 4rem;
                                 @include mobile {
                                     padding-top: 6.2rem;
                                 }
 
                                 .section-head {
                                     + .section-body {
-                                        // margin-top: 6.4rem;
+                                        margin-top: 4rem;
+                                        @include mobile {
+                                            margin-top: 2.4rem;
+                                        }
 
                                         .post-list {
                                             .post-figure {
@@ -90,7 +93,25 @@
                                 }
                             }
                         }
+                        &.last {
+                            .section {
+                                .section-head {
+                                   + .section-body {
+                                        margin-top: 6.4rem;
+                                        @include mobile {
+                                            margin-top: 4rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
+                }
+            }
+            + .section {
+                padding-top: 18rem;
+                @include mobile {
+                    padding-top: 12rem;
                 }
             }
         }
@@ -107,10 +128,10 @@
                     .panel-item {
                         .panel-wrap {
                             .section {
-
-                                @include mobile {
-                                    padding-top: 6.2rem;
-                                }
+                                // margin-top: 4rem;
+                                // @include mobile {
+                                //     margin-top: 2.4rem;
+                                // }
 
                                 .section-body {
                                     position: relative;
@@ -153,6 +174,12 @@
                     }
                 }
             }
+            + .section {
+                padding-top: 18rem;
+                @include mobile {
+                    padding-top: 12rem;
+                }
+            }
         }
     }
 
@@ -167,10 +194,10 @@
                     .panel-item {
                         .panel-wrap {
                             .section {
-
-                                @include mobile {
-                                    padding-top: 6.2rem;
-                                }
+                                // margin-top: 4rem;
+                                // @include mobile {
+                                //     margin-top: 2.4rem;
+                                // }
 
                                 .section-body {
                                     .section-figure {
@@ -190,7 +217,25 @@
                                 }
                             }
                         }
+                        &.last {
+                            .section {
+                                .section-head {
+                                   + .section-body {
+                                        margin-top: 6.4rem;
+                                        @include mobile {
+                                            margin-top: 4rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
+                }
+            }
+            + .section {
+                padding-top: 18rem;
+                @include mobile {
+                    padding-top: 12rem;
                 }
             }
         }
@@ -233,6 +278,12 @@
                     }
                 }
             }
+            + .section {
+                padding-top: 18rem;
+                @include mobile {
+                    padding-top: 12rem;
+                }
+            }
         }
     }
 
@@ -271,6 +322,12 @@
                             }
                         }
                     }
+                }
+            }
+            + .section {
+                padding-top: 18rem;
+                @include mobile {
+                    padding-top: 12rem;
                 }
             }
         }
