@@ -133,6 +133,16 @@
         display: flex;
         gap: 12rem;
         justify-content: space-between;
+        
+        @include mobile {
+            height: 100%;
+            background-repeat: no-repeat;
+            background: url('../images/about/reference/performance-mo.jpg');
+            background-size: cover;
+            flex-direction: column;
+            padding: 8rem 4.6rem;
+            gap: 8rem;
+        }
         .board-item {
             .board-wrap {
                 .board-icon {
@@ -205,8 +215,14 @@
                         .board-info {
                             @include font(large-7x, bold);
                             color: custom-color(neutral, 000);
+                            @include mobile {
+                                font-size: 6.8rem;
+                            }
                             .board-text {
                                 @include font(large-1x, bold);
+                                @include mobile {
+                                    @include font(small, bold);
+                                }
                             }
                         }
                     }

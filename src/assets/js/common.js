@@ -406,3 +406,56 @@ function activeItemOnlyPc(selector) {
         });
     });
 }
+
+/* s: 2021-10-19 1140 이미지 레이어 팝업 */
+$(function(){
+    var imgModalBox = $('.temp-img-modal-layer'),
+        imgModalBody = $('.temp-modal-body'),
+        imgModalOpener = $('.img-pop-more'),
+        imgModalCloser = $('.temp-modal-close'),
+        imgModalScale = $('.temp-modal-scale'),
+        imgModalScaleTimes = 0,
+        imgModalScaleTick = 0.125,
+        imgModalTarget;
+
+    imgModalOpener.on('click', function(e){
+        $('body').addClass('sc-disable');
+        imgModalTarget = $(this).next('div').clone(true, true);
+        imgModalTarget.css({
+            'max-height': '100%',
+            'overflow' : 'auto',
+        });
+        imgModalTarget.attr('data-zoomstep', 0);
+        imgModalBody.empty().append(imgModalTarget);
+        imgModalBox.addClass('active');
+        //console.log('임시 이미지 모달 열림');
+    });
+    imgModalCloser.on('click', function(e){
+        $('body').removeClass('sc-disable');
+        imgModalBox.removeClass('active');
+        imgModalScaleTimes = 0;
+        //console.log('임시 이미지 모달 닫힘');
+    });
+    imgModalScale.on('click', function(e){
+        switch ($(this).data('do')) {
+            case 'up':
+                if (imgModalScaleTimes === 0) return false;
+                imgModalScaleTimes++;
+                imgModalTarget.css('zoom', 1+imgModalScaleTimes*imgModalScaleTick);
+                imgModalTarget.attr('data-zoomstep', imgModalScaleTimes)
+                //console.log('임시 이미지 모달 내용 확대');
+                break;
+            case 'dn':
+                if (imgModalScaleTimes === -4) return false;
+                imgModalScaleTimes--;
+                imgModalTarget.css('zoom', 1+imgModalScaleTimes*imgModalScaleTick);
+                imgModalTarget.attr('data-zoomstep', imgModalScaleTimes)
+                //console.log('임시 이미지 모달 내용 축소');
+                break;
+            default:
+                console.log('정의되지 않은 동작');
+                break;
+        }
+    });
+});
+/* e: // 2021-10-19 1140 이미지 레이어 팝업 */

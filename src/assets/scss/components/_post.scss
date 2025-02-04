@@ -322,11 +322,18 @@
         display: flex;
         gap: 4rem 2rem;
         flex-wrap: wrap;
+        @include mobile {
+            gap: 2.4rem 2rem;
+        }
         .post-item {
             border: 0.1rem solid rgba(203, 203, 203, 0.50);
             border-radius: 0.8rem;
             overflow: hidden;
             width: calc(100%/6 - 2rem);
+
+            @include mobile {
+                width: calc(100%/2 - 1rem);
+            }
         }
     }
 

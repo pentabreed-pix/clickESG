@@ -4,6 +4,217 @@
 @use '../components/icons' as *;
 
 #wrap {
+
+    body.sc-disable {
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .content-responsive-pop {
+        position: relative;
+    
+        &-img {
+            position: relative;
+    
+            &-group {
+                white-space: nowrap;
+                font-size: 0;
+                text-align: center;
+    
+                &-row,
+                .content-responsive-pop-img {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+    
+    @media all and (min-width: 1024px) {
+        .content-responsive-pop-img-group {
+            &-row:not(:last-of-type),
+            .content-responsive-pop-img:not(:last-of-type) {
+                margin-right: 9px;
+            }
+        }
+    }
+    
+    @media all and (max-width: 749px) {
+        .content-responsive-pop-img-group {
+            &-row {
+                display: block;
+                overflow: auto;
+            }
+    
+            .content-responsive-pop-img:nth-of-type(odd) {
+                margin-right: 11px;
+            }
+        }
+    
+        .content-responsive-pop {
+            .img-pop-more {
+                font-size: 0;
+                text-indent: 2147483647px;
+                overflow: hidden;
+                right: 0;
+                bottom: 5px;
+                z-index: 1;
+                background-color: red;
+            }
+        }
+    
+        .content-responsive-pop-img {
+            padding-bottom: 11px;
+            overflow: auto;
+    
+            img {
+                display: block;
+                max-width: none;
+            }
+    
+            &.max-width-100p img {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    /* 이미지 레이어 팝업 */
+    .temp-img-modal-layer {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        z-index: 100;
+    }
+    
+    .temp-modal-header {
+        height: 60px;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        z-index: 1000;
+        position: relative;
+    }
+    
+    .temp-modal-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 153px);
+        overflow: hidden;
+    }
+    
+    .temp-modal-footer {
+        padding: 15px;
+    
+        .temp-modal-button-group {
+            text-align: center;
+            font-size: 0;
+        }
+    }
+    
+    .temp-modal-close {
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        width: 28px;
+        height: 28px;
+        background: transparent;
+        transform: rotate(45deg);
+        font-size: 0;
+        text-indent: 2147483647px;
+        overflow: hidden;
+    
+        &::before,
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            background: #000;
+        }
+    
+        &::before {
+            width: 28px;
+            height: 2px;
+            top: 13px;
+            left: 0;
+        }
+    
+        &::after {
+            width: 2px;
+            height: 28px;
+            top: 0;
+            left: 13px;
+        }
+    }
+    
+    .temp-modal-scale {
+        display: inline-block;
+        vertical-align: top;
+        width: 62px;
+        height: 62px;
+        margin: 0.5px;
+        background: no-repeat center/cover;
+        font-size: 0;
+        text-indent: 2147483647px;
+        overflow: hidden;
+    
+        &[data-do="up"] {
+            background-image: url('../../assets/images/mobile/modal-zoomin.png');
+            z-index: 1000;
+        }
+    
+        &[data-do="dn"] {
+            background-image: url('../../assets/images/mobile/modal-zoomout.png');
+        }
+    }
+    
+    /* 모바일용 스타일 */
+    @media all and (max-width: 749px) {
+        .img-pop-more {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+            width: 62px;
+            height: 62px;
+            background: url('../../assets/images/mobile/icon-zoom.png') no-repeat 50% 0;
+            background-size: cover;
+            cursor: pointer;
+            z-index: 1;
+            font-size: 0;
+        }
+    
+        .content-responsive-pop .img-pop-more.inner-open-pop {
+            font-size: 0;
+            text-indent: -999999;
+            overflow: hidden;
+            right: 0;
+            left: auto;
+            top: auto;
+            bottom: 5px;
+            z-index: 1;
+        }
+    }
+    
+    /* PC용 스타일 */
+    @media all and (min-width: 750px) {
+        .img-pop-more {
+            display: none;
+        }
+    }
+    
+    @media all and (max-width: 1024px) {
+        .temp-img-modal-layer.active {
+            display: block;
+        }
+    }
+    /* e: 이미지 레이어 팝업 임시 작성 */
+
+    
     .service-intro {
         .section {
             padding-top: 10rem;
@@ -143,6 +354,7 @@
                                     .post-list {
                                         .post-item {
                                             .post-wrap {
+                                                position: relative;
                                                 .post-figure {
                                                     //position: relative;
                                                     @include mobile{

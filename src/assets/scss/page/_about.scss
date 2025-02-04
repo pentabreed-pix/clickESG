@@ -30,6 +30,10 @@
                             position: relative;
                             padding-bottom: 18rem;
                             padding-top: 6rem;
+                            @include mobile {
+                                padding-top: 4rem;
+                                margin-top: 12rem;
+                            }
                 
                             &::after {
                                 content: "";

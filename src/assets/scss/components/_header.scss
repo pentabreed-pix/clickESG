@@ -162,8 +162,6 @@
                             opacity: 1;
                             visibility: visible;
                             overflow: hidden;
-                            //transition: none;
-                            //display: none;
                         }
 
                         .depth2-list {
@@ -180,6 +178,7 @@
                                 .depth2 {
                                     font-size: 1.6rem;
                                     line-height: 1.9rem;
+                                    color: custom-color(neutral, 080);
                                     &:hover {
                                         color: custom-color(primary, 090);
                                     }
