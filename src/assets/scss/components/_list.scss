@@ -55,9 +55,70 @@
                 @include mobile {
                     @include font(small-4x, regular);
                 }
-                .data-numb {
+                .data-text {
+                    padding-left: 2.4rem;
                     &::before {
                         content: counter(data-counter) ")";
+                        position: absolute;
+                        left: 0;
+                        text-align: center;
+                    }
+                    .order-list {
+                        margin-top: 2rem;
+                        @include font(small-3x, regular);
+                        .order-item {
+                            .item-det {
+                                color: custom-color(neutral, 080);
+                                margin-top: 0.4rem;
+                                position: relative;
+                                padding-left: 1.4rem;
+                                &::before {
+                                    content: "-";
+                                    margin-right: 0.8rem;
+                                    height: 100%;
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            + .order-item {
+                                margin-top: 2rem;
+                            }
+                        }
+                        &.edited {
+                            .order-item {
+                                + .order-item {
+                                    margin-top: 0.8rem;
+                                }
+                            }
+                        }
+                        &.one {
+                            margin-top: 1rem;
+                            .order-item {
+                                + .order-item {
+                                    margin-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    .no-number {
+                        margin-top: 2rem;
+                        .data-item {
+                            .order-list {
+                                margin-top: 0.4rem;
+                                .order-item {
+                                    margin-top: 0.4rem;
+                                }
+                            }
+                            + .data-item {
+                                margin-top: 2rem;
+                            }
+                        }
+                    }
+                    .symbol {
+                        margin-top: 1rem;
                     }
                 }
             }
