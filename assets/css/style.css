@@ -8102,6 +8102,9 @@ body.mo-menu-open {
 #wrap .personal .section.module-c .section-head + .section-body .panel-list .panel ~ .dropdown .dropdown-button .arrow {
   transform: translateY(-50%) rotate(180deg);
 }
+#wrap .personal .section.module-c .module-a .section-wrap .section-head {
+  display: block;
+}
 
 /**
  * Swiper 11.0.5
