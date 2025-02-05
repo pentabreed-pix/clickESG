@@ -147,11 +147,11 @@
                     }
                 }
             }
-            .post-util {
-                margin-top: 12rem;
-                @include mobile {
-                    margin-top: 8rem;
-                }
+        }
+        .post-util {
+            margin-top: 12rem;
+            @include mobile {
+                margin-top: 8rem;
             }
         }
     }
