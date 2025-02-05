@@ -198,17 +198,17 @@
                            padding: 1.6rem 1.5rem 0;
                            @include font(small-2x, medium);
                            color: custom-color(neutral,100);
-   
+
                            @include mobile {
                                @include font(small-3x, bold);
                            }
                         }
                     }
                 }
-    
+
                 &:nth-child(even) {
                     margin-top: 5.6rem;
-    
+
                     @include mobile {
                         margin-top: 0;
                     }
@@ -254,13 +254,13 @@
                             color: custom-color(neutral, 080);
                             .post-head {
                                 @include font(small-1x, bold);
-                                
+
                                 @include mobile {
                                     @include font(small-4x, bold);
                                 }
                                 + .post-body {
                                     @include font(small-3x, regular);
-                                    
+
                                     @include mobile {
                                         @include font(small-5x, regular);
                                     }
@@ -271,7 +271,7 @@
                             }
                             .post-body {
                                 margin-top: 2rem;
-    
+
                                 @include mobile {
                                     margin-top: 1.6rem;
                                 }
@@ -291,7 +291,7 @@
                         .post-name {
                             @include font(small-1x, bold);
                             color: custom-color(neutral, 080);
-    
+
                             @include mobile {
                                 @include font(small-4x, bold);
                             }
@@ -299,7 +299,7 @@
                                 margin-top: 6.4rem;
                                 @include font(small-3x, medium);
                                 color: custom-color(neutral, 100);
-    
+
                                 @include mobile {
                                     @include font(small-5x, medium);
                                     margin-top: 4rem;
@@ -328,7 +328,7 @@
                 }
                 + .post-item {
                     margin-top: 12rem;
-    
+
                     @include mobile {
                         margin-top: 8rem
                     }
@@ -385,7 +385,7 @@
                         .post-number {
                             @include font(small-1x, bold);
                             color: custom-color(primary, 090);
-    
+
                             @include mobile {
                                 @include font(small-2x, bold);
                             }
@@ -473,7 +473,7 @@
             }
         }
     }
-    
+
     &.module-f {
         display: flex;
         gap: 4rem 2rem;
@@ -504,9 +504,98 @@
         }
     }
 
+    &.module-g {
+        border-top: 0.1rem solid custom-color(neutral, 100);
 
+        .post-item {
+            display: block;
+            padding: 4.25rem 0;
+            border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 
-    // solution accordion 있는 페이제에 씀
+            .post-wrap {
+                display: flex;
+                gap: 7rem;
+
+                .post-figure {
+                    flex-shrink: 0;
+                    position: relative;
+                    width: 35.5rem;
+                    height: 19.4rem;
+                    border-radius: 1.6rem;
+                    overflow: hidden;
+
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) scale(1);
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: all .5s ease-out;
+                    }
+                }
+
+                .post-info {
+                    width: calc(100% - 35.5rem - 7rem);
+
+                    .post-head {
+                        .post-caption {
+                            @include font(small-4x, bold);
+                            color: custom-color(primary, 090);
+
+                            & + .post-subject {
+                                margin-top: 1.2rem;
+                            }
+                        }
+                        .post-subject {
+                            @include font(small-1x, bold);
+                            color: custom-color(neutral, 090);
+                            @include ellipsis(1);
+                        }
+
+                        & + .post-body {
+                            margin-top: 2.1rem;
+                        }
+                    }
+                    .post-body {
+                        .para {
+                            @include font(small-2x, regular);
+                            color: custom-color(neutral, 080);
+                            @include ellipsis(2);
+                        }
+
+                        & + .post-date {
+                            margin-top: 2.4rem;
+                        }
+                    }
+                    .post-date {
+                        @include font(small-6x, bold);
+                        color: custom-color(neutral, 070);
+                    }
+                }
+            }
+
+            &:hover,
+            &:focus {
+                .post-wrap {
+                    .post-figure {
+                        img {
+                            transform: translate(-50%, -50%) scale(1.1);
+                        }
+                    }
+                    .post-info {
+                        .post-head {
+                            .post-subject {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     &.process {
         position: relative;
         width: 144rem;
@@ -543,7 +632,7 @@
                             display: flex;
                             justify-content: center;
                             flex-direction: column;
-                            
+
 
                             @include font(small-3x, bold);
                             em {
@@ -604,7 +693,7 @@
                         .post-head {
                             .post-name {
                                 flex-direction: unset;
-                                
+
                                 em {
                                     position: relative;
                                     top: 0;
@@ -888,7 +977,7 @@
             }
 
             .circles {
-            
+
                 .post-item {
                     position: absolute;
                     top: -0.9rem;
@@ -907,7 +996,7 @@
                         display: block;
                         width: 7.6rem;
                         height: 7.6rem;
-                        
+
                     }
                     .title {
                         position: absolute;

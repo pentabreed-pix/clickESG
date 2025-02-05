@@ -12,7 +12,6 @@ frontCommon.Html = (function () {
             //accordion();
             activeItemOnlyPc('.process, .feature');
             activeItemOnlyMo('.feature');
-            dropdown();
 
             //footer();
             //localAnimations();
@@ -309,17 +308,17 @@ function tab() {
     // jQuery Scroll Event
     $(function () {
         var tabDisplayOffset = $(".tab-display.module-b").offset().top - 64;
-    
+
         var placeholder = $("<div>").height($(".tab-display.module-b").outerHeight()).hide();
         $(".tab-display.module-b").before(placeholder);
-    
+
         $(window).scroll(function () {
             var scrollTop = $(this).scrollTop();
-    
+
             if (tabDisplayOffset <= scrollTop) {
                 $(".tab-display.module-b").addClass("fixed");
                 placeholder.show();
-    
+
                 $("#header").css({
                     "box-shadow": "none"
                 });
@@ -328,12 +327,12 @@ function tab() {
                 placeholder.hide();
 
                 $("#header").css({
-                    "box-shadow": "0px 4px 28px 0px rgba(0, 0, 0, 0.04)" 
+                    "box-shadow": "0px 4px 28px 0px rgba(0, 0, 0, 0.04)"
                 });
             }
         });
     });
-    
+
 }
 
 // input
@@ -463,8 +462,8 @@ $(function(){
 
 
 // selectbox - dropdown
-function dropdown() {
-    $('.dropdown').each(function() {
+function dropdownTab() {
+    $('.dropdown.tab').each(function() {
         const $this = $(this);
         const $dropdownMenu = $this.find('.dropdown-menu');
         const $buttonArea = $this.find('.btn');
@@ -479,7 +478,7 @@ function dropdown() {
 
             $dropdownMenu.stop(true, true).slideToggle();
             $buttonArea.find('.arrow').toggleClass('rotate');
-            
+
             if ($dropdownMenu.is(':visible')) {
                 $this.css('border-color', '#000');
             } else {
@@ -489,7 +488,7 @@ function dropdown() {
 
         $dropdownItem.on('click', function(event) {
             event.stopPropagation();
-            
+
             $dropdownItem.removeClass('selected');
             $(this).addClass('selected');
 
@@ -501,6 +500,55 @@ function dropdown() {
 
             $('.panel-list .panel').removeClass('active');
             $('#' + $(this).data('panel')).addClass('active');
+        });
+    });
+
+    $(document).on('click', function() {
+        $('.dropdown-menu').slideUp();
+        $('.btn .arrow').removeClass('rotate');
+        $('.dropdown').css('border-color', 'transparent');
+    });
+
+    $('.dropdown-menu').on('click', function(event) {
+        event.stopPropagation();
+    });
+}
+
+function dropdownSelect() {
+    $('.dropdown.select').each(function() {
+        const $this = $(this);
+        const $dropdownMenu = $this.find('.dropdown-menu');
+        const $buttonArea = $this.find('.btn');
+        const $dropdownItem = $this.find('.dropdown-item');
+
+        $buttonArea.on('click', function(event) {
+            event.stopPropagation();
+
+            $('.dropdown-menu').not($dropdownMenu).slideUp();
+            $('.btn .arrow').not($buttonArea.find('.arrow')).removeClass('rotate');
+            $('.dropdown').not($this).css('border-color', 'transparent');
+
+            $dropdownMenu.stop(true, true).slideToggle();
+            $buttonArea.find('.arrow').toggleClass('rotate');
+
+            if ($dropdownMenu.is(':visible')) {
+                $this.css('border-color', '#000');
+            } else {
+                $this.css('border-color', 'transparent');
+            }
+        });
+
+        $dropdownItem.on('click', function(event) {
+            event.stopPropagation();
+
+            $dropdownItem.removeClass('selected');
+            $(this).addClass('selected');
+
+            $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
+
+            $dropdownMenu.slideUp();
+            $buttonArea.find('.arrow').removeClass('rotate');
+            $this.css('border-color', 'transparent');
         });
     });
 

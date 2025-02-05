@@ -352,6 +352,26 @@
     }
   }
 
+  &.module-b {
+    display: flex;
+    
+    .form-list {
+      .form-item {
+        .form-wrap {
+          .form-body {
+            .form-area {
+
+            }
+          }
+        }
+      }
+    }
+
+    &.type-c {
+      justify-content: flex-end;
+    }
+  }
+
   .sign {
     flex-shrink: 0;
     &.mail {
@@ -421,7 +441,7 @@
             background: icon('arrow-down1', custom-color(neutral, 080)) no-repeat center;
             background-size: 100%;
             transform: translateY(-50%);
-            transition: transform 0.3s ease; 
+            transition: transform 0.3s ease;
           }
           &.rotate::after {
             transform: translateY(-50%) rotate(180deg);
@@ -448,7 +468,7 @@
           }
         }
       }
-    }    
+    }
   }
 
   &.check {

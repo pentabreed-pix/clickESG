@@ -7,7 +7,11 @@
 	pageJavascript: ''
 }) %>
 </head>
-
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        dropdownTab();
+    });
+</script>
 <body>
 <div id="wrap" class="page">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
@@ -31,11 +35,11 @@
                 </div>
 
                 <div class="local-body">
-                    <div class="content-body">            
+                    <div class="content-body">
                         <div class="section module-c" active-animation="type-1">
                             <div class="section-wrap">
                                 <div class="section-head">
-                                    <div class="form dropdown module-a">
+                                    <div class="form dropdown module-a tab">
                                         <button class="btn">2024.09.01 ~ 현재까지 적용 <span class="arrow"></span></button>
                                         <div class="dropdown-menu">
                                             <div class="dropdown-item selected" data-panel="panel1">2024.09.01 ~ 현재까지 적용</div>
@@ -669,6 +673,6 @@
 </div>
 </body>
 </html>
-       
-            
+
+
 
