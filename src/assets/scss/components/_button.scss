@@ -197,5 +197,27 @@
         }
       }
     }
+    &.style-c {
+      width: 3.2rem;
+      height: 3.2rem;
+      border-radius: 50%;
+      transition:all .2s ease-out;
+
+      &::after {
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      &.arrow-left3 {
+        &::after {
+          background: icon('arrow-left3', custom-color(neutral, 100)) no-repeat center center;
+        }
+      }
+      &.arrow-right3 {
+        &::after {
+          background: icon('arrow-right3', custom-color(neutral, 100)) no-repeat center center;
+        }
+      }
+    }
   }
 }
