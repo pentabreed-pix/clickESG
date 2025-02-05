@@ -118,7 +118,7 @@
 
                                                 .btn {
                                                     @include mobile {
-                                                        padding: 1.15rem 2.7rem;
+                                                        padding: 1.15rem 3.9rem;
                                                         @include font(small-5x, bold);
                                                     }
                                                 }
@@ -586,7 +586,7 @@
                                                     color: custom-color(neutral, 080);
 
                                                     @include mobile {
-                                                        @include font(small-6x, bold);
+                                                        @include font(small-6x, regular);
                                                     }
                                                 }
                                             }
@@ -636,7 +636,7 @@
                                     &.item-03 {
                                         .swiper-wrap {
                                             &::before {
-                                                background-image: url("../../assets/images/main/story02-03.svg");
+                                                background-image: url("../../assets/images/main/story02-03.jpg");
                                             }
                                         }
                                     }
@@ -1168,6 +1168,7 @@
 
                                             @include mobile {
                                                 margin-top: 1.4rem;
+                                                padding: 0 1.5rem;
                                             }
 
                                         }
@@ -1212,6 +1213,10 @@
 
                                                     @include mobile {
                                                         //padding-bottom: 52.38095%;
+                                                        img {
+                                                            width: 25.2rem;
+                                                            object-fit: contain;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -1330,7 +1335,7 @@
                         }
 
                         & + .section-body {
-                            margin-top: 6.4rem;
+                            margin-top: 2.4rem;
 
                             @include mobile {
                                 margin-top: 4rem;
@@ -1415,7 +1420,7 @@
                                                 font-size: 1.5rem;
                                                 font-weight: 600;
                                                 line-height: 1.2;
-                                                color: custom-color(secondary, 040);
+                                                color: custom-color(primary, 090);
 
                                                 @include mobile {
                                                     @include font(small-6x, bold);
