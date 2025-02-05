@@ -222,13 +222,18 @@
             .data-wrap {
                 display: flex;
                 gap: 4.1rem;
+                align-items: center;
                 @include font(small-4x, regular);
+                color: custom-color(neutral, 080);
                 @include mobile {
                     @include font(small-5x, regular);
                     gap: 2rem;
                 }
                 .data-head {
                     position: relative;
+                    font-size: inherit;
+                    font-weight: inherit;
+                    color: inherit;
                     &::before {
                         content: "";
                         display: block;
@@ -247,7 +252,9 @@
                     }
                 }
                 .data-body {
+                    font-size: inherit;
                     font-weight: 700;
+                    color: inherit;
                     @include mobile {
                         white-space: nowrap;
                         overflow: hidden;

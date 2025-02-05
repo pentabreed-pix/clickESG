@@ -153,6 +153,12 @@
             @include mobile {
                 margin-top: 8rem;
             }
+            .button-area {
+                margin-top: 8rem;
+                @include mobile {
+                    margin-top: 6rem;
+                }
+            }
         }
     }
 }
