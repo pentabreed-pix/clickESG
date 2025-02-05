@@ -190,6 +190,12 @@
           }
         }
       }
+
+      &.search {
+        &::after {
+          background: icon('search', custom-color(neutral, 100)) no-repeat center center;
+        }
+      }
     }
   }
 }

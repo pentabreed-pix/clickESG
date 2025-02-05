@@ -354,13 +354,16 @@
 
   &.module-b {
     display: flex;
-    
+
     .form-list {
+      display: flex;
+      gap: 0.8rem;
+
       .form-item {
         .form-wrap {
           .form-body {
             .form-area {
-
+              position: relative;
             }
           }
         }
@@ -412,10 +415,11 @@
     &.module-a {
       position: relative;
       width: 28.4rem;
-      margin-bottom: 2rem;
+      //margin-bottom: 2rem;
 
       .btn {
         width: 100%;
+        height: 4.8rem;
         border: none;
         text-align: left;
         cursor: pointer;
@@ -423,7 +427,7 @@
         align-items: center;
         justify-content: space-between;
         background-color: custom-color(etc, 070);
-        padding: 1.3rem 1.6rem;
+        padding: 1.1rem 1.6rem;
         border-radius: 0.8rem;
         border: 0.1rem solid transparent;
         @include font(small-4x, medium);
@@ -550,6 +554,46 @@
             @include font(small-5x, medium);
           }
         }
+      }
+    }
+    &.module-b {
+      position: relative;
+      display: inline-flex;
+
+      .form-elem {
+        flex: 1 1 100%;
+        width: 100%;
+        height: 4.8rem;
+        padding: 1.1rem 5.6rem 1.1rem 1.6rem;
+        border-radius: 0.8rem;
+        border: 0.1rem solid transparent;
+        background-color: custom-color(etc, 070);
+        @include font(small-4x, medium);
+        color: custom-color(neutral, 090);
+
+        &::placeholder  {
+          @include font(small-4x, medium);
+          color: custom-color(neutral, 070);
+
+          @include mobile {
+
+          }
+        }
+
+        &:focus {
+          outline: none;
+          border: 0.1rem solid custom-color(neutral, 080);
+
+          &::placeholder  {
+            color: custom-color(neutral, 090);
+          }
+        }
+      }
+      
+      & + .search {
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
   }
