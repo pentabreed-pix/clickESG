@@ -26,7 +26,59 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="./../../assets/js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            function commaSeparateNumber(val) {
+                return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
 
+            gsap.utils.toArray('[active-animation="main"]').forEach((section) => {
+                gsap.to(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom top",
+                        onEnter: () => handleScrollEnter(section),
+                        onEnterBack: () => handleScrollEnter(section),
+                        once: false
+                    },
+                });
+            });
+
+            function handleScrollEnter(section) {
+                if (section.classList.contains('story-03')) {
+                    document.querySelectorAll('.story-03 .board-info').forEach((el) => {
+                        let boardText = el.querySelector('.board-text');
+                        let unit = boardText ? boardText.textContent : "";
+                        let textValue = el.textContent.trim().replace(/,/g, '').replace(unit, '');
+                        const targetValue = parseInt(textValue, 10);
+
+                        if (isNaN(targetValue)) return;
+
+                        let counter = {
+                            value: 0
+                        };
+
+                        gsap.to(counter, {
+                            value: targetValue,
+                            duration: 2,
+                            ease: "power2.out",
+                            onUpdate: () => {
+                                el.innerHTML = `${commaSeparateNumber(Math.ceil(counter.value))} <span class="board-text">${unit}</span>`;
+                            },
+                        });
+                    });
+                }
+            }
+
+            $(window).on("load", function() {
+                document.querySelectorAll('.story-03').forEach((section) => {
+                    handleScrollEnter(section);
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
