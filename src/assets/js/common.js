@@ -464,46 +464,54 @@ $(function(){
 
 // selectbox - dropdown
 function dropdown() {
-    const $moduleB = $('.dropdown');
-    const $dropdownMenu = $('.dropdown-menu');
-    const $buttonArea = $('.btn');
-    const $dropdownItem = $('.dropdown-item');
+    $('.dropdown').each(function() {
+        const $this = $(this);
+        const $dropdownMenu = $this.find('.dropdown-menu');
+        const $buttonArea = $this.find('.btn');
+        const $dropdownItem = $this.find('.dropdown-item');
 
-    $moduleB.on('click', function(event) {
-        event.stopPropagation();
-        $dropdownMenu.toggle();
-        $buttonArea.find('.arrow').toggleClass('rotate');
+        $buttonArea.on('click', function(event) {
+            event.stopPropagation();
 
-        if ($dropdownMenu.is(':visible')) {
-            $(this).css('border-color', '#000');
-        } else {
-            $(this).css('border-color', 'transparent');
-        }
-    });
+            $('.dropdown-menu').not($dropdownMenu).slideUp();
+            $('.btn .arrow').not($buttonArea.find('.arrow')).removeClass('rotate');
+            $('.dropdown').not($this).css('border-color', 'transparent');
 
-    $dropdownItem.on('click', function(event) {
-        event.stopPropagation();
-        
-        $dropdownItem.removeClass('selected');
-        $(this).addClass('selected');
+            $dropdownMenu.stop(true, true).slideToggle();
+            $buttonArea.find('.arrow').toggleClass('rotate');
+            
+            if ($dropdownMenu.is(':visible')) {
+                $this.css('border-color', '#000');
+            } else {
+                $this.css('border-color', 'transparent');
+            }
+        });
 
-        $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
-        $dropdownMenu.hide();
+        $dropdownItem.on('click', function(event) {
+            event.stopPropagation();
+            
+            $dropdownItem.removeClass('selected');
+            $(this).addClass('selected');
 
-        $('.panel-list .panel').removeClass('active');
-        $('#' + $(this).data('panel')).addClass('active');
+            $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
 
-        $buttonArea.find('.arrow').removeClass('rotate');
-        $moduleB.css('border-color', 'transparent');
+            $dropdownMenu.slideUp();
+            $buttonArea.find('.arrow').removeClass('rotate');
+            $this.css('border-color', 'transparent');
+
+            $('.panel-list .panel').removeClass('active');
+            $('#' + $(this).data('panel')).addClass('active');
+        });
     });
 
     $(document).on('click', function() {
-        $dropdownMenu.hide();
-        $buttonArea.find('.arrow').removeClass('rotate');
-        $moduleB.css('border-color', 'transparent');
+        $('.dropdown-menu').slideUp();
+        $('.btn .arrow').removeClass('rotate');
+        $('.dropdown').css('border-color', 'transparent');
     });
 
-    $dropdownMenu.on('click', function(event) {
+    $('.dropdown-menu').on('click', function(event) {
         event.stopPropagation();
     });
 }
+
