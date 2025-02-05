@@ -152,6 +152,14 @@ function pubListUp() {
         worker_ko: "주은소",
         history: "",
       },
+      {
+        id_ko: "",
+        menu: "News detail",
+        root_ko: "../../page/aboutus/DETAIL.05.00.html",
+        status_ko: "진행중",
+        worker_ko: "주은소",
+        history: "",
+      },
     ],
     Utility: [
       {
