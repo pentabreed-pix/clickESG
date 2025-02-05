@@ -356,7 +356,7 @@
     display: flex;
 
     .form-list {
-      display: flex;
+      display: inline-flex;
       gap: 0.8rem;
 
       .form-item {
@@ -364,6 +364,7 @@
           .form-body {
             .form-area {
               position: relative;
+              display: flex;
             }
           }
         }
@@ -414,7 +415,7 @@
   &.dropdown {
     &.module-a {
       position: relative;
-      width: 28.4rem;
+      //width: 28.4rem;
       //margin-bottom: 2rem;
 
       .btn {
@@ -589,7 +590,7 @@
           }
         }
       }
-      
+
       & + .search {
         position: absolute;
         top: 0;
