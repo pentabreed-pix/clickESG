@@ -407,7 +407,7 @@ function activeItemOnlyPc(selector) {
     });
 }
 
-/* s: 2021-10-19 1140 이미지 레이어 팝업 */
+/* s: 이미지 레이어 팝업 */
 $(function(){
     var imgModalBox = $('.temp-img-modal-layer'),
         imgModalBody = $('.temp-modal-body'),
@@ -458,4 +458,48 @@ $(function(){
         }
     });
 });
-/* e: // 2021-10-19 1140 이미지 레이어 팝업 */
+/* e: // 이미지 레이어 팝업 */
+
+
+// selectbox - dropdown
+$(document).ready(function() {
+    $('.module-b').click(function(event) {
+        event.stopPropagation(); 
+        
+        $('.dropdown-menu').toggle();
+        $('.button-area .arrow').toggleClass('rotate');
+
+        if ($('.dropdown-menu').is(':visible')) {
+            $(this).css('border-color', '#000');
+        } else {
+            $(this).css('border-color', 'transparent');
+        }
+    });
+
+    $('.dropdown-item').click(function(event) {
+        event.stopPropagation(); 
+
+        $('.dropdown-item').removeClass('selected');
+        $(this).addClass('selected');
+
+        $('.button-area').html($(this).text() + ' <span class="arrow"></span>');
+        $('.dropdown-menu').hide();
+
+        $('.panel-list .panel').removeClass('active');
+        let selectedPanel = $('#' + $(this).data('panel'));
+        selectedPanel.addClass('active');
+
+        $('.button-area .arrow').removeClass('rotate');
+        $('.module-b').css('border-color', 'transparent');
+    });
+
+    $(document).click(function() {
+        $('.dropdown-menu').hide();
+        $('.button-area .arrow').removeClass('rotate');
+        $('.module-b').css('border-color', 'transparent');
+    });
+
+    $('.dropdown-menu').click(function(event) {
+        event.stopPropagation();
+    });
+});

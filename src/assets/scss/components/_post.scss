@@ -330,9 +330,20 @@
             border-radius: 0.8rem;
             overflow: hidden;
             width: calc(100%/6 - 2rem);
+            height: 9rem;
+            position: relative;
+            background: custom-color(neutral, 000);
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
 
             @include mobile {
                 width: calc(100%/2 - 1rem);
+                position: relative;
+                height: 6.75rem;
             }
         }
     }

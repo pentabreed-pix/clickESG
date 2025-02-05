@@ -6,31 +6,6 @@
 	pageStyle: 'service',
 	pageJavascript: ''
 }) %>
-<script src="./../../assets/js/main.js"></script>
-<script>
-$(document).ready(function() {
-    $('.module-b').click(function() {
-        $('.dropdown-menu').toggle();
-
-        $('.button-area .arrow').toggleClass('rotate');
-    });
-
-    $('.dropdown-item').click(function() {
-        $('.dropdown-item').removeClass('selected');
-        $(this).addClass('selected');
-
-        $('.button-area').html($(this).text() + ' <span class="arrow"></span>');
-        $('.dropdown-menu').hide();
-
-        $('.panel-list .panel').removeClass('active');
-        let selectedPanel = $('#' + $(this).data('panel'));
-        selectedPanel.addClass('active');
-
-        $('.button-area .arrow').removeClass('rotate');
-    });
-});
-
-</script>
 </head>
 
 <body>
