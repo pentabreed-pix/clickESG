@@ -5,12 +5,12 @@
 .swiper-list{
     &.process {
         @include mobile {
-            .swiper-wrapper {  
+            .swiper-wrapper {
                 .swiper-slide {
                     width: 33.9rem !important;
                     height: 35rem;
                     margin-right: 0;
-            
+
                     .swiper-wrap {
                         .swiper-info {
                             display: flex;
@@ -32,7 +32,7 @@
                                         transform: rotate(0);
                                         display: inline-block;
                                         writing-mode: unset;
-            
+
                                         &::after {
                                             content: '';
                                             display: inline-block;
@@ -51,7 +51,7 @@
                                         margin-top: 0.4rem;
                                         display: block;
                                     }
-            
+
                                 }
                                 + .swiper-body {
                                     display: block;
@@ -64,7 +64,7 @@
                         }
                         .swiper-body {
                             display: block;
-            
+
                         }
                         .swiper-figure {
                             position: absolute;
@@ -80,10 +80,113 @@
                         }
                     }
                 }
-            
-            
+
+
             }
         }
 
+    }
+}
+
+.swiper-display {
+    &.module-a {
+        display: flex;
+        justify-content: space-between;
+        gap: 14.2rem;
+
+        .swiper-list {
+            &.title {
+                flex: 1 1 58.8rem;
+
+                .swiper-wrapper {
+                    .swiper-item {
+                        display: block;
+
+                        .swiper-wrap {
+                            .swiper-head {
+                                .swiper-cation {
+                                    @include font(small-4x, bold);
+                                    color: custom-color(primary, 090);
+
+                                    & + .swiper-subject {
+                                        margin-top: 2rem;
+                                    }
+                                }
+                                .swiper-subject {
+                                    @include font(medium, bold);
+                                    color: custom-color(neutral, 090);
+                                    @include ellipsis(2);
+                                }
+
+                                & + .swiper-body {
+                                    margin-top: 3.2rem;
+                                }
+                            }
+                            .swiper-body {
+                                .para {
+                                    @include font(small-2x, regular);
+                                    color: custom-color(neutral, 080);
+                                    @include ellipsis(3);
+
+                                }
+
+                                & + .swiper-date {
+                                    margin-top: 2.4rem;
+                                }
+                            }
+                            .swiper-date {
+                                @include font(small-5x, bold);
+                                color: custom-color(neutral, 070);
+                            }
+                        }
+                    }
+                }
+
+                .swiper-button-next,
+                .swiper-button-prev {
+                    top: unset;
+                    bottom: 0;
+                }
+
+                .swiper-button-prev {
+                    left: 0;
+                }
+                .swiper-button-next {
+                    left: 5.6rem;
+                }
+            }
+            &.thumbnail {
+                width: 71rem;
+                .swiper-wrapper {
+                    .swiper-item {
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        height: 39rem;
+                        border-radius: 1.6rem;
+                        overflow: hidden;
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) scale(1);
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: all .5s ease-out;
+                        }
+
+                        &:hover,
+                        &.focus,
+                        &.active {
+                            img {
+                                transform: translate(-50%, -50%) scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
