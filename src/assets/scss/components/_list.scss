@@ -200,7 +200,100 @@
     }
 
     // 상세 페이지
-    
+    &.page-det {
+        border-top: 0.1rem solid custom-color(neutral, 100);
+        border-bottom: 0.1rem solid custom-color(neutral, 100);
+        .data-item {
+            position: relative;
+            padding: 2.8rem 0;
+            border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+            padding-left: 4.2rem;
+            @include mobile {
+                padding-top: 1.7rem;
+                padding-bottom: 1.7rem;
+            }
+            + .data-item {
+                border-bottom: 0;
+            }
+            
+            .data-wrap {
+                display: flex;
+                gap: 4.1rem;
+                @include font(small-4x, regular);
+                @include mobile {
+                    @include font(small-5x, regular);
+                    gap: 2rem;
+                }
+                .data-head {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        right: -2rem;
+                        transform: translateY(-50%);
+                        height: 1rem;
+                        width: 0.1rem;
+                        background-color: rgb(167, 167, 167);
+                    }
+                    @include mobile {
+                        &::before {
+                            right: -1rem;
+                        }
+                    }
+                }
+                .data-body {
+                    font-weight: 700;
+                    @include mobile {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+            &.prev {
+                .data-wrap {
+                    .data-head {
+                        .data-name {
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                position: absolute;
+                                top: 50%;
+                                left: -3.2rem;
+                                width: 1.2rem;
+                                height: 0.7rem;
+                                background: icon('arrow-up1', custom-color(neutral, 080)) no-repeat center;
+                                background-size: 100%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+            &.next {
+                .data-wrap {
+                    .data-head {
+                        .data-name {
+                            &::before {
+                                content: "";
+                                display: inline-block;
+                                position: absolute;
+                                top: 50%;
+                                left: -3.2rem;
+                                width: 1.2rem;
+                                height: 0.7rem;
+                                background: icon('arrow-down1', custom-color(neutral, 080)) no-repeat center;
+                                background-size: 100%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
