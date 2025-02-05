@@ -90,6 +90,13 @@
                         }
                     }
                 }
+                .module-a {
+                    .section-wrap {
+                        .section-head {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }
