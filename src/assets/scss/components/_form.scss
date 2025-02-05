@@ -71,6 +71,12 @@
     }
   }
 
+  &.module-b {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+
   .sign {
     flex-shrink: 0;
     &.mail {
@@ -143,6 +149,16 @@
       //   .form-elem {
       //   }
       // }
+    }
+
+    &.module-b {
+      border-radius: 0.8rem;
+      select {
+        background: custom-color(etc, 070);
+        width: 28.4rem;
+        padding: 1.3rem 1.6rem;
+
+      }
     }
   }
 
