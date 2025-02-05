@@ -12,6 +12,7 @@ frontCommon.Html = (function () {
             //accordion();
             activeItemOnlyPc('.process, .feature');
             activeItemOnlyMo('.feature');
+            dropdown();
 
             //footer();
             //localAnimations();
@@ -462,44 +463,47 @@ $(function(){
 
 
 // selectbox - dropdown
-$(document).ready(function() {
-    $('.module-b').click(function(event) {
-        event.stopPropagation(); 
-        
-        $('.dropdown-menu').toggle();
-        $('.button-area .arrow').toggleClass('rotate');
+function dropdown() {
+    const $moduleB = $('.module-b');
+    const $dropdownMenu = $('.dropdown-menu');
+    const $buttonArea = $('.button-area');
+    const $dropdownItem = $('.dropdown-item');
 
-        if ($('.dropdown-menu').is(':visible')) {
+    $moduleB.on('click', function(event) {
+        event.stopPropagation();
+        $dropdownMenu.toggle();
+        $buttonArea.find('.arrow').toggleClass('rotate');
+
+        if ($dropdownMenu.is(':visible')) {
             $(this).css('border-color', '#000');
         } else {
             $(this).css('border-color', 'transparent');
         }
     });
 
-    $('.dropdown-item').click(function(event) {
-        event.stopPropagation(); 
-
-        $('.dropdown-item').removeClass('selected');
+    $dropdownItem.on('click', function(event) {
+        event.stopPropagation();
+        
+        $dropdownItem.removeClass('selected');
         $(this).addClass('selected');
 
-        $('.button-area').html($(this).text() + ' <span class="arrow"></span>');
-        $('.dropdown-menu').hide();
+        $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
+        $dropdownMenu.hide();
 
         $('.panel-list .panel').removeClass('active');
-        let selectedPanel = $('#' + $(this).data('panel'));
-        selectedPanel.addClass('active');
+        $('#' + $(this).data('panel')).addClass('active');
 
-        $('.button-area .arrow').removeClass('rotate');
-        $('.module-b').css('border-color', 'transparent');
+        $buttonArea.find('.arrow').removeClass('rotate');
+        $moduleB.css('border-color', 'transparent');
     });
 
-    $(document).click(function() {
-        $('.dropdown-menu').hide();
-        $('.button-area .arrow').removeClass('rotate');
-        $('.module-b').css('border-color', 'transparent');
+    $(document).on('click', function() {
+        $dropdownMenu.hide();
+        $buttonArea.find('.arrow').removeClass('rotate');
+        $moduleB.css('border-color', 'transparent');
     });
 
-    $('.dropdown-menu').click(function(event) {
+    $dropdownMenu.on('click', function(event) {
         event.stopPropagation();
     });
-});
+}
