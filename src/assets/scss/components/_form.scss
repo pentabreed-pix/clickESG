@@ -388,43 +388,67 @@
     flex: 1 1 100%;
   }
 
-  &.select {
-    appearance: none;
-    -webkit-appearance: none;
-
+  &.dropdown {
     &.module-a {
       position: relative;
-      display: inline-flex;
+      width: 28.4rem;
+      margin-bottom: 2rem;
 
-      // .form-elem {
-      //   flex: 1 1 100%;
-      //   border: 0.1rem solid transparent;
-      //   width: 100%;
-      //   //padding: 2.5rem 0;
-      //   @include font(small-4x, medium);
-      //   color: custom-color(neutral, 090);
-      //   background-color: transparent;
-      //   &:focus {
-      //     outline: none;
-      //     border: 0.1rem solid #222;
-      //     border-radius: 0.4rem;
-      //   }
-
-      //   &:invalid  {
-      //     @include font(small-4x, medium);
-      //     color: custom-color(neutral, 070);
-      //   }
-
-      //   option {
-      //     @include font(small-4x, medium);
-      //     color: custom-color(neutral, 090);
-      //   }
-      // }
-      // &.open {
-      //   .form-elem {
-      //   }
-      // }
-    }
+      .btn {
+        width: 100%;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: custom-color(etc, 070);
+        padding: 1.3rem 1.6rem;
+        border-radius: 0.8rem;
+        border: 0.1rem solid transparent;
+        @include font(small-4x, medium);
+        .arrow {
+          position: relative;
+          display: inline-block;
+          &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 1.2rem;
+            height: 0.7rem;
+            background: icon('arrow-down1', custom-color(neutral, 080)) no-repeat center;
+            background-size: 100%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease; 
+          }
+          &.rotate::after {
+            transform: translateY(-50%) rotate(180deg);
+          }
+        }
+      }
+      .dropdown-menu {
+        position: absolute;
+        width: 100%;
+        background-color: custom-color(neutral, 000);
+        box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.14);
+        display: none;
+        margin-top: 5px;
+        border-radius: 8px;
+        padding: 2rem 1.6rem;
+        .dropdown-item {
+          @include font(small-4x, medium);
+          cursor: pointer;
+          + .dropdown-item {
+            margin-top: 1rem;
+          }
+          &.selected {
+            color: custom-color(primary, 090);
+          }
+        }
+      }
+    }    
   }
 
   &.check {

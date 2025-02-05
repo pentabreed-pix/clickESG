@@ -464,9 +464,9 @@ $(function(){
 
 // selectbox - dropdown
 function dropdown() {
-    const $moduleB = $('.module-b');
+    const $moduleB = $('.dropdown');
     const $dropdownMenu = $('.dropdown-menu');
-    const $buttonArea = $('.button-area');
+    const $buttonArea = $('.btn');
     const $dropdownItem = $('.dropdown-item');
 
     $moduleB.on('click', function(event) {
