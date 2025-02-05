@@ -274,24 +274,24 @@
                                                     @include scroll-x;
                                                 }
 
-                                                // &.spec {
-                                                //     position: relative;
-                                                //     height: 0;
-                                                //     padding-bottom: 63%;
-                                                //     img {
-                                                //         position: absolute;
-                                                //         top: 0;
-                                                //         left: 50%;
-                                                //         transform: translateX(-50%);
-                                                //         object-fit: cover;
-                                                //         height: 100%;
+                                                &.spec {
+                                                    position: relative;
+                                                    height: 0;
+                                                    padding-bottom: 63%;
+                                                    img {
+                                                        position: absolute;
+                                                        top: 0;
+                                                        left: 50%;
+                                                        transform: translateX(-50%);
+                                                        object-fit: cover;
+                                                        height: 100%;
 
-                                                //         @include mobile {
-                                                //             left: 0%;
-                                                //             transform: none;
-                                                //         }
-                                                //     }
-                                                // }
+                                                        @include mobile {
+                                                            left: 0%;
+                                                            transform: none;
+                                                        }
+                                                    }
+                                                }
                                                 &.height {
                                                     @include mobile {
                                                         max-height: 53rem;

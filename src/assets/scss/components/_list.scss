@@ -66,19 +66,12 @@
                     .order-list {
                         margin-top: 2rem;
                         @include font(small-3x, regular);
-                        @include mobile {
-                            @include font(small-5x, regular);
-                            margin-top: 1.4rem;
-                        }
                         .order-item {
                             .item-det {
                                 color: custom-color(neutral, 080);
                                 margin-top: 0.4rem;
                                 position: relative;
                                 padding-left: 1.4rem;
-                                @include mobile {
-                                    margin-top: 0;
-                                }
                                 &::before {
                                     content: "-";
                                     margin-right: 0.8rem;

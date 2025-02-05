@@ -8,7 +8,6 @@
             &.module-a {
                 .section-wrap {
                     .section-head{
-                        
                         + .section-body {
                             margin-top: 4rem;
                             @include mobile {
@@ -25,66 +24,6 @@
                                 @include font(small-2x, regular);
                                 @include mobile {
                                     @include font(small-4x, regular);
-                                }
-                            }
-                        }
-                    }
-                }
-                + .section {
-                   &.module-a {
-                        @include mobile {
-                            padding-top: 8rem;
-                        }
-                   }
-                }
-            }
-
-            &.module-c {
-                .section-head {
-                    display: flex;
-                    justify-content: flex-end;
-                    .dropdown {
-                        position: relative;
-                        width: 28.4rem;
-                        margin-bottom: 2rem;
-                        .dropdown-menu {
-                            position: absolute;
-                            width: 100%;
-                            background-color: white;
-                            border: 1px solid #d1d5db;
-                            box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.14);
-                            display: none;
-                            margin-top: 5px;
-                            border-radius: 8px;
-                            padding: 2rem 1.6rem;
-                            .dropdown-item {
-                                @include font(small-4x, medium);
-                                cursor: pointer;
-                                + .dropdown-item {
-                                    margin-top: 1rem;
-                                }
-                                // &:hover {
-                                //     color: custom-color(primary, 090);
-                                // }
-                                &.selected {
-                                    color: custom-color(primary, 090);
-                                }
-                            }
-                        }
-                    }
-                    + .section-body {
-                        position: relative;
-                        z-index: -1;
-                        .panel-list {
-                            .panel {
-                                position: relative;
-                                display: none;
-                                z-index: 1;
-                                &.active {
-                                    display: block;
-                                }
-                                ~ .dropdown .dropdown-button .arrow {
-                                    transform: translateY(-50%) rotate(180deg);
                                 }
                             }
                         }

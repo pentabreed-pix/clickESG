@@ -8,40 +8,6 @@
     display: flex;
     justify-content: center;
   }
-
-  &.module-b {
-    width: 100%;
-    border: none;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: custom-color(etc, 070);
-    padding: 1.3rem 1.6rem;
-    border-radius: 0.8rem;
-    @include font(small-4x, medium);
-    .arrow {
-      position: relative;
-      display: inline-block;
-      &::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        width: 1.2rem;
-        height: 0.7rem;
-        background: icon('arrow-down1', custom-color(neutral, 080)) no-repeat center;
-        background-size: 100%;
-        transform: translateY(-50%);
-        transition: transform 0.3s ease; 
-      }
-      &.rotate::after {
-        transform: translateY(-50%) rotate(180deg);
-      }
-    }
-  }
 }
 
 .btn {
