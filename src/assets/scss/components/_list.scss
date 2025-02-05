@@ -5,7 +5,6 @@
 
 .data-list {
     
-
     // 개인정보
     &.pers {
         width: 100%;
@@ -43,7 +42,6 @@
         }
     }
 
-    // 개인
     &.numbering {
         counter-reset: data-counter 0;
         .data-item {
@@ -139,7 +137,7 @@
         }
     }
 
-
+    // solution
     &.solutions {
         display: flex;
         gap: 12.4rem;
@@ -200,6 +198,9 @@
             }
         }
     }
+
+    // 상세 페이지
+    
 }
 
 

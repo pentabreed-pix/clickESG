@@ -2,6 +2,162 @@
 @use '../components/variables' as *;
 @use '../components/icons' as *;
 
+.post-display {
+    max-width: 144rem;
+    margin: 0 auto;
+    margin-top: 7.6rem;
+    @include mobile {
+        margin-top: 0;
+    }
+    .post-wrap {
+        .post-head {
+            text-align: center;
+            .post-info {
+                .info-list {
+                    display: flex;
+                    justify-content: center;
+                    gap: 3rem;
+                    .info-item {
+                        position: relative;
+                        @include font(small-5x, bold);
+                        color: custom-color(neutral, 070);
+
+                        @include mobile {
+                            @include font(small-6x, bold);
+                        }
+
+                        &:first-child {
+                            color: custom-color(primary, 090);
+                        }
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            right: -1.5rem;
+                            transform: translateY(-50%);
+                            height: 0.8rem;
+                            width: 0.1rem;
+                            background-color: custom-color(neutral, 070);
+                        }
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                        &.link2 {
+                            position: relative;
+                            &::before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 50%;
+                                right: -1.4rem;
+                                transform: translateY(-50%);
+                                width: 2rem;
+                                height: 2rem;
+                                background-image: icon('link2', custom-color(neutral, 100));
+                                background-size: cover;
+                                background-repeat: no-repeat
+                            }
+                        }
+                    }
+                }
+            }
+            .post-subject {
+                @include font(large, bold);
+                padding: 3.4rem 0 8rem;
+                max-width: 95.4rem;
+                margin: 0 auto;
+                @include mobile {
+                    padding: 2rem 0 6rem;
+                    @include font(small-2x, bold);
+                }
+            }
+
+            + .post-body {
+                padding-top: 8rem;
+                border-top: 0.1rem solid custom-color(neutral, 100);
+                @include mobile {
+                    padding-top: 6rem;
+                }
+                .post-inner {
+                    max-width: 95.4rem;
+                    margin: 0 auto;
+                    .post-figure {
+                        border-radius: 1.6rem;
+                        overflow: hidden;
+                    }
+                    .post-text {
+                        margin-top: 6.4rem;
+                        @include font(small-2x, regular);
+                        color: custom-color(neutral, 080);
+                        @include mobile {
+                            margin-top: 4rem;
+                            @include font(small-4x, regular);
+                        }
+                    }
+                    .post-link {
+                        margin-top: 8rem;
+                        .link-list {
+                            .link-item {
+                                background: custom-color(etc, 100);
+                                border-radius: 0.8rem;
+                                padding: 2.8rem;
+                                @include mobile {
+                                    padding: 2rem 1.6rem;
+                                }
+                                .link-wrap {
+                                    a{
+                                        display: flex;
+                                        gap: 2rem;
+                                        @include font(small-4x, regular);
+                                        .link-icon {
+                                            position: relative;
+                                            font-weight: 700;
+                                            color: custom-color(primary, 090);
+                                            padding-left: 2.6rem;
+                                            height: 2.6rem;
+                                            &::before {
+                                                content: "";
+                                                display: block;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 0;
+                                                transform: translateY(-50%);
+                                                width: 2rem;
+                                                height: 2rem;
+                                                background-image: icon('link2', custom-color(primary, 090));
+                                                background-size: cover;
+                                                background-repeat: no-repeat
+                                            }
+                                        }
+                                        .link-title {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        @include mobile {
+                            margin-top: 4rem;
+                        }
+                    }
+                }
+            }
+            .post-util {
+                margin-top: 12rem;
+                @include mobile {
+                    margin-top: 8rem;
+                }
+            }
+        }
+    }
+}
+
+
 .post-list {
     &.module-a {
         display: flex;
