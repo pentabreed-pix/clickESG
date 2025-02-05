@@ -39,6 +39,9 @@
                     }
                 }
             }
+            &:hover {
+                color: custom-color(primary, 090);
+            }
         }
     }
 

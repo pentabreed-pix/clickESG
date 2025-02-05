@@ -6,6 +6,30 @@
 	pageStyle: 'service',
 	pageJavascript: ''
 }) %>
+<script>
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function(event) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+                if (target.length) {
+                    event.preventDefault();
+
+                    var scrollToPosition = target.offset().top - 64;
+
+                    $('html, body').animate({
+                        scrollTop: scrollToPosition
+                    }, 2000, function() {
+                        window.history.replaceState(null, null, target.selector);
+                    });
+                }
+            }
+        });
+    });
+</script>
+
+
 </head>
 <script>
     document.addEventListener('DOMContentLoaded',function(){
@@ -13,7 +37,7 @@
     });
 </script>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="page scroll-container">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
     <main class="page personal">
@@ -57,76 +81,98 @@
                                                     <div class="section-body pers">
                                                         <div class="data-list pers">
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보 수집항목·처리목적·보유기간</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-1">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보 수집항목·처리목적·보유기간</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보의 제3자 제공</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-2">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보의 제3자 제공</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보 처리의 위탁</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-3">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보 처리의 위탁</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보 파기절차 및 방법</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-4">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보 파기절차 및 방법</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">정보주체 및 법정대리인의 권리·의무 및 행사방법</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-5">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">정보주체 및 법정대리인의 권리·의무 및 행사방법</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보 자동수집 장치의 설치/운영 및 거부에 관한 사항</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-6">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보 자동수집 장치의 설치/운영 및 거부에 관한 사항</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보의 안전성 확보 조치</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-7">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보의 안전성 확보 조치</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보 보호 책임자 및 담당자</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-8">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보 보호 책임자 및 담당자</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보 열람청구</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-9">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보 열람청구</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">권익침해 구제방법</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-10">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">권익침해 구제방법</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="data-item">
-                                                                <div class="data-wrap">
-                                                                    <div class="data-number"></div>
-                                                                    <div class="data-text">개인정보 처리방침 변경</div>
-                                                                </div>
+                                                                <a href="#privacy-ind-11">
+                                                                    <div class="data-wrap">
+                                                                        <div class="data-number"></div>
+                                                                        <div class="data-text">개인정보 처리방침 변경</div>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-1">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -180,7 +226,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-2">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -192,7 +238,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-3">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -252,7 +298,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-4">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -285,7 +331,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-5">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -335,7 +381,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-6">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -373,7 +419,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-7">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -438,7 +484,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-8">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -501,7 +547,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-9">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -525,7 +571,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-10">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
@@ -629,7 +675,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="section module-a" active-animation="type-1">
+                                            <div class="section module-a" active-animation="type-1" id="privacy-ind-11">
                                                 <div class="section-wrap">
                                                     <div class="section-head">
                                                         <div class="section-subject">
