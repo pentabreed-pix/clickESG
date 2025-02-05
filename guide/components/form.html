@@ -2,6 +2,7 @@
 <html lang="ko">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
@@ -135,579 +136,186 @@
                     <!-- section -->
                     <div class="section">
                         <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">submit form</span></h4>
+                            <h4 class="section-subject"><span class="section-name">Form</span></h4>
                         </div>
                         <div class="section-body">
                             <div class="subsection">
                                 <div class="subsection-head">HTML structure</div>
-                                <div class="subsection-body">
-                                    <!-- highlight -->
-                                    <pre class="highlight-js">
-<code class="html">&lt;!-- submit form --&gt;
-    &lt;div class="submit-form module-a style-aalign1"&gt;
-        &lt;div class="form-list"&gt;
-            &lt;div class="form-item"&gt;&lt;/div&gt;
-            &lt;div class="form-item"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;!-- //submit form --&gt;
-</code></pre>
-                                    <!-- //highlight -->
-                                </div>
+                                <div class="subsection-body"></div>
                             </div>
                             <div class="subsection">
                                 <div class="subsection-head">module-a</div>
                                 <div class="subsection-body">
-                                    <div class="submit-form module-a style-aalign1">
+                                    <div class="submit-form module-a">
+                                        <legend class="blind">문의 작성 서식</legend>
                                         <div class="form-list">
                                             <div class="form-item">
-                                                <div class="form select module-a style-a type-a">
-                                                    <label for="temp" class="blind">Label</label>
-                                                    <select name="name" id="temp">
-                                                        <option value="option1">Option1</option>
-                                                        <option value="option2">Option2</option>
-                                                        <option value="option3">Option3</option>
-                                                        <option value="option4">Option4</option>
-                                                        <option value="option5">Option5</option>
-                                                    </select>
-                                                    <div class="arrow"><span class="blind">닫힘</span></div>
+                                                <div class="form-wrap">
+                                                    <!-- <div class="form-head"><label for="" class="form-name">문의/상담 유형</label></div> -->
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <div id="inquiryType" class="data-list select">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-head">
+                                                                        <span class="data-title">문의/상담 유형</span>
+                                                                        <a href="javascript:void(0);" id="inquiryTypeButton" class="data-name">선택하세요</a>
+                                                                    </div>
+                                                                    <div class="data-body">
+                                                                        <ul class="option-list">
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">ESG 진단/공급망진단, 서비스 및 CllickESG 관련 문의</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">NetZero , 온실가스 Inventory 관련 문의</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">CDP 컨설팅 및 솔루션 관련 문의</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">ESG Data Hub 솔루션 및 서비스 관련 문의</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">ESG 솔루션 구축 사업 문의</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="form-item">
-                                                <div class="form search module-a style-a type-a">
-                                                    <label for="temp-search" class="blind">
-                                                        검색
-                                                    </label>
-                                                    <input id="temp-search" class="input-elem" type="text" placeholder="Default" />
-                                                    <div class="input-icon">
-                                                        <button class="btn icon case3 remove">
-                                                            <span class="btn-text blind">삭제</span>
-                                                        </button>
-                                                        <button class="btn icon case3 search">
-                                                            <span class="btn-text blind">검색</span>
-                                                        </button>
+                                                <div class="form-wrap">
+                                                    <div class="form-head"><label for="" class="form-name">기업명</label></div>
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <span class="form textfield module-a flex">
+                                                                <input type="text" class="form-elem" id="" autocomplete="off" placeholder="입력하세요">
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Align</div>
-                                <div class="subsection-body">
-                                    <div class="subcategory">
-                                        <div class="subcategory-head">align1</div>
-                                        <div class="subcategory-body">
-                                            <div class="submit-form module-a style-aalign1">
-                                                <div class="form-list">
-                                                    <div class="form-item">
-                                                        <div class="form select module-a style-a type-a">
-                                                            <label for="temp" class="blind">Label</label>
-                                                            <select name="name" id="temp">
-                                                                <option value="option1">Option1</option>
-                                                                <option value="option2">Option2</option>
-                                                                <option value="option3">Option3</option>
-                                                                <option value="option4">Option4</option>
-                                                                <option value="option5">Option5</option>
-                                                            </select>
-                                                            <div class="arrow"><span class="blind">닫힘</span></div>
+                                            <div class="form-item">
+                                                <div class="form-wrap">
+                                                    <div class="form-head"><label for="" class="form-name">성명</label></div>
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <span class="form textfield module-a flex">
+                                                                <input type="text" class="form-elem" id="" autocomplete="off" placeholder="입력하세요">
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                    <div class="form-item">
-                                                        <div class="form search module-a style-a type-a">
-                                                            <label for="temp-search" class="blind">
-                                                                검색
-                                                            </label>
-                                                            <input id="temp-search" class="input-elem" type="text" placeholder="Default" />
-                                                            <div class="input-icon">
-                                                                <button class="btn icon case3 remove">
-                                                                    <span class="btn-text blind">삭제</span>
-                                                                </button>
-                                                                <button class="btn icon case3 search">
-                                                                    <span class="btn-text blind">검색</span>
-                                                                </button>
+                                                </div>
+                                            </div>
+                                            <div class="form-item">
+                                                <div class="form-wrap">
+                                                    <div class="form-head"><label for="" class="form-name">부서</label></div>
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <span class="form textfield module-a flex">
+                                                                <input type="text" class="form-elem" id="" autocomplete="off" placeholder="입력하세요">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-item">
+                                                <div class="form-wrap">
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <div id="emailType" class="data-list select">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-head">
+                                                                        <span class="data-title">이메일</span>
+                                                                        <span class="form textfield module-a flex">
+                                                                            <input type="text" class="form-elem" id="" autocomplete="off" placeholder="아이디">
+                                                                        </span>
+                                                                        <span class="sign mail">@</span>
+                                                                        <a href="javascript:void(0);" id="emailTypeButton" class="data-name">선택하세요</a>
+                                                                    </div>
+                                                                    <div class="data-body">
+                                                                        <ul class="option-list">
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">직접입력하기</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">gmail.com</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">naver.com</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">daum.net</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">outlook.com</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
                                                             </div>
+                                                            <span class="form textfield module-a flex" style="display:none;">
+                                                                <input type="text" class="form-elem" id="" autocomplete="off">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-item">
+                                                <div class="form-wrap">
+                                                    <div class="form-head"><label for="" class="form-name">연락처</label></div>
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <span class="form textfield module-a">
+                                                                <input type="text" class="form-elem phone-01" id="" autocomplete="off" placeholder="000">
+                                                            </span>
+                                                            <span class="sign bar"></span>
+                                                            <span class="form textfield module-a">
+                                                                <input type="text" class="form-elem phone-02" id="" autocomplete="off" placeholder="0000">
+                                                            </span>
+                                                            <span class="sign bar"></span>
+                                                            <span class="form textfield module-a">
+                                                                <input type="text" class="form-elem phone-03" id="" autocomplete="off" placeholder="0000">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-item" style="width:100%;">
+                                                <div class="form-wrap">
+                                                    <div class="form-head"><label for="" class="form-name">제목</label></div>
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <span class="form textfield module-a flex">
+                                                                <input type="text" class="form-elem" id="" autocomplete="off" placeholder="제목을 입력해 주세요">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-item" style="width:100%;">
+                                                <div class="form-wrap">
+                                                    <div class="form-head"><label for="" class="form-name">내용</label></div>
+                                                    <div class="form-body">
+                                                        <div class="form-area">
+                                                            <span class="form textarea">
+                                                                <textarea class="form-elem" cols="40" rows="4"></textarea>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="subcategory">
-                                        <div class="subcategory-head">align2</div>
-                                        <div class="subcategory-body">
-                                            <div class="submit-form module-a style-aalign2">
-                                                <div class="form-list">
-                                                    <div class="form-item">
-                                                        <div class="form select module-a style-a type-a">
-                                                            <label for="temp" class="blind">Label</label>
-                                                            <select name="name" id="temp">
-                                                                <option value="option1">Option1</option>
-                                                                <option value="option2">Option2</option>
-                                                                <option value="option3">Option3</option>
-                                                                <option value="option4">Option4</option>
-                                                                <option value="option5">Option5</option>
-                                                            </select>
-                                                            <div class="arrow"><span class="blind">닫힘</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-item">
-                                                        <div class="form search module-a style-a type-a">
-                                                            <label for="temp-search" class="blind">
-                                                                검색
-                                                            </label>
-                                                            <input id="temp-search" class="input-elem" type="text" placeholder="Default" />
-                                                            <div class="input-icon">
-                                                                <button class="btn icon case3 remove">
-                                                                    <span class="btn-text blind">삭제</span>
-                                                                </button>
-                                                                <button class="btn icon case3 search">
-                                                                    <span class="btn-text blind">검색</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="subcategory">
-                                        <div class="subcategory-head">align3</div>
-                                        <div class="subcategory-body">
-                                            <div class="submit-form module-a style-aalign3">
-                                                <div class="form-list">
-                                                    <div class="form-item">
-                                                        <div class="form select module-a style-a type-a">
-                                                            <label for="temp" class="blind">Label</label>
-                                                            <select name="name" id="temp">
-                                                                <option value="option1">Option1</option>
-                                                                <option value="option2">Option2</option>
-                                                                <option value="option3">Option3</option>
-                                                                <option value="option4">Option4</option>
-                                                                <option value="option5">Option5</option>
-                                                            </select>
-                                                            <div class="arrow"><span class="blind">닫힘</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-item">
-                                                        <div class="form search module-a style-a type-a">
-                                                            <label for="temp-search" class="blind">
-                                                                검색
-                                                            </label>
-                                                            <input id="temp-search" class="input-elem" type="text" placeholder="Default" />
-                                                            <div class="input-icon">
-                                                                <button class="btn icon case3 remove">
-                                                                    <span class="btn-text blind">삭제</span>
-                                                                </button>
-                                                                <button class="btn icon case3 search">
-                                                                    <span class="btn-text blind">검색</span>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //section -->
-                    <!-- section -->
-                    <div class="section">
-                        <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Inputfield</span></h4>
-                        </div>
-                        <div class="section-body">
-                            <div class="subsection">
-                                <div class="subsection-head">HTML structure (inputfield의 width값은 인라인 스타일로 설정)</div>
-                                <div class="subsection-body">
-                                    <!-- highlight -->
-                                    <pre class="highlight-js">
-<code class="html">&lt;div class="form input module-a style-a type-a"&gt;
-    &lt;label for="name" class="blind"&gt;
-        label
-    &lt;/label&gt;
-    &lt;input 
-        id="name"
-        class="input-elem"
-        type="text"
-    /&gt;
-    &lt;div class="input-icon"&gt;
-        &lt;button class="btn icon case3 remove"&gt;
-            &lt;span class="btn-text blind"&gt;삭제&lt;/span&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-&lt;div&gt;
-</code></pre>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Default</div>
-                                <div class="subsection-body">
-                                    <div class="form input module-a style-a type-a">
-                                        <label for="name" class="blind">name</label>
-                                        <input id="name" class="input-elem" type="text" placeholder="Default" />
-                                        <div class="input-icon">
-                                            <button class="btn icon case3 remove">
-                                                <span class="btn-text blind">삭제</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Disabled</div>
-                                <div class="subsection-body">
-                                    <div class="form input module-a style-a type-a disabled">
-                                        <label for="name" class="blind">name</label>
-                                        <input id="name" class="input-elem" type="text" placeholder="Disabled" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Error</div>
-                                <div class="subsection-body">
-                                    <div class="form input module-a style-a type-a error">
-                                        <label for="name" class="blind">name</label>
-                                        <input id="name" class="input-elem" type="text" placeholder="Error" />
-                                        <div class="input-icon">
-                                            <button class="btn icon case3 remove">
-                                                <span class="btn-text blind">삭제</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="form-text error">
-                                        <p class="comment module-a style-a">* Error message</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //section -->
-                    <!-- section -->
-                    <div class="section">
-                        <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Search</span></h4>
-                        </div>
-                        <div class="section-body">
-                            <div class="subsection">
-                                <div class="subsection-head">HTML structure</div>
-                                <div class="subsection-body">
-                                    <!-- highlight -->
-                                    <pre class="highlight-js">
-<code class="html">&lt;div class="form search module-a style-a type-a"&gt;
-    &lt;label for="temp-search" class="blind"&gt;
-        검색
-    &lt;/label&gt;
-    &lt;input 
-        id="temp-search"
-        class="input-elem"
-        type="text"
-    /&gt;
-    &lt;div class="input-icon"&gt;
-        &lt;button class="btn icon case3 remove"&gt;
-            &lt;span class="btn-text blind"&gt;삭제&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button class="btn icon case3 search"&gt;
-            &lt;span class="btn-text blind"&gt;검색&lt;/span&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-&lt;div&gt;
-</code></pre>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Default</div>
-                                <div class="subsection-body">
-                                    <div class="form search module-a style-a type-a">
-                                        <label for="temp-search" class="blind">
-                                            검색
+                                        <label class="form radio module-a" for="">
+                                            <input type="radio" id="" class="form-elem" name="">
+                                            <span class="form-text">상기 문의사항 요청을 처리하기 위한 개인정보 수집 및 제공에 동의합니다.</span>
                                         </label>
-                                        <input id="temp-search" class="input-elem" type="text" placeholder="Default" />
-                                        <div class="input-icon">
-                                            <button class="btn icon case3 remove">
-                                                <span class="btn-text blind">삭제</span>
-                                            </button>
-                                            <button class="btn icon case3 search">
-                                                <span class="btn-text blind">검색</span>
-                                            </button>
+                                        <div class="button-area module-a">
+                                            <a href="#" class="btn module-a style-a color-a"><span class="btn-text">요청전송</span></a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Disabled</div>
-                                <div class="subsection-body">
-                                    <div class="form search module-a style-a type-a disabled">
-                                        <label for="temp-search" class="blind">
-                                            검색
-                                        </label>
-                                        <input id="temp-search" class="input-elem" type="text" placeholder="Disabled" />
-                                        <div class="input-icon">
-                                            <button class="btn icon case3 search">
-                                                <span class="btn-text blind">검색</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //section -->
-                    <!-- section -->
-                    <div class="section">
-                        <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Datepicker</span></h4>
-                        </div>
-                        <div class="section-body">
-                            <div class="subsection">
-                                <div class="subsection-head">HTML structure</div>
-                                <div class="subsection-body">
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Line</div>
-                                <div class="subsection-body">
-
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Fill</div>
-                                <div class="subsection-body">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //section -->
-                    <!-- section -->
-                    <div class="section">
-                        <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Select</span></h4>
-                        </div>
-                        <div class="section-body">
-                            <div class="subsection">
-                                <div class="subsection-head">module-a</div>
-                                <div class="subsection-body">
-                                    <!-- highlight -->
-                                    <pre class="highlight-js">
-<code class="html">&lt;div class="form select module-a style-a type-a"&gt;
-    &lt;label for="temp" class="blind"&gt;
-        Label
-    &lt;/label&gt;
-    &lt;select name="name" id="temp"&gt;
-        &lt;option value="option1"&gt;Option1&lt;/option&gt;
-        &lt;option value="option2"&gt;Option2&lt;/option&gt;
-        &lt;option value="option3"&gt;Option3&lt;/option&gt;
-        &lt;option value="option4"&gt;Option4&lt;/option&gt;
-        &lt;option value="option5"&gt;Option5&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;div class="arrow"&gt;&lt;span class="blind"&gt;닫힘&lt;/span&gt;&lt;/div&gt;
-&lt;div&gt;
-</code></pre>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Default</div>
-                                <div class="subsection-body">
-                                    <div class="form select module-a style-a type-a">
-                                        <label for="temp" class="blind">Label</label>
-                                        <select name="name" id="temp">
-                                            <option value="option1">Option1</option>
-                                            <option value="option2">Option2</option>
-                                            <option value="option3">Option3</option>
-                                            <option value="option4">Option4</option>
-                                            <option value="option5">Option5</option>
-                                        </select>
-                                        <div class="arrow"><span class="blind">닫힘</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Disabled</div>
-                                <div class="subsection-body">
-                                    <div class="form select module-a style-a type-a disabled">
-                                        <label for="temp" class="blind">Label</label>
-                                        <select name="name" id="temp" disabled>
-                                            <option value="option1">Option1</option>
-                                            <option value="option2">Option2</option>
-                                            <option value="option3">Option3</option>
-                                            <option value="option4">Option4</option>
-                                            <option value="option5">Option5</option>
-                                        </select>
-                                        <div class="arrow"><span class="blind">닫힘</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Error</div>
-                                <div class="subsection-body">
-                                    <div class="form select module-a style-a type-a error">
-                                        <label for="temp" class="blind">Label</label>
-                                        <select name="name" id="temp">
-                                            <option value="option1">Option1</option>
-                                            <option value="option2">Option2</option>
-                                            <option value="option3">Option3</option>
-                                            <option value="option4">Option4</option>
-                                            <option value="option5">Option5</option>
-                                        </select>
-                                        <div class="arrow"><span class="blind">닫힘</span></div>
-                                    </div>
-                                    <div class="form-text error">
-                                        <p class="comment module-a style-a">* Error message</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //section -->
-                    <!-- section -->
-                    <div class="section">
-                        <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Textarea</span></h4>
-                        </div>
-                        <div class="section-body">
-                            <div class="subsection">
-                                <div class="subsection-head">HTML structure</div>
-                                <div class="subsection-body">
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Property</div>
-                                <div class="subsection-body">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //section -->
-                    <!-- section -->
-                    <div class="section">
-                        <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Radio</span></h4>
-                        </div>
-                        <div class="section-body">
-                            <div class="subsection">
-                                <div class="subsection-head">HTML structure</div>
-                                <div class="subsection-body">
-                                    <!-- highlight -->
-                                    <pre class="highlight-js">
-<code class="html">&lt;div class="form radio module-a style-a type-a"&gt;
-    &lt;ul class="radio-list"&gt;
-        &lt;li class="radio-item"&gt;
-            &lt;label for="radio1"&gt;
-                &lt;input type="radio" name="temp" value="r1" id="radio1" checked&gt;
-                &lt;span class="option"&gt;radio1&lt;/span&gt;
-            &lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li class="radio-item"&gt;
-            &lt;label for="radio2"&gt;
-                &lt;input type="radio" name="temp" value="r2" id="radio2"&gt;
-                &lt;span class="option"&gt;radio2&lt;/span&gt;
-            &lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li class="radio-item"&gt;
-            &lt;label for="radio3"&gt;
-                &lt;input type="radio" name="temp" value="r3" id="radio3"&gt;
-                &lt;span class="option"&gt;radio3&lt;/span&gt;
-            &lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li class="radio-item"&gt;
-            &lt;label for="radio4"&gt;
-                &lt;input type="radio" name="temp" value="r4" id="radio4"&gt;
-                &lt;span class="option"&gt;radio4&lt;/span&gt;
-            &lt;/label&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;div&gt;
-</code></pre>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">module-a</div>
-                                <div class="subsection-body">
-                                    <div class="form radio module-a style-a type-a">
-                                        <ul class="radio-list">
-                                            <li class="radio-item">
-                                                <label for="radio1">
-                                                    <input type="radio" name="temp" value="r1" id="radio1" checked>
-                                                    <span class="option">radio1</span>
-                                                </label>
-                                            </li>
-                                            <li class="radio-item">
-                                                <label for="radio2">
-                                                    <input type="radio" name="temp" value="r2" id="radio2">
-                                                    <span class="option">radio2</span>
-                                                </label>
-                                            </li>
-                                            <li class="radio-item">
-                                                <label for="radio3">
-                                                    <input type="radio" name="temp" value="r3" id="radio3">
-                                                    <span class="option">radio3</span>
-                                                </label>
-                                            </li>
-                                            <li class="radio-item">
-                                                <label for="radio4">
-                                                    <input type="radio" name="temp" value="r4" id="radio4">
-                                                    <span class="option">radio4</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- //section -->
-                    <!-- section -->
-                    <div class="section">
-                        <div class="section-head">
-                            <h4 class="section-subject"><span class="section-name">Checkbox</span></h4>
-                        </div>
-                        <div class="section-body">
-                            <div class="subsection">
-                                <div class="subsection-head">HTML structure</div>
-                                <div class="subsection-body">
-                                    <!-- highlight -->
-                                    <pre class="highlight-js">
-    <code class="html">&lt;div class="form checkbox module-a style-a type-a"&gt;
-        &lt;ul class="checkbox-list"&gt;
-            &lt;li class="checkbox-item"&gt;
-                &lt;label for="checkbox1"&gt;
-                    &lt;input type="checkbox" name="temp" value="c1" id="checkbox1" checkboxed&gt;
-                    &lt;span class="option"&gt;checkbox1&lt;/span&gt;
-                &lt;/label&gt;
-            &lt;/li&gt;
-            &lt;li class="checkbox-item"&gt;
-                &lt;label for="checkbox2"&gt;
-                    &lt;input type="checkbox" name="temp" value="c2" id="checkbox2"&gt;
-                    &lt;span class="option"&gt;checkbox2&lt;/span&gt;
-                &lt;/label&gt;
-            &lt;/li&gt;
-            &lt;li class="checkbox-item"&gt;
-                &lt;label for="checkbox3"&gt;
-                    &lt;input type="checkbox" name="temp" value="c3" id="checkbox3"&gt;
-                    &lt;span class="option"&gt;checkbox3&lt;/span&gt;
-                &lt;/label&gt;
-            &lt;/li&gt;
-            &lt;li class="checkbox-item"&gt;
-                &lt;label for="checkbox4"&gt;
-                    &lt;input type="checkbox" name="temp" value="c4" id="checkbox4"&gt;
-                    &lt;span class="option"&gt;checkbox4&lt;/span&gt;
-                &lt;/label&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;div&gt;
-    </code></pre>
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="subsection-head">Style</div>
-                                <div class="subsection-body">
-
                                 </div>
                             </div>
                         </div>
@@ -729,6 +337,72 @@
             <!--//page-control-->
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            let $dropdownInquiry = $('#inquiryType');
+            let $buttonInquiry = $('#inquiryTypeButton');
+
+            $buttonInquiry.on('click', function(event) {
+                event.stopPropagation();
+                $dropdownInquiry.toggleClass('show');
+            });
+
+            $('#inquiryType .option-text').on('click', function() {
+                let selectedTextInquiry = $(this).text();
+                $buttonInquiry.text(selectedTextInquiry);
+                $('#inquiryType .option-item').removeClass('active');
+                $(this).closest('#inquiryType .option-item').addClass('active');
+                $dropdownInquiry.removeClass('show');
+
+                if (selectedTextInquiry === '선택하세요') {
+                    $buttonInquiry.removeClass('active');
+                } else {
+                    $buttonInquiry.addClass('active');
+                }
+            });
+
+            $(document).on('click', function(event) {
+                if (!$dropdownInquiry.is(event.target) && $dropdownInquiry.has(event.target).length === 0) {
+                    $dropdownInquiry.removeClass('show');
+                }
+            });
+
+            let $dropdownEmail = $('#emailType');
+            let $buttonEmail = $('#emailTypeButton');
+
+            $buttonEmail.on('click', function(event) {
+                event.stopPropagation();
+                $dropdownEmail.toggleClass('show');
+            });
+
+            $('#emailType .option-text').on('click', function() {
+                let selectedTextEmail = $(this).text();
+                $buttonEmail.text(selectedTextEmail);
+                $('#emailType .option-item').removeClass('active');
+                $(this).closest('.option-item').addClass('active');
+                $dropdownEmail.removeClass('show');
+
+                if (selectedTextEmail === '선택하세요') {
+                    $buttonEmail.removeClass('active');
+                } else {
+                    $buttonEmail.addClass('active');
+                }
+
+                if (selectedTextEmail === '직접입력') {
+                    $buttonEmail.removeClass('active');
+                } else {
+                    $buttonEmail.addClass('active');
+                }
+            });
+
+            $(document).on('click', function(event) {
+                if (!$dropdownEmail.is(event.target) && $dropdownEmail.has(event.target).length === 0) {
+                    $dropdownEmail.removeClass('show');
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
