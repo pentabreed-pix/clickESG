@@ -221,5 +221,20 @@
         }
       }
     }
+    &.style-d {
+      width: 2rem;
+      height: 2rem;
+
+      &::after {
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      &.link2 {
+        &::after {
+          background: icon('link2', custom-color(neutral, 100)) no-repeat center center;
+        }
+      }
+    }
   }
 }
