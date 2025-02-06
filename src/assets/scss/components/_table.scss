@@ -97,6 +97,7 @@
 
 	&.module-b{
 		table {
+			border-bottom: 0;
 			>thead {
 				>tr {
 					>th {
@@ -143,7 +144,7 @@
 							font-weight: 600;
 						}
 						&.bottom-grey {
-							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50) !important;
 							font-size: 1.5rem;
 							font-weight: 400;
 							line-height: 160%;
@@ -175,6 +176,7 @@
 
 	&.module-c{
 		table {
+			border-bottom: 0;
 			>thead {
 				>tr {
 					>th {
@@ -208,6 +210,7 @@
 						padding: 1.8rem 0;
 						&.bold {
 							font-weight: 700;
+							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 						}
 						&.has-bg {
 							@include font(small-5x, bold);
@@ -259,6 +262,9 @@
 								transform: translate(-50%, -50%);
 								border-radius: 100%
 							}
+						}
+						&.nonline {
+							background: custom-color(etc, 100);
 						}
 					}
 				}
