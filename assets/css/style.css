@@ -1903,7 +1903,7 @@
 }
 .bullet-list.module-a.type-a > .bullet-item::before {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: rgb(0, 0, 0);
 }
 @media (max-width: 1023px) {
@@ -2258,6 +2258,7 @@
 @media (max-width: 1023px) {
   .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info {
     margin-top: 2.4rem;
+    padding: 0 1.6rem;
   }
 }
 .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info .post-body {
@@ -2276,11 +2277,11 @@
 @media (max-width: 1023px) {
   .post-list.module-c.style-c .post-item .post-wrap .post-head .post-name {
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 .post-list.module-c.style-c .post-item .post-wrap .post-head .post-name + .post-summary {
-  margin-top: 6.4rem;
+  margin-top: 2.4rem;
   font-weight: 500;
   font-size: 1.8rem;
   color: rgb(0, 0, 0);
@@ -2289,7 +2290,7 @@
   .post-list.module-c.style-c .post-item .post-wrap .post-head .post-name + .post-summary {
     font-weight: 500;
     font-size: 1.4rem;
-    margin-top: 4rem;
+    margin-top: 1.6rem;
   }
 }
 .post-list.module-c.style-c .post-item .post-wrap .post-head + .post-figure {
@@ -2301,14 +2302,59 @@
 .post-list.module-c.style-c .post-item .post-wrap .post-head + .post-body {
   margin-top: 4rem;
 }
+.post-list.module-c.style-c .post-item .post-wrap .post-head + .post-body .table-info {
+  display: flex;
+  justify-content: right;
+  gap: 1.2rem;
+}
 .post-list.module-c.style-c .post-item .post-wrap .post-head + .post-body img {
   width: 100%;
 }
 .post-list.module-c.style-c .post-item .post-wrap .post-figure {
   margin-top: 4rem;
 }
+@media (max-width: 1023px) {
+  .post-list.module-c.style-c .post-item .post-wrap .post-figure {
+    overflow: auto;
+    width: calc(100% - 1.8rem);
+    padding-right: 1.8rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: calc(100% + 3.6rem);
+    max-width: unset;
+    overflow: auto;
+    padding-bottom: 1.6rem;
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    margin-left: -1.8rem;
+  }
+  .post-list.module-c.style-c .post-item .post-wrap .post-figure::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  .post-list.module-c.style-c .post-item .post-wrap .post-figure::-webkit-scrollbar-thumb {
+    background-color: #D5D4D9;
+    border-radius: 5rem;
+  }
+  .post-list.module-c.style-c .post-item .post-wrap .post-figure::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+  .post-list.module-c.style-c .post-item .post-wrap .post-figure::-webkit-scrollbar-thumb {
+    background-color: #D5D4D9;
+    border-radius: 5rem;
+  }
+  .post-list.module-c.style-c .post-item .post-wrap .post-figure::-webkit-scrollbar-track {
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    border-radius: 5rem;
+  }
+}
 .post-list.module-c.style-c .post-item .post-wrap .post-figure img {
   width: 100%;
+}
+@media (max-width: 1023px) {
+  .post-list.module-c.style-c .post-item .post-wrap .post-figure.height {
+    max-height: 53rem;
+  }
 }
 .post-list.module-c.style-c .post-item + .post-item {
   margin-top: 12rem;
@@ -6417,7 +6463,7 @@ body.mo-menu-open {
 }
 @media (max-width: 1023px) {
   #wrap .page .section.module-b {
-    padding-top: 8rem;
+    padding-top: 12rem;
   }
 }
 #wrap .page .section.module-b .section-wrap {
@@ -8206,11 +8252,11 @@ body.mo-menu-open {
   }
 }
 #wrap .esg-consulting .section {
-  padding-top: 10rem;
+  padding-top: 10rem !important;
 }
 @media (max-width: 1023px) {
   #wrap .esg-consulting .section {
-    padding-top: 8.4rem;
+    padding-top: 4rem !important;
   }
 }
 @media (max-width: 1023px) {
@@ -8265,11 +8311,6 @@ body.mo-menu-open {
   #wrap .esg-consulting .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure.height {
     max-height: 53rem;
   }
-}
-#wrap .esg-consulting .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .table-info {
-  display: flex;
-  justify-content: right;
-  gap: 1.2rem;
 }
 #wrap .esg-consulting .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
   margin-top: 6.4rem;
