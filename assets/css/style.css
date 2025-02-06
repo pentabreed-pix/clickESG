@@ -6211,7 +6211,7 @@ body.mo-menu-open {
   line-height: 160%;
   text-align: center;
   margin-top: 6.4rem;
-  color: rgb(34, 34, 34);
+  color: rgb(0, 0, 0);
 }
 @media (max-width: 1023px) {
   #wrap .page .local.module-a .local-subject .local-name {
@@ -6226,6 +6226,7 @@ body.mo-menu-open {
   line-height: 160%;
   text-align: center;
   margin-top: 4rem;
+  color: rgb(0, 0, 0);
 }
 @media (max-width: 1023px) {
   #wrap .page .local.module-a .local-subject .local-summary {
