@@ -287,12 +287,12 @@ body {
 
 			.local-body {
 				.content-body {
-					//padding-top: 8rem;
+					padding-top: 12rem;
 					padding-bottom: 20rem;
 
 					@include mobile {
 						padding-bottom: 8rem;
-						//padding-top: 6rem;
+						padding-top: 8rem;
 					}
 				}
 			}
@@ -304,10 +304,7 @@ body {
 			&.module-a {
 				max-width: 144rem;
 				margin: 0 auto;
-				padding-top: 12rem;
-				@include mobile {
-					padding-top: 8rem;
-				}
+
 				.section-wrap {
 					.section-head {
 						.section-caption {
@@ -401,16 +398,20 @@ body {
 						}
 					}
 				}
+				+ .section {
+					&.module-b {
+						padding-top: 18rem;
+						@include mobile {
+							padding-top: 12rem;
+						}
+					}
+				}
 			}
 
 			// section-head와 section-body가 flex 되는 경우
 			&.module-b {
 				max-width: 144rem;
 				margin: 0 auto;
-				padding-top: 12rem;
-				@include mobile {
-					padding-top: 12rem;
-				}
 				.section-wrap {
 					display: flex;
 					justify-content: space-between;
@@ -456,6 +457,12 @@ body {
 							margin-top: 2rem;
 
 						}
+					}
+				}
+				+ .module-b {
+					padding-top: 12rem;
+					@include mobile {
+						padding-top: 8rem;
 					}
 				}
 			}
