@@ -8961,7 +8961,7 @@ body.mo-menu-open {
 }
 #wrap .personal .content-body .section.module-c .section-head {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: relative;
   z-index: 100;
 }
@@ -8985,7 +8985,113 @@ body.mo-menu-open {
 #wrap .personal .content-body .section.module-c .section-head + .section-body .panel-list .panel ~ .dropdown .dropdown-button .arrow {
   transform: translateY(-50%) rotate(180deg);
 }
+#wrap .personal .content-body .section.module-c .section-head + .section-body .panel-list .panel .section + .section {
+  padding-top: 18rem;
+}
+@media (max-width: 1023px) {
+  #wrap .personal .content-body .section.module-c .section-head + .section-body .panel-list .panel .section + .section {
+    padding-top: 12rem;
+  }
+}
 #wrap .personal .content-body .section.module-c .module-a .section-wrap .section-head {
+  display: block;
+}
+
+#wrap .terms .content-body {
+  padding-top: 0 !important;
+}
+#wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body {
+  margin-top: 3.2rem;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body {
+    margin-top: 2.4rem;
+  }
+}
+#wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body .numbering .data-item + .data-item {
+  margin-top: 2rem;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body .numbering .data-item + .data-item {
+    margin-top: 1rem;
+  }
+}
+#wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body .numbering.underline .data-item .data-text {
+  text-decoration: underline;
+}
+#wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body .order-list .order-item + .order-item {
+  margin-top: 1rem;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body .order-list .order-item + .order-item {
+    margin-top: 0.4rem;
+  }
+}
+#wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body .para {
+  font-weight: 400;
+  font-size: 2rem;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-a .section-wrap .section-head + .section-body .para {
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+}
+#wrap .terms .content-body .section.module-a .section-wrap .section-head .section-summary {
+  font-weight: 500;
+  font-size: 2rem;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-a .section-wrap .section-head .section-summary {
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+}
+#wrap .terms .content-body .section.module-a .section-wrap .section-head .section-summary.under {
+  text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-a + .section.module-a {
+    padding-top: 8rem;
+  }
+}
+#wrap .terms .content-body .section.module-c {
+  padding-top: 8rem;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-c {
+    padding-top: 4rem;
+  }
+}
+#wrap .terms .content-body .section.module-c .section-head {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 100;
+}
+#wrap .terms .content-body .section.module-c .section-head .dropdown {
+  width: 28.4rem;
+}
+#wrap .terms .content-body .section.module-c .section-head + .section-body .panel-list .panel {
+  position: relative;
+  display: none;
+  z-index: 1;
+}
+#wrap .terms .content-body .section.module-c .section-head + .section-body .panel-list .panel.active {
+  display: block;
+}
+#wrap .terms .content-body .section.module-c .section-head + .section-body .panel-list .panel ~ .dropdown .dropdown-button .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+#wrap .terms .content-body .section.module-c .section-head + .section-body .panel-list .panel .section + .section {
+  padding-top: 18rem;
+}
+@media (max-width: 1023px) {
+  #wrap .terms .content-body .section.module-c .section-head + .section-body .panel-list .panel .section + .section {
+    padding-top: 12rem;
+  }
+}
+#wrap .terms .content-body .section.module-c .module-a .section-wrap .section-head {
   display: block;
 }
 
