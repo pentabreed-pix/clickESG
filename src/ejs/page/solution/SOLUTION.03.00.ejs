@@ -2,9 +2,6 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'service',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.js"></script>
@@ -18,14 +15,13 @@
         });
     });
 </script>
-
 </head>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page solution-netzero">
-        <div class="main-inner">
+    <main id="main" class="page solution-netzero">
+        <div class="page-body">
             <div class="local module-b">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -451,7 +447,7 @@
      <%-include('../_templates/_footer.ejs')%>
 </div>
 
-<!-- 
+<!--
 <script>
 
     //let scrollTriggersInitialized = false;

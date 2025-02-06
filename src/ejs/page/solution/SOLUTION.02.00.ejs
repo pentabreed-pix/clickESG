@@ -2,19 +2,16 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'service',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 
 </head>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page solution-scm">
-        <div class="main-inner">
+    <main id="main" class="page solution-scm">
+        <div class="page-body">
             <div class="local module-b">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -42,7 +39,7 @@
 
 
                 <div class="local-body">
-                    <div class="content-body">            
+                    <div class="content-body">
                         <div class="section module-a" active-animation="type-1">
                             <div class="section-wrap">
                                 <div class="section-head">
@@ -166,6 +163,6 @@
 </div>
 </body>
 </html>
-       
-            
+
+
 

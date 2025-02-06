@@ -2,9 +2,6 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'about',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 <script>
@@ -29,12 +26,12 @@
         function handleScrollEnter(section) {
             if (section.classList.contains('story-03')) {
                 document.querySelectorAll('.story-03 .board-info').forEach((el) => {
-                    let boardText = el.querySelector('.board-text'); 
+                    let boardText = el.querySelector('.board-text');
                     let unit = boardText ? boardText.textContent : "";
                     let textValue = el.textContent.trim().replace(/,/g, '').replace(unit, '');
                     const targetValue = parseInt(textValue, 10);
 
-                    if (isNaN(targetValue)) return; 
+                    if (isNaN(targetValue)) return;
 
                     let counter = { value: 0 };
 
@@ -59,11 +56,11 @@
 </script>
 </head>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page about-reference">
-        <div class="main-inner">
+    <main id="main" class="page about-reference">
+        <div class="page-body">
             <div class="local module-c">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -75,7 +72,7 @@
                     <div class="local-wrap">
                         <div class="local-subject">
                             <h2 class="local-name">
-                                Reference 
+                                Reference
                             </h2>
                         </div>
                         <div class="local-figure">
@@ -238,6 +235,6 @@
 </div>
 </body>
 </html>
-       
-            
+
+
 
