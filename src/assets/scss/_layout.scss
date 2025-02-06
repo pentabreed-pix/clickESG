@@ -32,7 +32,7 @@ body {
 						line-height: 160%;
 						text-align: center;
 						margin-top: 6.4rem;
-						color: custom-color(neutral, 090);
+						color: custom-color(neutral, 100);
 
 						@include mobile {
 							@include font(small-1x, bold);
@@ -45,6 +45,7 @@ body {
 						line-height: 160%;
 						text-align: center;
 						margin-top: 4rem;
+						color: custom-color(neutral, 100);
 
 						@include mobile {
 							@include font(small-5x, regular);
