@@ -6610,11 +6610,11 @@ body.mo-menu-open {
   font-size: 1.8rem;
 }
 #wrap .page .section.module-a .section-wrap .section-head + .section-body {
-  margin-top: 4rem;
+  margin-top: 6.4rem;
 }
 @media (max-width: 1023px) {
   #wrap .page .section.module-a .section-wrap .section-head + .section-body {
-    margin-top: 2.5rem;
+    margin-top: 4rem;
   }
 }
 #wrap .page .section.module-a .section-wrap .section-head .section-summary {
