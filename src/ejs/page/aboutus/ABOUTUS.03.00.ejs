@@ -331,7 +331,9 @@
                                         </div>
                                     </a>
                                 </div>
-                                <button class="btn module-a style-a color-a mo-only"><span class="btn-text">더보기</span></button>
+                                <div class="button-area module-a type-c">
+                                    <button id="moreBtn" class="btn module-a style-a color-a mo-only"><span class="btn-text">더보기</span></button>
+                                </div>
                                 <div class="pagination module-a style-a pc-only">
                                     <span class="page-util">
                                         <span class="util-item">
@@ -390,17 +392,35 @@
         galleryTop.controller.control = galleryThumbs;
         galleryThumbs.controller.control = galleryTop;
 
-        const $titleItems = $(".swiper-list.title .swiper-item");
-        const $thumbnailItems = $(".swiper-list.thumbnail .swiper-item");
+        function applyMoreButtonLogic() {
+            let itemsToShow = 5
+            let itemsIncrement = 5;
 
-        $titleItems.on("mouseenter", function () {
-            let index = $(this).index();
-            $thumbnailItems.removeClass("active").eq(index).addClass("active");
-        });
+            $('#moreBtn').show();
+            $('.post-item').removeClass('show');
+            $('.post-item').slice(0, itemsToShow).addClass('show');
 
-        $(".swiper-list").on("mouseleave", function () {
-            $thumbnailItems.removeClass("active");
-        });
+            $('#moreBtn').off('click').on('click', function () {
+                let hiddenItems = $('.post-item:hidden');
+                hiddenItems.slice(0, itemsIncrement).addClass('show');
+
+                if ($('.post-item:hidden').length === 0) {
+                    $('#moreBtn').hide();
+                }
+            });
+        }
+
+        function checkScreenSize() {
+            if (window.matchMedia("(max-width: 1024px)").matches) {
+                applyMoreButtonLogic();
+            } else {
+                $('.post-item').addClass('show');
+                $('#moreBtn').hide();
+            }
+        }
+
+        checkScreenSize();
+        $(window).resize(checkScreenSize);
     });
 </script>
 </body>

@@ -53,23 +53,32 @@
         }
     }
     .about-news {
-        .submit-form {
-            .dropdown {
-                width: 15rem;
+        .section {
+            .submit-form {
+                .dropdown {
+                    width: 15rem;
+                }
+                .form.textfield {
+                    width: 27rem;
+                }
+                & + .post-list {
+                    margin-top: 2.4rem;
+                    @include mobile {
+                        margin-top: 4rem;
+                    }
+                }
             }
-            .form.textfield {
-                width: 27rem;
-            }
-            & + .post-list {
-                margin-top: 2.4rem;
-                @include mobile {
-                    margin-top: 4rem;
+            .post-list {
+                & + .button-area {
+                    margin-top: 8rem;
+                }
+                & + .pagination {
+                    margin-top: 18rem;
                 }
             }
         }
-        .pagination {
-            margin-top: 18rem;
-        }
+
+
     }
     .about-contact {
         .section {
