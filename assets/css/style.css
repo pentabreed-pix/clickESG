@@ -3574,6 +3574,10 @@
   border-bottom: 0.1rem solid rgba(203, 203, 203, 0.5);
   background: rgb(241, 244, 249);
 }
+.t-display.module-b table > tbody > tr > th.nonline,
+.t-display.module-b table > tbody > tr > td.nonline {
+  border-bottom: 0.1rem solid rgb(241, 244, 249);
+}
 .t-display.module-b table > tbody > tr:last-child > td {
   border-bottom: 0;
 }
