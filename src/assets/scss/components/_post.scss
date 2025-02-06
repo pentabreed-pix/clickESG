@@ -5,7 +5,7 @@
 .post-display {
     max-width: 144rem;
     margin: 0 auto;
-    margin-top: 7.6rem;
+    margin-top: -4.4rem;
     @include mobile {
         margin-top: 0;
     }
@@ -169,8 +169,15 @@
                     flex-shrink: 0;
                     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     padding-bottom: 94%;
+                    object-fit: cover;
                     img {
                         width: 100%;
+                    }
+                    &:hover {
+                        img {
+                            transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+                            transform: scale(1.1);
+                        }
                     }
                 }
             }
@@ -243,6 +250,7 @@
                         + .post-info {
                             margin-top: 4rem;
                             color: custom-color(neutral, 080);
+                            padding: 0 1.6rem;
                             .post-head {
                                 @include font(small-1x, bold);
 
@@ -259,7 +267,6 @@
                             }
                             @include mobile {
                                 margin-top: 2.4rem;
-                                padding: 0 1.6rem;
                             }
                             .post-body {
                                 margin-top: 2rem;
@@ -382,6 +389,12 @@
                             height: auto;
                             @include mobile {
                                 width: 100%;
+                            }
+                        }
+                        &:hover {
+                            img {
+                                transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+                                transform: scale(1.1);
                             }
                         }
                     }
