@@ -8220,19 +8220,20 @@ body.mo-menu-open {
 #wrap .about-reference .local .local-body .content-body {
   padding-bottom: 0;
 }
-#wrap .about-reference .local .local-body .content-body .section .section-wrap.reference-bg {
+#wrap .about-reference .local .local-body .content-body .section.reference-bg {
   margin-top: 18rem;
   position: relative;
   padding-bottom: 18rem;
   padding-top: 6rem;
 }
 @media (max-width: 1023px) {
-  #wrap .about-reference .local .local-body .content-body .section .section-wrap.reference-bg {
+  #wrap .about-reference .local .local-body .content-body .section.reference-bg {
     padding-top: 4rem;
     margin-top: 12rem;
+    padding-bottom: 12rem;
   }
 }
-#wrap .about-reference .local .local-body .content-body .section .section-wrap.reference-bg::after {
+#wrap .about-reference .local .local-body .content-body .section.reference-bg::after {
   content: "";
   display: block;
   position: absolute;
