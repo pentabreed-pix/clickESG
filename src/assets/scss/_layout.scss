@@ -337,16 +337,16 @@ body {
 							}
 						}
 						+.section-body {
-							margin-top: 6.4rem;
+							margin-top: 4rem;
 
 							@include mobile {
-								margin-top: 4rem;
+								margin-top: 2.5rem;
 							}
 						}
 						.section-summary {
 							margin-top: 2rem;
 							@include font(small-3x, medium);
-							color: custom-color(neutral, 080);
+							color: custom-color(neutral, 100);
 							@include mobile {
 								margin-top: 1.6rem;
 								@include font(small-4x, medium);
