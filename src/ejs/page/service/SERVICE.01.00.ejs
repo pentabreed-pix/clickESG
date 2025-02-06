@@ -2,9 +2,6 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'service',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 <script>
@@ -14,14 +11,14 @@
 </script>
 </head>
 <style>
-   
+
 </style>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page esg-consulting">
-        <div class="main-inner">
+    <main id="main" class="page esg-consulting">
+        <div class="page-body">
             <div class="local module-b">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -49,7 +46,7 @@
 
 
                 <div class="local-body">
-                    <div class="content-body">            
+                    <div class="content-body">
                         <div class="section module-a">
                             <div class="section-body">
                                 <div class="tab-display module-b">
@@ -667,6 +664,6 @@
     </div>
 </body>
 </html>
-       
-            
+
+
 

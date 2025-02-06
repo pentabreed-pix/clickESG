@@ -2,9 +2,6 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'service',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 </head>
@@ -12,8 +9,8 @@
 <div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page solution-intro">
-        <div class="main-inner">
+    <main id="main" class="page solution-intro">
+        <div class="page-body">
             <div class="local module-a">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -119,7 +116,7 @@
                                     <h4 class="section-name">솔루션 특징</h4>
                                 </div>
                                 <div class="section-body solution-character">
-                                    <div class="bullet-list module-a style-a type-b">                                                        
+                                    <div class="bullet-list module-a style-a type-b">
                                         <div class="bullet-item">최신 IT 기술과 아키텍처 적용</div>
                                         <div class="bullet-item">Cloud 및 On-premise 구축 가능</div>
                                         <div class="bullet-item">최고 등급의 보안 서비스 적용</div>

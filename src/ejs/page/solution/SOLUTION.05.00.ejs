@@ -2,19 +2,16 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'service',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 
 </head>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page solution-cdp">
-        <div class="main-inner">
+    <main id="main" class="page solution-cdp">
+        <div class="page-body">
             <div class="local module-b">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -28,7 +25,7 @@
                             <h2 class="local-name">
                                 CDP AI Assistant <br>(Carbon Disclosure Project AI 지원 솔루션)
                             </h2>
-                            <p class="local-summary">신속하고 정확한 CDP 평가 대응을 위하여 공식 Database로 학습된 AI 기능으로 <br>CDP 응답 자문 서비스를 이용해 보세요.                            
+                            <p class="local-summary">신속하고 정확한 CDP 평가 대응을 위하여 공식 Database로 학습된 AI 기능으로 <br>CDP 응답 자문 서비스를 이용해 보세요.
                             </p>
                         </div>
                         <div class="local-figure">
@@ -42,7 +39,7 @@
 
 
                 <div class="local-body">
-                    <div class="content-body">            
+                    <div class="content-body">
                         <div class="section module-a" active-animation="type-1">
                             <div class="section-wrap">
                                 <div class="section-head">
@@ -114,7 +111,7 @@
                                                 </div>
                                                 <div class="board-info">
                                                     <p class="board-head">즉각적인 CDP 평가 결과 예측</p>
-                                                    <p class="board-body">CDP 문항은 사용자가 주어진 항목에서 응답 내용을 고르는 선택형 응답과 해당 질문에 대해 내용을 기술하는 서술형 응답 유형으로 나누어 집니다. 작성된 문항 응답은 G.AI 기술로 분석되어 사용자에게 즉각적인 예상점수를 제공합니다. 
+                                                    <p class="board-body">CDP 문항은 사용자가 주어진 항목에서 응답 내용을 고르는 선택형 응답과 해당 질문에 대해 내용을 기술하는 서술형 응답 유형으로 나누어 집니다. 작성된 문항 응답은 G.AI 기술로 분석되어 사용자에게 즉각적인 예상점수를 제공합니다.
                                                     </p>
                                                 </div>
                                             </div>
@@ -146,6 +143,6 @@
 </div>
 </body>
 </html>
-       
-            
+
+
 

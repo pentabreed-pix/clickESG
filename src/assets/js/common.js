@@ -12,7 +12,7 @@ frontCommon.Html = (function () {
             //accordion();
             activeItemOnlyPc('.process, .feature');
             activeItemOnlyMo('.feature');
-
+            scrollTopBtn();
             //footer();
             //localAnimations();
             //business_Interaction();
@@ -67,6 +67,40 @@ function lenis() {
     }
     requestAnimationFrame(raf);
 }
+
+function scrollTopBtn() {
+    const quickScrollBtnToTop = document.querySelector('.btn-to-top .top-btn');
+    const topButton = document.querySelector('.btn-to-top');
+
+    quickScrollBtnToTop.addEventListener('click', function(){
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    })
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const pageBodyHeight = parseInt(document.querySelector('#wrap').clientHeight);
+        const showLine = pageBodyHeight * 0.05;
+        const contentHeight = document.querySelector('.page').clientHeight;
+        const hotLine = contentHeight - window.innerHeight;
+
+        //alert(contentHeight)
+
+        if (scrollTop >= showLine) {
+            topButton.classList.add('active');
+        } else {
+            topButton.classList.remove('active');
+        }
+        if (scrollTop >= hotLine) {
+            topButton.classList.add('fixed');
+        } else {
+            topButton.classList.remove('fixed');
+        }
+    });
+}
+
 // header
 function header() {
     const $body = $('body');

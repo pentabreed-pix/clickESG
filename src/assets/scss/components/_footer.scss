@@ -4,8 +4,9 @@
 @use '../components/icons' as *;
 
 #footer {
+    position: relative;
     background-color: #0A1C3F;
-    
+
     .footer-inner {
         position: relative;
         max-width: 144rem;
@@ -74,7 +75,7 @@
                     }
 
                 }
-                
+
                 .link {
                     position: relative;
 
@@ -110,7 +111,7 @@
             @include mobile {
                 flex-direction: column-reverse;
             }
-    
+
             .copyright {
                 font-size: 1.3rem;
                 font-weight: 500;
@@ -121,21 +122,21 @@
                     @include font(small-6x);
                 }
             }
-    
+
             .info-area {
                 display: flex;
                 gap: 2.6rem;
-                
+
                 .info-area-link {
                     position: relative;
                     font-size: 1.3rem;
                     font-weight: 500;
-                    color: custom-color(neutral, 000); 
+                    color: custom-color(neutral, 000);
 
                     @include mobile {
                         @include font(small-6x);
                     }
-    
+
                     &::before {
                         content: '';
                         position: absolute;
@@ -146,7 +147,7 @@
                         height: 0.7rem;
                         background-color: #727272;
                     }
-    
+
                     &:last-child::before {
                         display: none;
                     }
@@ -157,5 +158,40 @@
                 }
             }
         }
+    }
+}
+
+.btn-to-top {
+    position: fixed;
+    bottom: 1.6rem;
+    right: 6rem;
+    z-index: 1;
+    transition: 0.3s ease;
+    visibility: visible;
+        opacity: 100%;
+
+    .top-btn {
+        padding: 0.8rem 1.6rem;
+        border-radius: 3.2rem;
+        border: 1.5px solid rgba(184, 184, 194, 0.40);
+        .btn-text {
+            display: block;
+            text-align: center;
+            color: #85858C;
+            @include font(small-4x,extrabold)
+        }
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 100%;
+    }
+    &.fixed {
+        position: absolute;
+        top: -6rem;
+        bottom: unset;
+    }
+    @include mobile {
+        right: 1.7rem;
     }
 }

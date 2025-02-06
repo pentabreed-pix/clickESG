@@ -2,9 +2,6 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'service',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 <script>
@@ -14,11 +11,11 @@
 </script>
 </head>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page about-news">
-        <div class="main-inner">
+    <main id="main" class="page about-news">
+        <div class="page-body">
             <div class="local module-b">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -383,7 +380,7 @@
             },
             autoplay: {
                 delay: 3000,
-                disableOnInteraction: false, 
+                disableOnInteraction: false,
             },
         });
 

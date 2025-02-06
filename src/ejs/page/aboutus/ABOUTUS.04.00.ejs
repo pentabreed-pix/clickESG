@@ -2,9 +2,6 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'main',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 <script>
@@ -17,8 +14,8 @@
 <div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page about-contact">
-        <div class="main-inner">
+    <main id="main" class="page about-contact">
+        <div class="page-body">
             <div class="local module-d">
                 <div class="local-head">
                     <div class="local-subject">

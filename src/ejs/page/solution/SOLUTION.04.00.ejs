@@ -2,19 +2,16 @@
 <html lang="ko">
 <head>
 <%-include('../_templates/_head.ejs', {
-	layoutTemplate: 'front',
-	pageStyle: 'service',
-	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/main.js"></script>
 
 </head>
 <body>
-<div id="wrap" class="page">
+<div id="wrap" class="wrap">
     <%-include('../_templates/_header.ejs', {type: 'white',})%>
     <!-- main -->
-    <main class="page solution-data">
-        <div class="main-inner">
+    <main id="main" class="page solution-data">
+        <div class="page-body">
             <div class="local module-b">
                 <div class="local-head">
                     <%-include('../_templates/_local-info.ejs', {
@@ -29,7 +26,7 @@
                                 ESG Data Hub<br>(ESG 데이터관리 솔루션)
                             </h2>
                             <p class="local-summary">ESG 경영에 필수적인 ESG Data 및 성과 관리를 도와 드립니다.<br>
-                                관리지표, 목표 및 실적이 일관성 있고 효과적으로 관리되어 귀사의 ESG 경영 수준이 한 단계 업그레이드됩니다.                            
+                                관리지표, 목표 및 실적이 일관성 있고 효과적으로 관리되어 귀사의 ESG 경영 수준이 한 단계 업그레이드됩니다.
                             </p>
                         </div>
                         <div class="local-figure">
@@ -43,7 +40,7 @@
 
 
                 <div class="local-body">
-                    <div class="content-body">            
+                    <div class="content-body">
                         <div class="section module-a" active-animation="type-1">
                             <div class="section-wrap">
                                 <div class="section-head">
@@ -167,6 +164,6 @@
 </div>
 </body>
 </html>
-       
-            
+
+
 
