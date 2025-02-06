@@ -115,7 +115,7 @@
         border-radius: 1.6rem;
         padding: 17rem 16.5rem 3.4rem;
         display: flex;
-        gap: 12rem;
+        //gap: 12rem;
         justify-content: space-between;
         
         @include mobile {
@@ -128,6 +128,10 @@
             gap: 8rem;
         }
         .board-item {
+            width: calc(100% / 4 - 12rem);
+            @include mobile {
+                width: 100%;
+            }
             .board-wrap {
                 .board-icon {
                     position: relative;
@@ -185,25 +189,25 @@
                     @include font(small-4x, bold);
                     color: custom-color(neutral, 000);
                    }
-                   + .board-body {
-                        .board-info {
-                            @include font(large-7x, bold);
-                            color: custom-color(neutral, 000);
-                            display: inline-block;
-                            white-space: nowrap;
-                            @include mobile {
-                                font-size: 6.8rem;
-                            }
-                            .board-text {
-                                @include font(large-1x, bold);
-                                margin-left: -1rem;
-                                @include mobile {
-                                    @include font(small, bold);
-                                }
-                            }
-                        }
-                    }
                 }
+                .board-body {
+                     .board-info {
+                         @include font(large-7x, bold);
+                         color: custom-color(neutral, 000);
+                         display: inline-block;
+                         white-space: nowrap;
+                         @include mobile {
+                             font-size: 6.8rem;
+                         }
+                         .board-text {
+                             @include font(large-1x, bold);
+                             margin-left: -1rem;
+                             @include mobile {
+                                 @include font(small, bold);
+                             }
+                         }
+                     }
+                 }
             }
         }
     }
