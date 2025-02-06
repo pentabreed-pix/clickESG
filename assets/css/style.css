@@ -196,7 +196,6 @@
   border-radius: 1.6rem;
   padding: 17rem 16.5rem 3.4rem;
   display: flex;
-  gap: 12rem;
   justify-content: space-between;
 }
 @media (max-width: 1023px) {
@@ -211,7 +210,12 @@
   }
 }
 .board-list.module-b .board-item {
-  width: 26rem;
+  width: calc(25% - 12rem);
+}
+@media (max-width: 1023px) {
+  .board-list.module-b .board-item {
+    width: 100%;
+  }
 }
 .board-list.module-b .board-item .board-wrap .board-icon {
   position: relative;
@@ -262,7 +266,7 @@
   font-size: 1.6rem;
   color: rgb(255, 255, 255);
 }
-.board-list.style-b .board-item .board-wrap .board-head + .board-body .board-info {
+.board-list.style-b .board-item .board-wrap .board-body .board-info {
   font-weight: 700;
   font-size: 8rem;
   color: rgb(255, 255, 255);
@@ -270,17 +274,17 @@
   white-space: nowrap;
 }
 @media (max-width: 1023px) {
-  .board-list.style-b .board-item .board-wrap .board-head + .board-body .board-info {
+  .board-list.style-b .board-item .board-wrap .board-body .board-info {
     font-size: 6.8rem;
   }
 }
-.board-list.style-b .board-item .board-wrap .board-head + .board-body .board-info .board-text {
+.board-list.style-b .board-item .board-wrap .board-body .board-info .board-text {
   font-weight: 700;
   font-size: 4rem;
   margin-left: -1rem;
 }
 @media (max-width: 1023px) {
-  .board-list.style-b .board-item .board-wrap .board-head + .board-body .board-info .board-text {
+  .board-list.style-b .board-item .board-wrap .board-body .board-info .board-text {
     font-weight: 700;
     font-size: 2.8rem;
   }
@@ -8190,19 +8194,19 @@ body.mo-menu-open {
 #wrap .about-reference .local .local-body .content-body {
   padding-bottom: 0;
 }
-#wrap .about-reference .local .local-body .content-body .section.reference-bg {
+#wrap .about-reference .local .local-body .content-body .section .section-wrap.reference-bg {
   margin-top: 18rem;
   position: relative;
   padding-bottom: 18rem;
   padding-top: 6rem;
 }
 @media (max-width: 1023px) {
-  #wrap .about-reference .local .local-body .content-body .section.reference-bg {
+  #wrap .about-reference .local .local-body .content-body .section .section-wrap.reference-bg {
     padding-top: 4rem;
     margin-top: 12rem;
   }
 }
-#wrap .about-reference .local .local-body .content-body .section.reference-bg::after {
+#wrap .about-reference .local .local-body .content-body .section .section-wrap.reference-bg::after {
   content: "";
   display: block;
   position: absolute;
