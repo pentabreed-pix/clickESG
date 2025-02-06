@@ -153,6 +153,9 @@
 							border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 							background: custom-color(etc, 100);
 						}
+						&.nonline {
+							border-bottom: 0.1rem solid custom-color(etc, 100);
+						}
 					}
 					&:last-child{
 						>td {
