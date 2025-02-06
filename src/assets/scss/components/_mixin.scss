@@ -27,6 +27,7 @@ $iframe: 1040px;
 // ellipsis
 @mixin ellipsis($line: 1) {
     @if $line ==1 {
+        display: block;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

@@ -537,6 +537,10 @@
             padding: 4.25rem 0;
             border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
 
+            @include mobile {
+                padding: 2.4rem 0;
+            }
+
             .post-wrap {
                 display: flex;
                 gap: 7rem;
@@ -548,6 +552,10 @@
                     height: 19.4rem;
                     border-radius: 1.6rem;
                     overflow: hidden;
+
+                    @include mobile {
+                        display: none;
+                    }
 
                     img {
                         position: absolute;
@@ -564,10 +572,18 @@
                 .post-info {
                     width: calc(100% - 35.5rem - 7rem);
 
+                    @include mobile {
+                        width: 100%;
+                    }
+
                     .post-head {
                         .post-caption {
                             @include font(small-4x, bold);
                             color: custom-color(primary, 090);
+
+                            @include mobile {
+                                @include font(small-6x, bold);
+                            }
 
                             & + .post-subject {
                                 margin-top: 1.2rem;
@@ -577,10 +593,18 @@
                             @include font(small-1x, bold);
                             color: custom-color(neutral, 090);
                             @include ellipsis(1);
+
+                            @include mobile {
+                                @include font(small-4x, bold);
+                            }
                         }
 
                         & + .post-body {
                             margin-top: 2.1rem;
+
+                            @include mobile {
+                                margin-top: 0.3rem;
+                            }
                         }
                     }
                     .post-body {
@@ -588,10 +612,18 @@
                             @include font(small-2x, regular);
                             color: custom-color(neutral, 080);
                             @include ellipsis(2);
+
+                            @include mobile {
+                                @include font(small-4x, regular);
+                            }
                         }
 
                         & + .post-date {
                             margin-top: 2.4rem;
+
+                            @include mobile {
+                                margin-top: 1.6rem;
+                            }
                         }
                     }
                     .post-date {

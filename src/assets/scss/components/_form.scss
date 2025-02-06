@@ -356,8 +356,13 @@
     display: flex;
 
     .form-list {
-      display: inline-flex;
+      display: flex;
       gap: 0.8rem;
+
+      @include mobile {
+        flex-direction: column;
+        width: 100%;
+      }
 
       .form-item {
         .form-wrap {
@@ -365,6 +370,12 @@
             .form-area {
               position: relative;
               display: flex;
+
+              .form  {
+                @include mobile {
+                  width: 100% !important;
+                }
+              }
             }
           }
         }
@@ -444,7 +455,6 @@
             background: icon('arrow-down1', custom-color(neutral, 080)) no-repeat center;
             background-size: 100%;
             transform: translateY(-50%);
-            transition: transform 0.3s ease;
           }
         }
         &.rotate {
@@ -466,13 +476,16 @@
         margin-top: 5px;
         border-radius: 8px;
         padding: 2rem 1.6rem;
+        z-index: 10;
+
         .dropdown-item {
           @include font(small-4x, medium);
           cursor: pointer;
           + .dropdown-item {
             margin-top: 1rem;
           }
-          &.selected {
+          &.selected,
+          &:hover {
             color: custom-color(primary, 090);
           }
         }

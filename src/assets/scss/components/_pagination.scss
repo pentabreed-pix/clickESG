@@ -8,6 +8,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          gap: 3.2rem;
 
           .page-util {
               .util-item {
@@ -28,7 +29,6 @@
                   @include font(small-4x, bold);
                   color: custom-color(neutral, 080);
                   text-align: center;
-                  min-width: 4rem;
 
                   &::after {
                     content: '';

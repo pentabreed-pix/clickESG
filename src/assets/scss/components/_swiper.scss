@@ -94,9 +94,20 @@
         justify-content: space-between;
         gap: 14.2rem;
 
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 2.4rem;
+        }
+
         .swiper-list {
             &.title {
                 flex: 1 1 58.8rem;
+
+                @include mobile {
+                    order: 2;
+                    flex: 1 1 100%;
+                    padding-bottom: 7.6rem;
+                }
 
                 .swiper-wrapper {
                     .swiper-item {
@@ -108,18 +119,35 @@
                                     @include font(small-4x, bold);
                                     color: custom-color(primary, 090);
 
+                                    @include mobile {
+                                        @include font(small-6x, bold);
+                                    }
+
                                     & + .swiper-subject {
                                         margin-top: 2rem;
+
+                                        @include mobile {
+                                            margin-top: 0.8rem;
+                                        }
                                     }
                                 }
                                 .swiper-subject {
                                     @include font(medium, bold);
                                     color: custom-color(neutral, 090);
                                     @include ellipsis(2);
+
+                                    @include mobile {
+                                        @include font(small-2x, bold);
+                                        @include ellipsis(1);
+                                    }
                                 }
 
                                 & + .swiper-body {
                                     margin-top: 3.2rem;
+
+                                    @include mobile {
+                                        margin-top: 1.4rem;
+                                    }
                                 }
                             }
                             .swiper-body {
@@ -128,15 +156,27 @@
                                     color: custom-color(neutral, 080);
                                     @include ellipsis(3);
 
+                                    @include mobile {
+                                        @include font(small-4x, regular);
+                                        @include ellipsis(2);
+                                    }
                                 }
 
                                 & + .swiper-date {
                                     margin-top: 2.4rem;
+
+                                    @include mobile {
+                                        margin-top: 1.6rem;
+                                    }
                                 }
                             }
                             .swiper-date {
                                 @include font(small-5x, bold);
                                 color: custom-color(neutral, 070);
+
+                                @include mobile {
+                                    @include font(small-6x, bold);
+                                }
                             }
                         }
                     }
@@ -157,6 +197,10 @@
             }
             &.thumbnail {
                 width: 71rem;
+
+                @include mobile {
+                    width: 100%;
+                }
                 .swiper-wrapper {
                     .swiper-item {
                         display: block;
@@ -165,6 +209,11 @@
                         height: 39rem;
                         border-radius: 1.6rem;
                         overflow: hidden;
+
+                        @include mobile {
+                            height: 0;
+                            padding-bottom: 54.86725%;
+                        }
 
                         img {
                             position: absolute;

@@ -516,18 +516,11 @@ function dropdownSelect() {
         $buttonArea.on('click', function(event) {
             event.stopPropagation();
 
-            $('.dropdown-menu').not($dropdownMenu).slideUp();
-            $('.btn .arrow').not($buttonArea.find('.arrow')).removeClass('rotate');
-            $('.dropdown').not($this).css('border-color', 'transparent');
+            $('.btn').not($buttonArea).removeClass('rotate');
+            $('.dropdown-menu').not($dropdownMenu).hide();
 
-            $dropdownMenu.stop(true, true).slideToggle();
-            $buttonArea.find('.arrow').toggleClass('rotate');
-
-            if ($dropdownMenu.is(':visible')) {
-                $this.css('border-color', '#000');
-            } else {
-                $this.css('border-color', 'transparent');
-            }
+            $dropdownMenu.toggle();
+            $buttonArea.toggleClass('rotate');
         });
 
         $dropdownItem.on('click', function(event) {
@@ -538,16 +531,14 @@ function dropdownSelect() {
 
             $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
 
-            $dropdownMenu.slideUp();
-            $buttonArea.find('.arrow').removeClass('rotate');
-            $this.css('border-color', 'transparent');
+
+            $buttonArea.removeClass('rotate');
         });
     });
 
     $(document).on('click', function() {
-        $('.dropdown-menu').slideUp();
-        $('.btn .arrow').removeClass('rotate');
-        $('.dropdown').css('border-color', 'transparent');
+        $('.dropdown-menu').hide();
+        $('.btn').removeClass('rotate');
     });
 
     $('.dropdown-menu').on('click', function(event) {

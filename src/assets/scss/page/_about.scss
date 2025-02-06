@@ -62,7 +62,13 @@
             }
             & + .post-list {
                 margin-top: 2.4rem;
+                @include mobile {
+                    margin-top: 4rem;
+                }
             }
+        }
+        .pagination {
+            margin-top: 18rem;
         }
     }
     .about-contact {
