@@ -6,64 +6,67 @@
 
 #wrap {
     .solution-intro{
-        .section{
-            //bg
-            &.esg-operation{
-                position: relative;
-                padding: 10rem 0 8.9rem;
-
-                @include mobile {
-                    padding: 6rem 0 7.9rem;
-                   
-                    .section-figure {
-                        @include mobile {
-                            @include scroll-x;
-                        }
-                        img {
-                            width: 91rem;
+        .content-body{
+            padding-top: 0 !important;
+            .section{
+                //bg
+                &.esg-operation{
+                    position: relative;
+                    padding: 10rem 0 8.9rem;
+    
+                    @include mobile {
+                        padding: 6rem 0 7.9rem;
+                       
+                        .section-figure {
+                            @include mobile {
+                                @include scroll-x;
+                            }
+                            img {
+                                width: 91rem;
+                            }
                         }
                     }
+    
+                    &::after{
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        width: 100vw;
+                        height: 100%;
+                        content: '';
+                        background: custom-color(etc, 070);
+                        transform: translateX(-50%);
+                        z-index: -1;
+    
+                    }
+    
+                    .section-body {
+                        text-align: center;
+                    }
                 }
-
-                &::after{
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    width: 100vw;
-                    height: 100%;
-                    content: '';
-                    background: custom-color(etc, 070);
-                    transform: translateX(-50%);
-                    z-index: -1;
-
-                }
-
+    
                 .section-body {
                     text-align: center;
-                }
-            }
-
-            .section-body {
-                text-align: center;
-                &.solution-character {
-                    padding: 6.6rem 8rem;
-                    border-radius: 1.6rem;
-                    background: custom-color(etc, 070);
-                    @include mobile {
-                        padding: 4rem 1.6rem;
-                    }
-
-                    .bullet-list {
-                        display: flex;
-                        flex-wrap: wrap;
-                        column-gap: 7rem;
-                        width: 111rem;
-                        .bullet-item {
-                            width: 47rem;
-                        }
-
+                    &.solution-character {
+                        padding: 6.6rem 8rem;
+                        border-radius: 1.6rem;
+                        background: custom-color(etc, 070);
                         @include mobile {
-                            flex-direction: column;
+                            padding: 4rem 1.6rem;
+                        }
+    
+                        .bullet-list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            column-gap: 7rem;
+                            width: 111rem;
+                            .bullet-item {
+                                width: 47rem;
+                            }
+    
+                            @include mobile {
+                                flex-direction: column;
+                            }
                         }
                     }
                 }
@@ -166,27 +169,21 @@
                                 background: custom-color(etc, 070);
                             }
                         }
-            
-            
-            
-                        // &.story1 {
-                        //     padding-top: 0;
-                        //      .section-wrap {
-                        //         height: 100vh;
-                        //         display: flex;
-                        //         flex-direction: column;
-                        //         align-items: center;
-                        //         justify-content: center;
-            
-                        //         @include mobile {
-                        //             height: auto;
-                        //         }
-            
-                        //         .section-body {
-                        //             width: 100%;
-                        //         }
-                        //     }
-                        // }
+                        + .module-a {
+                            padding-top: 0;
+                            .section-figure {
+                                padding: 16rem 0 13.5rem;
+                                @include mobile {
+                                    padding: 7rem 0 6rem;
+                                }
+                            }
+                            ~ .module-a {
+                                padding-top: 18rem;
+                                @include mobile {
+                                    padding-top: 12rem;
+                                }
+                            }
+                        }
                     }
                 }
             }

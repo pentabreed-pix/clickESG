@@ -238,42 +238,58 @@
     }
 
     .esg-consulting {
-        .section {
-            padding-top: 10rem !important;
-            @include mobile {
-                padding-top: 4rem !important;
-            }
-            .panel-display {
-                .panel-list {
-                    .panel-item {
-                        .panel-wrap {
-                            .section {
-                                //margin-top: 4rem;
-                                @include mobile {
-                                    padding-top: 6.2rem;
-                                }
-
-                                .section-head {
-                                    + .section-body {
-                                        margin-top: 4rem;
+            .content-body {
+                padding-top: 0 !important;
+                .section {
+                    padding-top: 10rem !important;
+                    @include mobile {
+                        padding-top: 4rem !important;
+                    }
+                    .panel-display {
+                        .panel-list {
+                            .panel-item {
+                                .panel-wrap {
+                                    .section {
+                                        //margin-top: 4rem;
                                         @include mobile {
-                                            margin-top: 2.4rem;
+                                            padding-top: 6.2rem;
                                         }
-
-                                        .post-list {
-                                            .post-figure {
-                                                
-                                                
-                                                @include mobile{
-                                                    overflow: auto;
-                                                    @include scroll-y;
-                                                    @include scroll-x;
+        
+                                        .section-head {
+                                            + .section-body {
+                                                margin-top: 4rem;
+                                                @include mobile {
+                                                    margin-top: 2.4rem;
                                                 }
-
-                                                &.height {
-                                                    @include mobile {
-                                                        max-height: 53rem;
+        
+                                                .post-list {
+                                                    .post-figure {
+                                                        
+                                                        
+                                                        @include mobile{
+                                                            overflow: auto;
+                                                            @include scroll-y;
+                                                            @include scroll-x;
+                                                        }
+        
+                                                        &.height {
+                                                            @include mobile {
+                                                                max-height: 53rem;
+                                                            }
+                                                        }
                                                     }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.last {
+                                    .section {
+                                        .section-head {
+                                           + .section-body {
+                                                margin-top: 6.4rem;
+                                                @include mobile {
+                                                    margin-top: 4rem;
                                                 }
                                             }
                                         }
@@ -281,28 +297,15 @@
                                 }
                             }
                         }
-                        &.last {
-                            .section {
-                                .section-head {
-                                   + .section-body {
-                                        margin-top: 6.4rem;
-                                        @include mobile {
-                                            margin-top: 4rem;
-                                        }
-                                    }
-                                }
-                            }
+                    }
+                    + .section {
+                        padding-top: 18rem;
+                        @include mobile {
+                            padding-top: 12rem;
                         }
                     }
                 }
             }
-            + .section {
-                padding-top: 18rem;
-                @include mobile {
-                    padding-top: 12rem;
-                }
-            }
-        }
     }
 
     .esg-chain {
