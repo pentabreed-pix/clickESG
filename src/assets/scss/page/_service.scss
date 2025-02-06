@@ -311,14 +311,14 @@
     .esg-chain {
         .section {
             .panel-display {
+                padding-top: 10rem;
+                @include mobile {
+                    padding-top: 6.2rem;
+                }
                 .panel-list {
                     .panel-item {
                         .panel-wrap {
                             .section {
-                                padding-top: 10rem;
-                                @include mobile {
-                                    padding-top: 8.4rem;
-                                }
                                 .section-body {
                                     position: relative;
                                     .post-list {
@@ -379,7 +379,7 @@
                             .section {
                                 padding-top: 10rem;
                                 @include mobile {
-                                    padding-top: 8.4rem;
+                                    padding-top: 6.2rem;
                                 }
                                 .section-body {
                                     .section-figure {
@@ -432,7 +432,7 @@
                             .section {
                                 padding-top: 10rem;
                                 @include mobile {
-                                    padding-top: 8.4rem;
+                                    padding-top: 6.2rem;
                                 }
 
                                 .section-body {
