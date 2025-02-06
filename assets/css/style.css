@@ -3055,6 +3055,7 @@
   color: rgb(57, 57, 57);
   background: rgb(249, 249, 249);
   line-height: 120%;
+  text-align: left;
 }
 .post-list.click-esg-manager .circle .circles .post-item .title::after {
   content: "";
@@ -3081,6 +3082,14 @@
 .post-list.click-esg-manager .circle .circles .post-item.two {
   top: 12rem;
   left: calc(50% + 34rem);
+}
+.post-list.click-esg-manager .circle .circles .post-item.two .title {
+  width: 10rem;
+  left: 2.2rem;
+}
+.post-list.click-esg-manager .circle .circles .post-item.two .title::after {
+  right: -0.5rem;
+  background-size: cover;
 }
 .post-list.click-esg-manager .circle .circles .post-item.three {
   top: 34rem;
