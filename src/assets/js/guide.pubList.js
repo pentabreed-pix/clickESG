@@ -164,7 +164,7 @@ function pubListUp() {
     Utility: [
       {
         id_ko: "",
-        menu: "Utility",
+        menu: "개인정보 처리방침",
         root_ko: "../../page/utility/PERSONALINFO.00.00.html",
         status_ko: "완료",
         worker_ko: "강선율",
@@ -172,7 +172,7 @@ function pubListUp() {
       },
       {
         id_ko: "",
-        menu: "Utility",
+        menu: "이용약관",
         root_ko: "../../page/utility/TERMSOFUSE.01.00.html",
         status_ko: "완료",
         worker_ko: "강선율",
