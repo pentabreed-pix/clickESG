@@ -170,6 +170,14 @@ function pubListUp() {
         worker_ko: "강선율",
         history: "",
       },
+      {
+        id_ko: "",
+        menu: "Utility",
+        root_ko: "../../page/utility/TERMSOFUSE.01.00.html",
+        status_ko: "완료",
+        worker_ko: "강선율",
+        history: "",
+      },
     ],
   };
 

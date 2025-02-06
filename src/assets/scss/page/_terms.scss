@@ -3,7 +3,7 @@
 @use '../components/icons' as *;
 
 #wrap {
-    .personal {
+    .terms {
         .content-body {
             padding-top: 0 !important;
             .section {
@@ -11,22 +11,51 @@
                     .section-wrap {
                         .section-head{
                             + .section-body {
-                                margin-top: 4rem;
+                                margin-top: 3.2rem;
                                 @include mobile {
                                     margin-top: 2.4rem;
                                 }
-                                .t-display {
-                                    margin: 4rem 0 3.6rem;
-                                    @include mobile {
-                                        @include scroll-x;
+                                .numbering {
+                                    .data-item {
+                                        + .data-item {
+                                            margin-top: 2rem;
+                                            @include mobile {
+                                                margin-top: 1rem;
+                                            }
+                                        }
+                                    }
+                                    &.underline {
+                                        .data-item {
+                                            .data-text {
+                                                text-decoration: underline;
+                                            }
+                                        }
                                     }
                                 }
-    
+                                .order-list {
+                                    .order-item {
+                                        + .order-item {
+                                            margin-top: 1rem;
+                                            @include mobile {
+                                                margin-top: 0.4rem;
+                                            }
+                                        }
+                                    }
+                                }
                                 .para {
                                     @include font(small-2x, regular);
                                     @include mobile {
                                         @include font(small-4x, regular);
                                     }
+                                }
+                            }
+                            .section-summary {
+                                @include font(small-2x, medium);
+                                @include mobile {
+                                    @include font(small-4x, medium);
+                                }
+                                &.under {
+                                    text-decoration: underline;
                                 }
                             }
                         }
@@ -52,10 +81,6 @@
                         z-index: 100;
                         .dropdown {
                             width: 28.4rem;
-                            margin-bottom: 2rem;
-                            @include mobile {
-                                margin-bottom: 1.4rem;
-                            }
                         }
                         + .section-body {
                             .panel-list {
