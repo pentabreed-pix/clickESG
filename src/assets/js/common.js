@@ -343,30 +343,28 @@ function tab() {
 
     // jQuery Scroll Event
     $(function () {
-        var tabDisplayOffset = $(".tab-display.module-b").offset().top - 64;
+        var $tabDisplay = $(".tab-display.module-b");
 
-        var placeholder = $("<div>").height($(".tab-display.module-b").outerHeight()).hide();
-        $(".tab-display.module-b").before(placeholder);
+        // 요소가 존재할 때만 실행
+        if ($tabDisplay.length) {
+            var tabDisplayOffset = $tabDisplay.offset().top - 64;
+            var placeholder = $("<div>").height($tabDisplay.outerHeight()).hide();
+            $tabDisplay.before(placeholder);
 
-        $(window).scroll(function () {
-            var scrollTop = $(this).scrollTop();
+            $(window).scroll(function () {
+                var scrollTop = $(this).scrollTop();
 
-            if (tabDisplayOffset <= scrollTop) {
-                $(".tab-display.module-b").addClass("fixed");
-                placeholder.show();
-
-                $("#header").css({
-                    "box-shadow": "none"
-                });
-            } else {
-                $(".tab-display.module-b").removeClass("fixed");
-                placeholder.hide();
-
-                $("#header").css({
-                    "box-shadow": "0px 4px 28px 0px rgba(0, 0, 0, 0.04)"
-                });
-            }
-        });
+                if (tabDisplayOffset <= scrollTop) {
+                    $tabDisplay.addClass("fixed");
+                    placeholder.show();
+                    $("#header").css({ "box-shadow": "none" });
+                } else {
+                    $tabDisplay.removeClass("fixed");
+                    placeholder.hide();
+                    $("#header").css({ "box-shadow": "0px 4px 28px 0px rgba(0, 0, 0, 0.04)" });
+                }
+            });
+        }
     });
 
 }
