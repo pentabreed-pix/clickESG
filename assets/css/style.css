@@ -885,7 +885,11 @@
   transform: translateY(-50%);
   transition: transform 0.3s ease;
 }
-.form.dropdown.module-a .btn .arrow.rotate::after {
+.form.dropdown.module-a .btn.rotate {
+  border: 0.1rem solid rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+.form.dropdown.module-a .btn.rotate .arrow::after {
   transform: translateY(-50%) rotate(180deg);
 }
 .form.dropdown.module-a .dropdown-menu {
@@ -3435,6 +3439,7 @@
   border-right: 0.1rem solid rgb(255, 255, 255);
   border-left: 0.1rem solid rgb(255, 255, 255);
   border-top: 0.1rem solid rgb(255, 255, 255);
+  padding: 1.8rem 0;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 160%;
@@ -3451,9 +3456,9 @@
 .t-display.module-c table > tbody > tr > th,
 .t-display.module-c table > tbody > tr > td {
   vertical-align: middle;
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: rgb(57, 57, 57);
+  padding: 1.8rem 0;
 }
 .t-display.module-c table > tbody > tr > th.bold,
 .t-display.module-c table > tbody > tr > td.bold {
@@ -3523,19 +3528,37 @@
   border-left: 0.1rem solid rgb(255, 255, 255);
   border-top: 0.1rem solid rgb(255, 255, 255);
   padding: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 160%;
+  color: rgb(255, 255, 255);
 }
 .t-display.module-d table > thead > tr > th.organization {
   border-right: 1px solid rgba(203, 203, 203, 0.5);
   background: rgb(241, 244, 249);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgb(57, 57, 57);
+  font-weight: 600;
 }
 .t-display.module-d table > tbody > tr > th,
 .t-display.module-d table > tbody > tr > td {
   vertical-align: middle;
   padding: 1.5rem 2rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: rgb(57, 57, 57);
+  padding: 2.8rem;
+}
+.t-display.module-d table > tbody > tr > th.has-bg,
+.t-display.module-d table > tbody > tr > td.has-bg {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 .t-display.module-d table > tbody > tr > th.has-bg,
 .t-display.module-d table > tbody > tr > td.has-bg {
   background: rgb(241, 244, 249);
+  border-bottom: 0.1rem solid rgb(241, 244, 249);
 }
 .t-display.module-d table > tbody > tr > th.has-grey,
 .t-display.module-d table > tbody > tr > td.has-grey {
@@ -8725,11 +8748,28 @@ body.mo-menu-open {
     padding-top: 8rem;
   }
 }
+#wrap .personal .section.module-c {
+  padding-top: 8rem;
+}
+@media (max-width: 1023px) {
+  #wrap .personal .section.module-c {
+    padding-top: 4rem;
+  }
+}
 #wrap .personal .section.module-c .section-head {
   display: flex;
   justify-content: flex-end;
   position: relative;
   z-index: 100;
+}
+#wrap .personal .section.module-c .section-head .dropdown {
+  width: 28.4rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1023px) {
+  #wrap .personal .section.module-c .section-head .dropdown {
+    margin-bottom: 1.4rem;
+  }
 }
 #wrap .personal .section.module-c .section-head + .section-body .panel-list .panel {
   position: relative;
