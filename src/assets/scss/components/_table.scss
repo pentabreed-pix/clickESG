@@ -180,6 +180,7 @@
 						border-right: 0.1rem solid custom-color(neutral, 000);
 						border-left: 0.1rem solid custom-color(neutral, 000);
 						border-top: 0.1rem solid custom-color(neutral, 000);
+						padding: 1.8rem 0;
 						font-size: 1.5rem;
 						font-weight: 700;
 						line-height: 160%;
@@ -200,9 +201,9 @@
 					>th,
 					>td {
 						vertical-align: middle;
-						@include font(small-5x, medium);
+						font-size: 1.5rem;
 						color: custom-color(neutral, 080);
-
+						padding: 1.8rem 0;
 						&.bold {
 							font-weight: 700;
 						}
@@ -274,9 +275,16 @@
 						border-left: 0.1rem solid custom-color(neutral, 000);
 						border-top: 0.1rem solid custom-color(neutral, 000);
 						padding: 1.6rem;
+						font-size: 1.5rem;
+						font-weight: 700;
+						line-height: 160%;
+						color: custom-color(neutral, 000);
 						&.organization {
 							border-right: 1px solid rgba(203, 203, 203, 0.50);
 							background: custom-color(etc, 100);
+							@include font(small-5x, bold);
+							color: custom-color(neutral, 080);
+							font-weight: 600;
 						}
 					}
 				}
@@ -288,8 +296,15 @@
 					>td {
 						vertical-align: middle;
 						padding: 1.5rem 2rem;
+						@include font(small-5x, medium);
+						color: custom-color(neutral, 080);
+						padding: 2.8rem;
+						&.has-bg {
+							@include font(small-5x, bold);
+						}
 						&.has-bg {
 							background: custom-color(etc, 100);
+							border-bottom: 0.1rem solid custom-color(etc, 100);
 						}
 						&.has-grey {
 							background: rgba(133, 133, 133, 0.05);

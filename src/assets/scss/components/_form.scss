@@ -415,8 +415,6 @@
   &.dropdown {
     &.module-a {
       position: relative;
-      //width: 28.4rem;
-      //margin-bottom: 2rem;
 
       .btn {
         width: 100%;
@@ -448,8 +446,14 @@
             transform: translateY(-50%);
             transition: transform 0.3s ease;
           }
-          &.rotate::after {
-            transform: translateY(-50%) rotate(180deg);
+        }
+        &.rotate {
+          border: 0.1rem solid custom-color(neutral, 100);
+          background: custom-color(neutral, 000);
+          .arrow {
+            &::after {
+              transform: translateY(-50%) rotate(180deg);
+            }
           }
         }
       }

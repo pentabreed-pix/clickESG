@@ -8,7 +8,6 @@
             &.module-a {
                 .section-wrap {
                     .section-head{
-                        
                         + .section-body {
                             margin-top: 4rem;
                             @include mobile {
@@ -40,11 +39,22 @@
             }
 
             &.module-c {
+                padding-top: 8rem;
+                @include mobile {
+                    padding-top: 4rem;
+                }
                 .section-head {
                     display: flex;
                     justify-content: flex-end;
                     position: relative;
                     z-index: 100;
+                    .dropdown {
+                        width: 28.4rem;
+                        margin-bottom: 2rem;
+                        @include mobile {
+                            margin-bottom: 1.4rem;
+                        }
+                    }
                     + .section-body {
                         .panel-list {
                             .panel {
