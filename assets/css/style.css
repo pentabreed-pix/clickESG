@@ -8475,12 +8475,12 @@ body.mo-menu-open {
     padding-top: 12rem;
   }
 }
-#wrap .esg-chain .section .panel-display .panel-list .panel-item .panel-wrap .section {
+#wrap .esg-chain .section .panel-display {
   padding-top: 10rem;
 }
 @media (max-width: 1023px) {
-  #wrap .esg-chain .section .panel-display .panel-list .panel-item .panel-wrap .section {
-    padding-top: 8.4rem;
+  #wrap .esg-chain .section .panel-display {
+    padding-top: 6.2rem;
   }
 }
 #wrap .esg-chain .section .panel-display .panel-list .panel-item .panel-wrap .section .section-body {
@@ -8554,7 +8554,7 @@ body.mo-menu-open {
 }
 @media (max-width: 1023px) {
   #wrap .esg-net .section .panel-display .panel-list .panel-item .panel-wrap .section {
-    padding-top: 8.4rem;
+    padding-top: 6.2rem;
   }
 }
 @media (max-width: 1023px) {
@@ -8618,7 +8618,7 @@ body.mo-menu-open {
 }
 @media (max-width: 1023px) {
   #wrap .esg-data-hub .section .panel-display .panel-list .panel-item .panel-wrap .section {
-    padding-top: 8.4rem;
+    padding-top: 6.2rem;
   }
 }
 @media (max-width: 1023px) {
