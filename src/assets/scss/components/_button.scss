@@ -6,6 +6,8 @@
 .button-area {
   &.module-a {
     display: flex;
+  }
+  &.type-c {
     justify-content: center;
   }
 }
