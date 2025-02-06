@@ -4,77 +4,80 @@
 
 #wrap {
     .personal {
-        .section {
-            &.module-a {
-                .section-wrap {
-                    .section-head{
-                        + .section-body {
-                            margin-top: 4rem;
-                            @include mobile {
-                                margin-top: 2.4rem;
-                            }
-                            .t-display {
-                                margin: 4rem 0 3.6rem;
-                                @include mobile {
-                                    @include scroll-x;
-                                }
-                            }
-
-                            .para {
-                                @include font(small-2x, regular);
-                                @include mobile {
-                                    @include font(small-4x, regular);
-                                }
-                            }
-                        }
-                    }
-                }
-                + .section {
-                   &.module-a {
-                        @include mobile {
-                            padding-top: 8rem;
-                        }
-                   }
-                }
-            }
-
-            &.module-c {
-                padding-top: 8rem;
-                @include mobile {
-                    padding-top: 4rem;
-                }
-                .section-head {
-                    display: flex;
-                    justify-content: flex-end;
-                    position: relative;
-                    z-index: 100;
-                    .dropdown {
-                        width: 28.4rem;
-                        margin-bottom: 2rem;
-                        @include mobile {
-                            margin-bottom: 1.4rem;
-                        }
-                    }
-                    + .section-body {
-                        .panel-list {
-                            .panel {
-                                position: relative;
-                                display: none;
-                                z-index: 1;
-                                &.active {
-                                    display: block;
-                                }
-                                ~ .dropdown .dropdown-button .arrow {
-                                    transform: translateY(-50%) rotate(180deg);
-                                }
-                            }
-                        }
-                    }
-                }
-                .module-a {
+        .content-body {
+            padding-top: 0 !important;
+            .section {
+                &.module-a {
                     .section-wrap {
-                        .section-head {
-                            display: block;
+                        .section-head{
+                            + .section-body {
+                                margin-top: 4rem;
+                                @include mobile {
+                                    margin-top: 2.4rem;
+                                }
+                                .t-display {
+                                    margin: 4rem 0 3.6rem;
+                                    @include mobile {
+                                        @include scroll-x;
+                                    }
+                                }
+    
+                                .para {
+                                    @include font(small-2x, regular);
+                                    @include mobile {
+                                        @include font(small-4x, regular);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    + .section {
+                       &.module-a {
+                            @include mobile {
+                                padding-top: 8rem;
+                            }
+                       }
+                    }
+                }
+    
+                &.module-c {
+                    padding-top: 8rem;
+                    @include mobile {
+                        padding-top: 4rem;
+                    }
+                    .section-head {
+                        display: flex;
+                        justify-content: flex-end;
+                        position: relative;
+                        z-index: 100;
+                        .dropdown {
+                            width: 28.4rem;
+                            margin-bottom: 2rem;
+                            @include mobile {
+                                margin-bottom: 1.4rem;
+                            }
+                        }
+                        + .section-body {
+                            .panel-list {
+                                .panel {
+                                    position: relative;
+                                    display: none;
+                                    z-index: 1;
+                                    &.active {
+                                        display: block;
+                                    }
+                                    ~ .dropdown .dropdown-button .arrow {
+                                        transform: translateY(-50%) rotate(180deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .module-a {
+                        .section-wrap {
+                            .section-head {
+                                display: block;
+                            }
                         }
                     }
                 }

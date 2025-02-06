@@ -217,10 +217,6 @@
     
     .service-intro {
         .section {
-            padding-top: 10rem;
-            @include mobile {
-                padding-top: 8.4rem;
-            }
             &.module-b {
                 .section-wrap {
                     gap: 32.2rem;
