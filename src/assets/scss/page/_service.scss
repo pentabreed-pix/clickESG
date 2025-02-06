@@ -310,20 +310,15 @@
 
     .esg-chain {
         .section {
-            padding-top: 10rem;
-            @include mobile {
-                padding-top: 8.4rem;
-            }
             .panel-display {
                 .panel-list {
                     .panel-item {
                         .panel-wrap {
                             .section {
-                                // margin-top: 4rem;
-                                // @include mobile {
-                                //     margin-top: 2.4rem;
-                                // }
-
+                                padding-top: 10rem;
+                                @include mobile {
+                                    padding-top: 8.4rem;
+                                }
                                 .section-body {
                                     position: relative;
                                     .post-list {
@@ -377,20 +372,15 @@
 
     .esg-net {
         .section {
-            padding-top: 10rem;
-            @include mobile {
-                padding-top: 8.4rem;
-            }
             .panel-display {
                 .panel-list {
                     .panel-item {
                         .panel-wrap {
                             .section {
-                                // margin-top: 4rem;
-                                // @include mobile {
-                                //     margin-top: 2.4rem;
-                                // }
-
+                                padding-top: 10rem;
+                                @include mobile {
+                                    padding-top: 8.4rem;
+                                }
                                 .section-body {
                                     .section-figure {
                                         @include mobile{
@@ -435,18 +425,14 @@
 
     .esg-data-hub {
         .section {
-            padding-top: 10rem;
-            @include mobile {
-                padding-top: 8.4rem;
-            }
             .panel-display {
                 .panel-list {
                     .panel-item {
                         .panel-wrap {
                             .section {
-
+                                padding-top: 10rem;
                                 @include mobile {
-                                    padding-top: 6.2rem;
+                                    padding-top: 8.4rem;
                                 }
 
                                 .section-body {
@@ -481,18 +467,14 @@
 
     .esg-cdp {
         .section {
-            padding-top: 10rem;
-            @include mobile {
-                padding-top: 8.4rem;
-            }
             .panel-display {
                 .panel-list {
                     .panel-item {
                         .panel-wrap {
                             .section {
-
+                                padding-top: 10rem;
                                 @include mobile {
-                                    padding-top: 6.2rem;
+                                    padding-top: 8.4rem;
                                 }
 
                                 .section-body {
