@@ -371,7 +371,7 @@
                 color:custom-color(neutral, 100);
 
                 &::before {
-                    @include font(small-5x, regular);
+                    @include font(small-3x, regular);
                     color:custom-color(neutral, 100);
 
                     @include mobile {

@@ -16,7 +16,7 @@ function pubListUp() {
         id_ko: "",
         menu: "Service 소개",
         root_ko: "../../page/service/SERVICE.00.00.html",
-        status_ko: "진행중",
+        status_ko: "완료",
         worker_ko: "강선율",
         history: "",
       },

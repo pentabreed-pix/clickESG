@@ -243,9 +243,9 @@
 
     .esg-consulting {
         .section {
-            padding-top: 10rem;
+            padding-top: 10rem !important;
             @include mobile {
-                padding-top: 8.4rem;
+                padding-top: 4rem !important;
             }
             .panel-display {
                 .panel-list {
@@ -274,35 +274,11 @@
                                                     @include scroll-x;
                                                 }
 
-                                                // &.spec {
-                                                //     position: relative;
-                                                //     height: 0;
-                                                //     padding-bottom: 63%;
-                                                //     img {
-                                                //         position: absolute;
-                                                //         top: 0;
-                                                //         left: 50%;
-                                                //         transform: translateX(-50%);
-                                                //         object-fit: cover;
-                                                //         height: 100%;
-
-                                                //         @include mobile {
-                                                //             left: 0%;
-                                                //             transform: none;
-                                                //         }
-                                                //     }
-                                                // }
                                                 &.height {
                                                     @include mobile {
                                                         max-height: 53rem;
                                                     }
                                                 }
-
-                                            }
-                                            .table-info {
-                                                display: flex;
-                                                justify-content: right;
-                                                gap: 1.2rem;
                                             }
                                         }
                                     }
