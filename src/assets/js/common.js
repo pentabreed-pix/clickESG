@@ -73,20 +73,22 @@ function scrollTopBtn() {
     const topButton = document.querySelector('.btn-to-top');
 
     quickScrollBtnToTop.addEventListener('click', function(){
-        window.scroll({
-            top: 0,
-            behavior: 'smooth'
-        });
-    })
+        if (lenisBody) {
+            lenisBody.scrollTo(0, { duration: 1.5 });
+        } else {
+            window.scroll({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    });
 
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const pageBodyHeight = parseInt(document.querySelector('#wrap').clientHeight);
         const showLine = pageBodyHeight * 0.05;
-        const contentHeight = document.querySelector('.page').clientHeight;
+        const contentHeight = document.querySelector('#main').clientHeight;
         const hotLine = contentHeight - window.innerHeight;
-
-        //alert(contentHeight)
 
         if (scrollTop >= showLine) {
             topButton.classList.add('active');

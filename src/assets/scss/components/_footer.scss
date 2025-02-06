@@ -163,25 +163,33 @@
 
 .btn-to-top {
     position: fixed;
-    bottom: 1.6rem;
+    bottom: 2.4rem;
     right: 6rem;
     z-index: 1;
     transition: 0.3s ease;
     visibility: visible;
-        opacity: 100%;
+    opacity: 100%;
 
     .top-btn {
-        padding: 0.8rem 1.6rem;
-        border-radius: 3.2rem;
-        border: 1.5px solid rgba(184, 184, 194, 0.40);
-        .btn-text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.8rem;
+        height: 4.8rem;
+        border-radius: 50%;
+        background-color: #0A1C3F;
+
+        &::after {
+            position: relative;
+            content: '';
             display: block;
-            text-align: center;
-            color: #85858C;
-            @include font(small-4x,extrabold)
+            width: 3.2rem;
+            height: 3.2rem;
+            background: icon('arrow-right1', custom-color(neutral, 000)) no-repeat center center;
+            transform: rotate(-90deg);
         }
     }
-
     &.active {
         visibility: visible;
         opacity: 100%;
