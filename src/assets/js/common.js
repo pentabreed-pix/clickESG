@@ -484,6 +484,7 @@ function dropdownTab() {
 
             $dropdownItem.removeClass('selected');
             $(this).addClass('selected');
+            $('.dropdown-menu').hide();
 
             $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
 
@@ -528,6 +529,7 @@ function dropdownSelect() {
 
             $dropdownItem.removeClass('selected');
             $(this).addClass('selected');
+            $('.dropdown-menu').hide();
 
             $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
 
