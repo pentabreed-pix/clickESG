@@ -210,6 +210,9 @@
     gap: 8rem;
   }
 }
+.board-list.module-b .board-item {
+  width: 26rem;
+}
 .board-list.module-b .board-item .board-wrap .board-icon {
   position: relative;
 }
