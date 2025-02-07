@@ -379,7 +379,7 @@
                         .post-summary {
                             margin-top: 6.4rem;
                             @include font(small-1x, bold);
-                            color: custom-color(neutral, 100);
+                            color: custom-color(neutral, 080);
 
                             @include mobile {
                                 @include font(small-2x, medium);
