@@ -2446,6 +2446,19 @@
     margin-top: 8rem;
   }
 }
+.post-list.module-c.style-c .post-item + .post-item.special-case .post-summary {
+  margin-top: 2.4rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: rgb(0, 0, 0);
+}
+@media (max-width: 1023px) {
+  .post-list.module-c.style-c .post-item + .post-item.special-case .post-summary {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+}
 .post-list.module-c.style-d .post-item .post-wrap .post-head .post-name {
   font-weight: 700;
   font-size: 3.6rem;
