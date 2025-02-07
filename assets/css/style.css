@@ -209,7 +209,7 @@
     background: url("../images/about/reference/performance-mo.jpg");
     background-size: cover;
     flex-direction: column;
-    padding: 8rem 4.6rem;
+    padding: 8rem 4.6rem 15.4rem;
     gap: 8rem;
   }
 }
@@ -218,7 +218,7 @@
 }
 @media (max-width: 1023px) {
   .board-list.module-b .board-item {
-    width: 100%;
+    width: 100% !important;
   }
 }
 .board-list.module-b .board-item:nth-child(1) {
@@ -8310,6 +8310,25 @@ body.mo-menu-open {
 @media (max-width: 1023px) {
   #wrap .about-contact .button-area {
     margin-top: 6rem;
+  }
+}
+#wrap .about-reference .section-body.board-comm .board-list {
+  position: relative;
+}
+#wrap .about-reference .section-body.board-comm .board-list .board-aside {
+  position: absolute;
+  bottom: 3.4rem;
+  right: 16.5rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: rgb(203, 203, 203);
+}
+@media (max-width: 1023px) {
+  #wrap .about-reference .section-body.board-comm .board-list .board-aside {
+    right: 4.6rem;
+    bottom: 8rem;
+    font-weight: 500;
+    font-size: 1.2rem;
   }
 }
 
