@@ -296,13 +296,13 @@
                             }
                         }
                         .post-summary {
-                            margin-top: 2.4rem;
+                            margin-top: 6.4rem;
                             @include font(small-3x, medium);
                             color: custom-color(neutral, 100);
 
                             @include mobile {
                                 @include font(small-5x, medium);
-                                margin-top: 1.6rem;
+                                margin-top: 4rem;
                             }
                         }
                         + .post-figure {
@@ -872,8 +872,13 @@
                                 background-image: icon('clock', custom-color(neutral, 090));
                             }
 
-                            &.device::after {
-                                background-image: icon('device', custom-color(neutral, 090));
+                            &.device {
+                                @include mobile {
+                                    width: 25rem;
+                                }
+                                &::after {
+                                    background-image: icon('device', custom-color(neutral, 090));
+                                }
                             }
 
                             &.certi::after {

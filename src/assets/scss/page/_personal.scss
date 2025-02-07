@@ -107,6 +107,11 @@
                         }
                     }
                 }
+                + .section {
+                    @include mobile {
+                        padding-top: 8rem !important;
+                    }
+                }
             }
         }
     }
