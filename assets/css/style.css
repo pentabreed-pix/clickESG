@@ -8987,6 +8987,12 @@ body.mo-menu-open {
   }
 }
 
+#wrap .personal .local .local-head .local-info .data-list .data-item:nth-child(2) .item-text {
+  color: rgb(57, 57, 57);
+}
+#wrap .personal .local .local-head .local-info .data-list .data-item:last-child {
+  display: none;
+}
 #wrap .personal .content-body {
   padding-top: 0 !important;
 }
@@ -9085,6 +9091,12 @@ body.mo-menu-open {
   display: block;
 }
 
+#wrap .terms .local .local-head .local-info .data-list .data-item:nth-child(2) .item-text {
+  color: rgb(57, 57, 57);
+}
+#wrap .terms .local .local-head .local-info .data-list .data-item:last-child {
+  display: none;
+}
 #wrap .terms .content-body {
   padding-top: 0 !important;
 }
