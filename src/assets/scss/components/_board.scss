@@ -130,13 +130,13 @@
             background: url('../images/about/reference/performance-mo.jpg');
             background-size: cover;
             flex-direction: column;
-            padding: 8rem 4.6rem;
+            padding: 8rem 4.6rem 15.4rem;
             gap: 8rem;
         }
         .board-item {
             width: calc(100% / 4 - 12rem);
             @include mobile {
-                width: 100%;
+                width: 100% !important;
             }
             &:nth-child(1) {
                 width: calc(100% / 4 - 15rem);

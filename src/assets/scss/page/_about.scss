@@ -109,4 +109,26 @@
             }
         }
     }
+
+    .about-reference {
+        .section-body {
+            &.board-comm {
+                .board-list {
+                    position: relative;
+                    .board-aside {
+                        position: absolute;
+                        bottom: 3.4rem;
+                        right: 16.5rem;
+                        @include font(small-4x, medium);
+                        color: custom-color(neutral, 060);
+                        @include mobile {
+                            right: 4.6rem;
+                            bottom: 8rem;
+                            @include font(small-6x, medium);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
