@@ -382,7 +382,7 @@
                             color: custom-color(neutral, 080);
 
                             @include mobile {
-                                @include font(small-2x, medium);
+                                @include font(small-2x, bold);
                                 margin-top: 4rem;
                             }
                         }
