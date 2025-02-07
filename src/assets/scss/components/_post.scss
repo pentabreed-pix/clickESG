@@ -294,15 +294,15 @@
                             @include mobile {
                                 @include font(small-2x, bold);
                             }
-                            + .post-summary {
-                                margin-top: 2.4rem;
-                                @include font(small-3x, medium);
-                                color: custom-color(neutral, 100);
+                        }
+                        .post-summary {
+                            margin-top: 2.4rem;
+                            @include font(small-3x, medium);
+                            color: custom-color(neutral, 100);
 
-                                @include mobile {
-                                    @include font(small-5x, medium);
-                                    margin-top: 1.6rem;
-                                }
+                            @include mobile {
+                                @include font(small-5x, medium);
+                                margin-top: 1.6rem;
                             }
                         }
                         + .post-figure {
@@ -990,9 +990,16 @@
                                     background-image: icon('clock', custom-color(primary, 080));
                                 }
 
-                                &.device::after {
-                                    background-image: icon('device', custom-color(primary, 080));
+                                &.device {
+                                    @include mobile {
+                                        width: 25rem;
+                                    }
+                                    &::after {
+                                        background-image: icon('device', custom-color(primary, 080));
+    
+                                    }
                                 }
+                                
 
                                 &.certi::after {
                                     background-image: icon('certi', custom-color(primary, 080));
