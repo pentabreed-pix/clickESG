@@ -344,11 +344,11 @@ body {
 							}
 						}
 						.section-summary {
-							margin-top: 2rem;
+							margin-top: 3.2rem;
 							@include font(small-3x, medium);
 							color: custom-color(neutral, 100);
 							@include mobile {
-								margin-top: 1.6rem;
+								margin-top: 2rem;
 								@include font(small-4x, medium);
 							}
 						}
