@@ -288,20 +288,20 @@
                 .post-wrap {
                     .post-head {
                         .post-name {
-                            @include font(small-1x, bold);
+                            @include font(large, bold);
                             color: custom-color(neutral, 080);
 
                             @include mobile {
-                                @include font(small-2x, bold);
+                                @include font(small-1x, bold);
                             }
                         }
                         .post-summary {
                             margin-top: 6.4rem;
-                            @include font(small-3x, medium);
+                            @include font(small-1x, medium);
                             color: custom-color(neutral, 100);
 
                             @include mobile {
-                                @include font(small-5x, medium);
+                                @include font(small-2x, medium);
                                 margin-top: 4rem;
                             }
                         }
