@@ -4,6 +4,24 @@
 
 #wrap {
     .terms {
+        .local {
+            .local-head {
+                .local-info {
+                    .data-list {
+                        .data-item {
+                            &:nth-child(2) {
+                                .item-text {
+                                    color: custom-color(neutral, 080);
+                                }
+                            }
+                            &:last-child {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .content-body {
             padding-top: 0 !important;
             .section {
