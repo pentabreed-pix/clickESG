@@ -349,6 +349,18 @@
                     @include mobile {
                         margin-top: 8rem
                     }
+                    &.special-case{
+                        .post-summary {
+                            margin-top: 2.4rem;
+                            @include font(small-3x, medium);
+                            color: custom-color(neutral, 100);
+    
+                            @include mobile {
+                                @include font(small-5x, medium);
+                                margin-top: 2rem
+                            }
+                        }
+                    }
                 }
             }
         }
