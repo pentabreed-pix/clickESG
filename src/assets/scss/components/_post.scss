@@ -288,6 +288,75 @@
                 .post-wrap {
                     .post-head {
                         .post-name {
+                            @include font(small-1x, bold);
+                            color: custom-color(neutral, 080);
+
+                            @include mobile {
+                                @include font(small-2x, bold);
+                            }
+                        }
+                        .post-summary {
+                            margin-top: 6.4rem;
+                            @include font(small-3x, medium);
+                            color: custom-color(neutral, 100);
+
+                            @include mobile {
+                                @include font(small-5x, medium);
+                                margin-top: 4rem;
+                            }
+                        }
+                        + .post-figure {
+                            margin-top: 4rem;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        + .post-body {
+                            margin-top: 4rem;
+
+                            .table-info {
+                                display: flex;
+                                justify-content: right;
+                                gap: 1.2rem;
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .post-figure {
+                        margin-top: 4rem;
+
+                        @include mobile{
+                            overflow: auto;
+                            @include scroll-y;
+                            @include scroll-x;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                        &.height {
+                            @include mobile {
+                                max-height: 53rem;
+                            }
+                        }
+                    }
+                }
+                + .post-item {
+                    margin-top: 12rem;
+
+                    @include mobile {
+                        margin-top: 8rem
+                    }
+                }
+            }
+        }
+        &.style-d {
+            .post-item {
+                .post-wrap {
+                    .post-head {
+                        .post-name {
                             @include font(large, bold);
                             color: custom-color(neutral, 080);
 
