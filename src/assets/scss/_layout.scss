@@ -318,7 +318,7 @@ body {
 							color: custom-color(neutral, 080);
 
 							@include mobile {
-								@include font(small-2x, bold);
+								@include font(small-1x, bold);
 							}
 
 							+.section-summary {
