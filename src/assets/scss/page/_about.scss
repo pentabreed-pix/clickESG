@@ -82,30 +82,36 @@
 
     }
     .about-contact {
-        .section {
-            padding-top: 6rem;
-            border-top: 0.1rem solid custom-color(neutral, 100);
-
+        .content-body {
+            padding-top: 8rem;
             @include mobile {
-                padding-top: 4rem;
+                padding-top: 6rem;
             }
-        }
-        .submit-form {
-            &.module-a {
-                .form-list {
-                    margin-bottom: 2rem;
-
-                    @include mobile {
-                        margin-bottom: 1.4rem;
+            .section {
+                padding-top: 6rem;
+                border-top: 0.1rem solid custom-color(neutral, 100);
+    
+                @include mobile {
+                    padding-top: 4rem;
+                }
+            }
+            .submit-form {
+                &.module-a {
+                    .form-list {
+                        margin-bottom: 2rem;
+    
+                        @include mobile {
+                            margin-bottom: 1.4rem;
+                        }
                     }
                 }
             }
-        }
-        .button-area {
-            margin-top: 8rem;
-
-            @include mobile {
-                margin-top: 6rem;
+            .button-area {
+                margin-top: 8rem;
+    
+                @include mobile {
+                    margin-top: 6rem;
+                }
             }
         }
     }

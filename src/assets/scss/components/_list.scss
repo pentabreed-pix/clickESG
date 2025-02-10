@@ -307,7 +307,51 @@
 
 
 
+// no-data
+.no-data {
+    text-align: center;
+    padding: 12rem 0;
+    border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+    @include mobile {
+        padding: 8rem 0;
+    }
+    .no-data-wrap {
+        position: relative;
+        .no-data-icon {
+            margin-bottom: 2rem;
+            height: 6rem;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 5rem;
+                height: 5rem;
+                transform: translateX(-50%);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: icon('nodata', custom-color(neutral, 060));
+            }
+    
+            + .no-data-title {
+                @include font(small-2x, bold);
+                @include mobile {
+                    @include font(small-4x, bold);
+                }
+            }
 
+            @include mobile {
+                height: 4rem;
+                margin-bottom: 1.4rem;
+                &::before {
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
 
 
 
