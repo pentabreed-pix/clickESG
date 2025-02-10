@@ -8597,7 +8597,7 @@ body.mo-menu-open {
     display: inline-block;
     position: absolute;
     bottom: 0;
-    right: 15px;
+    right: -10px;
     width: 62px;
     height: 62px;
     background: url("../../assets/images/mobile/icon-zoom.png") no-repeat 50% 0;
