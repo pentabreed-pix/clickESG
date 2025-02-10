@@ -23,8 +23,6 @@
         background-color: custom-color(etc, 070);
         padding: 2.4rem 3.2rem;
         border-radius: 0.8rem;
-        border: 1px solid transparent; 
-
 
         @include mobile {
           width: 100%;
@@ -244,8 +242,6 @@
                       .data-body {
                         .option-list {
                           display: block;
-                          border: 1px solid custom-color(neutral, 080);
-                          border-top: 0;
                         }
                       }
                     }
@@ -351,10 +347,6 @@
               }
             }
           }
-        }
-
-        &.border {
-          border: 0.1rem solid custom-color(neutral, 080);
         }
       }
     }
