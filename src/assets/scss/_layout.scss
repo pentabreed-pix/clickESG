@@ -316,6 +316,7 @@ body {
 						.section-name {
 							@include font(large, bold);
 							color: custom-color(neutral, 080);
+							word-break: break-all;
 
 							@include mobile {
 								@include font(small-1x, bold);
