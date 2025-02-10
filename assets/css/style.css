@@ -2545,6 +2545,7 @@
   font-weight: 400;
   font-size: 1.8rem;
   color: rgb(0, 0, 0);
+  word-break: break-all;
 }
 @media (max-width: 1023px) {
   .post-list.module-c.style-c .post-item + .post-item.special-case .post-summary {
@@ -2646,11 +2647,11 @@
   }
 }
 .post-list.module-c.style-d .post-item + .post-item {
-  margin-top: 12rem;
+  margin-top: 18rem;
 }
 @media (max-width: 1023px) {
   .post-list.module-c.style-d .post-item + .post-item {
-    margin-top: 8rem;
+    margin-top: 12rem;
   }
 }
 .post-list.module-d {
@@ -6806,7 +6807,7 @@ body.mo-menu-open {
 @media (max-width: 1023px) {
   #wrap .page .local .local-body .content-body {
     padding-bottom: 12rem;
-    padding-top: 8rem;
+    padding-top: 6.2rem;
   }
 }
 #wrap .page .section.module-a {
@@ -8758,32 +8759,32 @@ body.mo-menu-open {
     width: 100%;
   }
 }
-#wrap .esg-consulting .content-body {
+#wrap .esg-consulting .local .local-body .content-body {
   padding-top: 0 !important;
 }
-#wrap .esg-consulting .content-body .section {
-  padding-top: 6.4rem !important;
+#wrap .esg-consulting .local .local-body .content-body .section {
+  padding-top: 10rem !important;
 }
 @media (max-width: 1023px) {
-  #wrap .esg-consulting .content-body .section {
-    padding-top: 4rem !important;
+  #wrap .esg-consulting .local .local-body .content-body .section {
+    padding-top: 6.2rem !important;
   }
 }
 @media (max-width: 1023px) {
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section {
     padding-top: 6.2rem;
   }
 }
-#wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body {
+#wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body {
   margin-top: 4rem;
 }
 @media (max-width: 1023px) {
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body {
     margin-top: 2.4rem;
   }
 }
 @media (max-width: 1023px) {
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure {
     overflow: auto;
     width: calc(100% - 1.8rem);
     padding-right: 1.8rem;
@@ -8797,44 +8798,44 @@ body.mo-menu-open {
     padding-left: 1.8rem;
     margin-left: -1.8rem;
   }
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar {
     width: 0.5rem;
   }
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar-thumb {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar-thumb {
     background-color: #D5D4D9;
     border-radius: 5rem;
   }
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar {
     height: 0.5rem;
   }
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar-thumb {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar-thumb {
     background-color: #D5D4D9;
     border-radius: 5rem;
   }
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar-track {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure::-webkit-scrollbar-track {
     margin-left: 1.8rem;
     margin-right: 1.8rem;
     border-radius: 5rem;
   }
 }
 @media (max-width: 1023px) {
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure.height {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item .panel-wrap .section .section-head + .section-body .post-list .post-figure.height {
     max-height: 53rem;
   }
 }
-#wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
+#wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
   margin-top: 6.4rem;
 }
 @media (max-width: 1023px) {
-  #wrap .esg-consulting .content-body .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
+  #wrap .esg-consulting .local .local-body .content-body .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
     margin-top: 4rem;
   }
 }
-#wrap .esg-consulting .content-body .section + .section {
+#wrap .esg-consulting .local .local-body .content-body .section + .section {
   padding-top: 18rem;
 }
 @media (max-width: 1023px) {
-  #wrap .esg-consulting .content-body .section + .section {
+  #wrap .esg-consulting .local .local-body .content-body .section + .section {
     padding-top: 12rem;
   }
 }
