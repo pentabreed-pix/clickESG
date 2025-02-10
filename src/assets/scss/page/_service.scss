@@ -305,6 +305,13 @@
                             @include mobile {
                                 padding-top: 12rem;
                             }
+
+                            &.framework-sec {
+                                padding-top: 6.4rem !important;
+                                @include mobile {
+                                    padding-top: 4rem !important;
+                                }
+                            }
                         }
                     }
                 }
