@@ -1792,6 +1792,7 @@
 @media (max-width: 1023px) {
   .data-list.solutions {
     flex-direction: column;
+    gap: 12rem;
   }
 }
 .data-list.solutions .data-item {
