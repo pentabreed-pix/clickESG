@@ -372,8 +372,10 @@
 						background-color: custom-color(etc, 070);
 						border-right: 0.1rem solid rgba(203, 203, 203, 0.50);
 						border-left: 0.1rem solid rgba(203, 203, 203, 0.50);
-						padding: 1.8rem;
-						@include font(small-4x, bold)
+						padding: 1.4rem;
+						@include font(small-4x);
+						font-weight: 600;
+						color: custom-color(neutral, 100);
 					}
 				}
 			}
@@ -385,7 +387,7 @@
 						vertical-align: middle;
 						border-top: 0.1rem solid rgba(203, 203, 203, 0.50);
 						border-right: 0.1rem solid rgba(203, 203, 203, 0.50);
-						padding: 3.9rem;
+						padding: 2.6rem;
 						@include font(small-4x, regular);
 						color: custom-color(neutral, 080);
 						@include mobile {

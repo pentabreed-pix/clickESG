@@ -24,23 +24,36 @@
         }
         .data-item {
             counter-increment: data-counter;
-            width: 42.8rem;
+            width: 65.7rem;
             @include mobile {
                 width: auto;
             }
             .data-wrap {
                 display: flex;
                 gap: 1.2rem;
-                @include font(small-4x, regular);
-                .data-number {
-                    &::before {
-                        content: counter(data-counter, decimal-leading-zero);
-                        font-weight: 700;
+                .data-text {
+                    @include font(small-3x, regular);
+                    color: custom-color(neutral, 080);
+                    @include mobile {
+                        @include font(small-4x, regular);
                     }
                 }
-            }
-            &:hover {
-                color: custom-color(primary, 090);
+                .data-number {
+                    @include font(small-4x, bold);
+                    color: custom-color(neutral, 100);
+                    &::before {
+                        content: counter(data-counter, decimal-leading-zero);
+                    }
+                }
+
+                &:hover {
+                    .data-text {
+                        color: custom-color(primary, 090);
+                    }
+                    .data-number {
+                        color: custom-color(primary, 090);
+                    }
+                }
             }
         }
     }
@@ -57,6 +70,7 @@
                     @include font(small-4x, regular);
                 }
                 .data-text {
+                    color: custom-color(neutral, 100);
                     padding-left: 2.4rem;
                     &::before {
                         content: counter(data-counter) ")";
@@ -93,10 +107,12 @@
                             }
                             + .order-item {
                                 margin-top: 2rem;
+                                color: custom-color(neutral, 090);
                             }
                         }
                         &.edited {
                             .order-item {
+                                color: custom-color(neutral, 090);
                                 + .order-item {
                                     margin-top: 0.8rem;
                                 }
@@ -232,9 +248,10 @@
                 }
                 .data-head {
                     position: relative;
-                    font-size: inherit;
-                    font-weight: inherit;
-                    color: inherit;
+                    .data-name {
+                        @include font(small-4x, regular);
+                        color: custom-color(neutral, 080);
+                    }
                     &::before {
                         content: "";
                         display: block;
@@ -253,9 +270,8 @@
                     }
                 }
                 .data-body {
-                    font-size: inherit;
-                    font-weight: 700;
-                    color: inherit;
+                    @include font(small-4x, bold);
+                    color: custom-color(neutral, 080);
                     @include mobile {
                         white-space: nowrap;
                         overflow: hidden;
@@ -314,8 +330,11 @@
     text-align: center;
     padding: 12rem 0;
     border-bottom: 0.1rem solid rgba(203, 203, 203, 0.50);
+    border-top: 0.1rem solid custom-color(neutral, 100);
+    margin-top: 2.4rem;
     @include mobile {
         padding: 8rem 0;
+        margin-top: 4rem;
     }
     .no-data-wrap {
         position: relative;

@@ -258,7 +258,7 @@ body {
 					}
 					.local-name {
 						@include font(large-4x, bold);
-						color: custom-color(neutral, 080);
+						color: custom-color(neutral, 090);
 
 						@include mobile {
 							@include font(large, bold);
@@ -267,7 +267,7 @@ body {
 					}
 					.local-summary {
 						@include font(small-2x, regular);
-						color: custom-color(neutral, 080);
+						color: custom-color(neutral, 090);
 						margin-top: 4rem;
 						@include mobile {
 							margin-top: 2.4rem;
