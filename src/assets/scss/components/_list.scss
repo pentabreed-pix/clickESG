@@ -176,9 +176,10 @@
                 @include mobile {
                     text-align: left;
                     .data-subject {
-                        @include font(small-2x, bold);
+                        @include font(small-1x, bold);
                         + .data-summary {
                             @include font(small-4x, regular);
+                            line-height: 180%;
                             margin-top: 2rem;
                         }
                     }

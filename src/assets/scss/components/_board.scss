@@ -22,7 +22,7 @@
                 border-radius: 1.6rem;
 
                 @include mobile{
-                    gap: 2.8rem;
+                    gap: 2.4rem;
                 }
 
                 .board-figure {
@@ -77,7 +77,7 @@
                     .board-head {
                         @include font(small, bold);
                         color: custom-color(primary, 080);
-                        line-height: 190%;
+                        line-height: 160%;
                         
                         @include mobile {
                             @include font(small-2x, bold);

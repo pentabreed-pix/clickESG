@@ -91,6 +91,9 @@
                                                 height: 100%;
                                                 position: relative;
                                                 margin-top: 6rem;
+                                                @include mobile {
+                                                    margin-top: 4rem;
+                                                }
             
                                                 &::after {
                                                     content: '';
