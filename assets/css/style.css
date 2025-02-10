@@ -8922,6 +8922,9 @@ body.mo-menu-open {
 #wrap .esg-net .section .panel-display .panel-list .panel-item .panel-wrap .section .section-body .post-list.module-c.style-c .post-item + .post-item {
   margin-top: 0;
 }
+#wrap .esg-net .section .panel-display .panel-list .panel-item .panel-wrap .section .section-body .post-list.module-c.style-c .post-item + .post-item .post-wrap + .post-wrap .post-figure {
+  margin-top: 1.4rem;
+}
 #wrap .esg-net .section + .section {
   padding-top: 18rem;
 }
