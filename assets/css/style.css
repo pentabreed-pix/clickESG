@@ -2436,6 +2436,7 @@
 .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info .post-head {
   font-weight: 700;
   font-size: 2.4rem;
+  color: inherit;
 }
 @media (max-width: 1023px) {
   .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info .post-head {
@@ -2459,7 +2460,8 @@
   }
 }
 .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info .post-body {
-  margin-top: 2rem;
+  margin-top: 2.4rem;
+  color: inherit;
 }
 @media (max-width: 1023px) {
   .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info .post-body {
@@ -2679,6 +2681,14 @@
 @media (max-width: 1023px) {
   .post-list.module-c.style-d .post-item + .post-item {
     margin-top: 12rem;
+  }
+}
+.post-list.module-c.style-d .post-item + .post-item ~ .post-item {
+  margin-top: 12rem;
+}
+@media (max-width: 1023px) {
+  .post-list.module-c.style-d .post-item + .post-item ~ .post-item {
+    margin-top: 8rem;
   }
 }
 .post-list.module-d {
