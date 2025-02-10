@@ -592,7 +592,7 @@
         gap: 4rem 2rem;
         flex-wrap: wrap;
         @include mobile {
-            gap: 2.4rem 2rem;
+            gap: 2.4rem 0.4rem;
         }
         .post-item {
             border: 0.1rem solid rgba(203, 203, 203, 0.50);
@@ -610,7 +610,7 @@
             }
 
             @include mobile {
-                width: calc(100%/2 - 1rem);
+                width: calc(100%/2 - 0.2rem);
                 position: relative;
                 height: 6.75rem;
             }
@@ -999,7 +999,7 @@
                                 padding-left: 3.2rem;
 
                                 @include mobile {
-                                    margin-top: 1.6rem;
+                                    margin-top: 1.9rem;
                                 }
                             }
                         }

@@ -131,7 +131,7 @@
             background-size: cover;
             flex-direction: column;
             padding: 8rem 4.6rem 15.4rem;
-            gap: 8rem;
+            gap: 6rem;
         }
         .board-item {
             width: calc(100% / 4 - 12rem);
@@ -193,6 +193,7 @@
                         background-image: icon('building', custom-color(neutral, 000));
                         background-repeat: no-repeat;
                     }
+
                 }
             }
         }

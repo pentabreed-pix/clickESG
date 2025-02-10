@@ -23,6 +23,9 @@
             .local-body {
                 .content-body {
                     padding-bottom: 0;
+                    @include mobile {
+                        padding-bottom: 9.2rem;
+                    }
                     .section {
                         &.reference-bg {
                             margin-top: 18rem;

@@ -56,7 +56,7 @@
                                 + .swiper-body {
                                     display: block;
                                     .swiper-summary {
-                                        @include font(small-5x, medium);
+                                        @include font(small-5x, bold);
                                         width: auto;
                                     }
                                 }

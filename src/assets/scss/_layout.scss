@@ -266,12 +266,12 @@ body {
 
 					}
 					.local-summary {
-						@include font(small-2x, medium);
+						@include font(small-2x, regular);
 						color: custom-color(neutral, 080);
 						margin-top: 4rem;
 						@include mobile {
 							margin-top: 2.4rem;
-							@include font(small-4x, medium);
+							@include font(small-4x, regular);
 						}
 					}
 					.local-base {
