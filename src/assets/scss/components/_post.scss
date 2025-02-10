@@ -254,6 +254,7 @@
                             padding: 0 1.6rem;
                             .post-head {
                                 @include font(small-1x, bold);
+                                color: inherit;
 
                                 @include mobile {
                                     @include font(small-2x, bold);
@@ -270,7 +271,8 @@
                                 margin-top: 2.4rem;
                             }
                             .post-body {
-                                margin-top: 2rem;
+                                margin-top: 2.4rem;
+                                color: inherit;
 
                                 @include mobile {
                                     margin-top: 1.6rem;
@@ -438,6 +440,13 @@
 
                     @include mobile {
                         margin-top: 12rem
+                    }
+
+                    ~ .post-item {
+                        margin-top: 12rem;
+                        @include mobile {
+                            margin-top: 8rem;
+                        }
                     }
                 }
             }
