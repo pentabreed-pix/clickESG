@@ -147,6 +147,7 @@
 
         @include mobile {
             flex-direction: column;
+            gap: 12rem;
         }
 
         .data-item {
