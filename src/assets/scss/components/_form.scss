@@ -21,6 +21,7 @@
         width: calc(50% - 1rem);
         min-height: 7.6rem;
         background-color: custom-color(etc, 070);
+        border: 0.1rem solid custom-color(etc, 070);
         padding: 2.4rem 3.2rem;
         border-radius: 0.8rem;
 
@@ -164,10 +165,11 @@
                     .data-body {
                       .option-list {
                         position: absolute;
-                        left: - 3.2rem;
-                        width: calc(100% + 6.4rem);
+                        left: -3.3rem;
+                        width: calc(100% + 6.6rem);
                         padding: 2.5rem 3.2rem;
                         background-color: custom-color(etc, 070);
+                        border: 0.1rem solid custom-color(etc, 070);
                         border-radius: 0 0 0.8rem 0.8rem;
                         z-index: 1;
                         display: none;
@@ -252,6 +254,32 @@
           }
         }
 
+        &.active {
+          border-top: 0.1rem solid custom-color(neutral, 080);
+          border-left: 0.1rem solid custom-color(neutral, 080);
+          border-right: 0.1rem solid custom-color(neutral, 080);
+
+          .form-wrap {
+            .form-body {
+              .form-area {
+                .data-list {
+                  &.select {
+                    .data-wrap {
+                      .data-body {
+                        .option-list {
+                          border-bottom: 0.1rem solid custom-color(neutral, 080);
+                          border-left: 0.1rem solid custom-color(neutral, 080);
+                          border-right: 0.1rem solid custom-color(neutral, 080);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
         &.textarea {
           .form-wrap {
             align-items: flex-start;
@@ -264,12 +292,6 @@
           border-radius: 0;
 
           .form-wrap {
-            .form-head {
-              .form-name {
-
-              }
-            }
-
             .form-body {
               .form-area {
                 .data-list {
@@ -286,6 +308,9 @@
                         background-color: custom-color(etc, 070);
                         padding: 2.4rem 3.2rem;
                         border-radius: 0.8rem;
+                        border-top: 0.1rem solid custom-color(etc, 070);
+                        border-left: 0.1rem solid custom-color(etc, 070);
+                        border-right: 0.1rem solid custom-color(etc, 070);
 
                         .data-head {
                           column-gap: 1.6rem;
@@ -293,12 +318,6 @@
                           }
                           .data-name {
                             flex: 1 0 calc(100% - 3.2rem - 14rem - 2.4rem);
-                          }
-
-                          .sign {
-                            &.mail {
-
-                            }
                           }
                           .email-enter {
                             width: calc(100% - 3.2rem - 2.4rem - 10rem);
@@ -310,8 +329,11 @@
                         }
                         .data-body {
                           .option-list {
-                            left: 0;
-                            width: 100%;
+                            left: -0.1rem;
+                            width: calc(100% + 0.2rem);
+                            border-bottom: 0.1rem solid custom-color(etc, 070);
+                            border-left: 0.1rem solid custom-color(etc, 070);
+                            border-right: 0.1rem solid custom-color(etc, 070);
                           }
                         }
                       }
@@ -326,18 +348,36 @@
                           .data-name {
                             color: rgb(167, 167, 167);
                           }
-                          .email-id {
-                            &::placeholder {
-                            }
-                          }
                           .sign {
                             &.mail {
                               color: rgb(167, 167, 167);
                             }
                           }
                         }
-                        .data-body {
-                          .option-list {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .form-wrap {
+            .form-body {
+              .form-area {
+                .data-list {
+                  &.select {
+                    .data-wrap {
+                      .data-inner {
+                        &.active {
+                          border-top: 0.1rem solid custom-color(neutral, 080);
+                          border-left: 0.1rem solid custom-color(neutral, 080);
+                          border-right: 0.1rem solid custom-color(neutral, 080);
+                          .data-body {
+                            .option-list {
+                              border-bottom: 0.1rem solid custom-color(neutral, 080);
+                              border-left: 0.1rem solid custom-color(neutral, 080);
+                              border-right: 0.1rem solid custom-color(neutral, 080);
+                            }
                           }
                         }
                       }
