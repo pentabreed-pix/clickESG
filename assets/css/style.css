@@ -2498,6 +2498,11 @@
 .post-list.module-c.style-d .post-item .post-wrap .post-head + .post-body {
   margin-top: 4rem;
 }
+@media (max-width: 1023px) {
+  .post-list.module-c.style-d .post-item .post-wrap .post-head + .post-body {
+    margin-top: 2.4rem;
+  }
+}
 .post-list.module-c.style-d .post-item .post-wrap .post-head + .post-body .table-info {
   display: flex;
   justify-content: right;
