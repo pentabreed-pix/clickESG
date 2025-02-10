@@ -400,6 +400,13 @@
                                         .post-item {
                                             + .post-item {
                                                 margin-top: 0;
+                                                .post-wrap {
+                                                    + .post-wrap {
+                                                        .post-figure {
+                                                            margin-top: 1.4rem;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
