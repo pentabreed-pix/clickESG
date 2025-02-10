@@ -452,8 +452,12 @@ $(function(){
         imgModalScaleTick = 0.125,
         imgModalTarget;
 
+    // Lenis 인스턴스 생성 (이미 Lenis가 초기화되어 있다면 필요 없음)
+    const lenis = new Lenis();
+
     imgModalOpener.on('click', function(e){
         $('body').addClass('sc-disable');
+        lenis.start();
         imgModalTarget = $(this).next('div').clone(true, true);
         imgModalTarget.css({
             'max-height': '100%',
@@ -462,14 +466,15 @@ $(function(){
         imgModalTarget.attr('data-zoomstep', 0);
         imgModalBody.empty().append(imgModalTarget);
         imgModalBox.addClass('active');
-        //console.log('임시 이미지 모달 열림');
     });
+
     imgModalCloser.on('click', function(e){
         $('body').removeClass('sc-disable');
+        lenis.stop();
         imgModalBox.removeClass('active');
         imgModalScaleTimes = 0;
-        //console.log('임시 이미지 모달 닫힘');
     });
+
     imgModalScale.on('click', function(e){
         switch ($(this).data('do')) {
             case 'up':
@@ -477,14 +482,12 @@ $(function(){
                 imgModalScaleTimes++;
                 imgModalTarget.css('zoom', 1+imgModalScaleTimes*imgModalScaleTick);
                 imgModalTarget.attr('data-zoomstep', imgModalScaleTimes)
-                //console.log('임시 이미지 모달 내용 확대');
                 break;
             case 'dn':
                 if (imgModalScaleTimes === -4) return false;
                 imgModalScaleTimes--;
                 imgModalTarget.css('zoom', 1+imgModalScaleTimes*imgModalScaleTick);
                 imgModalTarget.attr('data-zoomstep', imgModalScaleTimes)
-                //console.log('임시 이미지 모달 내용 축소');
                 break;
             default:
                 console.log('정의되지 않은 동작');
@@ -492,6 +495,7 @@ $(function(){
         }
     });
 });
+
 /* e: // 이미지 레이어 팝업 */
 
 
