@@ -2325,7 +2325,7 @@
 @media (max-width: 1023px) {
   .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info .post-head {
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 .post-list.module-b.style-b .post-item .post-wrap .post-figure + .post-info .post-head + .post-body {
@@ -2372,7 +2372,7 @@
   .post-list.module-c.style-c .post-item .post-wrap .post-head .post-summary {
     font-weight: 500;
     font-size: 1.4rem;
-    margin-top: 4rem;
+    margin-top: 1.6rem;
   }
 }
 .post-list.module-c.style-c .post-item .post-wrap .post-head + .post-figure {
@@ -2383,6 +2383,11 @@
 }
 .post-list.module-c.style-c .post-item .post-wrap .post-head + .post-body {
   margin-top: 4rem;
+}
+@media (max-width: 1023px) {
+  .post-list.module-c.style-c .post-item .post-wrap .post-head + .post-body {
+    margin-top: 2.4rem;
+  }
 }
 .post-list.module-c.style-c .post-item .post-wrap .post-head + .post-body .table-info {
   display: flex;
@@ -2409,6 +2414,7 @@
     padding-right: 1.8rem;
     padding-left: 1.8rem;
     margin-left: -1.8rem;
+    margin-top: 2.4rem;
   }
   .post-list.module-c.style-c .post-item .post-wrap .post-figure::-webkit-scrollbar {
     width: 0.5rem;
@@ -3867,8 +3873,8 @@
 .t-display.module-d table > tbody > tr > td {
   vertical-align: middle;
   padding: 1.5rem 2rem;
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: rgb(57, 57, 57);
   padding: 2.8rem;
 }
@@ -6838,7 +6844,7 @@ body.mo-menu-open {
 @media (max-width: 1023px) {
   #wrap .page .section.module-b .section-wrap .section-head .section-name {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 }
 #wrap .page .section.module-b .section-wrap .section-head .section-name + .section-summary {
