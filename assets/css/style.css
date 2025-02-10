@@ -568,6 +568,7 @@
   width: calc(50% - 1rem);
   min-height: 7.6rem;
   background-color: rgb(249, 249, 249);
+  border: 0.1rem solid rgb(249, 249, 249);
   padding: 2.4rem 3.2rem;
   border-radius: 0.8rem;
 }
@@ -721,10 +722,11 @@
 }
 .submit-form.module-a .form-list .form-item .form-wrap .form-body .form-area .data-list.select .data-wrap .data-body .option-list {
   position: absolute;
-  left: -3.2rem;
-  width: calc(100% + 6.4rem);
+  left: -3.3rem;
+  width: calc(100% + 6.6rem);
   padding: 2.5rem 3.2rem;
   background-color: rgb(249, 249, 249);
+  border: 0.1rem solid rgb(249, 249, 249);
   border-radius: 0 0 0.8rem 0.8rem;
   z-index: 1;
   display: none;
@@ -790,6 +792,16 @@
 .submit-form.module-a .form-list .form-item .form-wrap .form-body .form-area .data-list.select.show .data-wrap .data-body .option-list {
   display: block;
 }
+.submit-form.module-a .form-list .form-item.active {
+  border-top: 0.1rem solid rgb(57, 57, 57);
+  border-left: 0.1rem solid rgb(57, 57, 57);
+  border-right: 0.1rem solid rgb(57, 57, 57);
+}
+.submit-form.module-a .form-list .form-item.active .form-wrap .form-body .form-area .data-list.select .data-wrap .data-body .option-list {
+  border-bottom: 0.1rem solid rgb(57, 57, 57);
+  border-left: 0.1rem solid rgb(57, 57, 57);
+  border-right: 0.1rem solid rgb(57, 57, 57);
+}
 .submit-form.module-a .form-list .form-item.textarea .form-wrap {
   align-items: flex-start;
 }
@@ -810,6 +822,9 @@
   background-color: rgb(249, 249, 249);
   padding: 2.4rem 3.2rem;
   border-radius: 0.8rem;
+  border-top: 0.1rem solid rgb(249, 249, 249);
+  border-left: 0.1rem solid rgb(249, 249, 249);
+  border-right: 0.1rem solid rgb(249, 249, 249);
 }
 .submit-form.module-a .form-list .form-item.mo-only .form-wrap .form-body .form-area .data-list.select .data-wrap .data-inner .data-head {
   -moz-column-gap: 1.6rem;
@@ -826,8 +841,11 @@
   flex: 1 1 10rem;
 }
 .submit-form.module-a .form-list .form-item.mo-only .form-wrap .form-body .form-area .data-list.select .data-wrap .data-inner .data-body .option-list {
-  left: 0;
-  width: 100%;
+  left: -0.1rem;
+  width: calc(100% + 0.2rem);
+  border-bottom: 0.1rem solid rgb(249, 249, 249);
+  border-left: 0.1rem solid rgb(249, 249, 249);
+  border-right: 0.1rem solid rgb(249, 249, 249);
 }
 .submit-form.module-a .form-list .form-item.mo-only .form-wrap .form-body .form-area .data-list.select.show .data-wrap .data-head .data-title {
   color: rgb(34, 34, 34);
@@ -837,6 +855,16 @@
 }
 .submit-form.module-a .form-list .form-item.mo-only .form-wrap .form-body .form-area .data-list.select.show .data-wrap .data-head .sign.mail {
   color: rgb(167, 167, 167);
+}
+.submit-form.module-a .form-list .form-item.mo-only .form-wrap .form-body .form-area .data-list.select .data-wrap .data-inner.active {
+  border-top: 0.1rem solid rgb(57, 57, 57);
+  border-left: 0.1rem solid rgb(57, 57, 57);
+  border-right: 0.1rem solid rgb(57, 57, 57);
+}
+.submit-form.module-a .form-list .form-item.mo-only .form-wrap .form-body .form-area .data-list.select .data-wrap .data-inner.active .data-body .option-list {
+  border-bottom: 0.1rem solid rgb(57, 57, 57);
+  border-left: 0.1rem solid rgb(57, 57, 57);
+  border-right: 0.1rem solid rgb(57, 57, 57);
 }
 .submit-form.module-b {
   display: flex;
@@ -8479,36 +8507,36 @@ body.mo-menu-open {
 #wrap .about-news .section .post-list + .pagination {
   margin-top: 18rem;
 }
-#wrap .about-contact .content-body {
+#wrap .about-contact .local .local-body .content-body {
   padding-top: 8rem;
 }
 @media (max-width: 1023px) {
-  #wrap .about-contact .content-body {
+  #wrap .about-contact .local .local-body .content-body {
     padding-top: 6rem;
   }
 }
-#wrap .about-contact .content-body .section {
+#wrap .about-contact .local .local-body .content-body .section {
   padding-top: 6rem;
   border-top: 0.1rem solid rgb(0, 0, 0);
 }
 @media (max-width: 1023px) {
-  #wrap .about-contact .content-body .section {
+  #wrap .about-contact .local .local-body .content-body .section {
     padding-top: 4rem;
   }
 }
-#wrap .about-contact .content-body .submit-form.module-a .form-list {
+#wrap .about-contact .local .local-body .content-body .submit-form.module-a .form-list {
   margin-bottom: 2rem;
 }
 @media (max-width: 1023px) {
-  #wrap .about-contact .content-body .submit-form.module-a .form-list {
+  #wrap .about-contact .local .local-body .content-body .submit-form.module-a .form-list {
     margin-bottom: 1.4rem;
   }
 }
-#wrap .about-contact .content-body .button-area {
+#wrap .about-contact .local .local-body .content-body .button-area {
   margin-top: 8rem;
 }
 @media (max-width: 1023px) {
-  #wrap .about-contact .content-body .button-area {
+  #wrap .about-contact .local .local-body .content-body .button-area {
     margin-top: 6rem;
   }
 }
