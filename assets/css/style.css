@@ -109,7 +109,7 @@
 }
 @media (max-width: 1023px) {
   .board-list.module-a .board-item .board-wrap {
-    gap: 2.8rem;
+    gap: 2.4rem;
   }
 }
 .board-list.module-a .board-item .board-wrap .board-figure {
@@ -157,7 +157,7 @@
   font-weight: 700;
   font-size: 2.8rem;
   color: rgb(7, 57, 143);
-  line-height: 190%;
+  line-height: 160%;
 }
 @media (max-width: 1023px) {
   .board-list.style-a .board-item .board-wrap .board-info .board-head {
@@ -1854,11 +1854,12 @@
   }
   .data-list.solutions .data-item .data-head .data-subject {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   .data-list.solutions .data-item .data-head .data-subject + .data-summary {
     font-weight: 400;
     font-size: 1.6rem;
+    line-height: 180%;
     margin-top: 2rem;
   }
 }
@@ -9174,6 +9175,11 @@ body.mo-menu-open {
   height: 100%;
   position: relative;
   margin-top: 6rem;
+}
+@media (max-width: 1023px) {
+  #wrap .solution-netzero .local .local-body .content-body .section .section-wrap .section-util .banner-list .banner-item .banner-wrap .banner-body {
+    margin-top: 4rem;
+  }
 }
 #wrap .solution-netzero .local .local-body .content-body .section .section-wrap .section-util .banner-list .banner-item .banner-wrap .banner-body::after {
   content: "";
