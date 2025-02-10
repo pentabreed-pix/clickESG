@@ -359,6 +359,7 @@
                             margin-top: 2.4rem;
                             @include font(small-3x, regular);
                             color: custom-color(neutral, 100);
+                            word-break: break-all;
     
                             @include mobile {
                                 @include font(small-5x, regular);
@@ -433,10 +434,10 @@
                     }
                 }
                 + .post-item {
-                    margin-top: 12rem;
+                    margin-top: 18rem;
 
                     @include mobile {
-                        margin-top: 8rem
+                        margin-top: 12rem
                     }
                 }
             }
