@@ -342,6 +342,11 @@ body {
 							@include mobile {
 								margin-top: 4rem;
 							}
+							&.solution-character {
+								@include mobile {
+									margin-top: 2.4rem;
+								}
+							}
 						}
 						.section-summary {
 							margin-top: 3.2rem;

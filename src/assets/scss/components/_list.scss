@@ -162,11 +162,10 @@
                     @include font(large, bold);
                     font-weight: 700;
                     line-height: 160%;
-                    color: custom-color(neutral,100);
+                    color: custom-color(neutral,080);
 
                     + .data-summary {
-                        font-size: 1.9rem;
-                        font-weight: 400;
+                        @include font(small-2x, regular);
                         line-height: 180%;
                         color: custom-color(neutral,100);
                         margin-top: 3.2rem;
@@ -355,6 +354,7 @@
 
                     @include mobile {
                         margin-right: 0.8rem;
+                        top: 0.5rem;
                     }
                 }
                 &.arrow {

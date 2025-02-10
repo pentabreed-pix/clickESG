@@ -193,12 +193,13 @@
                 .post-wrap {
                     .post-head {
                         .post-name {
-                           padding: 1.6rem 1.5rem 0;
+                           padding: 2.4rem 2.4rem 0;
                            @include font(small-2x, medium);
                            color: custom-color(neutral,100);
 
                            @include mobile {
                                @include font(small-3x, bold);
+                               padding: 1.6rem 1.6rem 0;
                            }
                         }
                     }
