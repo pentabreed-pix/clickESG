@@ -8721,7 +8721,7 @@ body.mo-menu-open {
   padding-top: 0 !important;
 }
 #wrap .esg-consulting .content-body .section {
-  padding-top: 10rem !important;
+  padding-top: 6.4rem !important;
 }
 @media (max-width: 1023px) {
   #wrap .esg-consulting .content-body .section {
@@ -8919,13 +8919,8 @@ body.mo-menu-open {
     max-height: 53rem;
   }
 }
-#wrap .esg-net .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
-  margin-top: 6.4rem;
-}
-@media (max-width: 1023px) {
-  #wrap .esg-net .section .panel-display .panel-list .panel-item.last .section .section-head + .section-body {
-    margin-top: 4rem;
-  }
+#wrap .esg-net .section .panel-display .panel-list .panel-item .panel-wrap .section .section-body .post-list.module-c.style-c .post-item + .post-item {
+  margin-top: 0;
 }
 #wrap .esg-net .section + .section {
   padding-top: 18rem;
