@@ -304,7 +304,8 @@
 					>td {
 						vertical-align: middle;
 						padding: 1.5rem 2rem;
-						@include font(small-5x, medium);
+						font-size: 1.5rem;
+						font-weight: 400;
 						color: custom-color(neutral, 080);
 						padding: 2.8rem;
 						&.has-bg {

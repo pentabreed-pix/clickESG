@@ -255,7 +255,7 @@
                                 @include font(small-1x, bold);
 
                                 @include mobile {
-                                    @include font(small-4x, bold);
+                                    @include font(small-2x, bold);
                                 }
                                 + .post-body {
                                     @include font(small-3x, regular);
@@ -302,7 +302,7 @@
 
                             @include mobile {
                                 @include font(small-5x, medium);
-                                margin-top: 4rem;
+                                margin-top: 1.6rem;
                             }
                         }
                         + .post-figure {
@@ -313,6 +313,9 @@
                         }
                         + .post-body {
                             margin-top: 4rem;
+                            @include mobile {
+                                margin-top: 2.4rem;
+                            }
 
                             .table-info {
                                 display: flex;
@@ -332,6 +335,7 @@
                             overflow: auto;
                             @include scroll-y;
                             @include scroll-x;
+                            margin-top: 2.4rem;
                         }
                         img {
                             width: 100%;
