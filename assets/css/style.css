@@ -8914,6 +8914,14 @@ body.mo-menu-open {
     padding-top: 12rem;
   }
 }
+#wrap .esg-consulting .local .local-body .content-body .section + .section.framework-sec {
+  padding-top: 6.4rem !important;
+}
+@media (max-width: 1023px) {
+  #wrap .esg-consulting .local .local-body .content-body .section + .section.framework-sec {
+    padding-top: 4rem !important;
+  }
+}
 #wrap .esg-chain .section .panel-display {
   padding-top: 10rem;
 }
