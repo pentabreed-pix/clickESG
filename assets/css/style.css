@@ -2113,8 +2113,14 @@
 }
 .bullet-list.module-a.type-d > .bullet-item::before {
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: rgb(0, 0, 0);
+}
+@media (max-width: 1023px) {
+  .bullet-list.module-a.type-d > .bullet-item::before {
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
 }
 .bullet-list.module-a.type-e > .bullet-item {
   font-size: 1.5rem;
