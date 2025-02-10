@@ -241,7 +241,7 @@
             .content-body {
                 padding-top: 0 !important;
                 .section {
-                    padding-top: 10rem !important;
+                    padding-top: 6.4rem !important;
                     @include mobile {
                         padding-top: 4rem !important;
                     }
@@ -396,21 +396,28 @@
                                         }
 
                                     }
-                                }
-                            }
-                        }
-                        &.last {
-                            .section {
-                                .section-head {
-                                   + .section-body {
-                                        margin-top: 6.4rem;
-                                        @include mobile {
-                                            margin-top: 4rem;
+                                    .post-list.module-c.style-c {
+                                        .post-item {
+                                            + .post-item {
+                                                margin-top: 0;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
+                        // &.last {
+                        //     .section {
+                        //         .section-head {
+                        //            + .section-body {
+                        //                 margin-top: 6.4rem;
+                        //                 @include mobile {
+                        //                     margin-top: 4rem;
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+                        // }
                     }
                 }
             }
