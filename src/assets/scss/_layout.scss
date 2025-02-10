@@ -24,6 +24,9 @@ body {
 			&.module-a {
 				margin: 0 auto;
 				padding: 10.4rem 0 0 0;
+				@include mobile {
+					padding-top: 9.4rem;
+				}
 
 				position: relative;
 				.local-subject {
