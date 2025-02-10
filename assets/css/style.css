@@ -6523,6 +6523,11 @@ body.mo-menu-open {
   padding: 10.4rem 0 0 0;
   position: relative;
 }
+@media (max-width: 1023px) {
+  #wrap .page .local.module-a {
+    padding-top: 9.4rem;
+  }
+}
 #wrap .page .local.module-a .local-subject .local-name {
   font-weight: 700;
   font-size: 5.6rem;
