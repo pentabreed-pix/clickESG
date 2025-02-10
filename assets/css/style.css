@@ -210,7 +210,7 @@
     background-size: cover;
     flex-direction: column;
     padding: 8rem 4.6rem 15.4rem;
-    gap: 8rem;
+    gap: 6rem;
   }
 }
 .board-list.module-b .board-item {
@@ -2044,7 +2044,7 @@
 .bullet-list.module-a.style-b {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 .bullet-list.module-a.style-b > .bullet-item {
   display: flex;
@@ -2117,7 +2117,7 @@
 }
 .bullet-list.module-a.type-c > .bullet-item {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: rgb(0, 0, 0);
   line-height: 180%;
 }
@@ -2821,7 +2821,7 @@
 }
 @media (max-width: 1023px) {
   .post-list.module-f {
-    gap: 2.4rem 2rem;
+    gap: 2.4rem 0.4rem;
   }
 }
 .post-list.module-f .post-item {
@@ -2841,7 +2841,7 @@
 }
 @media (max-width: 1023px) {
   .post-list.module-f .post-item {
-    width: calc(50% - 1rem);
+    width: calc(50% - 0.2rem);
     position: relative;
     height: 6.75rem;
   }
@@ -3198,7 +3198,7 @@
 }
 @media (max-width: 1023px) {
   .post-list.feature .post-item .post-wrap .post-info .post-head + .post-body .bullet-list {
-    margin-top: 1.6rem;
+    margin-top: 1.9rem;
   }
 }
 .post-list.feature .post-item .post-wrap .post-info .post-head + .post-body {
@@ -4168,7 +4168,7 @@
     display: block;
   }
   .swiper-list.process .swiper-wrapper .swiper-slide .swiper-wrap .swiper-info .swiper-head + .swiper-body .swiper-summary {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.4rem;
     width: auto;
   }
@@ -6775,7 +6775,7 @@ body.mo-menu-open {
   }
 }
 #wrap .page .local.module-d .local-subject .local-summary {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 2rem;
   color: rgb(57, 57, 57);
   margin-top: 4rem;
@@ -6783,7 +6783,7 @@ body.mo-menu-open {
 @media (max-width: 1023px) {
   #wrap .page .local.module-d .local-subject .local-summary {
     margin-top: 2.4rem;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.6rem;
   }
 }
@@ -8469,6 +8469,11 @@ body.mo-menu-open {
 }
 #wrap .about-reference .local .local-body .content-body {
   padding-bottom: 0;
+}
+@media (max-width: 1023px) {
+  #wrap .about-reference .local .local-body .content-body {
+    padding-bottom: 9.2rem;
+  }
 }
 #wrap .about-reference .local .local-body .content-body .section.reference-bg {
   margin-top: 18rem;
