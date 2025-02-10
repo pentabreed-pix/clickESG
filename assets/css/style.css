@@ -1698,7 +1698,7 @@
 }
 .data-list.pers .data-item {
   counter-increment: data-counter;
-  width: 42.8rem;
+  width: 65.7rem;
 }
 @media (max-width: 1023px) {
   .data-list.pers .data-item {
@@ -1708,14 +1708,30 @@
 .data-list.pers .data-item .data-wrap {
   display: flex;
   gap: 1.2rem;
+}
+.data-list.pers .data-item .data-wrap .data-text {
   font-weight: 400;
+  font-size: 1.8rem;
+  color: rgb(57, 57, 57);
+}
+@media (max-width: 1023px) {
+  .data-list.pers .data-item .data-wrap .data-text {
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
+}
+.data-list.pers .data-item .data-wrap .data-number {
+  font-weight: 700;
   font-size: 1.6rem;
+  color: rgb(0, 0, 0);
 }
 .data-list.pers .data-item .data-wrap .data-number::before {
   content: counter(data-counter, decimal-leading-zero);
-  font-weight: 700;
 }
-.data-list.pers .data-item:hover {
+.data-list.pers .data-item .data-wrap:hover .data-text {
+  color: rgb(5, 104, 204);
+}
+.data-list.pers .data-item .data-wrap:hover .data-number {
   color: rgb(5, 104, 204);
 }
 .data-list.numbering {
@@ -1737,6 +1753,7 @@
   }
 }
 .data-list.numbering .data-item .data-wrap .data-text {
+  color: rgb(0, 0, 0);
   padding-left: 2.4rem;
 }
 .data-list.numbering .data-item .data-wrap .data-text::before {
@@ -1780,6 +1797,10 @@
 }
 .data-list.numbering .data-item .data-wrap .data-text .order-list .order-item + .order-item {
   margin-top: 2rem;
+  color: rgb(34, 34, 34);
+}
+.data-list.numbering .data-item .data-wrap .data-text .order-list.edited .order-item {
+  color: rgb(34, 34, 34);
 }
 .data-list.numbering .data-item .data-wrap .data-text .order-list.edited .order-item + .order-item {
   margin-top: 0.8rem;
@@ -1914,9 +1935,11 @@
 }
 .data-list.page-det .data-item .data-wrap .data-head {
   position: relative;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
+}
+.data-list.page-det .data-item .data-wrap .data-head .data-name {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: rgb(57, 57, 57);
 }
 .data-list.page-det .data-item .data-wrap .data-head::before {
   content: "";
@@ -1935,9 +1958,9 @@
   }
 }
 .data-list.page-det .data-item .data-wrap .data-body {
-  font-size: inherit;
   font-weight: 700;
-  color: inherit;
+  font-size: 1.6rem;
+  color: rgb(57, 57, 57);
 }
 @media (max-width: 1023px) {
   .data-list.page-det .data-item .data-wrap .data-body {
@@ -1975,10 +1998,13 @@
   text-align: center;
   padding: 12rem 0;
   border-bottom: 0.1rem solid rgba(203, 203, 203, 0.5);
+  border-top: 0.1rem solid rgb(0, 0, 0);
+  margin-top: 2.4rem;
 }
 @media (max-width: 1023px) {
   .no-data {
     padding: 8rem 0;
+    margin-top: 4rem;
   }
 }
 .no-data .no-data-wrap {
@@ -2176,7 +2202,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2.9rem;
 }
 .post-display .post-wrap .post-head .post-info .info-list .info-item {
   position: relative;
@@ -4034,16 +4060,18 @@
   background-color: rgb(249, 249, 249);
   border-right: 0.1rem solid rgba(203, 203, 203, 0.5);
   border-left: 0.1rem solid rgba(203, 203, 203, 0.5);
-  padding: 1.8rem;
-  font-weight: 700;
+  padding: 1.4rem;
+  font-weight: 400;
   font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
 }
 .t-display.module-e table > tbody > tr > th,
 .t-display.module-e table > tbody > tr > td {
   vertical-align: middle;
   border-top: 0.1rem solid rgba(203, 203, 203, 0.5);
   border-right: 0.1rem solid rgba(203, 203, 203, 0.5);
-  padding: 3.9rem;
+  padding: 2.6rem;
   font-weight: 400;
   font-size: 1.6rem;
   color: rgb(57, 57, 57);
@@ -6766,7 +6794,7 @@ body.mo-menu-open {
 #wrap .page .local.module-d .local-subject .local-name {
   font-weight: 700;
   font-size: 5.6rem;
-  color: rgb(57, 57, 57);
+  color: rgb(34, 34, 34);
 }
 @media (max-width: 1023px) {
   #wrap .page .local.module-d .local-subject .local-name {
@@ -6777,7 +6805,7 @@ body.mo-menu-open {
 #wrap .page .local.module-d .local-subject .local-summary {
   font-weight: 400;
   font-size: 2rem;
-  color: rgb(57, 57, 57);
+  color: rgb(34, 34, 34);
   margin-top: 4rem;
 }
 @media (max-width: 1023px) {
