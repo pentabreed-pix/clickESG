@@ -398,6 +398,9 @@
                         }
                         + .post-body {
                             margin-top: 4rem;
+                            @include mobile {
+                                margin-top: 2.4rem;
+                            }
 
                             .table-info {
                                 display: flex;
