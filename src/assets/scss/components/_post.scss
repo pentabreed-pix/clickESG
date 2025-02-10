@@ -296,12 +296,12 @@
                             }
                         }
                         .post-summary {
-                            margin-top: 6.4rem;
-                            @include font(small-3x, medium);
+                            margin-top: 2.4rem;
+                            @include font(small-3x, regular);
                             color: custom-color(neutral, 100);
 
                             @include mobile {
-                                @include font(small-5x, medium);
+                                @include font(small-5x, regular);
                                 margin-top: 1.6rem;
                             }
                         }
@@ -356,11 +356,11 @@
                     &.special-case{
                         .post-summary {
                             margin-top: 2.4rem;
-                            @include font(small-3x, medium);
+                            @include font(small-3x, regular);
                             color: custom-color(neutral, 100);
     
                             @include mobile {
-                                @include font(small-5x, medium);
+                                @include font(small-5x, regular);
                                 margin-top: 2rem
                             }
                         }

@@ -32,7 +32,7 @@ body {
 						line-height: 160%;
 						text-align: center;
 						margin-top: 6.4rem;
-						color: custom-color(neutral, 100);
+						color: custom-color(neutral, 090);
 
 						@include mobile {
 							@include font(small-1x, bold);
@@ -62,7 +62,7 @@ body {
 					}
 
 					@include mobile {
-						margin-top: 4rem;
+						margin-top: 6rem;
 						position: relative;
 						height: 24rem;
 						img {
@@ -345,11 +345,11 @@ body {
 						}
 						.section-summary {
 							margin-top: 3.2rem;
-							@include font(small-3x, medium);
+							@include font(small-2x, regular);
 							color: custom-color(neutral, 100);
 							@include mobile {
 								margin-top: 2rem;
-								@include font(small-4x, medium);
+								@include font(small-4x, regular);
 							}
 						}
 					}
@@ -506,10 +506,10 @@ body {
 			.comment {
 				&.module-a {
 					color: custom-color(neutral, 080);
-					@include font(small-4x, medium);
+					@include font(small-4x, regular);
 
 					@include mobile {
-						@include font(small-6x, medium);
+						@include font(small-6x, regular);
 					}
 				}
 				&.module-b {
@@ -530,6 +530,9 @@ body {
 				}
 				&.style-a {
 					margin-top: 2rem;
+					@include mobile {
+						margin-top: 1.4rem;
+					}
 				}
 			}
 		}
