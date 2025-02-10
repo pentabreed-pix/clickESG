@@ -481,17 +481,15 @@
 
             let $dropdownInquiry = $('#inquiryType');
             let $buttonInquiry = $('#inquiryTypeButton');
-            let $formItem = $('.form-list .form-item')
 
             $buttonInquiry.on('click', function(event) {
                 event.stopPropagation();
                 if ($dropdownInquiry.hasClass('show')) {
                     $('.data-list.select').removeClass('show');
                     $dropdownInquiry.removeClass('show');
-                    $dropdownInquiry.removeClass('show').parents($formItem).removeClass('border');
                 } else {
                     $('.data-list.select').removeClass('show');
-                    $dropdownInquiry.addClass('show').parents($formItem).addClass('border');
+                    $dropdownInquiry.addClass('show');
                 }
             });
 
@@ -519,8 +517,6 @@
             let $buttonTitle = $('#emailType .data-title');
             let $buttonEmail = $('#emailTypeButton');
             let $emailEnter = $('.pc-only .email-enter');
-            let $formItem1 = $('.form-list .form-item.mo-only');
-
 
             $buttonEmail.on('click', function(event) {
                 event.stopPropagation();
@@ -528,11 +524,11 @@
                 if ($dropdownEmail.hasClass('show')) {
                     $buttonTitle.text('이메일');
                     $('.data-list.select').removeClass('show');
-                    $dropdownEmail.removeClass('show').parents($formItem1).removeClass('border');
+                    $dropdownEmail.removeClass('show');
                 } else {
                     $buttonTitle.text('이메일 주소');
                     $('.data-list.select').removeClass('show');
-                    $dropdownEmail.addClass('show').parents($formItem1).addClass('border');
+                    $dropdownEmail.addClass('show');
                 }
             });
 

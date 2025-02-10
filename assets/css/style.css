@@ -570,7 +570,6 @@
   background-color: rgb(249, 249, 249);
   padding: 2.4rem 3.2rem;
   border-radius: 0.8rem;
-  border: 1px solid transparent;
 }
 @media (max-width: 1023px) {
   .submit-form.module-a .form-list .form-item {
@@ -790,8 +789,6 @@
 }
 .submit-form.module-a .form-list .form-item .form-wrap .form-body .form-area .data-list.select.show .data-wrap .data-body .option-list {
   display: block;
-  border: 1px solid rgb(57, 57, 57);
-  border-top: 0;
 }
 .submit-form.module-a .form-list .form-item.textarea .form-wrap {
   align-items: flex-start;
@@ -840,9 +837,6 @@
 }
 .submit-form.module-a .form-list .form-item.mo-only .form-wrap .form-body .form-area .data-list.select.show .data-wrap .data-head .sign.mail {
   color: rgb(167, 167, 167);
-}
-.submit-form.module-a .form-list .form-item.border {
-  border: 0.1rem solid rgb(57, 57, 57);
 }
 .submit-form.module-b {
   display: flex;
