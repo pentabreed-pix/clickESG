@@ -266,7 +266,7 @@ body {
 
 					}
 					.local-summary {
-						@include font(small-2x, regular);
+						@include font(small-1x, regular);
 						color: custom-color(neutral, 090);
 						margin-top: 4rem;
 						@include mobile {
@@ -281,7 +281,7 @@ body {
 						margin-top: 2rem;
 						@include mobile {
 							margin-top: 1.4rem;
-							@include font(small-6x, medium);
+							@include font(small-6x, regular);
 						}
 					}
 				}

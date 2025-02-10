@@ -72,6 +72,8 @@
                 .data-text {
                     color: custom-color(neutral, 100);
                     padding-left: 2.4rem;
+                    font-size: inherit;
+                    font-weight: inherit;
                     &::before {
                         content: counter(data-counter) ")";
                         position: absolute;
@@ -183,9 +185,10 @@
 
                     + .data-summary {
                         @include font(small-2x, regular);
-                        line-height: 180%;
+                        line-height: 160%;
                         color: custom-color(neutral,100);
                         margin-top: 3.2rem;
+                        word-break: break-all;
                     }
                 }
 
@@ -195,7 +198,6 @@
                         @include font(small-1x, bold);
                         + .data-summary {
                             @include font(small-4x, regular);
-                            line-height: 180%;
                             margin-top: 2rem;
                         }
                     }
@@ -455,7 +457,7 @@
             >.bullet-item {
                 @include font(small-3x, regular);
                 color:custom-color(neutral, 100);
-                line-height: 240%;
+                line-height: 230%;
 
                 @include mobile {
                     @include font(small-5x, regular);

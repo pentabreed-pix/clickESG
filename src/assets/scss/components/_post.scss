@@ -196,6 +196,7 @@
                            padding: 2.4rem 2.4rem 0;
                            @include font(small-2x, medium);
                            color: custom-color(neutral,100);
+                           line-height: 160%;
 
                            @include mobile {
                                @include font(small-3x, bold);

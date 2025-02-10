@@ -68,9 +68,9 @@
                                 }
                             }
                             .section-summary {
-                                @include font(small-2x, medium);
+                                @include font(small-2x, regular);
                                 @include mobile {
-                                    @include font(small-4x, medium);
+                                    @include font(small-4x, regular);
                                 }
                                 &.under {
                                     text-decoration: underline;
