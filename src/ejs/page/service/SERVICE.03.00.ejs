@@ -9,6 +9,111 @@
         tab();
     });
 </script>
+<script>
+    function tab() {
+
+    const tabDisplay = document.querySelectorAll(".tab-display");
+
+    tabDisplay.forEach((tab, tabDisplayIndex) => {
+        const firstTab = tab.querySelector(".tab-item:first-child");
+        firstTab.classList.add("active");
+        firstTab.querySelector(".tab-text").setAttribute("aria-selected", "true");
+
+        const tabList = tab.querySelector(".tab-list");
+
+        tabList.addEventListener("keydown", function(e) {
+            e = e || window.event;
+            let keycode = e.keyCode || e.which;
+
+            if (!e.shiftKey && keycode === 9) {
+                let tabItems = this.querySelectorAll(".tab-item");
+                tabItems.forEach(item => {
+                    const button = item.querySelector(".tab-text");
+                    if (item.classList.contains("active")) {
+                        button.setAttribute("tabindex", "0");
+                        button.setAttribute("aria-selected", "true");
+                    } else {
+                        button.setAttribute("tabindex", "-1");
+                        button.setAttribute("aria-selected", "false");
+                    }
+                });
+            }
+        });
+
+        const tabButtons = tab.querySelectorAll(".tab-text");
+        tabButtons.forEach(button => {
+            button.addEventListener("keydown", function(e) {
+                e = e || window.event;
+                let keycode = e.keyCode || e.which;
+
+                switch (keycode) {
+                    case 37: // Left Arrow
+                        if (this.closest('.tab-item').previousElementSibling) {
+                            this.setAttribute("tabindex", "-1");
+                            const prevButton = this.closest('.tab-item').previousElementSibling.querySelector('.tab-text');
+                            prevButton.setAttribute("tabindex", "0");
+                            prevButton.focus();
+                        }
+                        break;
+                    case 39: // Right Arrow
+                        if (this.closest('.tab-item').nextElementSibling) {
+                            this.setAttribute("tabindex", "-1");
+                            const nextButton = this.closest('.tab-item').nextElementSibling.querySelector('.tab-text');
+                            nextButton.setAttribute("tabindex", "0");
+                            nextButton.focus();
+                        }
+                        break;
+                    case 32: // Space
+                    case 13: // Enter
+                        tabButtons.forEach(btn => btn.setAttribute("aria-selected", "false"));
+                        this.setAttribute("aria-selected", "true");
+                        break;
+                }
+            });
+        });
+
+        const panelDisplay = document.querySelectorAll(".panel-display")[tabDisplayIndex];
+        const panelItems = panelDisplay.querySelectorAll(".panel-item");
+        panelItems.forEach((item, i) => {
+            if (i !== 0) item.classList.add("hidden");
+        });
+
+        const tabItems = tab.querySelectorAll(".tab-item");
+        tabItems.forEach((item, tabIndex) => {
+            const button = item.querySelector(".tab-text");
+            button.addEventListener("click", () => {
+                const curTab = button.closest(".tab-item");
+
+                tabItems.forEach(item => {
+                    item.classList.remove("active");
+                    item.querySelector('.tab-text').setAttribute("tabindex", "-1");
+                    item.querySelector('.tab-text').setAttribute("aria-selected", "false");
+                });
+
+                curTab.classList.add("active");
+                button.setAttribute("tabindex", "0");
+                button.setAttribute("aria-selected", "true");
+
+                // 클릭한 요소를 중앙으로 정렬
+                tabList.scrollTo({
+                    left: curTab.offsetLeft - (tabList.offsetWidth / 2) + (curTab.offsetWidth / 2),
+                    behavior: "smooth"
+                });
+
+                panelItems.forEach((item, panelIndex) => {
+                    item.classList.add("hidden");
+                    if (tabIndex === panelIndex) item.classList.remove("hidden");
+                });
+            });
+        });
+    });
+
+    new Swiper(".tab-wrap", {
+        slidesPerView: "auto",
+        freeMode: true,
+    });
+    }
+</script>
 </head>
 <body>
 <div id="wrap" class="wrap">

@@ -66,6 +66,10 @@
         .tab-wrap {
             .tab-list {
                 gap: 8rem;
+                display: flex;
+                overflow-x: auto; 
+                white-space: nowrap;
+                scroll-behavior: smooth;
 
                 @include mobile {
                     gap: 2.9rem;
