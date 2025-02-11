@@ -23,9 +23,11 @@
     <script src="./../../assets/js/guide.js"></script>
     <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
 
+    <script src="./../../assets/js/jquery.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             input();
+            dropdownSelect();
         });
     </script>
 </head>
@@ -320,15 +322,38 @@
                             </div>
                             <div class="subsection">
                                 <div class="subsection-head">module-b</div>
-                                <div class="subsection-body">
-                                    <div class="submit-form module-b">
-                                        <div class="dropdown">
-                                            <button class="button-area module-b">2024.09.01 ~ 현재까지 적용 <span class="arrow"></span></button>
-                                            <div class="dropdown-menu">
-                                                <div class="dropdown-item selected" data-panel="panel1">2024.09.01 ~ 현재까지 적용</div>
-                                                <div class="dropdown-item" data-panel="panel2">2024.07.01 ~ 2024.08.31</div>
-                                                <div class="dropdown-item" data-panel="panel3">2023.11.02 ~ 2024.06.30</div>
-                                                <div class="dropdown-item" data-panel="panel4">2021.11.08 ~ 2023.11.01</div>
+                                <div class="submit-form module-b type-c">
+                                    <div class="form-list">
+                                        <div class="form-item">
+                                            <div class="form-wrap">
+                                                <div class="form-body">
+                                                    <div class="form-area">
+                                                        <div class="form dropdown module-a select" style="width: 150px;">
+                                                            <button class="btn">전체<span class="arrow"></span></button>
+                                                            <div class="dropdown-menu">
+                                                                <div class="dropdown-item selected">전체</div>
+                                                                <div class="dropdown-item">공시기관</div>
+                                                                <div class="dropdown-item">평가기관</div>
+                                                                <div class="dropdown-item">정부/규제기관</div>
+                                                                <div class="dropdown-item">이니셔티브</div>
+                                                                <div class="dropdown-item">투자자</div>
+                                                                <div class="dropdown-item">Media</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item">
+                                            <div class="form-wrap">
+                                                <div class="form-body">
+                                                    <div class="form-area">
+                                                        <span class="form textfield module-b">
+                                                            <input type="text" class="form-elem" id="postsSearchKeyword" autocomplete="off" placeholder="검색어를 입력하세요.">
+                                                        </span>
+                                                        <button class="btn icon style-b search"><span class="btn-text blind">검색</span></button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -417,6 +442,48 @@
                 }
             });
         });
+    </script>
+    <script>
+        function dropdownSelect() {
+            $('.dropdown.select').each(function() {
+                const $this = $(this);
+                const $dropdownMenu = $this.find('.dropdown-menu');
+                const $buttonArea = $this.find('.btn');
+                const $dropdownItem = $this.find('.dropdown-item');
+
+                $buttonArea.on('click', function(event) {
+                    event.stopPropagation();
+
+                    $('.btn').not($buttonArea).removeClass('rotate');
+                    $('.dropdown-menu').not($dropdownMenu).hide();
+
+                    $dropdownMenu.toggle();
+                    $buttonArea.toggleClass('rotate');
+                });
+
+                $dropdownItem.on('click', function(event) {
+                    event.stopPropagation();
+
+                    $dropdownItem.removeClass('selected');
+                    $(this).addClass('selected');
+                    $('.dropdown-menu').hide();
+
+                    $buttonArea.html($(this).text() + ' <span class="arrow"></span>');
+
+
+                    $buttonArea.removeClass('rotate');
+                });
+            });
+
+            $(document).on('click', function() {
+                $('.dropdown-menu').hide();
+                $('.btn').removeClass('rotate');
+            });
+
+            $('.dropdown-menu').on('click', function(event) {
+                event.stopPropagation();
+            });
+        }
     </script>
 
 </body>
