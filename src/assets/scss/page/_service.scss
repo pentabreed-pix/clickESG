@@ -241,22 +241,20 @@
         .local {
             .local-body {
                 .content-body {
-                    padding-top: 0 !important;
+                    padding-top: 10rem !important;
+                    @include mobile {
+                        padding-top: 6.2rem !important;
+                    }
                     .section {
-                        padding-top: 10rem !important;
-                        @include mobile {
-                            padding-top: 6.2rem !important;
-                        }
                         .panel-display {
+                            padding-top: 10rem !important;
+                            @include mobile {
+                                padding-top: 6.2rem !important;
+                            }
                             .panel-list {
                                 .panel-item {
                                     .panel-wrap {
                                         .section {
-                                            //margin-top: 4rem;
-                                            @include mobile {
-                                                padding-top: 6.2rem;
-                                            }
-            
                                             .section-head {
                                                 + .section-body {
                                                     margin-top: 4rem;
@@ -320,24 +318,97 @@
     }
 
     .esg-chain {
-        .section {
-            .panel-display {
-                padding-top: 10rem;
-                @include mobile {
-                    padding-top: 6.2rem;
-                }
-                .panel-list {
-                    .panel-item {
-                        .panel-wrap {
-                            .section {
-                                .section-body {
-                                    position: relative;
-                                    .post-list {
-                                        .post-item {
-                                            .post-wrap {
+        .local {
+            .local-body {
+                .content-body {
+                    padding-top: 10rem !important;
+                    @include mobile {
+                        padding-top: 6.2rem !important;
+                    }
+                    .section {
+                        .panel-display {
+                            padding-top: 10rem !important;
+                            @include mobile {
+                                padding-top: 6.2rem !important;
+                            }
+                            .panel-list {
+                                .panel-item {
+                                    .panel-wrap {
+                                        .section {
+                                            .section-body {
                                                 position: relative;
-                                                .post-figure {
-                                                    //position: relative;
+                                                .post-list {
+                                                    .post-item {
+                                                        .post-wrap {
+                                                            position: relative;
+                                                            .post-figure {
+                                                                //position: relative;
+                                                                @include mobile{
+                                                                    overflow: auto;
+                                                                    @include scroll-y;
+                                                                    @include scroll-x;
+                                                                }
+                                                                
+                                                                &.height {
+                                                                    @include mobile {
+                                                                        max-height: 53rem;
+                                                                    }
+                                                                }
+                                                                
+                                                                &.step-bg {
+                                                                    position: relative;
+                                                                    left: 50%;
+                                                                    transform: translateX(-50%);
+                                                                    width: 100vw;
+                                                                    img {
+                                                                        @include mobile {
+                                                                            margin-left: 1.8rem;
+                                                                            margin-right: -1.8rem;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }                                        
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        + .section {
+                            padding-top: 18rem;
+                            @include mobile {
+                                padding-top: 12rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .esg-net {
+        .local {
+            .local-body {
+                .content-body {
+                    padding-top: 10rem !important;
+                    @include mobile {
+                        padding-top: 6.2rem !important;
+                    }
+                    .section {
+                        .panel-display {
+                            .panel-list {
+                                .panel-item {
+                                    .panel-wrap {
+                                        .section {
+                                            padding-top: 10rem !important;
+                                            @include mobile {
+                                                padding-top: 6.2rem !important;
+                                            }
+                                            .section-body {
+                                                .section-figure {
                                                     @include mobile{
                                                         overflow: auto;
                                                         @include scroll-y;
@@ -349,184 +420,139 @@
                                                             max-height: 53rem;
                                                         }
                                                     }
-                                                    
-                                                    &.step-bg {
-                                                        position: relative;
-                                                        left: 50%;
-                                                        transform: translateX(-50%);
-                                                        width: 100vw;
-                                                        img {
-                                                            @include mobile {
-                                                                margin-left: 1.8rem;
-                                                                margin-right: -1.8rem;
+            
+                                                }
+                                                .post-list.module-c.style-c {
+                                                    .post-item {
+                                                        + .post-item {
+                                                            margin-top: 0;
+                                                            .post-wrap {
+                                                                + .post-wrap {
+                                                                    .post-figure {
+                                                                        margin-top: 1.4rem;
+                                                                    }
+                                                                }
                                                             }
                                                         }
                                                     }
                                                 }
                                             }
-                                        }                                        
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            + .section {
-                padding-top: 18rem;
-                @include mobile {
-                    padding-top: 12rem;
-                }
-            }
-        }
-    }
-
-    .esg-net {
-        .section {
-            .panel-display {
-                .panel-list {
-                    .panel-item {
-                        .panel-wrap {
-                            .section {
-                                padding-top: 10rem;
-                                @include mobile {
-                                    padding-top: 6.2rem;
-                                }
-                                .section-body {
-                                    .section-figure {
-                                        @include mobile{
-                                            overflow: auto;
-                                            @include scroll-y;
-                                            @include scroll-x;
-                                        }
-                                        
-                                        &.height {
-                                            @include mobile {
-                                                max-height: 53rem;
-                                            }
-                                        }
-
-                                    }
-                                    .post-list.module-c.style-c {
-                                        .post-item {
-                                            + .post-item {
-                                                margin-top: 0;
-                                                .post-wrap {
-                                                    + .post-wrap {
-                                                        .post-figure {
-                                                            margin-top: 1.4rem;
-                                                        }
-                                                    }
-                                                }
-                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                        // &.last {
-                        //     .section {
-                        //         .section-head {
-                        //            + .section-body {
-                        //                 margin-top: 6.4rem;
-                        //                 @include mobile {
-                        //                     margin-top: 4rem;
-                        //                 }
-                        //             }
-                        //         }
-                        //     }
-                        // }
+                        + .section {
+                            padding-top: 18rem;
+                            @include mobile {
+                                padding-top: 12rem;
+                            }
+                        }
                     }
-                }
-            }
-            + .section {
-                padding-top: 18rem;
-                @include mobile {
-                    padding-top: 12rem;
                 }
             }
         }
     }
 
     .esg-data-hub {
-        .section {
-            .panel-display {
-                .panel-list {
-                    .panel-item {
-                        .panel-wrap {
-                            .section {
-                                padding-top: 10rem;
-                                @include mobile {
-                                    padding-top: 6.2rem;
-                                }
-
-                                .section-body {
-                                    .section-figure {
-                                        @include mobile{
-                                            overflow: auto;
-                                            @include scroll-y;
-                                            @include scroll-x;
-                                        }
-                                        
-                                        &.height {
+        .local {
+            .local-body {
+                .content-body {
+                    padding-top: 10rem !important;
+                    @include mobile {
+                        padding-top: 6.2rem !important;
+                    }
+                    .section {
+                        .panel-display {
+                            .panel-list {
+                                .panel-item {
+                                    .panel-wrap {
+                                        .section {
+                                            padding-top: 10rem !important;
                                             @include mobile {
-                                                max-height: 53rem;
+                                                padding-top: 6.2rem !important;
+                                            }
+            
+                                            .section-body {
+                                                .section-figure {
+                                                    @include mobile{
+                                                        overflow: auto;
+                                                        @include scroll-y;
+                                                        @include scroll-x;
+                                                    }
+                                                    
+                                                    &.height {
+                                                        @include mobile {
+                                                            max-height: 53rem;
+                                                        }
+                                                    }
+            
+                                                }
                                             }
                                         }
-
                                     }
                                 }
                             }
                         }
+                        + .section {
+                            padding-top: 18rem;
+                            @include mobile {
+                                padding-top: 12rem;
+                            }
+                        }
                     }
-                }
-            }
-            + .section {
-                padding-top: 18rem;
-                @include mobile {
-                    padding-top: 12rem;
                 }
             }
         }
     }
 
     .esg-cdp {
-        .section {
-            .panel-display {
-                .panel-list {
-                    .panel-item {
-                        .panel-wrap {
-                            .section {
-                                padding-top: 10rem;
-                                @include mobile {
-                                    padding-top: 8.4rem;
-                                }
-
-                                .section-body {
-                                    .section-figure {
-                                        @include mobile{
-                                            overflow: auto;
-                                            @include scroll-y;
-                                            @include scroll-x;
-                                        }
-                                        
-                                        &.height {
+        .local{
+            .local-body {
+                .content-body {
+                    padding-top: 10rem !important;
+                    @include mobile {
+                        padding-top: 6.2rem !important;
+                    }
+                    .section {
+                        .panel-display {
+                            .panel-list {
+                                .panel-item {
+                                    .panel-wrap {
+                                        .section {
+                                            padding-top: 10rem !important;
                                             @include mobile {
-                                                max-height: 53rem;
+                                                padding-top: 6.2rem !important;
+                                            }
+            
+                                            .section-body {
+                                                .section-figure {
+                                                    @include mobile{
+                                                        overflow: auto;
+                                                        @include scroll-y;
+                                                        @include scroll-x;
+                                                    }
+                                                    
+                                                    &.height {
+                                                        @include mobile {
+                                                            max-height: 53rem;
+                                                        }
+                                                    }
+            
+                                                }
                                             }
                                         }
-
                                     }
                                 }
                             }
                         }
+                        + .section {
+                            padding-top: 18rem;
+                            @include mobile {
+                                padding-top: 12rem;
+                            }
+                        }
                     }
-                }
-            }
-            + .section {
-                padding-top: 18rem;
-                @include mobile {
-                    padding-top: 12rem;
                 }
             }
         }
