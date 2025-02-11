@@ -54,7 +54,7 @@
                                                         <div id="inquiryType" class="data-list select">
                                                             <div class="data-wrap">
                                                                 <div class="data-head">
-                                                                    <span class="data-title">문의/상담 유형</span>
+                                                                    <span class="data-title">문의/<br class="mo-only">상담 유형</span>
                                                                     <a href="javascript:void(0);" id="inquiryTypeButton" class="data-name">선택하세요</a>
                                                                 </div>
                                                                 <div class="data-body">
@@ -83,11 +83,11 @@
                                         </div>
                                         <div class="form-item">
                                             <div class="form-wrap">
-                                                <div class="form-head"><label for="" class="form-name">기업명</label></div>
+                                                <div class="form-head"><label for="comName" class="form-name">기업명</label></div>
                                                 <div class="form-body">
                                                     <div class="form-area">
                                                         <span class="form textfield module-a flex">
-                                                            <input type="text" class="form-elem" id="" autocomplete="off" placeholder="입력하세요">
+                                                            <input type="text" class="form-elem" id="comName" autocomplete="off" placeholder="입력하세요">
                                                         </span>
                                                     </div>
                                                 </div>
@@ -95,11 +95,11 @@
                                         </div>
                                         <div class="form-item">
                                             <div class="form-wrap">
-                                                <div class="form-head"><label for="" class="form-name">성명</label></div>
+                                                <div class="form-head"><label for="name" class="form-name">성명</label></div>
                                                 <div class="form-body">
                                                     <div class="form-area">
                                                         <span class="form textfield module-a flex">
-                                                            <input type="text" class="form-elem" id="" autocomplete="off" placeholder="입력하세요">
+                                                            <input type="text" class="form-elem" id="name" autocomplete="off" placeholder="입력하세요">
                                                         </span>
                                                     </div>
                                                 </div>
@@ -107,17 +107,17 @@
                                         </div>
                                         <div class="form-item">
                                             <div class="form-wrap">
-                                                <div class="form-head"><label for="" class="form-name">부서</label></div>
+                                                <div class="form-head"><label for="classing" class="form-name">부서</label></div>
                                                 <div class="form-body">
                                                     <div class="form-area">
                                                         <span class="form textfield module-a flex">
-                                                            <input type="text" class="form-elem" id="" autocomplete="off" placeholder="입력하세요">
+                                                            <input type="text" class="form-elem" id="classing" autocomplete="off" placeholder="입력하세요">
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-item">
+                                        <div class="form-item pc-only">
                                             <div class="form-wrap">
                                                 <div class="form-body">
                                                     <div class="form-area">
@@ -125,11 +125,14 @@
                                                             <div class="data-wrap">
                                                                 <div class="data-head">
                                                                     <span class="data-title">이메일</span>
-                                                                    <span class="form textfield module-a flex">
-                                                                        <input type="text" class="form-elem" id="" autocomplete="off" placeholder="아이디">
+                                                                    <span class="form textfield module-a email-id">
+                                                                        <input type="text" class="form-elem" id="emailId" autocomplete="off" placeholder="아이디">
                                                                     </span>
                                                                     <span class="sign mail">@</span>
-                                                                    <a href="javascript:void(0);" id="emailTypeButton" class="data-name">선택하세요</a>
+                                                                    <span class="form textfield module-a flex email-enter">
+                                                                        <input type="text" class="form-elem" autocomplete="off">
+                                                                    </span>
+                                                                    <a href="javascript:void(0);" id="emailTypeButton" class="data-name">이메일주소</a>
                                                                 </div>
                                                                 <div class="data-body">
                                                                     <ul class="option-list">
@@ -151,28 +154,72 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <span class="form textfield module-a flex" style="display:none;">
-                                                            <input type="text" class="form-elem" id="" autocomplete="off">
-                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-item mo-only">
+                                            <div class="form-wrap">
+                                                <div class="form-body">
+                                                    <div class="form-area">
+                                                        <div id="emailTypeMo" class="data-list select">
+                                                            <div class="data-wrap">
+                                                                <div class="data-inner">
+                                                                    <div class="data-head">
+                                                                        <span class="data-title">이메일</span>
+                                                                        <span class="form textfield module-a email-id">
+                                                                            <input type="text" class="form-elem" id="emailIdMo" autocomplete="off" placeholder="아이디">
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data-inner">
+                                                                    <div class="data-head">
+                                                                        <span class="sign mail">@</span>
+                                                                        <span class="form textfield module-a email-enter">
+                                                                            <input type="text" class="form-elem" autocomplete="off">
+                                                                        </span>
+                                                                        <a href="javascript:void(0);" id="emailTypeButtonMo" class="data-name">이메일주소</a>
+                                                                    </div>
+                                                                    <div class="data-body">
+                                                                        <ul class="option-list">
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">직접입력하기</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">gmail.com</a></li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">naver.com</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">daum.net</a>
+                                                                            </li>
+                                                                            <li class="option-item">
+                                                                                <a class="option-text" href="javascript:void(0);">outlook.com</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-item">
                                             <div class="form-wrap">
-                                                <div class="form-head"><label for="" class="form-name">연락처</label></div>
+                                                <div class="form-head"><label for="phone-01" class="form-name">연락처</label></div>
                                                 <div class="form-body">
                                                     <div class="form-area">
-                                                        <span class="form textfield module-a">
-                                                            <input type="text" class="form-elem phone-01" id="" autocomplete="off" placeholder="000">
+                                                        <span class="form textfield module-a phone-01">
+                                                            <input type="text" class="form-elem" id="phone-01" autocomplete="off" placeholder="000">
                                                         </span>
                                                         <span class="sign bar"></span>
-                                                        <span class="form textfield module-a">
-                                                            <input type="text" class="form-elem phone-02" id="" autocomplete="off" placeholder="0000">
+                                                        <span class="form textfield module-a phone-02">
+                                                            <input type="text" class="form-elem" autocomplete="off" placeholder="0000">
                                                         </span>
                                                         <span class="sign bar"></span>
-                                                        <span class="form textfield module-a">
-                                                            <input type="text" class="form-elem phone-03" id="" autocomplete="off" placeholder="0000">
+                                                        <span class="form textfield module-a phone-03">
+                                                            <input type="text" class="form-elem" autocomplete="off" placeholder="0000">
                                                         </span>
                                                     </div>
                                                 </div>
@@ -180,35 +227,36 @@
                                         </div>
                                         <div class="form-item" style="width:100%;">
                                             <div class="form-wrap">
-                                                <div class="form-head"><label for="" class="form-name">제목</label></div>
+                                                <div class="form-head"><label for="subject" class="form-name">제목</label></div>
                                                 <div class="form-body">
                                                     <div class="form-area">
                                                         <span class="form textfield module-a flex">
-                                                            <input type="text" class="form-elem" id="" autocomplete="off" placeholder="제목을 입력해 주세요">
+                                                            <input type="text" class="form-elem" id="subject" autocomplete="off" placeholder="제목을 입력해 주세요">
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-item" style="width:100%;">
+                                        <div class="form-item textarea" style="width:100%;">
                                             <div class="form-wrap">
-                                                <div class="form-head"><label for="" class="form-name">내용</label></div>
+                                                <div class="form-head"><label for="detail" class="form-name">내용</label></div>
                                                 <div class="form-body">
                                                     <div class="form-area">
-                                                        <span class="form textarea">
-                                                            <textarea class="form-elem" cols="40" rows="4"></textarea>
+                                                        <span class="form textarea module-a flex">
+                                                            <textarea class="form-elem" id="detail" placeholder="내용을 입력해 주세요"></textarea>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <label class="form radio module-a" for="">
-                                        <input type="radio" id="" class="form-elem" name="">
+                                    <label class="form check module-a" for="check01">
+                                        <input type="checkbox" id="check01" class="form-elem" name="check01">
+                                        <span class="form-mark"></span>
                                         <span class="form-text">상기 문의사항 요청을 처리하기 위한 개인정보 수집 및 제공에 동의합니다.</span>
                                     </label>
-                                    <div class="button-area module-a">
-                                        <a href="#" class="btn module-a style-a color-a"><span class="btn-text">요청전송</span></a>
+                                    <div class="button-area module-a type-c">
+                                        <a href="#" class="btn module-a style-a color-c"><span class="btn-text">요청전송</span></a>
                                     </div>
                                 </div>
 							</div>
@@ -264,12 +312,24 @@
 </div>
 <script>
     $(document).ready(function() {
+
         let $dropdownInquiry = $('#inquiryType');
         let $buttonInquiry = $('#inquiryTypeButton');
 
         $buttonInquiry.on('click', function(event) {
             event.stopPropagation();
-            $dropdownInquiry.toggleClass('show');
+            if( $dropdownInquiry.hasClass('show')){
+                $('.data-list.select').removeClass('show');
+                $('.form-item').removeClass('active');
+                $('.mo-only .data-inner').removeClass('active');
+                $dropdownInquiry.removeClass('show');
+            }else{
+                $('.data-list.select').removeClass('show');
+                $('.form-item').removeClass('active');
+                $('.mo-only .data-inner').removeClass('active');
+                $(this).closest('.form-item').addClass('active');
+                $dropdownInquiry.addClass('show');
+            }
         });
 
         $('#inquiryType .option-text').on('click', function() {
@@ -278,6 +338,7 @@
             $('#inquiryType .option-item').removeClass('active');
             $(this).closest('#inquiryType .option-item').addClass('active');
             $dropdownInquiry.removeClass('show');
+            $dropdownInquiry.closest('.form-item').removeClass('active');
 
             if (selectedTextInquiry === '선택하세요') {
                 $buttonInquiry.removeClass('active');
@@ -289,15 +350,30 @@
         $(document).on('click', function(event) {
             if (!$dropdownInquiry.is(event.target) && $dropdownInquiry.has(event.target).length === 0) {
                 $dropdownInquiry.removeClass('show');
+                $dropdownInquiry.closest('.form-item').removeClass('active');
             }
         });
 
         let $dropdownEmail = $('#emailType');
+        let $buttonTitle = $('#emailType .data-title');
         let $buttonEmail = $('#emailTypeButton');
+        let $emailEnter = $('.pc-only .email-enter');
 
         $buttonEmail.on('click', function(event) {
             event.stopPropagation();
-            $dropdownEmail.toggleClass('show');
+
+            if( $dropdownEmail.hasClass('show')){
+                $buttonTitle.text('이메일');
+                $('.data-list.select').removeClass('show');
+                $dropdownEmail.removeClass('show');
+                $('.form-item').removeClass('active');
+            }else{
+                $buttonTitle.text('이메일 주소');
+                $('.data-list.select').removeClass('show');
+                $dropdownEmail.addClass('show');
+                $('.form-item').removeClass('active');
+                $(this).closest('.form-item').addClass('active');
+            }
         });
 
         $('#emailType .option-text').on('click', function() {
@@ -306,23 +382,85 @@
             $('#emailType .option-item').removeClass('active');
             $(this).closest('.option-item').addClass('active');
             $dropdownEmail.removeClass('show');
+            $buttonTitle.text('이메일');
+            $(this).closest('.form-item').removeClass('active');
 
-            if (selectedTextEmail === '선택하세요') {
+            if (selectedTextEmail === '이메일주소') {
                 $buttonEmail.removeClass('active');
             } else {
                 $buttonEmail.addClass('active');
             }
 
-            if (selectedTextEmail === '직접입력') {
-                $buttonEmail.removeClass('active');
+            if (selectedTextEmail === '직접입력하기') {
+                $emailEnter.addClass('show').find('input').focus();
+                //$buttonEmail.hide();
             } else {
-                $buttonEmail.addClass('active');
+                $buttonEmail.show();
+                $emailEnter.removeClass('show');
             }
         });
 
         $(document).on('click', function(event) {
             if (!$dropdownEmail.is(event.target) && $dropdownEmail.has(event.target).length === 0) {
                 $dropdownEmail.removeClass('show');
+                $buttonTitle.text('이메일');
+                $dropdownEmail.closest('.form-item').removeClass('active');
+            }
+        });
+
+
+        let $dropdownEmailMo = $('#emailTypeMo');
+        let $buttonTitleMo = $('#emailTypeMo .data-title');
+        let $buttonEmailMo = $('#emailTypeButtonMo');
+        let $emailEnterMo = $('.mo-only .email-enter');
+
+        $buttonEmailMo.on('click', function(event) {
+            event.stopPropagation();
+
+            if( $dropdownEmailMo.hasClass('show')){
+                //$buttonTitleMo.text('이메일');
+                $('.data-list.select').removeClass('show');
+                $dropdownEmailMo.removeClass('show');
+                $('.form-item').removeClass('active');
+                $('.data-inner').removeClass('active');
+            }else{
+                //$buttonTitleMo.text('이메일 주소');
+                $('.data-list.select').removeClass('show');
+                $dropdownEmailMo.addClass('show');
+                $('.form-item').removeClass('active');
+                $('.data-inner').removeClass('active');
+                $(this).closest('.data-inner').addClass('active');
+            }
+        });
+
+        $('#emailTypeMo .option-text').on('click', function() {
+            let selectedTextEmail = $(this).text();
+            $buttonEmailMo.text(selectedTextEmail);
+            $('#emailTypeMo .option-item').removeClass('active');
+            $(this).closest('.option-item').addClass('active');
+            $dropdownEmailMo.removeClass('show');
+            $(this).closest('.data-inner').removeClass('active');
+
+            if (selectedTextEmail === '이메일주소') {
+                $buttonEmailMo.removeClass('active');
+            } else {
+                $buttonEmailMo.addClass('active');
+            }
+
+            if (selectedTextEmail === '직접입력하기') {
+                $emailEnterMo.addClass('show').find('input').focus();
+                //$buttonEmail.hide();
+            } else {
+                $buttonEmailMo.show();
+                $emailEnterMo.removeClass('show');
+            }
+        });
+
+        $(document).on('click', function(event) {
+            if (!$dropdownEmailMo.is(event.target) && $dropdownEmailMo.has(event.target).length === 0) {
+                $dropdownEmailMo.removeClass('show');
+                $buttonTitleMo.text('이메일');
+                $('.mo-only .data-inner').removeClass('active');
             }
         });
     });
