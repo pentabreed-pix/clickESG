@@ -5,23 +5,35 @@
 	pageJavascript: ''
 }) %>
 <script src="./../../assets/js/jquery.js"></script>
-<script>
-	function activeItemOnlyPc(selector) {
-		$(selector).each(function() {
-			const $accordion = $(this);
 
-			$accordion.find('[class*="-item"]').on('click', function () {
-				if ($(window).width() >= 1024) {
-					const $this = $(this);
-					$accordion.find('[class*="-item"]').removeClass('active');
-					$this.addClass('active');
-				}
-			});
-		});
-	}
-	$(document).ready(function() {
-		activeItemOnlyPc('.process');
-	});
+<script>
+    function activateItems(selector) {
+        $(document).on('click', `${selector} [class*="-item"]`, function () {
+            const isDesktop = $(window).width() >= 1024;
+            const isMobile = !isDesktop;
+            const $accordion = $(this).closest(selector);
+
+            if ((isDesktop && selector === '.process') || (isDesktop && selector === '.feature')) {
+                $accordion.find('[class*="-item"]').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        activateItems('.process');  // Desktop behavior
+        activateItems('.feature');  // Mobile behavior (fixed typo)
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        new Swiper('.swiper-list', {
+            loop: false,
+            slidesPerView: 'auto',
+            spaceBetween: 8,
+            freeMode: false,
+        });
+    });
 </script>
 
 </head>
@@ -238,6 +250,124 @@
 											</div>
 											<div class="post-figure">
 												<img src="../../assets/images/solution/net-zero/process-06.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-list mo-only process">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide swiper-item">
+											<div class="swiper-wrap">
+												<div class="swiper-info">
+													<div class="swiper-head">
+														<p class="swiper-name">M1 <em>배출원 설정</em>
+														</p>
+														<p class="swiper-name">Measure : 온실가스 인벤토리 구축</p>
+													</div>
+													<div class="swiper-body">
+														<p class="swiper-summary">
+															정확한 관리를 위해 사업장 별 산정, 법인 통합 View를 제공하며 표준 코드 기반하에 배출원을 설정합니다.
+														</p>
+													</div>
+												</div>
+												<div class="swiper-figure">
+													<img src="../../assets/images/solution/net-zero/process-01-mo.jpg" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide swiper-item">
+											<div class="swiper-wrap">
+												<div class="swiper-info">
+													<div class="swiper-head">
+														<p class="swiper-name">M2 <em>배출활동자료 수집</em>
+														</p>
+														<p class="swiper-name">Measure : 온실가스 인벤토리 구축</p>
+													</div>
+													<div class="swiper-body">
+														<p class="swiper-summary">
+															사용량 & 비용 기반 등 모든 관리 방식에 대응합니다. 전력, 유가 API 자동화를 통해 편리하게 관리하세요.
+														</p>
+													</div>
+												</div>
+												<div class="swiper-figure">
+													<img src="../../assets/images/solution/net-zero/process-02-mo.jpg" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide swiper-item">
+											<div class="swiper-wrap">
+												<div class="swiper-info">
+													<div class="swiper-head">
+														<p class="swiper-name">M3 <em>배출량 산정</em>
+														</p>
+														<p class="swiper-name">Measure : 온실가스 인벤토리 구축</p>
+													</div>
+													<div class="swiper-body">
+														<p class="swiper-summary">
+															GHG 프로토콜에 따라 신뢰할 수 있는 방법론과 최신 배출계수 DB를 제공합니다. 기업 전반에 걸친 Scope 1&2 부터 Scope 3까지 모든 배출량 관리하세요.
+														</p>
+													</div>
+												</div>
+												<div class="swiper-figure">
+													<img src="../../assets/images/solution/net-zero/process-03-mo.jpg" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide swiper-item">
+											<div class="swiper-wrap">
+												<div class="swiper-info">
+													<div class="swiper-head">
+														<p class="swiper-name">R1 <em>감축목표 수립</em>
+														</p>
+														<p class="swiper-name">Report : 보고</p>
+													</div>
+													<div class="swiper-body">
+														<p class="swiper-summary">
+															측정이 완료 되었다면 넷제로 여정을 위한 목표를 설정하세요. SBTi (과학기반) 방법론과 경영 환경에 맞춰 자체 목표 시나리오 관리를 통해, 유연하게 목표를 수립하고 성과를 추적할 수 있습니다.
+														</p>
+													</div>
+												</div>
+												<div class="swiper-figure">
+													<img src="../../assets/images/solution/net-zero/process-04-mo.jpg" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide swiper-item">
+											<div class="swiper-wrap">
+												<div class="swiper-info">
+													<div class="swiper-head">
+														<p class="swiper-name">R2 <em>분석 및 리포팅</em>
+														</p>
+														<p class="swiper-name">Report : 보고</p>
+													</div>
+													<div class="swiper-body">
+														<p class="swiper-summary">
+															이해관계자별 상이한 정보 공개 요청을 일일이 파악할 필요가 없습니다. ClickESG Net-Zero를 통해 한번에 대응하세요. 원청사를 위한 제품단위 온실가스 할당부터 다양한 보고서 및 Fact Sheet 를 제공합니다.
+														</p>
+													</div>
+												</div>
+												<div class="swiper-figure">
+													<img src="../../assets/images/solution/net-zero/process-05-mo.jpg" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide swiper-item">
+											<div class="swiper-wrap">
+												<div class="swiper-info">
+													<div class="swiper-head">
+														<p class="swiper-name">V1 <em>검증</em>
+														</p>
+														<p class="swiper-name">Verification : 검증</p>
+													</div>
+													<div class="swiper-body">
+														<p class="swiper-summary">
+															측정된 배출량 검∙인증을 위한 정형화된 보고서 및 분석 Data를 제공합니다. 공시 및 외부 이해관계자 대응이 용이해지는 ClickESG와 함께하세요.
+														</p>
+													</div>
+												</div>
+												<div class="swiper-figure">
+													<img src="../../assets/images/solution/net-zero/process-06-mo.jpg" alt="">
+												</div>
 											</div>
 										</div>
 									</div>
