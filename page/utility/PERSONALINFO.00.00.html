@@ -32,7 +32,9 @@
                     if (target.length) {
                         event.preventDefault();
 
-                        var scrollToPosition = target.offset().top - 64;
+                        var navHeight = window.innerWidth < 768 ? 180 : 64;
+
+                        var scrollToPosition = target.offset().top - navHeight;
 
                         $('html, body').animate({
                             scrollTop: scrollToPosition
