@@ -3602,6 +3602,10 @@
 }
 .tab-display.module-b .tab-wrap .tab-list {
   gap: 8rem;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
 }
 @media (max-width: 1023px) {
   .tab-display.module-b .tab-wrap .tab-list {
@@ -8381,7 +8385,7 @@ body.mo-menu-open {
 }
 @media (max-width: 1023px) {
   #wrap .main .section.story-06 {
-    padding: 8rem 1.8rem 8rem 1.8rem;
+    padding: 8rem 1.8rem 14.8rem 1.8rem;
   }
 }
 #wrap .main .section.story-06 .section-wrap {
