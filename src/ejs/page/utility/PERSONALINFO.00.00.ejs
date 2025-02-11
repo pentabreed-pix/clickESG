@@ -7,26 +7,29 @@
 	pageJavascript: ''
 }) %>
 <script>
-    $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function(event) {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function(event) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-                if (target.length) {
-                    event.preventDefault();
+            if (target.length) {
+                event.preventDefault();
 
-                    var scrollToPosition = target.offset().top - 64;
+                var navHeight = window.innerWidth < 768 ? 180 : 64; 
 
-                    $('html, body').animate({
-                        scrollTop: scrollToPosition
-                    }, 1000, function() {
-                        window.history.replaceState(null, null, target.selector);
-                    });
-                }
+                var scrollToPosition = target.offset().top - navHeight;
+
+                $('html, body').animate({
+                    scrollTop: scrollToPosition
+                }, 1000, function() {
+                    window.history.replaceState(null, null, target.selector);
+                });
             }
-        });
+        }
     });
+});
+
 </script>
 
 
