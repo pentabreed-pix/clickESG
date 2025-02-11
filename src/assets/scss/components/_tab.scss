@@ -63,20 +63,26 @@
     &.module-b {
         display: flex;
         justify-content: center;
+
         .tab-wrap {
+            @include mobile {
+                padding: 0 1.8rem;
+                margin: 0 -1.8rem;
+            }
             .tab-list {
-                gap: 8rem;
                 display: flex;
-                overflow-x: auto; 
-                white-space: nowrap;
-                scroll-behavior: smooth;
-
-                @include mobile {
-                    gap: 2.9rem;
-                }
-
                 .tab-item  {
                     width: auto !important;
+                    margin-right: 8rem;
+
+                    @include mobile {
+                        margin-right: 2.9rem;
+
+                        & + .tab-item:last-child {
+                            margin-right: 0;
+                        }
+                    }
+
                     .tab-text {
                         padding: 0.6rem 0;
                         @include font(small-2x, medium);
@@ -130,7 +136,7 @@
             align-items: flex-end;
             height: 6.4rem;
             width: 100%;
-    
+
             &::after {
                 content: '';
                 display: block;
@@ -148,7 +154,7 @@
         }
     }
 
-    
+
 }
 .panel-display {
     &.module-a {
